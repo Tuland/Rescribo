@@ -1,0 +1,60 @@
+h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: 7px;
+  margin-bottom: 0.7em;
+}
+
+th {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+td{
+  padding: 0 1em;
+}
+
+tr.class_0{
+  background-color:#CCFFCC;
+}
+
+tr.class_1{
+  background-color:#CCCCFF;
+}
+
+#ontology_info {
+  padding: 1em;
+  background-color:#FFFF66;
+  margin-top: 10px;
+}
+
+#onto_loader {
+  padding: 1em
+}
+
+#progress_indicator {
+  float:right;
+}
+
+#onto_loader {
+  border: 2px dotted #E8E8E8;
+  margin-bottom: 2em;
+}
+
+#form .part{
+  margin-top: 20px;
+  border: 2px dotted #E8E8E8;
+  padding: 5px; 
+
+  label {
+    display:block;
+    margin-top:0.5em;
+  }
+  
+  .checkbox {
+    float:left;
+  }
+  
+  .submitter {
+    margin-top: 1em;
+  }
+  
+}

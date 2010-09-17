@@ -1,0 +1,5 @@
+page.replace_html 'results', "<pre>#{h(@results)}</pre>"
+page.visual_effect(:scrollTo, "results")
+page.delay(1) do
+  page.visual_effect(:highlight, "results")
+end

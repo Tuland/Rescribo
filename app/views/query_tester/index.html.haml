@@ -1,0 +1,13 @@
+%div#onto_loader
+  = link_to_remote("Load ontology",
+                  :loading => "Element.show('progress_indicator')",
+                  :complete => "Element.hide('progress_indicator')",
+                  :url => { :action => :load })
+
+  
+  = image_tag("ajax-loader.gif",
+              :id => 'progress_indicator',
+              :style => 'display:none')
+            
+%p
+  %span#ontology_info= "Ontology not loaded"

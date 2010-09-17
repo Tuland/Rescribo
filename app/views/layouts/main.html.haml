@@ -1,0 +1,20 @@
+!!! Strict
+%html{"xmlns"=>"http://www.w3.org/1999/xhtml", "lang"=>"en"}
+  %head
+    = javascript_include_tag "application","prototype", "scriptaculous"
+    = @other_javascript_include
+    
+    = stylesheet_link_tag "style"
+    = @other_css_links
+  
+    %meta{"http-equiv"=>"Content-Type", "content"=>"text/html;charset=iso-8859-1"}/
+    %title= "Query tester"
+    %meta{"name"=>"description", |
+          "content"=>"Prove SPARQL"}/
+    %meta{"name"=>"robots", "content"=>"all"}/
+  
+  %body
+    #header= render( :partial => 'layouts/header')
+    #container= yield :layout
+    #footer= render( :partial => 'layouts/footer')
+		

@@ -1,0 +1,10 @@
+page.visual_effect(:squish, "onto_loader")
+page.delay(1) do
+  page.replace_html 'ontology_info', "#{@url_str}"
+  page.visual_effect(:morph, "ontology_info", :style => "{background: '#CCFF66'}" )
+  page.delay(1) do
+    page.insert_html(:after, "ontology_info", :partial => "sparql_form")
+    page.visual_effect(:scrollTo, "form")
+    page.visual_effect(:highlight, "form")
+  end
+end

@@ -1,0 +1,66 @@
+- area_rows=5
+- area_cols=50
+- line=0
+
+%div#form
+  %div.part
+    %table
+      %tr
+        %th= "Prefix"
+        %th= "Uri"
+      - @prefix_map.each do |prefix, uri|
+        - if prefix == ""
+          - prefix = QueryTesterController::UNDEFINED_PREFIX
+        - line = line + 1
+        - class_line = line % 2
+        %tr{:class => "class_#{class_line}"}
+          %td
+            %span{:id => "id_#{line}"}= prefix
+            = in_place_editor("id_#{line}",
+                              {:url => url_for( :action => "edit",
+                                                :uri => "#{h(uri)}",
+                                                :old_prefix => prefix)})
+          %td= uri
+
+  %div.part
+    - remote_form_for :query, @query,
+                      :loading => "Element.show('mini_progress_ind')",
+                      :complete => "Element.hide('mini_progress_ind')",
+                      :url => {:action => "search"} do |form|
+      %label= "SELECT"
+      
+      //%div.checkbox= check_box :query, :select_enable,
+      //                          {:class => "checkbox", :checked => "checked" },
+      //                          1, 0
+      
+      %div.checkbox= radio_button :query, :select_enable, 1, {:checked => "checked" }                          
+      = text_area :query, :select, :rows => area_rows, :cols => area_cols
+      %label= "CONSTRUCT"
+      
+      //%div.checkbox= check_box :query, :construct_enable,
+      //                          {:class => "checkbox"},
+      //                          1, 0
+      
+      %div.checkbox= radio_button :query, :select_enable, 0, {}
+      = text_area :query, :construct, :rows => area_rows, :cols => area_cols
+      %label= "WHERE"
+      %div.checkbox= check_box :query, :where_enable,
+                                {:checked => "checked", 
+                                 :disabled => "disabled"}
+      = text_area :query, :where, :rows => area_rows, :cols => area_cols
+      %label= "Other:"
+      %div.checkbox= check_box :query, :other_enable,
+                                {},
+                                1, 0
+      = text_area :query, :other, :rows => area_rows, :cols => area_cols
+    
+      %div.submitter
+        = submit_tag "Submit"
+        = image_tag("mini-ajax-loader.gif",
+                    :id => 'mini_progress_ind',
+                    :style => 'display:none')
+                    
+%div#results
+  = "-"
+    
+  
