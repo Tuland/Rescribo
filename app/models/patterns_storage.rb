@@ -11,6 +11,13 @@ class PatternsStorage
     @cache = Array.new
   end
   
+  # Update patterns using a cache  
+  #  
+  # ==== Attributes  
+  #  
+  # * +prev_concept+ - A concept determining the last item into the pattern to perform the attachment
+  # * +property+ - A property to queue 
+  # * +next_concept+ - A concept to queue
   def update(prev_concept, 
              property, 
              next_concept)
@@ -33,8 +40,13 @@ class PatternsStorage
     end
   end
   
-  def print_report(count)
-    puts "STEP #{count}"
+  # Print a report  
+  #  
+  # ==== Attributes  
+  #  
+  # * +count+ - An integer determining the algorithm step
+  def print_report(step)
+    puts "STEP #{step}"
     i = 0
     @list.each do |pattern|
       i = i.next
