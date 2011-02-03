@@ -15,6 +15,9 @@
   
   %body
     #header= render( :partial => 'layouts/header')
-    #container= yield :layout
+    #container
+      - if flash[:notice]
+        %p.notice= flash[:notice]
+      = yield :layout
     #footer= render( :partial => 'layouts/footer')
 		

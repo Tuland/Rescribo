@@ -1,0 +1,16 @@
+- @header= "Ontology Uploading"
+
+%div#form
+  %div.part
+    %fieldset
+      %legend= "Enter ontology address"
+      - form_tag ({:action => 'save_onto'}, :multipart => true) do
+        %div
+          %label{:for => 'upload_onto'}Select File
+          = file_field 'upload', 'datafile'
+        %div.submitter
+        = submit_tag "Upload"
+        
+%div.links_list
+  = link_to 'Guide', :controller => "guide", :action => "index"
+  = link_to "Logout", :controller => "admin", :action => "logout"

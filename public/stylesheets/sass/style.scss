@@ -1,9 +1,37 @@
-h1 {
+/* Global styles */ 
+
+h1, h2 {
   font-family: Helvetica, Arial, sans-serif;
   letter-spacing: 7px;
   margin-bottom: 0.7em;
 }
 
+h3 {
+  margin-top: 1.5em;
+}
+
+.notice { 
+  border: 2px solid red; 
+  padding: 1em; 
+  margin-bottom: 2em; 
+  background-color: #f0f0f0; 
+  font: bold smaller sans-serif; 
+} 
+
+/* Menu */
+
+div.links_list{
+ margin-top:1em;
+ 
+ a{
+  font-family: Helvetica, Arial, sans-serif;
+  background-color:#CCCCFF;
+  padding: 2px 1em;
+  border: 1px dotted grey;
+ }
+}
+
+/* Tables */
 th {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -12,13 +40,21 @@ td{
   padding: 0 1em;
 }
 
-tr.class_0{
-  background-color:#CCFFCC;
+.class_0{
+  background-color:#D3D3D3;
 }
 
-tr.class_1{
+.class_1{
   background-color:#CCCCFF;
 }
+
+.part {
+  margin-top: 20px;
+  border: 2px dotted #E8E8E8;
+  padding: 5px;
+}
+
+/*  */
 
 #ontology_info {
   padding: 1em;
@@ -39,10 +75,9 @@ tr.class_1{
   margin-bottom: 2em;
 }
 
+/* Form */
+
 #form .part{
-  margin-top: 20px;
-  border: 2px dotted #E8E8E8;
-  padding: 5px; 
 
   label {
     display:block;
@@ -57,4 +92,75 @@ tr.class_1{
     margin-top: 1em;
   }
   
+}
+
+fieldset {
+
+  legend{
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold; 
+  }
+  
+}
+
+table{
+  margin-bottom: 2em;
+  td {
+    border: 1px solid black;
+  }
+  caption {
+    font-style:italic;
+    font-size: 110%;
+  }
+}
+
+/* The error box */ 
+
+.fieldWithErrors {
+ 
+  input { 
+    background-color: red; 
+  }
+}
+
+#errorExplanation { 
+  width: 400px; 
+  border: 2px solid red; 
+  padding: 7px; 
+  padding-bottom: 12px;
+  margin-bottom: 20px; 
+  background-color: #f0f0f0; 
+  
+  h2 { 
+  text-align: left; 
+  font-weight: bold; 
+  padding: 5px 5px 5px 15px; 
+  font-size: 12px; 
+  margin: -7px; 
+  background-color: #c00; 
+  color: #fff; 
+  } 
+  
+  p { 
+  color: #333; 
+  margin-bottom: 0; 
+  padding: 5px; 
+  } 
+  
+  ul li { 
+  font-size: 12px; 
+  list-style: square; 
+  }
+}
+
+.s_edge {
+  background-color: #90EE90;
+}
+
+.r_edge {
+  background-color: #FFA54F;
+}
+
+.i_edge {
+  background-color: #FFEC8B;
 }

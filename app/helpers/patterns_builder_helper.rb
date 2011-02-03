@@ -1,0 +1,2 @@
+module PatternsBuilderHelper
+end

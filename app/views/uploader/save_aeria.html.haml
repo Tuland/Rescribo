@@ -1,0 +1,16 @@
+- @header= "Aeria Uploading"
+
+%div#form
+  %div.part
+    %fieldset
+      %legend= "Enter AERIA summary address"
+      - form_tag ({:action => 'save_aeria'}, :multipart => true) do
+        %div
+          %label{:for => 'upload_aeria'}Select File
+          = file_field 'upload', 'datafile'
+        %div.submitter
+        = submit_tag "Upload"
+        
+%div.links_list
+  = link_to 'Guide', :controller => "guide", :action => "index"
+  = link_to "Logout", :controller => "admin", :action => "logout"

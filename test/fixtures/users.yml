@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+<% SALT = "NaCl" unless defined? (SALT) %>
+
+tullio:
+  name: tullio
+  hashed_password: <%= User.encrypted_password('secret', SALT) %>
+  salt: <%= SALT %>
+
+

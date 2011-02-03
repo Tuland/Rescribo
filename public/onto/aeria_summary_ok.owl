@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY aeria "http://www.siti.disco.unimib.it/cmm/2010/aeria#" >
+    <!ENTITY erlangen-crm_090330_5_0_1 "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.siti.disco.unimib.it/cmm/2010/aeria_summary.owl#"
+     xml:base="http://www.siti.disco.unimib.it/cmm/2010/aeria_summary.owl"
+     xmlns:erlangen-crm_090330_5_0_1="http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:aeria="http://www.siti.disco.unimib.it/cmm/2010/aeria#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.siti.disco.unimib.it/cmm/2010/aeria_summary.owl">
+        <owl:imports rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/aeria#a-forget -->
+
+    <owl:ObjectProperty rdf:about="&aeria;a-forget"/>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/aeria#a-generalize -->
+
+    <owl:ObjectProperty rdf:about="&aeria;a-generalize"/>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship -->
+
+    <owl:ObjectProperty rdf:about="&aeria;directedRelationship"/>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/aeria#generalize -->
+
+    <owl:ObjectProperty rdf:about="&aeria;generalize"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:ObjectProperty rdf:about="&rdfs;label">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P2.has_type -->
+
+    <owl:ObjectProperty rdf:about="&erlangen-crm_090330_5_0_1;P2.has_type">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P87.is_identified_by -->
+
+    <owl:ObjectProperty rdf:about="&erlangen-crm_090330_5_0_1;P87.is_identified_by">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="&skos;Concept"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Litteral -->
+
+    <skos:Concept rdf:about="&rdfs;Litteral">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A4.Location -->
+
+    <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;A4.Location">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <aeria:a-forget rdf:resource="&rdfs;Litteral"/>
+        <aeria:a-forget rdf:resource="&erlangen-crm_090330_5_0_1;E44.Place_Appellation"/>
+        <aeria:a-forget rdf:resource="&erlangen-crm_090330_5_0_1;E47.Spatial_Coordinates"/>
+        <aeria:a-forget rdf:resource="&erlangen-crm_090330_5_0_1;E53.Place"/>
+        <aeria:a-generalize rdf:resource="&erlangen-crm_090330_5_0_1;E53.Place"/>
+        <aeria:a-forget rdf:resource="&erlangen-crm_090330_5_0_1;E55.Type"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E44.Place_Appellation -->
+
+    <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;E44.Place_Appellation">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:resource="&rdfs;Litteral"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E47.Spatial_Coordinates -->
+
+    <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;E47.Spatial_Coordinates">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:resource="&rdfs;Litteral"/>
+        <aeria:generalize rdf:resource="&erlangen-crm_090330_5_0_1;E44.Place_Appellation"/>
+        <erlangen-crm_090330_5_0_1:P2.has_type rdf:resource="&erlangen-crm_090330_5_0_1;E55.Type"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place -->
+
+    <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;E53.Place">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <erlangen-crm_090330_5_0_1:P87.is_identified_by rdf:resource="&erlangen-crm_090330_5_0_1;E44.Place_Appellation"/>
+        <erlangen-crm_090330_5_0_1:P87.is_identified_by rdf:resource="&erlangen-crm_090330_5_0_1;E47.Spatial_Coordinates"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type -->
+
+    <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;E55.Type">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </skos:Concept>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
+
