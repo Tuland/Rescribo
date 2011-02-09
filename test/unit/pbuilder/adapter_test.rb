@@ -1,0 +1,41 @@
+module Pbuilder
+  
+  require 'test_helper'
+  
+  class AdapterTest < ActiveSupport::TestCase
+    
+    THIS_PATH = File.dirname(File.expand_path(__FILE__)) + "/"
+    IDENTIFIER = 1234
+    ONTO_NAME = "test.owl"
+    URL = "file://" +
+          THIS_PATH +
+          ONTO_NAME
+    ADAPTER_NAME = "name"
+    FILE_PATH = Adapter.personal_persistence_dir( IDENTIFIER,
+                                                  THIS_PATH) +
+                "/" +
+                ADAPTER_NAME
+    
+    def setup
+      Adapter.purge(IDENTIFIER,
+                    THIS_PATH)
+      @adapter = Adapter.new( IDENTIFIER, 
+                              URL, 
+                              ADAPTER_NAME,
+                              THIS_PATH)
+      @adapter.close
+    end
+    
+    test "presence_of_persitence_file" do
+      assert FileTest.exist?(FILE_PATH)
+    end
+    
+    test "absence_of_persitence_file" do
+      Adapter.purge(IDENTIFIER,
+                    THIS_PATH)
+      assert ! FileTest.exist?(FILE_PATH)
+    end   
+    
+  end
+  
+end

@@ -14708,3 +14708,3645 @@ Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-02 18:42:24)
 Rendering patterns_builder/load
 Rendered patterns_builder/_result (7.0ms)
 Completed in 147ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 13:59:13) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 146ms (DB: 2) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-03 13:59:14) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (13.0ms)
+Rendered layouts/_footer (3.0ms)
+Completed in 330ms (View: 324, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-03 13:59:16) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs=", "name"=>"tuland", "password"=>"12345", "commit"=>"Login"}
+  [4;36;1mUser Load (21.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/patterns_builder
+Completed in 121ms (DB: 22) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 13:59:16) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 133ms (View: 101, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 13:59:19) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (147.0ms)
+Completed in 932ms (View: 188, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:13:16) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+
+NameError (uninitialized constant Adapter::PERSISTENCE_DIR):
+  app/models/adapter.rb:23:in `purge'
+  app/controllers/patterns_builder_controller.rb:17:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (189.0ms)
+Rendered rescues/_request_and_response (20.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:17:05) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+
+NameError (undefined local variable or method `session' for Adapter:Class):
+  app/models/adapter.rb:32:in `purge'
+  app/controllers/patterns_builder_controller.rb:14:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:18:59) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 370ms (View: 39, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:19:01) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+Errno::EEXIST (File exists - File exists - jena_persistence155997973):
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:243:in `fu_mkdir'
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:172:in `mkdir'
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:171:in `each'
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:171:in `mkdir'
+  app/models/adapter.rb:14:in `load'
+  app/controllers/patterns_builder_controller.rb:19:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (6.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:19:53) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 372ms (View: 53, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:19:55) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NameError (uninitialized constant Adapter::AERIA_PATH):
+  app/models/adapter.rb:19:in `load'
+  app/controllers/patterns_builder_controller.rb:19:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:21:26) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 361ms (View: 41, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:21:28) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NoMethodError (undefined method `path_to_url' for Adapter:Class):
+  app/models/adapter.rb:19:in `load'
+  app/controllers/patterns_builder_controller.rb:19:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (73.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:26:08) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+
+NoMethodError (undefined method `path_to_url' for #<PatternsBuilderController:0x8e3a71>):
+  app/controllers/patterns_builder_controller.rb:15:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (70.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:26:38) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+
+NameError (undefined local variable or method `request' for Adapter:Class):
+  app/models/adapter.rb:36:in `path_to_url'
+  app/controllers/patterns_builder_controller.rb:15:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (10.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:29:15) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 129ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:29:17) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NoMethodError (undefined method `find_root_concepts' for #<SearchEngine:0x6fbaff>):
+  app/controllers/patterns_builder_controller.rb:28:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:30:44) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 71ms (View: 20, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:30:45) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NoMethodError (undefined method `find_root_concepts' for #<SearchEngine:0x6e7f96>):
+  app/controllers/patterns_builder_controller.rb:28:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:32:13) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 87ms (View: 39, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:32:15) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (16.0ms)
+Completed in 262ms (View: 34, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:36:03) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+
+ArgumentError (wrong # of arguments(0 for 1)):
+  app/controllers/patterns_builder_controller.rb:16:in `purge'
+  app/controllers/patterns_builder_controller.rb:16:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (67.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:36:22) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 77ms (View: 39, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:36:24) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (19.0ms)
+Completed in 542ms (View: 36, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:54:18) [GET]
+  [4;36;1mUser Load (3.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 357ms (View: 17, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:54:19) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NoMethodError (private method `load' called for Adapter:Class):
+  app/controllers/patterns_builder_controller.rb:21:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (65.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:54:49) [GET]
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 94ms (View: 49, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:54:51) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NoMethodError (undefined method `close' for #<Adapter:0x950f89>):
+  app/controllers/patterns_builder_controller.rb:39:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:55:06) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 90ms (View: 43, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:55:07) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NoMethodError (undefined method `close' for #<Adapter:0x201208>):
+  app/controllers/patterns_builder_controller.rb:39:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 14:59:05) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (7.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 181ms (View: 44, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 14:59:06) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (51.0ms)
+Completed in 247ms (View: 71, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:01:08) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 72ms (View: 18, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:01:09) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (8.0ms)
+Completed in 189ms (View: 32, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:11:57) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 78ms (View: 13, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:11:58) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (19.0ms)
+Completed in 185ms (View: 41, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:15:37) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 348ms (View: 36, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:15:40) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (8.0ms)
+Completed in 218ms (View: 28, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:21:57) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 255ms (View: 116, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:21:59) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NameError (undefined local variable or method `session' for #<Adapter:0xd93ebb>):
+  app/models/adapter.rb:29:in `load'
+  app/models/adapter.rb:14:in `initialize'
+  app/controllers/patterns_builder_controller.rb:21:in `new'
+  app/controllers/patterns_builder_controller.rb:21:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:22:53) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 129ms (View: 18, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:22:54) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NameError (undefined local variable or method `session' for #<Adapter:0xcaf643>):
+  app/models/adapter.rb:29:in `load'
+  app/models/adapter.rb:14:in `initialize'
+  app/controllers/patterns_builder_controller.rb:21:in `new'
+  app/controllers/patterns_builder_controller.rb:21:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:22:56) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+Errno::EEXIST (File exists - File exists - jena_persistence155997973):
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:243:in `fu_mkdir'
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:172:in `mkdir'
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:171:in `each'
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:171:in `mkdir'
+  app/models/adapter.rb:13:in `initialize'
+  app/controllers/patterns_builder_controller.rb:21:in `new'
+  app/controllers/patterns_builder_controller.rb:21:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:22:57) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 106ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:22:59) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 49ms (View: 11, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:23:01) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NameError (undefined local variable or method `session' for #<Adapter:0x19222f>):
+  app/models/adapter.rb:29:in `load'
+  app/models/adapter.rb:14:in `initialize'
+  app/controllers/patterns_builder_controller.rb:21:in `new'
+  app/controllers/patterns_builder_controller.rb:21:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (73.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:23:41) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 57ms (View: 18, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:23:42) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NameError (undefined local variable or method `session' for #<Adapter:0xac7e94>):
+  app/models/adapter.rb:29:in `init_load'
+  app/models/adapter.rb:14:in `initialize'
+  app/controllers/patterns_builder_controller.rb:21:in `new'
+  app/controllers/patterns_builder_controller.rb:21:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:24:00) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (3.0ms)
+Completed in 106ms (View: 61, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:24:01) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NameError (undefined local variable or method `session' for #<Adapter:0x89d391>):
+  app/models/adapter.rb:29:in `init_load'
+  app/models/adapter.rb:14:in `initialize'
+  app/controllers/patterns_builder_controller.rb:21:in `new'
+  app/controllers/patterns_builder_controller.rb:21:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:24:55) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 143ms (View: 43, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:24:56) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (9.0ms)
+Completed in 210ms (View: 68, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:29:31) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 56ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:29:32) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NameError (undefined local variable or method `url' for #<Adapter:0x2b748d>):
+  app/models/adapter.rb:33:in `init_load'
+  app/models/adapter.rb:14:in `initialize'
+  app/controllers/patterns_builder_controller.rb:21:in `new'
+  app/controllers/patterns_builder_controller.rb:21:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (65.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:29:36) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 61ms (View: 26, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:29:37) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+NameError (undefined local variable or method `url' for #<Adapter:0x963414>):
+  app/models/adapter.rb:33:in `init_load'
+  app/models/adapter.rb:14:in `initialize'
+  app/controllers/patterns_builder_controller.rb:21:in `new'
+  app/controllers/patterns_builder_controller.rb:21:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:30:02) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 341ms (View: 36, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:30:04) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+
+ArgumentError (wrong # of arguments(2 for 1)):
+  app/models/adapter.rb:14:in `init_load'
+  app/models/adapter.rb:14:in `initialize'
+  app/controllers/patterns_builder_controller.rb:21:in `new'
+  app/controllers/patterns_builder_controller.rb:21:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:30:54) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 56ms (View: 12, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:30:55) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (7.0ms)
+Completed in 165ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:49:24) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 63ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:49:26) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (8.0ms)
+Completed in 160ms (View: 32, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:49:53) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 56ms (View: 15, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:49:55) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (7.0ms)
+Completed in 164ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:50:29) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+
+NoMethodError (undefined method `path_to_url' for #<PatternsBuilderController:0x13aa7d>):
+  app/controllers/patterns_builder_controller.rb:16:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-03 15:51:27) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 48ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-03 15:51:28) [POST]
+  Parameters: {"authenticity_token"=>"4WJMhNVwNyK8k16mQF7Yt/bU7hN6Yg9j0XRlccWWjqs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (19.0ms)
+Completed in 173ms (View: 44, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-04 10:22:27) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 398ms (DB: 2) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-04 10:22:28) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (37.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 498ms (View: 491, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-04 10:22:31) [POST]
+  Parameters: {"authenticity_token"=>"dnpoFiSyxh28QwW0b4v2cTOXyEBw34i+06XK2cc/JSs=", "name"=>"tuland", "password"=>"12345", "commit"=>"Login"}
+  [4;36;1mUser Load (11.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/patterns_builder
+Completed in 320ms (DB: 11) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-04 10:22:32) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 242ms (View: 128, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-04 10:22:35) [POST]
+  Parameters: {"authenticity_token"=>"dnpoFiSyxh28QwW0b4v2cTOXyEBw34i+06XK2cc/JSs="}
+
+ArgumentError (wrong # of arguments(0 for 2)):
+  /opt/local/share/java/jruby/lib/ruby/1.8/singleton.rb:94:in `initialize'
+  /opt/local/share/java/jruby/lib/ruby/1.8/singleton.rb:94:in `new'
+  /opt/local/share/java/jruby/lib/ruby/1.8/singleton.rb:94:in `instance'
+  app/controllers/patterns_builder_controller.rb:20:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (191.0ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-04 10:50:55) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 168ms (View: 31, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-04 10:50:57) [POST]
+  Parameters: {"authenticity_token"=>"dnpoFiSyxh28QwW0b4v2cTOXyEBw34i+06XK2cc/JSs="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (177.0ms)
+Completed in 902ms (View: 239, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (45.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101125111013)
+Migrating to CreateOntoUploadeds (20101206155554)
+  [4;36;1mSQL (74.0ms)[0m   [0;1mCREATE TABLE `onto_uploadeds` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101206155554')[0m
+Migrating to CreateAeriaUploadeds (20101206164223)
+  [4;36;1mSQL (69.0ms)[0m   [0;1mCREATE TABLE `aeria_uploadeds` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101206164223')[0m
+Migrating to CreatePatternsStorages (20110202160622)
+  [4;36;1mSQL (70.0ms)[0m   [0;1mCREATE TABLE `patterns_storages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110202160622')[0m
+Migrating to CreatePatternsAnalyses (20110202164439)
+  [4;36;1mSQL (300.0ms)[0m   [0;1mCREATE TABLE `patterns_analyses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110202164439')[0m
+Migrating to CreateSearchEngines (20110202171609)
+  [4;36;1mSQL (61.0ms)[0m   [0;1mCREATE TABLE `search_engines` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110202171609')[0m
+Migrating to CreateAdapters (20110203130629)
+  [4;36;1mSQL (66.0ms)[0m   [0;1mCREATE TABLE `adapters` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110203130629')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-07 10:54:30) [GET]
+
+SyntaxError (/Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/patterns_builder_controller.rb:55: syntax error, unexpected end-of-file
+):
+  app/controllers/patterns_builder_controller.rb:380
+  app/controllers/patterns_builder_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (193.0ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-07 10:55:25) [GET]
+
+SyntaxError (/Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/patterns_builder_controller.rb:55: syntax error, unexpected end-of-file
+):
+  app/controllers/patterns_builder_controller.rb:380
+  app/controllers/patterns_builder_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 10:56:28) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 126ms (DB: 2) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 10:56:29) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (12.0ms)
+Rendered layouts/_footer (3.0ms)
+Completed in 144ms (View: 129, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 10:56:31) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"tuland", "password"=>"12345", "commit"=>"Login"}
+  [4;36;1mUser Load (18.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/patterns_builder
+Completed in 120ms (DB: 18) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 10:56:31) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 230ms (View: 112, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-07 10:56:36) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (152.0ms)
+Completed in 927ms (View: 190, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 11:08:22) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 435ms (View: 36, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-07 11:08:25) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4="}
+
+ArgumentError (wrong # of arguments(1 for 0)):
+  app/controllers/patterns_builder_controller.rb:25:in `initialize'
+  app/controllers/patterns_builder_controller.rb:25:in `new'
+  app/controllers/patterns_builder_controller.rb:25:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (8.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 11:09:09) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 96ms (View: 41, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-07 11:09:11) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `properties_list' for nil:NilClass) on line #23 of app/views/patterns_builder/_result.html.haml:
+20:         %th= "URI"
+21:         %th= "Type"
+22:     %tbody
+23:       - @analysis.properties_list.each do |p_name, p_type|
+24:         %tr
+25:           %td= h p_name
+26:           %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:23:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_4434_4516'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_4434_4516'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_4434_4516'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (129.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 11:11:39) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 362ms (View: 25, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-07 11:11:40) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (74.0ms)
+Completed in 246ms (View: 101, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101125111013)
+Migrating to CreateOntoUploadeds (20101206155554)
+Migrating to CreateAeriaUploadeds (20101206164223)
+Migrating to CreatePatternsStorages (20110202160622)
+Migrating to CreatePatternsAnalyses (20110202164439)
+Migrating to CreateSearchEngines (20110202171609)
+Migrating to CreateAdapters (20110203130629)
+Migrating to CreateOfflineFinders (20110207100123)
+  [4;36;1mSQL (66.0ms)[0m   [0;1mCREATE TABLE `offline_finders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110207100123')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 11:15:09) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 88ms (View: 39, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-07 11:15:10) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (22.0ms)
+Completed in 207ms (View: 45, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 11:53:52) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 469ms (DB: 2) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 11:53:53) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (13.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 151ms (View: 136, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 11:53:56) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"tuland", "password"=>"12345", "commit"=>"Login"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 72ms (View: 31, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 11:53:59) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"tuland", "password"=>"12345", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 73ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 11:54:14) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"tuland", "password"=>"12345", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 359ms (View: 22, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-02-07 11:54:38) [GET]
+Rendering template within layouts/main
+Rendering users/new
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 460ms (View: 176, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2011-02-07 11:54:53) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "user"=>{"name"=>"user", "password"=>"user", "password_confirmation"=>"user"}, "commit"=>"Add User"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `users` (`name`, `hashed_password`, `salt`, `created_at`, `updated_at`) VALUES('user', '9f01bd88c3f5c6279de1630f1f84dd6dd174e2e2', '42000.45901064821288', '2011-02-07 10:54:53', '2011-02-07 10:54:53')[0m
+Redirected to http://0.0.0.0:3000/admin
+Completed in 80ms (DB: 3) | 302 Found [http://0.0.0.0/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-02-07 11:54:53) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997973) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 34ms (DB: 0) | 302 Found [http://0.0.0.0/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 11:54:53) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 54ms (View: 50, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 11:54:59) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin
+Completed in 60ms (DB: 12) | 302 Found [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-02-07 11:55:00) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997974) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Completed in 76ms (DB: 1) | 302 Found [http://0.0.0.0/admin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 11:55:00) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (9.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 58ms (View: 55, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 11:55:03) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"tuland", "password"=>"12345", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 61ms (View: 28, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 11:59:52) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;35;1mUser Load (10.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/guide
+Completed in 315ms (DB: 11) | 302 Found [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-07 11:59:53) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997974) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (12.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 173ms (View: 143, DB: 3) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2011-02-07 11:59:58) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997974) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Completed in 53ms (DB: 2) | 302 Found [http://0.0.0.0/admin/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 11:59:59) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 118ms (View: 114, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:00:08) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"tuland", "password"=>"1234", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 99ms (View: 37, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:00:12) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"tuland", "password"=>"12345", "commit"=>"Login"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 65ms (View: 33, DB: 2) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:00:18) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/guide
+Completed in 43ms (DB: 2) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-07 12:00:19) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997974) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (7.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 83ms (View: 36, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 12:00:26) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997974) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 96ms (View: 39, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-07 12:00:28) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (161.0ms)
+Completed in 850ms (View: 198, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2011-02-07 12:02:00) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997974) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 89ms (DB: 2) | 302 Found [http://0.0.0.0/admin/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:02:00) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 49ms (View: 45, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:02:32) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (15.0ms)
+Rendered layouts/_footer (3.0ms)
+Completed in 430ms (View: 138, DB: 2) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:02:44) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 80ms (View: 43, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:02:58) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 44ms (View: 39, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:03:04) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 73ms (View: 37, DB: 2) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:03:39) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (15.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 361ms (View: 353, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:03:46) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 704ms (View: 43, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 12:04:33) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997974) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 291ms (DB: 2) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:04:33) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (14.0ms)
+Rendered layouts/_footer (3.0ms)
+Completed in 152ms (View: 136, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:04:44) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 148ms (View: 41, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:04:51) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 156ms (View: 33, DB: 2) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:04:55) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 151ms (View: 21, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 12:05:04) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997974) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 39ms (DB: 1) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:05:04) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (6.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 67ms (View: 51, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:05:06) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"tuland", "password"=>"12345", "commit"=>"Login"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 78ms (View: 30, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-02-07 12:05:08) [GET]
+Rendering template within layouts/main
+Rendering users/new
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 209ms (View: 181, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-02-07 12:05:08) [GET]
+Rendering template within layouts/main
+Rendering users/new
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 111ms (View: 88, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2011-02-07 12:05:17) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "user"=>{"name"=>"prova", "password"=>"prova", "password_confirmation"=>"prova"}, "commit"=>"Add User"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = 'prova') LIMIT 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO `users` (`name`, `hashed_password`, `salt`, `created_at`, `updated_at`) VALUES('prova', '65c84b26df9557c805031865590f4658a1cca76d', '44260.150816399751228', '2011-02-07 11:05:17', '2011-02-07 11:05:17')[0m
+Redirected to http://0.0.0.0:3000/admin
+Completed in 131ms (DB: 3) | 302 Found [http://0.0.0.0/users]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-02-07 12:05:17) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997974) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 29ms (DB: 2) | 302 Found [http://0.0.0.0/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:05:17) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 40ms (View: 38, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:05:24) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"prova", "password"=>"prova", "commit"=>"Login"}
+  [4;35;1mUser Load (14.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'prova') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin
+Completed in 60ms (DB: 15) | 302 Found [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-02-07 12:05:24) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Completed in 37ms (DB: 1) | 302 Found [http://0.0.0.0/admin]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:05:24) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 58ms (View: 52, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 12:05:30) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 166ms (View: 110, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2011-02-07 12:05:37) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Completed in 44ms (DB: 1) | 302 Found [http://0.0.0.0/admin/logout]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:05:37) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 41ms (View: 38, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:05:42) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 121ms (View: 90, DB: 3) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:05:48) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (3.0ms)
+Completed in 60ms (View: 23, DB: 2) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:06:10) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"prova", "password"=>"prova", "commit"=>"Login"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'prova') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/guide
+Completed in 47ms (DB: 2) | 302 Found [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-07 12:06:10) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 74ms (View: 34, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 12:06:59) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (17.0ms)
+Completed in 613ms (View: 138, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2011-02-07 12:07:03) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Completed in 37ms (DB: 2) | 302 Found [http://0.0.0.0/admin/logout]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:07:03) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 118ms (View: 111, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:07:12) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"prova", "password"=>"prova", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'prova') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/guide
+Completed in 80ms (DB: 1) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-07 12:07:13) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 143ms (View: 65, DB: 1) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2011-02-07 12:07:16) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Completed in 47ms (DB: 1) | 302 Found [http://0.0.0.0/admin/logout]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:07:16) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 47ms (View: 42, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:07:21) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 88ms (View: 46, DB: 2) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:07:30) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"tuland", "password"=>"12345", "commit"=>"Login"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'tuland') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 79ms (View: 40, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:07:45) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"prova", "password"=>"prova", "commit"=>"Login"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'prova') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/guide
+Completed in 56ms (DB: 2) | 302 Found [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-07 12:07:45) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 130ms (View: 37, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 12:08:58) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (17.0ms)
+Completed in 531ms (View: 137, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2011-02-07 12:09:01) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Completed in 37ms (DB: 3) | 302 Found [http://0.0.0.0/admin/logout]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:09:01) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 122ms (View: 116, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 12:09:08) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"prova", "password"=>"prova", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'prova') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/guide
+Completed in 85ms (DB: 2) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-07 12:09:08) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 127ms (View: 63, DB: 1) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 18:01:44) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 42ms (DB: 2) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 18:01:44) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 44ms (View: 40, DB: 2) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 18:01:49) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"prova", "password"=>"prova", "commit"=>"Login"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'prova') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 73ms (View: 35, DB: 3) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 18:01:57) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"prova", "password"=>"prova", "commit"=>"Login"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'prova') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 75ms (View: 29, DB: 2) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-02-07 18:02:00) [GET]
+Rendering template within layouts/main
+Rendering users/new
+Rendered layouts/_header (7.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 167ms (View: 112, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2011-02-07 18:02:15) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "user"=>{"name"=>"aaa", "password"=>"aaa", "password_confirmation"=>"aaa"}, "commit"=>"Add User"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = 'aaa') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `salt`, `created_at`, `updated_at`) VALUES('aaa', '3db5129257b003336a4f5be028969d07e2903637', '44320.160070446364911', '2011-02-07 17:02:15', '2011-02-07 17:02:15')[0m
+Redirected to http://0.0.0.0:3000/admin
+Completed in 133ms (DB: 2) | 302 Found [http://0.0.0.0/users]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-02-07 18:02:15) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997975) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 23ms (DB: 1) | 302 Found [http://0.0.0.0/admin]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 18:02:15) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 30ms (View: 27, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 18:02:20) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"aaa", "password"=>"aaa", "commit"=>"Login"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'aaa') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin
+Completed in 48ms (DB: 1) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-02-07 18:02:21) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997976) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Completed in 47ms (DB: 2) | 302 Found [http://0.0.0.0/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 18:02:21) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 43ms (View: 36, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 18:02:28) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997976) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 379ms (View: 52, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101125111013)
+Migrating to CreateOntoUploadeds (20101206155554)
+Migrating to CreateAeriaUploadeds (20101206164223)
+Migrating to CreatePatternsStorages (20110202160622)
+Migrating to CreatePatternsAnalyses (20110202164439)
+Migrating to CreateSearchEngines (20110202171609)
+Migrating to CreateAdapters (20110203130629)
+Migrating to CreateOfflineFinders (20110207100123)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 18:20:39) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 155997976) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 34ms (DB: 3) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 18:20:39) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 29ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-02-07 18:20:42) [GET]
+Rendering template within layouts/main
+Rendering users/new
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 110ms (View: 83, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2011-02-07 18:20:58) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "user"=>{"name"=>"user", "password"=>"user", "password_confirmation"=>"user"}, "commit"=>"Add User"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `users` (`name`, `hashed_password`, `salt`, `created_at`, `updated_at`) VALUES('user', '2c79555e0ada38e44e7db3704c3757b169b54043', '50000.0572447806112292', '2011-02-07 17:20:58', '2011-02-07 17:20:58')[0m
+Redirected to http://0.0.0.0:3000/admin
+Completed in 73ms (DB: 3) | 302 Found [http://0.0.0.0/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-02-07 18:20:58) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 155997976) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 30ms (DB: 1) | 302 Found [http://0.0.0.0/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 18:20:58) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 59ms (View: 55, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 18:21:05) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin
+Completed in 48ms (DB: 2) | 302 Found [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-02-07 18:21:05) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Completed in 57ms (DB: 1) | 302 Found [http://0.0.0.0/admin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-07 18:21:06) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 31ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-07 18:21:25) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 52ms (View: 14, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-07 18:22:24) [POST]
+  Parameters: {"authenticity_token"=>"wi31DjeNDIIkCNKz63Gtt5ojHdTADqD34Bz0wV8a8i4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (137.0ms)
+Completed in 1086ms (View: 167, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 14:40:03) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 138ms (DB: 3) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-08 14:40:03) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (14.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 159ms (View: 151, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-08 14:40:13) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (13.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/patterns_builder
+Completed in 140ms (DB: 14) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 14:40:14) [GET]
+  [4;36;1mUser Load (6.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 255ms (View: 119, DB: 6) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 14:40:17) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (200.0ms)
+Completed in 1045ms (View: 259, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 14:43:07) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 586ms (View: 145, DB: 13) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 14:43:11) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (220.0ms)
+Completed in 970ms (View: 280, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 15:20:53) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 374ms (View: 27, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 15:20:56) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (11.0ms)
+Completed in 329ms (View: 39, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-08 15:21:03) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 175ms (View: 57, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_aeria (for 127.0.0.1 at 2011-02-08 15:21:08) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_aeria
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 228ms (View: 93, DB: 1) | 200 OK [http://0.0.0.0/uploader/upload_aeria]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#save_aeria (for 127.0.0.1 at 2011-02-08 15:22:54) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI=", "upload"=>{"datafile"=>#<File:/var/folders/qk/qk-rWbAlHle6IYUHAQiFiU+++TI/-Tmp-/RackMultipart.631.6439>}, "commit"=>"Upload"}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/uploader/upload_aeria
+Completed in 36ms (DB: 3) | 302 Found [http://0.0.0.0/uploader/save_aeria]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_aeria (for 127.0.0.1 at 2011-02-08 15:22:54) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_aeria
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 68ms (View: 37, DB: 2) | 200 OK [http://0.0.0.0/uploader/upload_aeria]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-08 15:23:13) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 365ms (View: 51, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-08 15:29:21) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 380ms (View: 38, DB: 1) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 15:29:22) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NameError (uninitialized constant PatternsBuilderController::Adapter):
+  app/controllers/patterns_builder_controller.rb:15:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (192.0ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 15:30:41) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+SyntaxError (/Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/lib/adapter.rb:61: syntax error, unexpected end-of-file
+):
+  lib/adapter.rb:380
+  lib/adapter.rb:380:in `load'
+  app/controllers/patterns_builder_controller.rb:15:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (89.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 15:31:56) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 85ms (View: 38, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 15:31:58) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (7.0ms)
+Completed in 150ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 15:32:29) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (27.0ms)
+Completed in 431ms (View: 94, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 15:32:32) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (1.0ms)
+Completed in 123ms (View: 18, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_onto (for 127.0.0.1 at 2011-02-08 15:33:22) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_onto
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 82ms (View: 44, DB: 2) | 200 OK [http://0.0.0.0/uploader/upload_onto]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#save_onto (for 127.0.0.1 at 2011-02-08 15:33:31) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI=", "upload"=>{"datafile"=>#<File:/var/folders/qk/qk-rWbAlHle6IYUHAQiFiU+++TI/-Tmp-/RackMultipart.631.6440>}, "commit"=>"Upload"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/uploader/upload_onto
+Completed in 50ms (DB: 1) | 302 Found [http://0.0.0.0/uploader/save_onto]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_onto (for 127.0.0.1 at 2011-02-08 15:33:31) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_onto
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 45ms (View: 18, DB: 2) | 200 OK [http://0.0.0.0/uploader/upload_onto]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-08 15:33:36) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 429ms (View: 401, DB: 1) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 15:33:39) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 180ms (View: 38, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 15:33:41) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (1.0ms)
+Completed in 127ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 15:34:14) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 266ms (View: 138, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 15:34:35) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (1.0ms)
+Completed in 189ms (View: 28, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 15:39:34) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (11.0ms)
+Completed in 687ms (View: 146, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 15:39:38) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (181.0ms)
+Completed in 798ms (View: 221, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_aeria (for 127.0.0.1 at 2011-02-08 15:48:02) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_aeria
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 101ms (View: 58, DB: 1) | 200 OK [http://0.0.0.0/uploader/upload_aeria]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#save_aeria (for 127.0.0.1 at 2011-02-08 15:48:42) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI=", "upload"=>{"datafile"=>#<File:/var/folders/qk/qk-rWbAlHle6IYUHAQiFiU+++TI/-Tmp-/RackMultipart.1212.41187>}, "commit"=>"Upload"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/uploader/upload_aeria
+Completed in 67ms (DB: 2) | 302 Found [http://0.0.0.0/uploader/save_aeria]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_aeria (for 127.0.0.1 at 2011-02-08 15:48:42) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_aeria
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 96ms (View: 41, DB: 2) | 200 OK [http://0.0.0.0/uploader/upload_aeria]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-08 15:48:47) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 115ms (View: 81, DB: 1) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 15:48:49) [GET]
+  [4;36;1mUser Load (4.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 109ms (View: 44, DB: 4) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 15:48:52) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (37.0ms)
+Completed in 329ms (View: 63, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101125111013)
+Migrating to CreateOntoUploadeds (20101206155554)
+Migrating to CreateAeriaUploadeds (20101206164223)
+Migrating to RenameAeriaUploadedToUploadedAeria (20110208151540)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mRENAME TABLE `aeria_uploadeds` TO `uploaded_aerias`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110208151540')[0m
+Migrating to RenameOntoUploadedToUploadedOnto (20110208152353)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mRENAME TABLE `onto_uploadeds` TO `uploaded_ontos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110208152353')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 17:43:51) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NameError (uninitialized constant PatternsBuilderController::Adapter):
+  app/controllers/patterns_builder_controller.rb:15:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (192.0ms)
+Rendered rescues/_request_and_response (23.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 17:46:28) [GET]
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (20.0ms)
+Completed in 290ms (View: 169, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 17:47:55) [GET]
+  [4;35;1mUser Load (4.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 147ms (View: 20, DB: 4) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 17:47:57) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+
+NameError (uninitialized constant OfflineFinder::PatternsAnalysis):
+  lib/pbuilder/offline_finder.rb:5:in `initialize'
+  app/controllers/patterns_builder_controller.rb:29:in `new'
+  app/controllers/patterns_builder_controller.rb:29:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 17:49:55) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (7.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 192ms (View: 43, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 17:49:56) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+
+NameError (uninitialized constant OfflineFinder::PatternsAnalysis):
+  lib/pbuilder/offline_finder.rb:5:in `initialize'
+  app/controllers/patterns_builder_controller.rb:30:in `new'
+  app/controllers/patterns_builder_controller.rb:30:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 17:52:06) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 106ms (View: 64, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 17:52:07) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+
+NameError (uninitialized constant OfflineFinder::PatternsAnalysis):
+  lib/pbuilder/offline_finder.rb:5:in `initialize'
+  app/controllers/patterns_builder_controller.rb:29:in `new'
+  app/controllers/patterns_builder_controller.rb:29:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 17:52:27) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 93ms (View: 60, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 17:52:29) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+
+NameError (uninitialized constant OfflineFinder::PatternsAnalysis):
+  lib/pbuilder/offline_finder.rb:5:in `initialize'
+  app/controllers/patterns_builder_controller.rb:29:in `new'
+  app/controllers/patterns_builder_controller.rb:29:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (91.0ms)
+Rendered rescues/_request_and_response (12.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 17:56:09) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 103ms (View: 63, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 17:56:09) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 73ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 17:56:10) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (224.0ms)
+Completed in 453ms (View: 260, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-08 18:02:42) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 126ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-08 18:02:43) [POST]
+  Parameters: {"authenticity_token"=>"VMX6Zbw8BOZ1wRbZAxTErX/gv4t10YZFCYW1L2RarRI="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (11.0ms)
+Completed in 257ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 11:43:46) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 163ms (DB: 3) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-09 11:43:47) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (12.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 146ms (View: 131, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-09 11:43:53) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (12.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/patterns_builder
+Completed in 125ms (DB: 13) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 11:43:53) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 146ms (View: 91, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 11:43:55) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (153.0ms)
+Completed in 821ms (View: 188, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 11:51:21) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 359ms (View: 33, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 11:51:23) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (17.0ms)
+Completed in 237ms (View: 31, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-09 11:51:54) [GET]
+
+MissingSourceFile (no such file to load -- adapter):
+  app/controllers/patterns_builder_controller.rb:8
+  app/controllers/patterns_builder_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (182.0ms)
+Rendered rescues/_request_and_response (19.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 11:52:13) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 93ms (View: 58, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 11:52:15) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (25.0ms)
+Completed in 191ms (View: 47, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 11:55:44) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 170ms (View: 61, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 11:55:46) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (52.0ms)
+Completed in 188ms (View: 73, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 12:00:34) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 68ms (View: 33, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 12:00:35) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (9.0ms)
+Completed in 150ms (View: 36, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 12:05:19) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 353ms (View: 54, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 12:05:21) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (23.0ms)
+Completed in 198ms (View: 47, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-09 12:08:23) [GET]
+
+MissingSourceFile (no such file to load -- pbuilder):
+  app/controllers/patterns_builder_controller.rb:8
+  app/controllers/patterns_builder_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-09 12:19:11) [GET]
+
+MissingSourceFile (no such file to load -- pbuilder):
+  app/controllers/patterns_builder_controller.rb:8
+  app/controllers/patterns_builder_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 12:19:23) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 510ms (View: 27, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 12:19:26) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (7.0ms)
+Completed in 168ms (View: 22, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:34:07) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NameError (undefined local variable or method `sessio' for #<PatternsBuilderController:0xcd4674>):
+  app/controllers/patterns_builder_controller.rb:18:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:34:16) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 54ms (View: 16, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:34:38) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+TypeError (can't convert Fixnum into String):
+  app/controllers/patterns_builder_controller.rb:18:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (73.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:34:50) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 63ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 14:34:51) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (7.0ms)
+Completed in 147ms (View: 46, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:34:54) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 80ms (View: 44, DB: 4) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:48:17) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 136ms (View: 22, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 14:48:19) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+ArgumentError (wrong # of arguments(3 for 2)):
+  app/controllers/patterns_builder_controller.rb:24:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:49:35) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 102ms (View: 31, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 14:49:36) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+ArgumentError (wrong # of arguments(3 for 2)):
+  app/controllers/patterns_builder_controller.rb:24:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:49:38) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 70ms (View: 34, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 14:49:39) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+ArgumentError (wrong # of arguments(3 for 2)):
+  app/controllers/patterns_builder_controller.rb:24:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (57.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:51:02) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 115ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 14:51:04) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+ArgumentError (wrong # of arguments(3 for 2)):
+  app/controllers/patterns_builder_controller.rb:24:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:54:12) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 486ms (View: 143, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 14:54:15) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NameError (uninitialized constant PatternsBuilderController::SearchEngine):
+  app/controllers/patterns_builder_controller.rb:28:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (190.0ms)
+Rendered rescues/_request_and_response (21.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:56:25) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 344ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 14:56:27) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+ArgumentError (wrong # of arguments(2 for 3)):
+  app/controllers/patterns_builder_controller.rb:24:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:57:11) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (6.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 94ms (View: 42, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 14:57:12) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+ArgumentError (wrong # of arguments(2 for 3)):
+  app/controllers/patterns_builder_controller.rb:24:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 14:59:58) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 191ms (View: 65, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:00:00) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+ArgumentError (wrong # of arguments(2 for 3)):
+  app/controllers/patterns_builder_controller.rb:23:in `initialize'
+  app/controllers/patterns_builder_controller.rb:23:in `new'
+  app/controllers/patterns_builder_controller.rb:23:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:02:26) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 637ms (View: 142, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:02:29) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NameError (uninitialized constant PatternsBuilderController::SearchEngine):
+  app/controllers/patterns_builder_controller.rb:26:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (185.0ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:02:44) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 139ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:02:46) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NameError (uninitialized constant PatternsBuilderController::SearchEngine):
+  app/controllers/patterns_builder_controller.rb:26:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:04:48) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 95ms (View: 43, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:04:49) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NameError (uninitialized constant PatternsBuilderController::SearchEngine):
+  app/controllers/patterns_builder_controller.rb:26:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:05:26) [GET]
+  [4;35;1mUser Load (21.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 515ms (View: 126, DB: 22) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:05:29) [GET]
+  [4;35;1mUser Load (4.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (6.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 81ms (View: 33, DB: 4) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:05:31) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NameError (uninitialized constant PatternsBuilderController::SearchEngine):
+  app/controllers/patterns_builder_controller.rb:26:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (189.0ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:07:06) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 433ms (View: 138, DB: 13) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:07:09) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NameError (uninitialized constant PatternsBuilderController::SearchEngine):
+  app/controllers/patterns_builder_controller.rb:26:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (217.0ms)
+Rendered rescues/_request_and_response (19.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:10:23) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 132ms (View: 17, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:10:25) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NameError (uninitialized constant PatternsBuilderController::SearchEngine):
+  app/controllers/patterns_builder_controller.rb:26:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:13:04) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 102ms (View: 40, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:13:06) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NameError (uninitialized constant PatternsBuilderController::SearchEngine):
+  app/controllers/patterns_builder_controller.rb:27:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:13:39) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 117ms (View: 57, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:13:41) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NameError (uninitialized constant PatternsBuilderController::SearchEngine):
+  app/controllers/patterns_builder_controller.rb:27:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (77.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:15:46) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 539ms (View: 145, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:15:50) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NameError (uninitialized constant PatternsBuilderController::SearchEngine):
+  app/controllers/patterns_builder_controller.rb:27:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (181.0ms)
+Rendered rescues/_request_and_response (23.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:18:01) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NameError (uninitialized constant PatternsBuilderController::Adapter):
+  app/controllers/patterns_builder_controller.rb:18:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (206.0ms)
+Rendered rescues/_request_and_response (19.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:19:57) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NameError (uninitialized constant PatternsBuilderController::Adapter):
+  app/controllers/patterns_builder_controller.rb:18:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (186.0ms)
+Rendered rescues/_request_and_response (17.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-09 15:20:29) [GET]
+
+MissingSourceFile (no such file to load -- pbuilder):
+  app/controllers/patterns_builder_controller.rb:8
+  app/controllers/patterns_builder_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (85.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-09 15:22:48) [GET]
+
+MissingSourceFile (no such file to load -- adapter):
+  app/controllers/patterns_builder_controller.rb:8
+  app/controllers/patterns_builder_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:22:59) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NameError (uninitialized constant PatternsBuilderController::Adapter):
+  app/controllers/patterns_builder_controller.rb:18:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:23:29) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NameError (uninitialized constant PatternsBuilderController::Adapter):
+  app/controllers/patterns_builder_controller.rb:18:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (10.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:23:31) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NameError (uninitialized constant PatternsBuilderController::Adapter):
+  app/controllers/patterns_builder_controller.rb:18:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (67.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:23:51) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (6.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 197ms (View: 150, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:24:25) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 341ms (View: 15, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:24:27) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (202.0ms)
+Completed in 832ms (View: 235, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:25:48) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 64ms (View: 28, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:25:49) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+ArgumentError (wrong # of arguments(3 for 2)):
+  app/controllers/patterns_builder_controller.rb:29:in `initialize'
+  app/controllers/patterns_builder_controller.rb:29:in `new'
+  app/controllers/patterns_builder_controller.rb:29:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:26:21) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 91ms (View: 51, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:26:22) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+ArgumentError (wrong # of arguments(3 for 2)):
+  app/controllers/patterns_builder_controller.rb:29:in `initialize'
+  app/controllers/patterns_builder_controller.rb:29:in `new'
+  app/controllers/patterns_builder_controller.rb:29:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (9.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:27:18) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 483ms (View: 146, DB: 13) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:27:22) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (212.0ms)
+Completed in 867ms (View: 264, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:28:34) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 167ms (View: 27, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:28:35) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (20.0ms)
+Completed in 269ms (View: 39, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:43:03) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 364ms (View: 20, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:43:05) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (26.0ms)
+Completed in 204ms (View: 41, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:54:38) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 165ms (View: 50, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:54:40) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (56.0ms)
+Completed in 199ms (View: 71, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:55:18) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (8.0ms)
+Completed in 452ms (View: 139, DB: 13) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:55:20) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NoMethodError (undefined method `to_str' for nil:NilClass):
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:1389:in `fu_list'
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:1389:in `map'
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:1389:in `fu_list'
+  /opt/local/share/java/jruby/lib/ruby/1.8/fileutils.rb:167:in `mkdir'
+  lib/pbuilder/adapter.rb:24:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (201.0ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 15:56:26) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 451ms (View: 142, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 15:56:28) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (211.0ms)
+Completed in 873ms (View: 264, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:00:43) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NoMethodError (undefined method `personal_persistence_dir' for Pbuilder::Adapter:Class):
+  lib/pbuilder/adapter.rb:36:in `purge'
+  app/controllers/patterns_builder_controller.rb:18:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (186.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:03:25) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (8.0ms)
+Completed in 524ms (View: 140, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 16:03:37) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NoMethodError (undefined method `personal_persistence_dir' for #<Pbuilder::Adapter:0x3a6ecc>):
+  lib/pbuilder/adapter.rb:23:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (199.0ms)
+Rendered rescues/_request_and_response (17.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:05:15) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 358ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:05:48) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 971ms (View: 150, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 16:05:51) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NoMethodError (undefined method `personal_persistence_dir' for #<Pbuilder::Adapter:0x78fac9>):
+  lib/pbuilder/adapter.rb:23:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (197.0ms)
+Rendered rescues/_request_and_response (17.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:07:29) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 532ms (View: 140, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 16:07:32) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (217.0ms)
+Completed in 871ms (View: 270, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:07:44) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 83ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:08:14) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 723ms (View: 139, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 16:08:17) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NoMethodError (undefined method `personal_persistence_dir' for #<Pbuilder::Adapter:0x547ac9>):
+  lib/pbuilder/adapter.rb:23:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (208.0ms)
+Rendered rescues/_request_and_response (26.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:12:26) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NoMethodError (undefined method `personal_persistence_dir' for Pbuilder::Adapter:Class):
+  lib/pbuilder/adapter.rb:36:in `purge'
+  app/controllers/patterns_builder_controller.rb:18:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (188.0ms)
+Rendered rescues/_request_and_response (17.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:16:58) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (8.0ms)
+Completed in 442ms (View: 137, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:22:00) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 450ms (View: 142, DB: 11) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 16:22:02) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+
+NoMethodError (undefined method `personal_persistence_dir' for #<Pbuilder::Adapter:0x6fdcaf>):
+  lib/pbuilder/adapter.rb:23:in `initialize'
+  app/controllers/patterns_builder_controller.rb:24:in `new'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (213.0ms)
+Rendered rescues/_request_and_response (25.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:23:21) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 724ms (View: 144, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:23:22) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 64ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:23:26) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 68ms (View: 29, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 16:23:29) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (201.0ms)
+Completed in 886ms (View: 238, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-09 16:53:54) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 1098ms (View: 146, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-09 16:53:58) [POST]
+  Parameters: {"authenticity_token"=>"qDv+rwEX1VQXSW5ZIhOVNntRWvuC43Ah9BoWxZDYok4="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (212.0ms)
+Completed in 998ms (View: 267, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]

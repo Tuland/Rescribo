@@ -9,7 +9,7 @@ class UploaderController < ApplicationController
   
   def save_onto
     begin
-      post = OntoUploaded.save(params[:upload])
+      post = UploadedOnto.save(params[:upload])
     rescue
       flash[:notice] = "Something went wrong"
     else
@@ -24,7 +24,7 @@ class UploaderController < ApplicationController
   
   def save_aeria
     begin
-      post = AeriaUploaded.save(params[:upload])
+      post = UploadedAeria.save(params[:upload])
     rescue
       flash[:notice] = "Something went wrong"
     else

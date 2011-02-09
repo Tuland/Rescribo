@@ -9,9 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101125111013) do
+ActiveRecord::Schema.define(:version => 20110208152353) do
+
+  create_table "adapters", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "data_files", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "offline_finders", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -20,6 +30,31 @@ ActiveRecord::Schema.define(:version => 20101125111013) do
     t.text     "url"
     t.text     "base"
     t.binary   "model"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "patterns_analyses", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "patterns_storages", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "search_engines", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "uploaded_aerias", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "uploaded_ontos", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

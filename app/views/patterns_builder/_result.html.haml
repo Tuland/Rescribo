@@ -20,7 +20,7 @@
         %th= "URI"
         %th= "Type"
     %tbody
-      - @analysis.properties_list.each do |p_name, p_type|
+      - @finder.analysis.properties_list.each do |p_name, p_type|
         %tr
           %td= h p_name
           %td{:class => "#{h p_type}_edge"}= h p_type
@@ -28,7 +28,7 @@
   %h3="Patterns"
   
   - i = 0
-  - @patterns.list.each do |pattern|
+  - @finder.patterns.list.each do |pattern|
     - i = i.next
     %table{:summary => "Pattern identified: #{i}"}
       %caption="Pattern #{i}"

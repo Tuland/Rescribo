@@ -4,11 +4,6 @@ class AdminControllerTest < ActionController::TestCase
   
   fixtures :users
   
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
-  
   if false
     test "index" do
       get :index

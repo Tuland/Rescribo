@@ -1,5 +1,5 @@
-class OntoUploaded < ActiveRecord::Base
-  NAME = "onto.owl"
+class UploadedAeria < ActiveRecord::Base
+  NAME = "aeria_summary.owl"
   PUBLIC_DIRECTORY = "onto"
   
   PUBLIC_ADDRESS = PUBLIC_DIRECTORY + "/" + NAME

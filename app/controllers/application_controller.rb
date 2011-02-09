@@ -8,14 +8,14 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+    
+  ONTO_PATH = UploadedOnto::PUBLIC_ADDRESS
+  AERIA_PATH =  UploadedAeria::PUBLIC_ADDRESS
   
-  PERSISTENCE_DIR = "jena_persistence"
-  
+  # Persistence file related to the user ontology
   PERSISTENT_ONTO = "onto"
+  # Persistence file related to the AERIA ontology
   PERSISTENT_AERIA = "aeria"
-  
-  ONTO_PATH = OntoUploaded::PUBLIC_ADDRESS
-  AERIA_PATH =  AeriaUploaded::PUBLIC_ADDRESS
   
   def path_to_url(path)
     "http://#{request.host_with_port}/#{path.sub(%r[^/],'')}"
