@@ -6,8 +6,10 @@ module Pbuilder
     
     THIS_PATH = File.dirname(File.expand_path(__FILE__)) + "/"
     IDENTIFIER = 1234
-    ONTO_NAME = "minimal_sample.owl"
-    URL = Adapter.local_url(THIS_PATH, ONTO_NAME)
+    ONTO_NAME = {
+      :minimal => "minimal_sample.owl"
+    }.freeze
+    URL = Adapter.local_url(THIS_PATH, ONTO_NAME[:minimal])
     ADAPTER_NAME = "name"
     FILE_PATH = Adapter.personal_persistence_file(ADAPTER_NAME,
                                                   IDENTIFIER,

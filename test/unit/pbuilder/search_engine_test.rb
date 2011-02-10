@@ -28,18 +28,10 @@ module Pbuilder
     ABSTRACT_CONCEPT_RES = RDFS::Resource.new(ABSTRACT_CONCEPT_STR)
     CORE_CONCEPT_STR = "http://www.siti.disco.unimib.it/prova#E1.Concept_A_Core"
     CORE_CONCEPT_RES = RDFS::Resource.new(CORE_CONCEPT_STR)
-    # Properties
-    PROPERTY_P_STR = "http://www.siti.disco.unimib.it/prova#P1.property_p"
-    PROPERTY_P_RES = RDFS::Resource.new(PROPERTY_P_STR)
-    PROPERTY_Q_STR = "http://www.siti.disco.unimib.it/prova#P2.property_q"
-    PROPERTY_Q_RES = RDFS::Resource.new(PROPERTY_Q_STR)
-    PROPERTY_R_STR = "http://www.siti.disco.unimib.it/prova#P3.property_r"
-    PROPERTY_R_RES = RDFS::Resource.new(PROPERTY_R_STR)
-    #Concepts
-    CONCEPT_B_STR = "http://www.siti.disco.unimib.it/prova#E2.Concept_B"
-    CONCEPT_B_RES = RDFS::Resource.new(CONCEPT_B_STR)
-    CONCEPT_C_STR = "http://www.siti.disco.unimib.it/prova#E3.Concept_C"
-    CONCEPT_C_RES = RDFS::Resource.new(CONCEPT_C_STR)
+    # Const associated with properties: PROPERTY_#{letter}_STR and PROPERTY_#{letter}_RES
+    Phelper.set_properties_const_for_test(self, "p", "r")
+    # Const associated with concepts: CONCEPT_#{letter}_STR and CONCEPT_#{letter}_RES
+    Phelper.set_concepts_const_for_test(self, "b", "c")
                 
     def setup
       Adapter.purge(IDENTIFIER,
@@ -104,7 +96,6 @@ module Pbuilder
       assert_equal(edge, correct_edge)
     end
 
-   
     test "find_neighbours" do
       @adapter = default_adapter(ONTO_NAME[:s_i_r_edges])
       abstract_concept, core_concept = SearchEngine.find_root_concepts
@@ -125,12 +116,12 @@ module Pbuilder
       condition = Proc.new { true }
     end
     
-    def minimal_update_system(statement)
+    def minimal_update_system(edge)
       update_system = Proc.new do | curr_concept, 
                                     curr_property, 
                                     curr_property_type |
-        statement.push( curr_property,
-                        curr_concept )
+        edge.push(curr_property,
+                  curr_concept )
       end
     end
     
@@ -140,7 +131,6 @@ module Pbuilder
                   ADAPTER_NAME,
                   THIS_PATH)
     end
-    
   end
   
 end
