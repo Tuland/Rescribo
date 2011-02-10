@@ -77,9 +77,9 @@ module Pbuilder
                         curr_property,
                         curr_concept)
       end
-      # Reflection: it perform the finders into to the +finders_list+
+      # Reflection: it performs the finders included in the +finders_list+
       finders_list.each do |finder|
-        count = eval "#{finder}(concept, condition, update_system)"  
+        count = self.send finder, concept, condition, update_system  
       end
     end
   

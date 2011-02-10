@@ -6,16 +6,13 @@ module Pbuilder
     
     THIS_PATH = File.dirname(File.expand_path(__FILE__)) + "/"
     IDENTIFIER = 1234
-    ONTO_NAME = "test.owl"
-    URL = "file://" +
-          THIS_PATH +
-          ONTO_NAME
+    ONTO_NAME = "minimal_sample.owl"
+    URL = Adapter.local_url(THIS_PATH, ONTO_NAME)
     ADAPTER_NAME = "name"
-    FILE_PATH = Adapter.personal_persistence_dir( IDENTIFIER,
-                                                  THIS_PATH) +
-                "/" +
-                ADAPTER_NAME
-    
+    FILE_PATH = Adapter.personal_persistence_file(ADAPTER_NAME,
+                                                  IDENTIFIER,
+                                                  THIS_PATH)
+                                                  
     def setup
       Adapter.purge(IDENTIFIER,
                     THIS_PATH)

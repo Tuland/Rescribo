@@ -40,6 +40,18 @@ module Pbuilder
     def self.personal_persistence_dir(identifier, path = "")
       path + PERSISTENCE_DIR + "_" + identifier.to_s
     end
+    
+    def self.personal_persistence_file( adapter_name, 
+                                        identifier, 
+                                        path = "" )
+      dir = self.personal_persistence_dir(identifier, path)
+      file = dir.add_slash + adapter_name
+      file
+    end
+    
+    def self.local_url(path, onto_name)
+      "file://" + path.add_slash + onto_name
+    end
   
     private
   
@@ -61,6 +73,16 @@ module Pbuilder
       Namespace.register :aeria, AERIA
       ObjectManager.construct_classes
     end
+  end
   
+end
+
+class String
+  def add_slash
+    str = self
+    if str[-1..-1] != "/"
+      str = str + "/"
+    end
+    str
   end
 end

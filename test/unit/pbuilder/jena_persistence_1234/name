@@ -11,12 +11,6 @@
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.siti.disco.unimib.it/prova#E3.Concept_C">
-    <summ:P5.property_t rdf:resource="http://www.siti.disco.unimib.it/prova#E5.Concept_E"/>
-    <summ:P6.property_u rdf:resource="http://www.siti.disco.unimib.it/prova#E3.Concept_C"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/prova#P4.property_s">
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -36,11 +30,6 @@
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/aeria#a-generalize">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.siti.disco.unimib.it/prova#E4.Concept_D">
-    <summ:P3.property_r rdf:resource="http://www.siti.disco.unimib.it/prova#E2.Concept_B"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/prova#P2.property_q">
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -50,13 +39,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/prova#E2.Concept_B">
-    <summ:P4.property_s rdf:resource="http://www.siti.disco.unimib.it/prova#E5.Concept_E"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.siti.disco.unimib.it/prova#E5.Concept_E">
-    <summ:P8.property_z rdf:resource="http://www.siti.disco.unimib.it/prova#E5.Concept_E"/>
-    <summ:P7.property_v rdf:resource="http://www.siti.disco.unimib.it/prova#E3.Concept_C"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
@@ -64,7 +46,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/prova#E1.Concept_A_Core">
-    <summ:P2.property_q rdf:resource="http://www.siti.disco.unimib.it/prova#E3.Concept_C"/>
     <summ:P1.property_p rdf:resource="http://www.siti.disco.unimib.it/prova#E2.Concept_B"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -75,18 +56,15 @@
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/aeria#a-forget">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/aeria#generalize">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/prova#A1.AbstractConcept">
-    <aeria:a-forget rdf:resource="http://www.siti.disco.unimib.it/prova#E5.Concept_E"/>
-    <aeria:a-forget rdf:resource="http://www.siti.disco.unimib.it/prova#E4.Concept_D"/>
-    <aeria:a-forget rdf:resource="http://www.siti.disco.unimib.it/prova#E3.Concept_C"/>
     <aeria:a-forget rdf:resource="http://www.siti.disco.unimib.it/prova#E2.Concept_B"/>
     <aeria:a-forget rdf:resource="http://www.siti.disco.unimib.it/prova#E1.Concept_A_Core"/>
     <aeria:a-generalize rdf:resource="http://www.siti.disco.unimib.it/prova#E1.Concept_A_Core"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/aeria#generalize">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/prova#P3.property_r">
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
