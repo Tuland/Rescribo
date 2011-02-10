@@ -9,11 +9,8 @@ module Pbuilder
       :semi_cycle => "semi_cycle_sample.owl",
     }.freeze
     ADAPTER_NAME = "name"
-    # Root concepts                                              
-    ABSTRACT_CONCEPT_STR = "http://www.siti.disco.unimib.it/prova#A1.AbstractConcept"
-    ABSTRACT_CONCEPT_RES = RDFS::Resource.new(ABSTRACT_CONCEPT_STR)
-    CORE_CONCEPT_STR = "http://www.siti.disco.unimib.it/prova#E1.Concept_A_Core"
-    CORE_CONCEPT_RES = RDFS::Resource.new(CORE_CONCEPT_STR)
+    # Root concepts: ABSTRACT_CONCEPT_STR, ABSTRACT_CONCEPT_RES, CORE_CONCEPT_STR and CORE_CONCEPT_RES                                              
+    Phelper.set_rootc_const_for_test(self)
     # Const associated with properties: PROPERTY_#{letter}_STR and PROPERTY_#{letter}_RES
     Phelper.set_properties_const_for_test(self, "p", "w")
     # Const associated with concepts: CONCEPT_#{letter}_STR and CONCEPT_#{letter}_RES
