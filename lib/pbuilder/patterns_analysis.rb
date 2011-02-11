@@ -5,9 +5,15 @@ module Pbuilder
   
     DEFAULT_PROPERTY_TYPE = SearchEngine::PROPERTY_TYPES[:simple]
   
-    # Lists that store concepts and properties visited 
+    # * +concept_list+ - List to store concept
+    # * +properties_list - List to store properties
     attr_reader :concepts_list, :properties_list
-  
+    
+    # Init
+    #  
+    # ==== Attributes  
+    #  
+    # * +init_concept+ - an initial concept to include
     def initialize(init_concept=nil)
       if init_concept.nil?
         @concepts_list, @properties_list = Array.new, Hash.new
@@ -50,6 +56,7 @@ module Pbuilder
     def shift_concepts
       @concepts_list.shift
     end
+    
   end
   
 end

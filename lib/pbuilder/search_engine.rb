@@ -56,10 +56,10 @@ module Pbuilder
     # B --p--> A
     # p is inverse, focusing A
     # Into the pattern: A --p_i--> B
-    def self.find_neighbours(concept, 
-                        analysis,
-                        patterns, 
-                        finders_list = DEFAULT_FINDERS )
+    def self.find_neighbours( concept, 
+                              analysis,
+                              patterns, 
+                              finders_list = DEFAULT_FINDERS )
       patterns.empty_cache
       # Token bound: property count < 1
       condition = Proc.new do |curr_property|
@@ -148,9 +148,9 @@ module Pbuilder
     # * +concept+ - A concept to focus on
     # * +condition+ - A futher condition to apply into the algorithm
     # * +update_system+ - A block determining the system updating
-    def self.find_simple_edge( concept,
-                          condition,
-                          update_system)
+    def self.find_simple_edge(concept,
+                              condition,
+                              update_system)
       query = Query.new.distinct(:o, :p).where(concept, :p , :o)
       query.execute do |concept_o, property|
         if (property != RDF::type &&

@@ -1,9 +1,16 @@
 module Pbuilder
   
   class PatternsStorage
-  
+    
+    # * +list+ - List to storage patterns
+    # * +cache+ - Support list
     attr_reader :list, :cache
-  
+    
+    # Init
+    #  
+    # ==== Attributes  
+    #  
+    # * +init_concept+ - An initial concept to include
     def initialize(init_concept=nil)
       if init_concept.nil?
         @list = Array.new
@@ -12,7 +19,8 @@ module Pbuilder
       end
       @cache = Array.new
     end
-  
+    
+    # Reset the cache. Stop to mantain the last patterns in memory
     def empty_cache
       @cache = Array.new
     end
@@ -72,5 +80,7 @@ module Pbuilder
       end
       puts "\n"
     end
+    
   end
+  
 end

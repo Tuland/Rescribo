@@ -1,13 +1,22 @@
 module Pbuilder
   
   class OfflineFinder
+    
+    # +analysis+ - structure of analysis involved by the searching algorithm
+    # +patterns - patterns storage
     attr_reader :analysis, :patterns
-  
+    
+    # Init
+    #  
+    # ==== Attributes  
+    #  
+    # * +core_concept+ - A core concept representing the root of subgraph
     def initialize(core_concept)
       @analysis = PatternsAnalysis.new(core_concept)
       @patterns = PatternsStorage.new(core_concept)
     end
-  
+    
+    # Start research
     def start
       step_count = 0
       # @patterns_analysis.puts_report(step_count)
@@ -21,6 +30,7 @@ module Pbuilder
         @analysis.shift_concepts
       end
     end
+    
   end
   
 end
