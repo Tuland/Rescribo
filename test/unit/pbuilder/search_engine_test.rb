@@ -24,11 +24,11 @@ module Pbuilder
                                                   IDENTIFIER,
                                                   THIS_PATH)
     # Root concepts: ABSTRACT_CONCEPT_STR, ABSTRACT_CONCEPT_RES, CORE_CONCEPT_STR and CORE_CONCEPT_RES                                              
-    Phelper.set_rootc_const_for_test(self)
+    TestPHelper.set_rootc_const_for_test(self)
     # Const associated with properties: PROPERTY_#{letter}_STR and PROPERTY_#{letter}_RES
-    Phelper.set_properties_const_for_test(self, "p", "r")
+    TestPHelper.set_properties_const_for_test(self, "p", "r")
     # Const associated with concepts: CONCEPT_#{letter}_STR and CONCEPT_#{letter}_RES
-    Phelper.set_concepts_const_for_test(self, "b", "c")
+    TestPHelper.set_concepts_const_for_test(self, "b", "c")
                 
     def setup
       Adapter.purge(IDENTIFIER,
@@ -101,9 +101,9 @@ module Pbuilder
       SearchEngine.find_neighbours( core_concept, 
                                     analysis,
                                     patterns )
-      correct_patterns = [[CORE_CONCEPT_RES, PROPERTY_P_RES, CONCEPT_B_RES],
-                          [CORE_CONCEPT_RES, PROPERTY_Q_RES, CONCEPT_C_RES],
-                          [CORE_CONCEPT_RES, PROPERTY_R_RES, CORE_CONCEPT_RES]]
+      correct_patterns = [[CORE_CONCEPT_STR, PROPERTY_P_STR, CONCEPT_B_STR],
+                          [CORE_CONCEPT_STR, PROPERTY_Q_STR, CONCEPT_C_STR],
+                          [CORE_CONCEPT_STR, PROPERTY_R_STR, CORE_CONCEPT_STR]]
       assert_equal(patterns.list, correct_patterns)
     end
 

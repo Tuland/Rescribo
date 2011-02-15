@@ -16,8 +16,14 @@ module Pbuilder
       @patterns = PatternsStorage.new(core_concept)
     end
     
-    # Start research
-    def start
+    # Start search
+    #  
+    # ==== Attributes  
+    #  
+    # * +identifier+ - A personal identifier
+    # * +patterns_file+ - A string determing the name of the patterns file
+    # * +analysis_file+ - A string determing the name of the analysis file
+    def start(identifier=nil, patterns_file=nil, analysis_file=nil)
       step_count = 0
       # @patterns_analysis.puts_report(step_count)
       while ! @analysis.concepts_list.empty?
@@ -29,6 +35,9 @@ module Pbuilder
         # @patterns_list.puts_patterns(step_count)
         @analysis.shift_concepts
       end
+      reports_hash = {patterns_file => @patterns.list,
+                      analysis_file => @analysis }
+      YamlWriter.store_reports(reports_hash, identifier)
     end
     
   end

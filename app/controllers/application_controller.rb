@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
   # Persistence file related to the AERIA ontology
   PERSISTENT_AERIA = "aeria"
   
+  REPORT_DIR = "report/"
+  ANALYSIS_FILE = REPORT_DIR + "analysis"
+  PATTERNS_FILE = REPORT_DIR + "patterns"
+  
   def path_to_url(path)
     "http://#{request.host_with_port}/#{path.sub(%r[^/],'')}"
   end
@@ -30,7 +34,6 @@ class ApplicationController < ActionController::Base
       redirect_to :controller => 'admin', :action => 'login' 
     end 
   end 
-
-  
+ 
 end
 

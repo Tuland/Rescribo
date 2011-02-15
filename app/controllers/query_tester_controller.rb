@@ -5,7 +5,7 @@ print "This sample needs activerdf and activerdf_jena.\n"
 end
 require 'fileutils'
 
-
+require 'pbuilder/adapter'
 
 include_class 'java.io.ByteArrayOutputStream'
 
@@ -20,27 +20,17 @@ class QueryTesterController < ApplicationController
   layout 'main', :except => [ :load, :search, :edit ]
   
   def index
-    FileUtils.rm_rf(PERSISTENCE_DIR + session[:user_id].to_s)
-    
-    puts path_to_url(ONTO_PATH)
-    
+    Pbuilder::Adapter.purge(session[:user_id])
   end
 
   def load
-    # http://github.com/net7/ActiveRDF/blob/master/activerdf-jena/test/test_jena_adapter.rb
-    FileUtils.mkdir(PERSISTENCE_DIR + session[:user_id].to_s)
-    adapter = ConnectionPool.add_data_source( :type => :jena, 
-                                              :model => PERSISTENT_ONTO,
-                                              :file => PERSISTENCE_DIR + session[:user_id].to_s )
-    adapter.load( path_to_url(ONTO_PATH), 
-                  :format => :rdfxml, 
-                  :into => :default_model )
+    adapter = Pbuilder::Adapter.new(session[:user_id],
+                                    path_to_url(ONTO_PATH),
+                                    PERSISTENT_ONTO)
     @prefix_map = adapter.model.getNsPrefixMap
-    
     adapter.close
-    
-    @base_str = "base " + BASE
     @url_str = "URL: " + path_to_url(ONTO_PATH)
+    @base_str = "base " + BASE
   end
   
   def edit
@@ -49,10 +39,8 @@ class QueryTesterController < ApplicationController
     @e_editorId = params[:editorId]
     @e_old_prefix = params[:old_prefix]
     
-    adapter = ConnectionPool.add_data_source( :type => :jena, 
-                                              :model => PERSISTENT_ONTO,
-                                              :file => PERSISTENCE_DIR  + session[:user_id].to_s)
-                  
+    adapter = Pbuilder::Adapter.get_connection( PERSISTENT_ONTO, 
+                                                session[:user_id].to_s)
     if @e_old_prefix == UNDEFINED_PREFIX
       adapter.model.removeNsPrefix("")
     else
@@ -65,9 +53,8 @@ class QueryTesterController < ApplicationController
   end
 
   def search
-    adapter = ConnectionPool.add_data_source( :type => :jena, 
-                                              :model => PERSISTENT_ONTO,
-                                              :file => PERSISTENCE_DIR + session[:user_id].to_s)
+    adapter = Pbuilder::Adapter.get_connection( PERSISTENT_ONTO, 
+                                                session[:user_id].to_s)
     adapter.model.removeNsPrefix("")
     prefixes_map = adapter.model.getNsPrefixMap
     

@@ -5,7 +5,7 @@ h1, h2 {
   margin-bottom: 0.7em; }
 
 h3 {
-  margin-top: 1.5em; }
+  margin-top: 0.5em; }
 
 .notice {
   border: 2px solid red;
@@ -23,6 +23,16 @@ div.links_list {
     padding: 2px 1em;
     border: 1px dotted grey; }
 
+h3.menu {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #efefef;
+  padding: 10px; }
+
 /* Tables */
 th {
   font-family: Helvetica, Arial, sans-serif; }
@@ -37,8 +47,14 @@ td {
   background-color: #CCCCFF; }
 
 .part {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
   margin-top: 20px;
-  border: 2px dotted #E8E8E8;
+  border: 2px dotted #bfbfbf;
   padding: 5px; }
 
 /*  */
@@ -47,15 +63,13 @@ td {
   background-color: #FFFF66;
   margin-top: 10px; }
 
-#onto_loader {
-  padding: 1em; }
-
 #progress_indicator {
   float: right; }
 
 #onto_loader {
-  border: 2px dotted #E8E8E8;
-  margin-bottom: 2em; }
+  border: 2px dotted #bfbfbf;
+  margin-bottom: 2em;
+  padding: 1em; }
 
 /* Form */
 #form .part label {
@@ -104,6 +118,9 @@ table {
   #errorExplanation ul li {
     font-size: 12px;
     list-style: square; }
+
+#result, #query_interface {
+  margin-top: 2em; }
 
 .s_edge {
   background-color: #90EE90; }

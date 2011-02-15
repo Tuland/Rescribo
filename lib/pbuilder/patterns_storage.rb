@@ -15,7 +15,7 @@ module Pbuilder
       if init_concept.nil?
         @list = Array.new
       else
-        @list = Array[Array[init_concept]]
+        @list = Array[Array[init_concept.to_s]]
       end
       @cache = Array.new
     end
@@ -38,24 +38,24 @@ module Pbuilder
       size = @list.size
       # empty list => initialization with prev_concept
       if size == 0
-        @list << [prev_concept]
+        @list << [prev_concept.to_s]
         size = size.next
       end
       # approach without cache support => build cache
       if @cache.empty?
         for i in 0...size
-          if @list[i].last == prev_concept
+          if @list[i].last == prev_concept.to_s
             @cache << @list[i].clone
-            @list[i] << property
-            @list[i] << next_concept
+            @list[i] << property.to_s
+            @list[i] << next_concept.to_s
           end
         end
       # approach with cache support
       else
         @cache.each do |pattern_c|
           pattern_temp = pattern_c.clone
-          pattern_temp << property
-          pattern_temp << next_concept 
+          pattern_temp << property.to_s
+          pattern_temp << next_concept.to_s 
           @list << pattern_temp  
         end 
       end

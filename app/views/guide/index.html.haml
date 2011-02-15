@@ -1,20 +1,39 @@
 %div.part
-  %p= link_to 'Patterns builder', :controller => "patterns_builder", :action => "index"
+  %h3{:class => :menu}= link_to 'Approximator', :controller => "approximator", :action => "index"
+  %p
+    = "A sample of approximation"
+    %ul
+      %li
+        = "Use"
+        = link_to 'this uploader', :controller => "uploader", :action => "upload_aeria"
+        = "to select your AERIA summary."
+    %ul
+      %li
+        = "Use"
+        = link_to 'this uploader', :controller => "uploader", :action => "upload_onto"
+        = "to select your ontology."
+
+%div.part
+  %h3{:class => :menu}= link_to 'Patterns builder', :controller => "patterns_builder", :action => "index"
   %p
     = "An offline patterns builder."
-    = "Use"
-    = link_to 'this uploader', :controller => "uploader", :action => "upload_aeria"
-    = "to select your AERIA summary."
+    %ul
+      %li
+        = "Use"
+        = link_to 'this uploader', :controller => "uploader", :action => "upload_aeria"
+        = "to select your AERIA summary."
   
   
 
 %div.part
-  %p= link_to 'Query tester', :controller => "query_tester", :action => "index"
+  %h3{:class => :menu}= link_to 'Query tester', :controller => "query_tester", :action => "index"
   %p
     = "A tool that queries ontologies using SPARQL."
-    = "Use"
-    = link_to 'this uploader', :controller => "uploader", :action => "upload_onto"
-    = "to select your ontology."
+    %ul
+      %li
+        = "Use"
+        = link_to 'this uploader', :controller => "uploader", :action => "upload_onto"
+        = "to select your ontology."
   
 %div.links_list
   = link_to 'Logout', :controller => "admin", :action => "logout"

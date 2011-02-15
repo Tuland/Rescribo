@@ -1,5 +1,8 @@
 /* Global styles */ 
 
+$grey: #BFBFBF;
+$soft_grey: #EFEFEF;
+
 h1, h2 {
   font-family: Helvetica, Arial, sans-serif;
   letter-spacing: 7px;
@@ -7,7 +10,7 @@ h1, h2 {
 }
 
 h3 {
-  margin-top: 1.5em;
+  margin-top: 0.5em;
 }
 
 .notice { 
@@ -31,6 +34,17 @@ div.links_list{
  }
 }
 
+h3.menu {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+  background-color: $soft_grey;
+  padding: 10px;
+}
+
 /* Tables */
 th {
   font-family: Helvetica, Arial, sans-serif;
@@ -49,8 +63,14 @@ td{
 }
 
 .part {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
   margin-top: 20px;
-  border: 2px dotted #E8E8E8;
+  border: 2px dotted $grey;
   padding: 5px;
 }
 
@@ -62,17 +82,14 @@ td{
   margin-top: 10px;
 }
 
-#onto_loader {
-  padding: 1em
-}
-
 #progress_indicator {
   float:right;
 }
 
 #onto_loader {
-  border: 2px dotted #E8E8E8;
+  border: 2px dotted $grey;
   margin-bottom: 2em;
+  padding: 1em
 }
 
 /* Form */
@@ -153,6 +170,10 @@ table{
   }
 }
 
+#result, #query_interface {
+  margin-top: 2em;
+}
+
 .s_edge {
   background-color: #90EE90;
 }
@@ -164,3 +185,5 @@ table{
 .i_edge {
   background-color: #FFEC8B;
 }
+
+

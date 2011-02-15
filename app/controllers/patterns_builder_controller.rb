@@ -1,10 +1,3 @@
-begin
-require 'active_rdf'
-rescue Exception
-print "This sample needs activerdf and activerdf_jena.\n"
-end
-
-require 'fileutils'
 require 'pbuilder/adapter'
 require 'pbuilder/search_engine'
 require 'pbuilder/offline_finder'
@@ -16,11 +9,9 @@ class PatternsBuilderController < ApplicationController
   
   def index
     Pbuilder::Adapter.purge(session[:user_id])
-    puts path_to_url(AERIA_PATH)
   end
   
   def load
-    puts session[:user_id]
     adapter = Pbuilder::Adapter.new(session[:user_id],
                                     path_to_url(AERIA_PATH),
                                     PERSISTENT_AERIA)
@@ -28,7 +19,9 @@ class PatternsBuilderController < ApplicationController
     @abstract_concept, @core_concept = Pbuilder::SearchEngine.find_root_concepts
     
     @finder = Pbuilder::OfflineFinder.new(@core_concept)
-    @finder.start
+    @finder.start(session[:user_id],
+                  PATTERNS_FILE,
+                  ANALYSIS_FILE)
     
     adapter.close
   end

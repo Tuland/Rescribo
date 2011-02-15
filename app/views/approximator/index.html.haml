@@ -1,0 +1,20 @@
+- @header = "Approximator"
+
+%div#onto_loader
+  = link_to_remote("Load ontologies",
+                  :loading => "Element.show('progress_indicator')",
+                  :complete => "Element.hide('progress_indicator')",
+                  :url => { :action => :load })
+
+  
+  = image_tag("ajax-loader.gif",
+              :id => 'progress_indicator',
+              :style => 'display:none')
+            
+%p
+  %span#ontology_info= "Ontologies not loaded"
+
+%br  
+%div.links_list
+  = link_to 'Guide', :controller => "guide", :action => "index"
+  = link_to "Logout", :controller => "admin", :action => "logout"

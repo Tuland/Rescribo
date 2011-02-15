@@ -9,23 +9,33 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY aeria "http://www.siti.disco.unimib.it/cmm/2010/aeria#" >
     <!ENTITY erlangen-crm_090330_5_0_1 "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#" >
-    <!ENTITY summ "http://www.siti.disco.unimib.it/prova#" >
 ]>
 
 
-<rdf:RDF xmlns="http://www.siti.disco.unimib.it/prova#"
-     xml:base="http://www.siti.disco.unimib.it/prova"
+<rdf:RDF xmlns="http://www.siti.disco.unimib.it/cmm/2010/aeria_summary.owl#"
+     xml:base="http://www.siti.disco.unimib.it/cmm/2010/aeria_summary.owl"
      xmlns:erlangen-crm_090330_5_0_1="http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:summ="http://www.siti.disco.unimib.it/prova#"
      xmlns:aeria="http://www.siti.disco.unimib.it/cmm/2010/aeria#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="http://www.siti.disco.unimib.it/prova">
+    <owl:Ontology rdf:about="http://www.siti.disco.unimib.it/cmm/2010/aeria_summary.owl">
         <owl:imports rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     
 
 
@@ -37,70 +47,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#P1.property_p -->
-
-    <owl:ObjectProperty rdf:about="&summ;P1.property_p">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#P2.property_q -->
-
-    <owl:ObjectProperty rdf:about="&summ;P2.property_q">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#P3.property_r -->
-
-    <owl:ObjectProperty rdf:about="&summ;P3.property_r">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#P4.property_s -->
-
-    <owl:ObjectProperty rdf:about="&summ;P4.property_s">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#P5.property_t -->
-
-    <owl:ObjectProperty rdf:about="&summ;P5.property_t">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#P6.property_u -->
-
-    <owl:ObjectProperty rdf:about="&summ;P6.property_u">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#P7.property_v -->
-
-    <owl:ObjectProperty rdf:about="&summ;P7.property_v">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#P8.property_z -->
-
-    <owl:ObjectProperty rdf:about="&summ;P8.property_z">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
     
 
 
@@ -125,6 +71,30 @@
     <!-- http://www.siti.disco.unimib.it/cmm/2010/aeria#generalize -->
 
     <owl:ObjectProperty rdf:about="&aeria;generalize"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:ObjectProperty rdf:about="&rdfs;label">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P2.has_type -->
+
+    <owl:ObjectProperty rdf:about="&erlangen-crm_090330_5_0_1;P2.has_type">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P87.is_identified_by -->
+
+    <owl:ObjectProperty rdf:about="&erlangen-crm_090330_5_0_1;P87.is_identified_by">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
     
 
 
@@ -156,64 +126,62 @@
     
 
 
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#A1.AbstractConcept -->
+    <!-- http://www.w3.org/2000/01/rdf-schema#Litteral -->
 
-    <skos:Concept rdf:about="&summ;A1.AbstractConcept">
+    <skos:Concept rdf:about="&rdfs;Litteral">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <aeria:a-generalize rdf:resource="&summ;E1.Concept_A_Core"/>
-        <aeria:a-forget rdf:resource="&summ;E1.Concept_A_Core"/>
-        <aeria:a-forget rdf:resource="&summ;E2.Concept_B"/>
-        <aeria:a-forget rdf:resource="&summ;E3.Concept_C"/>
-        <aeria:a-forget rdf:resource="&summ;E4.Concept_D"/>
-        <aeria:a-forget rdf:resource="&summ;E5.Concept_E"/>
     </skos:Concept>
     
 
 
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#E1.Concept_A_Core -->
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A4.Location -->
 
-    <skos:Concept rdf:about="&summ;E1.Concept_A_Core">
+    <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;A4.Location">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <P1.property_p rdf:resource="&summ;E2.Concept_B"/>
-        <P2.property_q rdf:resource="&summ;E3.Concept_C"/>
+        <aeria:a-forget rdf:resource="&rdfs;Litteral"/>
+        <aeria:a-forget rdf:resource="&erlangen-crm_090330_5_0_1;E44.Place_Appellation"/>
+        <aeria:a-forget rdf:resource="&erlangen-crm_090330_5_0_1;E47.Spatial_Coordinates"/>
+        <aeria:a-forget rdf:resource="&erlangen-crm_090330_5_0_1;E53.Place"/>
+        <aeria:a-generalize rdf:resource="&erlangen-crm_090330_5_0_1;E53.Place"/>
+        <aeria:a-forget rdf:resource="&erlangen-crm_090330_5_0_1;E55.Type"/>
     </skos:Concept>
     
 
 
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#E2.Concept_B -->
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E44.Place_Appellation -->
 
-    <skos:Concept rdf:about="&summ;E2.Concept_B">
+    <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;E44.Place_Appellation">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <P4.property_s rdf:resource="&summ;E5.Concept_E"/>
+        <rdfs:label rdf:resource="&rdfs;Litteral"/>
     </skos:Concept>
     
 
 
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#E3.Concept_C -->
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E47.Spatial_Coordinates -->
 
-    <skos:Concept rdf:about="&summ;E3.Concept_C">
+    <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;E47.Spatial_Coordinates">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <P6.property_u rdf:resource="&summ;E3.Concept_C"/>
-        <P5.property_t rdf:resource="&summ;E5.Concept_E"/>
+        <rdfs:label rdf:resource="&rdfs;Litteral"/>
+        <aeria:generalize rdf:resource="&erlangen-crm_090330_5_0_1;E44.Place_Appellation"/>
+        <erlangen-crm_090330_5_0_1:P2.has_type rdf:resource="&erlangen-crm_090330_5_0_1;E55.Type"/>
     </skos:Concept>
     
 
 
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#E4.Concept_D -->
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place -->
 
-    <skos:Concept rdf:about="&summ;E4.Concept_D">
+    <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;E53.Place">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <P3.property_r rdf:resource="&summ;E2.Concept_B"/>
+        <erlangen-crm_090330_5_0_1:P87.is_identified_by rdf:resource="&erlangen-crm_090330_5_0_1;E44.Place_Appellation"/>
+        <erlangen-crm_090330_5_0_1:P87.is_identified_by rdf:resource="&erlangen-crm_090330_5_0_1;E47.Spatial_Coordinates"/>
     </skos:Concept>
     
 
 
-    <!-- file:/Users/tuland/Dropbox/Tesi%20Tullio/Summarization/Risultati/3%20With%20sirbec/summary_02_07_mantic_global.owl#E5.Concept_E -->
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type -->
 
-    <skos:Concept rdf:about="&summ;E5.Concept_E">
+    <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;E55.Type">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <P7.property_v rdf:resource="&summ;E3.Concept_C"/>
-        <P8.property_z rdf:resource="&summ;E5.Concept_E"/>
     </skos:Concept>
 </rdf:RDF>
 

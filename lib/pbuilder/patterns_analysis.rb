@@ -5,9 +5,10 @@ module Pbuilder
   
     DEFAULT_PROPERTY_TYPE = SearchEngine::PROPERTY_TYPES[:simple]
   
-    # * +concept_list+ - List to store concept
-    # * +properties_list - List to store properties
-    attr_reader :concepts_list, :properties_list
+    # * +concepts_list+ - List to store concept that must be visited (duplication, push & shift)
+    # * +properties_list - List to store properties 
+    # * +visited_concepts - List of visited concepts (no duplication, only push)
+    attr_reader :concepts_list, :properties_list, :visited_concepts
     
     # Init
     #  
@@ -17,8 +18,11 @@ module Pbuilder
     def initialize(init_concept=nil)
       if init_concept.nil?
         @concepts_list, @properties_list = Array.new, Hash.new
+        @visited_concepts = Array.new
       else
+        init_concept = init_concept.to_s
         @concepts_list, @properties_list = Array[init_concept], Hash.new
+        @visited_concepts = Array[init_concept]
       end
     end
   
@@ -32,8 +36,12 @@ module Pbuilder
     def update(concept, 
                property_name, 
                property_type = DEFAULT_PROPERTY_TYPE)
+      concept = concept.to_s
       @concepts_list.push(concept)
-      @properties_list[property_name] =  property_type
+      @properties_list[property_name.to_s] =  property_type
+      if ! @visited_concepts.include?(concept)
+        @visited_concepts.push(concept)
+      end
     end
   
     # Print a report  

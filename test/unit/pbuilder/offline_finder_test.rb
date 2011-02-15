@@ -10,11 +10,11 @@ module Pbuilder
     }.freeze
     ADAPTER_NAME = "name"
     # Root concepts: ABSTRACT_CONCEPT_STR, ABSTRACT_CONCEPT_RES, CORE_CONCEPT_STR and CORE_CONCEPT_RES                                              
-    Phelper.set_rootc_const_for_test(self)
+    TestPHelper.set_rootc_const_for_test(self)
     # Const associated with properties: PROPERTY_#{letter}_STR and PROPERTY_#{letter}_RES
-    Phelper.set_properties_const_for_test(self, "p", "w")
+    TestPHelper.set_properties_const_for_test(self, "p", "w")
     # Const associated with concepts: CONCEPT_#{letter}_STR and CONCEPT_#{letter}_RES
-    Phelper.set_concepts_const_for_test(self, "b", "e")
+    TestPHelper.set_concepts_const_for_test(self, "b", "e")
     
     def setup
       Adapter.purge(IDENTIFIER,
@@ -35,51 +35,51 @@ module Pbuilder
       abstract_concept, core_concept = Pbuilder::SearchEngine.find_root_concepts
       finder = Pbuilder::OfflineFinder.new(core_concept)
       finder.start
-      correct_patterns = [  [ CORE_CONCEPT_RES,
-                              PROPERTY_Q_RES,
-                              CONCEPT_C_RES,
-                              PROPERTY_T_RES,
-                              CONCEPT_E_RES,
-                              PROPERTY_W_RES,
-                              CONCEPT_E_RES ],
+      correct_patterns = [  [ CORE_CONCEPT_STR,
+                              PROPERTY_Q_STR,
+                              CONCEPT_C_STR,
+                              PROPERTY_T_STR,
+                              CONCEPT_E_STR,
+                              PROPERTY_W_STR,
+                              CONCEPT_E_STR ],
                             
-                            [ CORE_CONCEPT_RES,
-                              PROPERTY_P_RES,
-                              CONCEPT_B_RES,
-                              PROPERTY_S_RES,
-                              CONCEPT_E_RES,
-                              PROPERTY_W_RES,
-                              CONCEPT_E_RES ],
+                            [ CORE_CONCEPT_STR,
+                              PROPERTY_P_STR,
+                              CONCEPT_B_STR,
+                              PROPERTY_S_STR,
+                              CONCEPT_E_STR,
+                              PROPERTY_W_STR,
+                              CONCEPT_E_STR ],
                               
-                            [ CORE_CONCEPT_RES,
-                              PROPERTY_Q_RES,
-                              CONCEPT_C_RES,
-                              PROPERTY_V_RES,
-                              CONCEPT_E_RES,
-                              PROPERTY_W_RES,
-                              CONCEPT_E_RES ],
+                            [ CORE_CONCEPT_STR,
+                              PROPERTY_Q_STR,
+                              CONCEPT_C_STR,
+                              PROPERTY_V_STR,
+                              CONCEPT_E_STR,
+                              PROPERTY_W_STR,
+                              CONCEPT_E_STR ],
                               
-                            [ CORE_CONCEPT_RES,
-                              PROPERTY_Q_RES,
-                              CONCEPT_C_RES,
-                              PROPERTY_U_RES,
-                              CONCEPT_C_RES ],
+                            [ CORE_CONCEPT_STR,
+                              PROPERTY_Q_STR,
+                              CONCEPT_C_STR,
+                              PROPERTY_U_STR,
+                              CONCEPT_C_STR ],
                             
-                            [ CORE_CONCEPT_RES,
-                              PROPERTY_P_RES,
-                              CONCEPT_B_RES,
-                              PROPERTY_R_RES,
-                              CONCEPT_D_RES ] ]
+                            [ CORE_CONCEPT_STR,
+                              PROPERTY_P_STR,
+                              CONCEPT_B_STR,
+                              PROPERTY_R_STR,
+                              CONCEPT_D_STR ] ]
       assert_equal(finder.patterns.list, correct_patterns)
       correct_properties = {  
-        PROPERTY_Q_RES => SearchEngine::PROPERTY_TYPES[:simple],
-        PROPERTY_P_RES => SearchEngine::PROPERTY_TYPES[:simple],
-        PROPERTY_T_RES => SearchEngine::PROPERTY_TYPES[:simple],
-        PROPERTY_V_RES => SearchEngine::PROPERTY_TYPES[:inverse],
-        PROPERTY_U_RES => SearchEngine::PROPERTY_TYPES[:reflexive],
-        PROPERTY_S_RES => SearchEngine::PROPERTY_TYPES[:simple],
-        PROPERTY_R_RES => SearchEngine::PROPERTY_TYPES[:inverse],
-        PROPERTY_W_RES => SearchEngine::PROPERTY_TYPES[:reflexive] 
+        PROPERTY_Q_STR => SearchEngine::PROPERTY_TYPES[:simple],
+        PROPERTY_P_STR => SearchEngine::PROPERTY_TYPES[:simple],
+        PROPERTY_T_STR => SearchEngine::PROPERTY_TYPES[:simple],
+        PROPERTY_V_STR => SearchEngine::PROPERTY_TYPES[:inverse],
+        PROPERTY_U_STR => SearchEngine::PROPERTY_TYPES[:reflexive],
+        PROPERTY_S_STR => SearchEngine::PROPERTY_TYPES[:simple],
+        PROPERTY_R_STR => SearchEngine::PROPERTY_TYPES[:inverse],
+        PROPERTY_W_STR => SearchEngine::PROPERTY_TYPES[:reflexive] 
       }                    
       assert_equal(finder.analysis.properties_list, correct_properties)
     end

@@ -1,0 +1,10 @@
+page.visual_effect(:squish, "onto_loader")
+page.delay(1) do
+  page.replace_html 'ontology_info', "#{@notice}"
+  page.visual_effect(:morph, "ontology_info", :style => "{background: '#CCFF66'}" )
+  page.delay(1) do
+    page.insert_html(:after, "ontology_info", :partial => "query_interface")
+    page.visual_effect(:highlight, "query_interface")
+    page.visual_effect(:scrollTo, "query_interface")
+  end
+end

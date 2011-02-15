@@ -17,7 +17,8 @@ module Pbuilder
     AERIA = "http://www.siti.disco.unimib.it/cmm/2010/aeria#"
     
     # * +persistence_dir+ - Path of the persistence directory
-    attr_reader :persistence_dir
+    # * +model+ - The activeRdf/Jena model
+    attr_reader :persistence_dir, :model
     
     # Init
     #  
@@ -29,9 +30,12 @@ module Pbuilder
     # * +path+ - A path where store the persistence directory
     def initialize(identifier, url, adapter_name, path = "")
       @persistence_dir =  Adapter.personal_persistence_dir(identifier, path)
-      FileUtils.mkdir(@persistence_dir)
+      if ! FileTest.directory?(@persistence_dir)
+        FileUtils.mkdir(@persistence_dir)
+      end
       @adapter = init_load(url, adapter_name)
       init_setup
+      @model = @adapter.model
     end
   
     # Close adaptor
@@ -47,6 +51,20 @@ module Pbuilder
     # * +path+ - A path where is stored the persistence directory
     def self.purge(identifier, path = "")
       FileUtils.rm_rf(self.personal_persistence_dir(identifier, path))
+    end
+    
+    # Perform the connetection with an adapter built in the past
+    #
+    # ==== Attributes  
+    #  
+    # * +identifier+ - A personal identifier
+    # * +path+ - A path where is stored the persistence directory
+    def self.get_connection(adapter_name, identifier, path = "")
+      persistence_dir =  Adapter.personal_persistence_dir(identifier, path)
+      adapter = ConnectionPool.add_data_source( :type => :jena, 
+                                                :model => adapter_name,
+                                                :file =>  persistence_dir )
+      adapter
     end
     
     # Return the persistence directory path
@@ -74,6 +92,12 @@ module Pbuilder
       file
     end
     
+    # Return the local url using "file://"
+    #
+    # ==== Attributes  
+    #  
+    # * +adapter_name+ - An ontology name
+    # * +path+ - A path where the ontology is stored
     def self.local_url(path, onto_name)
       "file://" + path.add_slash + onto_name
     end

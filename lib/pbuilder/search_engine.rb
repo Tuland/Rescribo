@@ -46,7 +46,7 @@ module Pbuilder
     #  
     # ==== Attributes  
     #  
-    # * +concept+ - A concept to focus on
+    # * +concept+ - A concept (String or ActiveRDF Resource) to focus on
     # * +analysis+ - A patterns analysis. See +PatternsAnalysis+
     # * +patterns+ - A patterns storage. See +PatternsStorage+
     # * +finders_list+ - A list determining finders to use into the algorithm. See +DEFAULT_FINDERS+ and +EDGE_FINDERS+
@@ -63,7 +63,7 @@ module Pbuilder
       patterns.empty_cache
       # Token bound: property count < 1
       condition = Proc.new do |curr_property|
-        ! analysis.properties_list.has_key?(curr_property)
+        ! analysis.properties_list.has_key?(curr_property.to_s)
       end
       # System update analysis and patterns storage
       update_system = Proc.new do | curr_concept, 
@@ -79,6 +79,7 @@ module Pbuilder
       end
       # Reflection: it performs the finders included in the +finders_list+
       finders_list.each do |finder|
+        concept = RDFS::Resource.new(concept)
         count = self.send finder, concept, condition, update_system  
       end
     end
@@ -88,7 +89,7 @@ module Pbuilder
     #
     # ==== Attributes  
     #  
-    # * +concept+ - A concept to focus on
+    # * +concept+ - A concept (ActiveRDF Resource) to focus on
     # * +condition+ - A futher condition to apply into the algorithm
     # * +update_system+ - A block determining the system updating
     #
@@ -115,7 +116,7 @@ module Pbuilder
     #
     # ==== Attributes  
     #  
-    # * +concept+ - A concept to focus on
+    # * +concept+ - A concept (ActiveRDF Resource) to focus on
     # * +condition+ - A futher condition to apply into the algorithm
     # * +update_system+ - A block determining the system updating
     #
@@ -145,7 +146,7 @@ module Pbuilder
     #
     # ==== Attributes  
     #  
-    # * +concept+ - A concept to focus on
+    # * +concept+ - A concept (ActiveRDF Resource) to focus on
     # * +condition+ - A futher condition to apply into the algorithm
     # * +update_system+ - A block determining the system updating
     def self.find_simple_edge(concept,
