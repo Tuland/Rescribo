@@ -55,6 +55,34 @@ module Pbuilder
       end
     end
     
+    # Set constant associated with node for +klass+
+    # (testing mode)
+    # #  
+    # ==== Attributes  
+    #  
+    # * +klass+ - A Class to extend
+    # * +first_letter+ - The first letter that itentified the first constant
+    # * +last_letter+ - The last letter that itentified the last constant
+    def self.set_node_const(klass, first_letter, last_letter)
+      for i in first_letter..last_letter do
+        klass.const_set("NODE_#{i.upcase}", i)
+      end
+    end
+    
+    # Set constant associated with edge for +klass+
+    # (testing mode)
+    # #  
+    # ==== Attributes  
+    #  
+    # * +klass+ - A Class to extend
+    # * +first_letter+ - The first letter that itentified the first constant
+    # * +last_letter+ - The last letter that itentified the last constant
+    def self.set_edge_const(klass, first_letter, last_letter)
+      for i in first_letter..last_letter do
+        klass.const_set("EDGE_#{i.upcase}", i)
+      end
+    end
+    
   end
   
 end

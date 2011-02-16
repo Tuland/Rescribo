@@ -1,0 +1,2 @@
+- Classe ereditata per patterns_storage:
+  - abilitare o meno la matrice o l'albero

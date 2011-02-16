@@ -162,7 +162,6 @@
     <skos:Concept rdf:about="&erlangen-crm_090330_5_0_1;E47.Spatial_Coordinates">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label rdf:resource="&rdfs;Litteral"/>
-        <aeria:generalize rdf:resource="&erlangen-crm_090330_5_0_1;E44.Place_Appellation"/>
         <erlangen-crm_090330_5_0_1:P2.has_type rdf:resource="&erlangen-crm_090330_5_0_1;E55.Type"/>
     </skos:Concept>
     

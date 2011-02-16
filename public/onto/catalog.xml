@@ -8,4 +8,5 @@
     <uri name="http://www.siti.disco.unimib.it/cmm/2010/aeria_summary.owl" uri="aeria_summary.owl"/>
     <uri id="Imports Wizard Entry" name="file:/Users/tuland/Documents/Aptana%20RadRails%20Workspace/Rescribo/public/onto/aeria_summary.owl" uri="file:/Users/tuland/Documents/Aptana%20RadRails%20Workspace/Rescribo/public/onto/aerdiaskos-lite.owl"/>
     <uri name="http://www.siti.disco.unimib.it/prova" uri="aeria_summary_test.owl"/>
+    <uri name="http://www.semanticweb.org/ontologies/2010/4/mantic_global.owl" uri="onto.owl"/>
 </catalog>
