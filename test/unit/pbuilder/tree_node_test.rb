@@ -1,5 +1,4 @@
 module Pbuilder
-  
 
   require 'test_helper'
   
@@ -8,7 +7,7 @@ module Pbuilder
     ROOT_NODE = "root"
     # Const associated with nodes: NODE_#{letter} and NODE_#{letter}
     TestPHelper.set_node_const(self, "a", "c")
-    # Const associated with nodes: NODE_#{letter} and NODE_#{letter}
+    # Const associated with nodes: EDGE_#{letter} and EDGE_#{letter}
     TestPHelper.set_edge_const(self, "p", "r")
     
     def setup
