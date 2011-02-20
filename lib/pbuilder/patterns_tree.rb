@@ -12,23 +12,23 @@ module Pbuilder
     def initialize(init_concept)
       @leaves = LeavesList.new()
       @root = @leaves.insert(init_concept.to_s)
-      purge_cache
+      empty_temp
     end
     
     def import(concept, property)
-      @cache[concept.to_s] = property.to_s
+      @temp[concept.to_s] = property.to_s
     end
     
     def update(concept)
       @leaves.substitute_concept_using_hash(concept, 
-                                            @cache)
-      purge_cache
+                                            @temp)
+      empty_temp
     end
     
     private
     
-    def purge_cache
-      @cache = Hash.new
+    def empty_temp
+      @temp = Hash.new
     end      
       
   end

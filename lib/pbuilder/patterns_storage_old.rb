@@ -17,15 +17,12 @@ module Pbuilder
       else
         @list = Array[Array[init_concept.to_s]]
       end
-      empty_temp
+      @cache = Array.new
     end
     
-    def empty_temp
-      @temp = Hash.new
-    end
-    
-    def import(concept, property)
-      @temp[concept.to_s] = property.to_s
+    # Reset the cache. Stop to mantain the last patterns in memory
+    def empty_cache
+      @cache = Array.new
     end
   
     # Update patterns using a cache  
@@ -35,22 +32,33 @@ module Pbuilder
     # * +prev_concept+ - A concept determining the last item into the pattern to perform the attachment
     # * +property+ - A property to queue 
     # * +next_concept+ - A concept to queue
-    def update(concept)
-      concept = concept.to_s
-      @list.each do |pattern|
-        if @pattern.last == concept
-          first_node = @temp.shift
-          @temp.each do |concept_t, property_t|
-            cloned_pattern = pattern.clone
-            cloned_pattern << property_t
-            cloned_pattern << concept_t
-            @list # NON VA BENE! Sporco il primo each -> i cloned vanno messi alla fine dell'update! ci vuona una cache
+    def update(prev_concept, 
+               property, 
+               next_concept)
+      size = @list.size
+      # empty list => initialization with prev_concept
+      if size == 0
+        @list << [prev_concept.to_s]
+        size = size.next
+      end
+      # approach without cache support => build cache
+      if @cache.empty?
+        for i in 0...size
+          if @list[i].last == prev_concept.to_s
+            @cache << @list[i].clone
+            @list[i] << property.to_s
+            @list[i] << next_concept.to_s
           end
         end
+      # approach with cache support
+      else
+        @cache.each do |pattern_c|
+          pattern_temp = pattern_c.clone
+          pattern_temp << property.to_s
+          pattern_temp << next_concept.to_s 
+          @list << pattern_temp  
+        end 
       end
-    end
-      
-  
     end
   
     # Print a report  
