@@ -33,7 +33,7 @@ module Pbuilder
                               ADAPTER_NAME,
                               THIS_PATH)
       abstract_concept, core_concept = Pbuilder::SearchEngine.find_root_concepts
-      finder = Pbuilder::OfflineFinder.new(core_concept)
+      finder = Pbuilder::OfflineFinder.new(core_concept, SimpleStorage)
       finder.start
       correct_patterns = [  [ CORE_CONCEPT_STR,
                               PROPERTY_Q_STR,

@@ -42,11 +42,11 @@ module Pbuilder
     end
     
     test "concept_substitution_with_multiple_nodes" do
-      nodes = { NODE_A => EDGE_P,
-                NODE_B => EDGE_Q, 
-                NODE_C => EDGE_R }
-      @leaves.substitute_concept_using_hash( INIT_CONCEPT,
-                                            nodes )
+      nodes = [ [NODE_A, EDGE_P], 
+                [NODE_B, EDGE_Q], 
+                [NODE_C, EDGE_R] ]
+      @leaves.substitute_concept_using_matrix(INIT_CONCEPT,
+                                              nodes )
       assert_equal(@leaves.list.size, nodes.length )
     end
     
@@ -60,12 +60,12 @@ module Pbuilder
     end
     
     test "multiple_subistitution" do
-      nodes = { NODE_B => EDGE_R,
-                NODE_C => EDGE_S }
+      nodes = [ [NODE_B, EDGE_R],
+                [NODE_C, EDGE_S] ]
       node_1 = @leaves.insert(NODE_A, EDGE_P)
       node_2 = @leaves.insert(NODE_A, EDGE_Q)
-      old_nodes = @leaves.substitute_concept_using_hash(NODE_A, 
-                                                        nodes)
+      old_nodes = @leaves.substitute_concept_using_matrix(NODE_A, 
+                                                          nodes)
       assert_equal(old_nodes.size, 2)
       old_nodes.each do |node|
         assert_instance_of(TreeNode, node)

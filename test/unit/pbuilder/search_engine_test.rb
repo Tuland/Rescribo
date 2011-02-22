@@ -97,7 +97,7 @@ module Pbuilder
       @adapter = default_adapter(ONTO_NAME[:s_i_r_edges])
       abstract_concept, core_concept = SearchEngine.find_root_concepts
       analysis = PatternsAnalysis.new(core_concept)
-      patterns = PatternsStorage.new(core_concept)
+      patterns = SimpleStorage.new(core_concept)
       SearchEngine.find_neighbours( core_concept, 
                                     analysis,
                                     patterns )

@@ -48,7 +48,7 @@ module Pbuilder
     #  
     # * +concept+ - A concept (String or ActiveRDF Resource) to focus on
     # * +analysis+ - A patterns analysis. See +PatternsAnalysis+
-    # * +patterns+ - A patterns storage. See +PatternsStorage+
+    # * +patterns+ - A list of patterns storage. See +PatternsStorage+
     # * +finders_list+ - A list determining finders to use into the algorithm. See +DEFAULT_FINDERS+ and +EDGE_FINDERS+
     #
     # ==== Example
@@ -58,9 +58,8 @@ module Pbuilder
     # Into the pattern: A --p_i--> B
     def self.find_neighbours( concept, 
                               analysis,
-                              patterns, 
+                              patterns_storage, 
                               finders_list = DEFAULT_FINDERS )
-      patterns.empty_cache
       # Token bound: property count < 1
       condition = Proc.new do |curr_property|
         ! analysis.properties_list.has_key?(curr_property.to_s)
@@ -68,20 +67,25 @@ module Pbuilder
       # System update analysis and patterns storage
       update_system = Proc.new do | curr_concept, 
                                     curr_property, 
-                                    curr_property_type, 
-                                    curr_count |
+                                    curr_property_type|
+
         analysis.update(curr_concept, 
                         curr_property,
                         curr_property_type)
-        patterns.update(concept, 
-                        curr_property,
-                        curr_concept)
+
+        
+
+        patterns_storage.import(curr_concept,
+                                curr_property)
+
       end
       # Reflection: it performs the finders included in the +finders_list+
       finders_list.each do |finder|
         concept = RDFS::Resource.new(concept)
         count = self.send finder, concept, condition, update_system  
       end
+      # Update storage
+      patterns_storage.update(concept)
     end
   
     # Reflexive edge detection. Reflexive edge: statement with a property denoted with "R"
@@ -99,8 +103,8 @@ module Pbuilder
     # t is reflexive
     # Into the pattern: A --t_r--> A
     def self.find_reflexive_edge(concept,
-                            condition,
-                            update_system)
+                                condition,
+                                update_system)
       query= Query.new.distinct(:p).where(concept, :p , concept)
       query.execute do |property|
         if condition.call(property)

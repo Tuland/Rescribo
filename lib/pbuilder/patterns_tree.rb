@@ -1,6 +1,6 @@
 module Pbuilder
   
-  class PatternsTree
+  class PatternsTree < PatternsStorage
       
     attr_reader :root, :leaves
     
@@ -15,21 +15,13 @@ module Pbuilder
       empty_temp
     end
     
-    def import(concept, property)
-      @temp[concept.to_s] = property.to_s
-    end
-    
     def update(concept)
-      @leaves.substitute_concept_using_hash(concept, 
-                                            @temp)
-      empty_temp
-    end
-    
-    private
-    
-    def empty_temp
-      @temp = Hash.new
-    end      
+      if ! @temp.empty?
+        @leaves.substitute_concept_using_matrix(concept, 
+                                              @temp)
+        empty_temp
+      end
+    end   
       
   end
     

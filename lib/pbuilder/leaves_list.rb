@@ -56,8 +56,8 @@ module Pbuilder
     # * +concept+ - A string determining the new concept     
     # * +property+ - A string determining the property (edge between +prev_conept+ and +concept+)
     def substitute_concept(prev_concept, concept, property)
-      node_hash = { concept => property }
-      substitute_concept_using_hash(prev_concept, node_hash).first
+      nodes_matrix = [ [concept , property] ]
+      substitute_concept_using_matrix(prev_concept, nodes_matrix).first
     end
     
     # Substitute a node for another one that includes a new concept
@@ -68,8 +68,8 @@ module Pbuilder
     # * +concept+ - A string determining the new concept     
     # * +property+ - A string determining the property 
     def substitute_node(node, concept, property)
-      node_hash = { concept => property }
-      substitute_node_using_hash(node, node_hash).first
+      nodes_matrix = [ [concept , property] ]
+      substitute_node_using_matrix(node, nodes_matrix).first
     end
     
     # Substitute a concept for others that include new concepts
@@ -77,9 +77,9 @@ module Pbuilder
     # ==== Attributes  
     #  
     # * +prev_concept+ - A string determining the concept to substite
-    # * +nodes_hash+ - An hash that include data nodes to perferfom the substitution
-    def substitute_concept_using_hash(prev_concept, nodes_hash)
-      substitute_using_hash( nodes_hash, 
+    # * +nodes_matrix+ - A Matrix that include data nodes to perferfom the substitution
+    def substitute_concept_using_matrix(prev_concept, nodes_matrix)
+      substitute_using_matrix( nodes_matrix, 
                             :find_concept_for_editing, 
                             prev_concept)
     end
@@ -89,9 +89,9 @@ module Pbuilder
     # ==== Attributes  
     #  
     # * +node+ - A node to substite
-    # * +nodes_hash+ - An hash that include data nodes to perferfom the substitution
-    def substitute_node_using_hash(node, nodes_hash)
-      substitute_using_hash( nodes_hash, 
+    # * +nodes_matrix+ - A Matrix that include data nodes to perferfom the substitution
+    def substitute_node_using_matrix(node, nodes_matrix)
+      substitute_using_matrix( nodes_matrix, 
                             :find_node_for_editing, 
                             node)
     end
@@ -134,19 +134,19 @@ module Pbuilder
       end
     end
     
-    # Perform substitution using an hash that includes data nodes
+    # Perform substitution using A Matrix that includes data nodes
     #
     # ==== Attributes  
     #  
-    # * +nodes_hash+ - An hash that include data nodes to perferfom the substitution
+    # * +nodes_matrix+ - A Matrix that include data nodes to perferfom the substitution
     # * +finder+ - A string determining the method to search
     # * +args+ - Arguments related to +finder+
-    def substitute_using_hash(nodes_hash, finder, *args)
+    def substitute_using_matrix(nodes_matrix, finder, *args)
       old_nodes = []
       self.send (finder, *args) do |node|
         old_nodes << node
-        nodes_hash.each do |value, edge|
-          leaf_node = node.link(value, edge)
+        nodes_matrix.each do |row|
+          leaf_node = node.link(row[0], row[1])
           @list.delete(node)
           @list << leaf_node
         end

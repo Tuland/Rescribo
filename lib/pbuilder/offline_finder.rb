@@ -11,9 +11,10 @@ module Pbuilder
     # ==== Attributes  
     #  
     # * +core_concept+ - A core concept representing the root of subgraph
-    def initialize(core_concept)
+    # * +storage_klass+ - A class to perform storage (See +PatternsStorage+ : +SimpleStorage+ and +PatternsTree+)
+    def initialize(core_concept, storage_klass)
       @analysis = PatternsAnalysis.new(core_concept)
-      @patterns = PatternsStorage.new(core_concept)
+      @patterns = storage_klass.new(core_concept)
     end
     
     # Start search

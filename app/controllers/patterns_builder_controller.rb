@@ -18,7 +18,7 @@ class PatternsBuilderController < ApplicationController
     @url_str = "URL: " + path_to_url(AERIA_PATH)
     @abstract_concept, @core_concept = Pbuilder::SearchEngine.find_root_concepts
     
-    @finder = Pbuilder::OfflineFinder.new(@core_concept)
+    @finder = Pbuilder::OfflineFinder.new(@core_concept, Pbuilder::SimpleStorage)
     @finder.start(session[:user_id],
                   PATTERNS_FILE,
                   ANALYSIS_FILE)
