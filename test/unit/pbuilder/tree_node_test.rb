@@ -20,34 +20,52 @@ module Pbuilder
     end
     
     test "root_node" do
+      # Tree mode
       assert_equal(ROOT_NODE, @root_node.value)
       assert_equal(nil, @root_node.edge)
+      # List mode
+      assert_equal([[ROOT_NODE]], @root_node.build_patterns)
     end
     
     test "multiple_children" do   
-      # Build Tree
+      ## Build Tree
       @children.each do |value, edge|
         @root_node.link(value, edge)
       end
-      # Assertions
+      ## Assertions
+      # Tree mode
       @root_node.each do |value, edge|
         assert_equal(@nodes[value], edge)
         assert_equal(@nodes.index(edge), value) 
       end
+      # List mode
+      correct_patterns = [[ ROOT_NODE, EDGE_P, NODE_A ],
+                          [ ROOT_NODE, EDGE_Q, NODE_B ],
+                          [ ROOT_NODE, EDGE_R, NODE_C ]]
+      assert_equal(correct_patterns, @root_node.build_patterns)
     end
     
     test "long_path" do
-      # Build Tree
+      ## Build Tree
       node = @root_node
       @children.each do |value, edge|
         node = node.link(value, edge)
       end
-      # Assertions
+      ## Assertions
+      # Tree mode
       @root_node.each do |value, edge|
         assert_equal(@nodes[value], edge)
         assert_equal(@nodes.index(edge), value) 
       end
-
+      # List mode
+      correct_patterns = [[ ROOT_NODE, 
+                            EDGE_P, 
+                            NODE_A,
+                            EDGE_Q,
+                            NODE_B,
+                            EDGE_R, 
+                            NODE_C ]]
+      assert_equal(correct_patterns, @root_node.build_patterns)
     end
     
   end

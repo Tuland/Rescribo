@@ -39,6 +39,23 @@ module Pbuilder
       end
     end
     
+    def build_patterns(local_list=[], global_list=[])
+      if ! @edge.nil?
+        local_list << @edge
+      end
+      local_list << @value
+      if @children.empty?
+        global_list << local_list
+      else
+        @children.each do |child|
+          new_list = local_list.clone
+          child.build_patterns(new_list, 
+                               global_list)
+        end
+      end
+      global_list 
+    end
+    
     # Number of direct children
     def num_of_direct_children
       @children.size

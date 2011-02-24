@@ -21,10 +21,23 @@ module Pbuilder
     #  
     # ==== Attributes  
     #  
-    # * +identifier+ - A personal identifier
-    # * +patterns_file+ - A string determing the name of the patterns file
-    # * +analysis_file+ - A string determing the name of the analysis file
-    def start(identifier=nil, patterns_file=nil, analysis_file=nil)
+    # * +options+ - An hash determining option
+    #
+    # ==== Options
+    #
+    # * +:id+ - A personal identifier
+    # * +:report+ - Consent (true or false) to write a report 
+    # * +:patterns_file+ - A string determining the name of the patterns file
+    # * +:analysis_file+ - A string determining the name of the analysis file
+    # * +:report_view+ - A method to perform the view
+    #
+    # ==== Report view
+    #
+    # * "" or nil - A generic view
+    # * "list" - A patterns list
+    # * "root" - A tree view available only with PatternsTree
+    # * "leaves" - A view that show last concept of each pattern. It's available only with PatternsTree
+    def start(options={})
       step_count = 0
       # @patterns_analysis.puts_report(step_count)
       while ! @analysis.concepts_list.empty?
@@ -36,9 +49,16 @@ module Pbuilder
         # @patterns_list.puts_patterns(step_count)
         @analysis.shift_concepts
       end
-      reports_hash = {patterns_file => @patterns.list,
-                      analysis_file => @analysis }
-      YamlWriter.store_reports(reports_hash, identifier)
+      if options[:report]
+        if options[:report_view].nil? || options[:report_view] = "list"
+          view = @patterns
+        else
+          view = @patterns.send(options[:report_view])
+        end
+        reports_hash = {options[:patterns_file] => view,
+                        options[:analysis_file] => @analysis }
+        YamlWriter.store_reports(reports_hash, options[:id])
+      end
     end
     
   end

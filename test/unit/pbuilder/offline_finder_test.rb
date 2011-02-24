@@ -19,6 +19,11 @@ module Pbuilder
     def setup
       Adapter.purge(IDENTIFIER,
                     THIS_PATH)
+      @adapter = Adapter.new( IDENTIFIER,
+                              Adapter.local_url(THIS_PATH, ONTO_NAME[:semi_cycle]),
+                              ADAPTER_NAME,
+                              THIS_PATH)
+      @abstract_concept, @core_concept = Pbuilder::SearchEngine.find_root_concepts
     end
     
     def teardown
@@ -27,13 +32,47 @@ module Pbuilder
       end
     end
     
-    test "semi_cycle" do
-      @adapter = Adapter.new( IDENTIFIER,
-                              Adapter.local_url(THIS_PATH, ONTO_NAME[:semi_cycle]),
-                              ADAPTER_NAME,
-                              THIS_PATH)
-      abstract_concept, core_concept = Pbuilder::SearchEngine.find_root_concepts
-      finder = Pbuilder::OfflineFinder.new(core_concept, SimpleStorage)
+    test "simple_storage_instance" do
+      finder = Pbuilder::OfflineFinder.new(@core_concept, SimpleStorage)
+      assert_instance_of(SimpleStorage, finder.patterns)
+    end
+    
+    test "patterns_tree_instance" do
+      finder = Pbuilder::OfflineFinder.new(@core_concept, PatternsTree)
+      assert_instance_of(PatternsTree, finder.patterns)
+    end
+    
+    test "root_of_patterns_tree_exploring_a_semi_cycle" do
+      finder = Pbuilder::OfflineFinder.new(@core_concept, PatternsTree)
+      finder.start
+      assert_instance_of(String, finder.patterns.root.value)
+      assert_equal(CORE_CONCEPT_STR, finder.patterns.root.value)
+    end
+    
+    test "leaves_of_patterns_tree_exploring_a_semi_cycle" do
+      finder = Pbuilder::OfflineFinder.new(@core_concept, PatternsTree)
+      finder.start
+      correct_leaves = [CONCEPT_C_STR,
+                        CONCEPT_D_STR,
+                        CONCEPT_E_STR,
+                        CONCEPT_E_STR,
+                        CONCEPT_E_STR]
+      assert_equal_leaves(correct_leaves, finder.patterns.leaves)
+    end
+    
+    test "comparison_simple_storage_with_patterns_tree" do
+      finder = Pbuilder::OfflineFinder.new(@core_concept, PatternsTree)
+      finder.start
+      list_t = finder.patterns.list
+      finder = Pbuilder::OfflineFinder.new(@core_concept, SimpleStorage)
+      finder.start
+      # List mode: SimpleStorage = PatternsTree
+      list_s = finder.patterns.list
+      assert_equal(list_t.sort, list_s.sort)
+    end
+    
+    test "semi_cycle_with_simple_storage" do
+      finder = Pbuilder::OfflineFinder.new(@core_concept, SimpleStorage)
       finder.start
       correct_patterns = [  [ CORE_CONCEPT_STR,
                               PROPERTY_Q_STR,
@@ -82,6 +121,14 @@ module Pbuilder
         PROPERTY_W_STR => SearchEngine::PROPERTY_TYPES[:reflexive] 
       }                    
       assert_equal(finder.analysis.properties_list, correct_properties)
+    end
+    
+    def assert_equal_leaves(correct_leaves, leaves)
+      i=0
+      leaves.list.each do |leaf|
+        assert_equal(leaf.value, correct_leaves[i])
+        i = i.next
+      end
     end
      
   end

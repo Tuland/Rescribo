@@ -19,13 +19,11 @@ module Pbuilder
       empty_temp
     end
   
-    # Update patterns using a cache  
+    # Update patterns
     #  
     # ==== Attributes  
     #  
-    # * +prev_concept+ - A concept determining the last item into the pattern to perform the attachment
-    # * +property+ - A property to queue 
-    # * +next_concept+ - A concept to queue
+    # * +concept+ - A concept determining the last item into the pattern to perform the attachment
     def update(concept)
       if ! @temp.empty?
         concept = concept.to_s

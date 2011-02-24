@@ -143,7 +143,7 @@ module Pbuilder
     # * +args+ - Arguments related to +finder+
     def substitute_using_matrix(nodes_matrix, finder, *args)
       old_nodes = []
-      self.send (finder, *args) do |node|
+      self.send(finder, *args) do |node|
         old_nodes << node
         nodes_matrix.each do |row|
           leaf_node = node.link(row[0], row[1])
