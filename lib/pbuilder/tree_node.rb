@@ -39,6 +39,10 @@ module Pbuilder
       end
     end
     
+    # Build a pattern list exploring the tree recursively.
+    # Depth-first search
+    # * +local_list+ - A temporary local list (needed by recursion)
+    # * +global_list+ - A global list to return
     def build_patterns(local_list=[], global_list=[])
       if ! @edge.nil?
         local_list << @edge

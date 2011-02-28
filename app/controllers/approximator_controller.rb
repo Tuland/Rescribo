@@ -4,6 +4,9 @@ rescue Exception
   print "This sample needs activerdf and activerdf_jena.\n"
 end
 
+require 'pbuilder/adapter'
+require 'pbuilder/maps_analyzer'
+
 class ApproximatorController < ApplicationController
   layout 'main'
   
@@ -14,17 +17,15 @@ class ApproximatorController < ApplicationController
   def load
     aeria_adapter = Pbuilder::Adapter.new(session[:user_id],
                                           path_to_url(AERIA_PATH),
-                                          PERSISTENT_AERIA)                                
-    @abstract_concept, @core_concept = Pbuilder::SearchEngine.find_root_concepts
-    @finder = Pbuilder::OfflineFinder.new(@core_concept)
-    @finder.start(session[:user_id],
-                  PATTERNS_FILE,
-                  ANALYSIS_FILE)
-                              
+                                          PERSISTENT_AERIA)
+    maps = Pbuilder::MapsAnalyzer.new(PATTERNS_FILE, 
+                                      ANALYSIS_FILE, 
+                                      MAPPINGS_FILE, 
+                                      session[:user_id])
+    @root_concepts_list = maps.root_concepts_list
+    @finders = maps.finders              
     aeria_adapter.close
-   
     @notice = "Ontologies loaded"
-    
   end
 
 end

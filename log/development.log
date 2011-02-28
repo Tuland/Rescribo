@@ -21994,3 +21994,826 @@ Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-24 16:13:33)
 Rendering patterns_builder/load
 Rendered patterns_builder/_result (133.0ms)
 Completed in 821ms (View: 162, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-28 11:20:14) [GET]
+
+ActionController::RoutingError (No route matches "/login" with {:method=>:get}):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-28 11:20:23) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (32.0ms)
+Rendered layouts/_footer (3.0ms)
+Completed in 314ms (View: 307, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-28 11:20:30) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/guide
+Completed in 232ms (DB: 12) | 302 Found [http://0.0.0.0/admin/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-28 11:20:31) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 203ms (View: 152, DB: 3) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-28 11:20:34) [GET]
+
+SyntaxError (/Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/patterns_builder_controller.rb:30: syntax error, unexpected tSYMBEG
+
+                    :report_view    =>  ""} )
+                    ^):
+  app/controllers/patterns_builder_controller.rb:380
+  app/controllers/patterns_builder_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (183.0ms)
+Rendered rescues/_request_and_response (21.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:21:02) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (16.0ms)
+Completed in 155ms (View: 90, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:21:04) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+
+Errno::ENOENT (No such file or directory - 1_report/patterns.0):
+  lib/pbuilder/yaml_writer.rb:19:in `initialize'
+  lib/pbuilder/yaml_writer.rb:19:in `open'
+  lib/pbuilder/yaml_writer.rb:19:in `store_list'
+  lib/pbuilder/yaml_writer.rb:12:in `store_reports'
+  lib/pbuilder/yaml_writer.rb:8:in `each'
+  lib/pbuilder/yaml_writer.rb:8:in `store_reports'
+  lib/pbuilder/offline_finder.rb:60:in `start'
+  app/controllers/patterns_builder_controller.rb:29:in `load'
+  app/controllers/patterns_builder_controller.rb:24:in `each'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (81.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:24:50) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 432ms (View: 132, DB: 13) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:24:51) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 69ms (View: 25, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:24:54) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined local variable or method `n' for #<ActionView::Base:0x673b8d>) on line #5 of app/views/patterns_builder/_result.html.haml:
+2:   n = 0
+3:   - @root_concepts_list.each do |root_concepts|
+4:     n = n.next
+5:     %h3.important= "Mapping #{n}"
+6:     %h3= "Significative concepts"
+7:     %table{:summary => "Significative concepts"}
+8:       %thead
+
+    app/views/patterns_builder/_result.html.haml:5:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_3944_4068'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_3944_4068'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_3944_4068'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (238.0ms)
+Rendered rescues/_request_and_response (7.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:25:47) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 91ms (View: 39, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:25:49) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `next' for nil:NilClass) on line #4 of app/views/patterns_builder/_result.html.haml:
+1: %div#result
+2:   n = 0
+3:   - @root_concepts_list.each do |root_concepts|
+4:     - n = n.next
+5:     %h3.important= "Mapping #{n}"
+6:     %h3= "Significative concepts"
+7:     %table{:summary => "Significative concepts"}
+
+    app/views/patterns_builder/_result.html.haml:4:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_4140_4260'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_4140_4260'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_4140_4260'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (139.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:26:17) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 113ms (View: 67, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:26:19) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for nil:NilClass) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_4330_4450'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_4330_4450'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_4330_4450'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (143.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:32:14) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 48ms (View: 21, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:32:16) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for nil:NilClass) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_4520_4640'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_4520_4640'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_4520_4640'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (120.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:36:36) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (6.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 108ms (View: 68, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:36:38) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for nil:NilClass) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_4710_4822'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_4710_4822'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_4710_4822'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (107.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:38:51) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 78ms (View: 46, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:38:53) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for nil:NilClass) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_4892_5004'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_4892_5004'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_4892_5004'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (121.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:39:38) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 44ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:39:40) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for nil:NilClass) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_5074_5186'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_5074_5186'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_5074_5186'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (120.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:40:52) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 111ms (View: 29, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:40:53) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for nil:NilClass) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_5256_5368'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_5256_5368'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_5256_5368'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:43:27) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (8.0ms)
+Completed in 432ms (View: 133, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:43:29) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for nil:NilClass) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_3876_3992'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_3876_3992'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_3876_3992'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (252.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:44:51) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 60ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:44:54) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for nil:NilClass) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_4064_4176'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_4064_4176'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_4064_4176'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:48:40) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 78ms (View: 29, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:48:42) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for 42:Fixnum) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_4246_4358'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_4246_4358'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_4246_4358'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (123.0ms)
+Rendered rescues/_request_and_response (8.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:49:47) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 438ms (View: 133, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:49:50) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for 42:Fixnum) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_3876_3992'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_3876_3992'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_3876_3992'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (248.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:50:09) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 62ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:50:10) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+
+TypeError (can't convert Pbuilder::OfflineFinder into String):
+  app/controllers/patterns_builder_controller.rb:31:in `load'
+  app/controllers/patterns_builder_controller.rb:24:in `each'
+  app/controllers/patterns_builder_controller.rb:24:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:51:51) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 435ms (View: 133, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:51:54) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+
+ActionView::TemplateError (undefined method `analysis' for nil:NilClass) on line #27 of app/views/patterns_builder/_result.html.haml:
+24:           %th= "URI"
+25:           %th= "Type"
+26:       %tbody
+27:         - @finders[n].analysis.properties_list.each do |p_name, p_type|
+28:           %tr
+29:             %td= h p_name
+30:             %td{:class => "#{h p_type}_edge"}= h p_type
+
+    app/views/patterns_builder/_result.html.haml:27:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    app/views/patterns_builder/_result.html.haml:3:in `each'
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_3876_3992'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_3876_3992'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_3876_3992'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (248.0ms)
+Rendered rescues/_request_and_response (11.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 11:53:52) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 61ms (View: 18, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 11:53:53) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (103.0ms)
+Completed in 336ms (View: 130, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 12:19:30) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 568ms (View: 135, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 12:19:33) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+
+NoMethodError (undefined method `MapsAnalyzer' for Pbuilder:Module):
+  app/controllers/patterns_builder_controller.rb:18:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (174.0ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 12:20:34) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 61ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 12:20:36) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+
+NameError (uninitialized constant Pbuilder::MapsAnalyzer::MAPPINGS_FILE):
+  lib/pbuilder/maps_analyzer.rb:30:in `initialize'
+  app/controllers/patterns_builder_controller.rb:18:in `new'
+  app/controllers/patterns_builder_controller.rb:18:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 12:20:38) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 93ms (View: 41, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 12:20:40) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+
+NameError (uninitialized constant Pbuilder::MapsAnalyzer::MAPPINGS_FILE):
+  lib/pbuilder/maps_analyzer.rb:30:in `initialize'
+  app/controllers/patterns_builder_controller.rb:18:in `new'
+  app/controllers/patterns_builder_controller.rb:18:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 12:21:05) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 442ms (View: 137, DB: 11) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 12:21:08) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+
+NameError (uninitialized constant Pbuilder::MapsAnalyzer::MAPPINGS_FILE):
+  lib/pbuilder/maps_analyzer.rb:30:in `initialize'
+  app/controllers/patterns_builder_controller.rb:18:in `new'
+  app/controllers/patterns_builder_controller.rb:18:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (191.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 12:23:18) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (147.0ms)
+Completed in 1025ms (View: 202, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-28 12:25:25) [GET]
+  [4;36;1mUser Load (14.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (7.0ms)
+Rendered layouts/_footer (3.0ms)
+Completed in 289ms (View: 191, DB: 14) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-02-28 12:25:27) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 77ms (View: 71, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-02-28 12:25:29) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering approximator/load
+Rendered approximator/_query_interface (5.0ms)
+Completed in 229ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/approximator/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-02-28 12:26:16) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 83ms (View: 44, DB: 1) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 12:26:18) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 108ms (View: 50, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]

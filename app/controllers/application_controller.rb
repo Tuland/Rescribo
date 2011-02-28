@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
   PERSISTENT_AERIA = "aeria"
   
   REPORT_DIR = "report/"
+  MAPPINGS_FILE = REPORT_DIR + "mappings"
   ANALYSIS_FILE = REPORT_DIR + "analysis"
   PATTERNS_FILE = REPORT_DIR + "patterns"
   

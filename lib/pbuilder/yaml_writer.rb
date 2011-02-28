@@ -3,11 +3,11 @@ module Pbuilder
   
   class YamlWriter
     
-    def self.store_reports(reports_hash, identifier)
-      if ! identifier.nil?
+    def self.store_reports(reports_hash, id)
+      if ! id.nil?
         reports_hash.each do |report, list|
           if ! report.nil?
-            file = YamlWriter.get_file_path(identifier,
+            file = YamlWriter.get_file_path(id,
                                             report)
             YamlWriter.store_list(file, list)
           end
@@ -19,8 +19,8 @@ module Pbuilder
       open(file, 'w') {|f| YAML.dump(list, f)}
     end
     
-    def self.get_file_path(identifier, report_file)
-      report_file + "_" + identifier.to_s
+    def self.get_file_path(id, report_file)
+      report_file + "_" + id.to_s
     end
   
   end

@@ -34,12 +34,20 @@ module Pbuilder
                         EDGE_FINDERS[:inverse], 
                         EDGE_FINDERS[:reflexive] ]                    
 
-    # Core and abstract concepts detection
+    # Core and abstract concepts detection. Return pairs in a list
     def self.find_root_concepts
       query = Query.new.distinct(:s,:o).where(:s, A_GENERALIZE_RESOURCE, :o)
+      concepts = []
       query.execute do |abstract_concept, core_concept|
-         return abstract_concept, core_concept
+         concepts << [abstract_concept, core_concept]
       end
+      concepts
+    end
+    
+    # Core and abstract concepts detection (first pair)
+    def self.find_a_single_pair_of_rc
+      root_concepts_list = self.find_root_concepts
+      abstract_concept, core_concept = root_concepts_list[0][0], root_concepts_list[0][1]
     end
   
     # Find neighbours of a concept  

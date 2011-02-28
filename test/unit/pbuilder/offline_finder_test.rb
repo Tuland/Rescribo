@@ -23,7 +23,7 @@ module Pbuilder
                               Adapter.local_url(THIS_PATH, ONTO_NAME[:semi_cycle]),
                               ADAPTER_NAME,
                               THIS_PATH)
-      @abstract_concept, @core_concept = Pbuilder::SearchEngine.find_root_concepts
+      @abstract_concept, @core_concept = SearchEngine.find_a_single_pair_of_rc
     end
     
     def teardown

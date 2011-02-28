@@ -43,14 +43,14 @@ module Pbuilder
                 
     test "root_concepts" do
       @adapter = default_adapter(ONTO_NAME[:minimal])
-      abstract_concept, core_concept = SearchEngine.find_root_concepts
+      abstract_concept, core_concept = SearchEngine.find_a_single_pair_of_rc
       assert_equal(ABSTRACT_CONCEPT_RES, abstract_concept)
       assert_equal(CORE_CONCEPT_RES, core_concept)
     end
     
     test "simple_edge" do
       @adapter = default_adapter(ONTO_NAME[:simple_edge])
-      abstract_concept, core_concept = SearchEngine.find_root_concepts
+      abstract_concept, core_concept = SearchEngine.find_a_single_pair_of_rc
       edge = Array[core_concept]
       update_system = minimal_update_system(edge)
       condition = minimal_condition
@@ -65,7 +65,7 @@ module Pbuilder
     
     test "inverse_edge" do
       @adapter = default_adapter(ONTO_NAME[:inverse_edge])
-      abstract_concept, core_concept = SearchEngine.find_root_concepts
+      abstract_concept, core_concept = SearchEngine.find_a_single_pair_of_rc
       edge = Array[core_concept]
       update_system = minimal_update_system(edge)
       condition = minimal_condition
@@ -80,7 +80,7 @@ module Pbuilder
     
     test "reflexive_edge" do
       @adapter = default_adapter(ONTO_NAME[:reflexive_edge])
-      abstract_concept, core_concept = SearchEngine.find_root_concepts
+      abstract_concept, core_concept = SearchEngine.find_a_single_pair_of_rc
       edge = Array[core_concept]
       update_system = minimal_update_system(edge)
       condition = minimal_condition
@@ -95,7 +95,7 @@ module Pbuilder
 
     test "find_neighbours" do
       @adapter = default_adapter(ONTO_NAME[:s_i_r_edges])
-      abstract_concept, core_concept = SearchEngine.find_root_concepts
+      abstract_concept, core_concept = SearchEngine.find_a_single_pair_of_rc
       analysis = PatternsAnalysis.new(core_concept)
       patterns = SimpleStorage.new(core_concept)
       SearchEngine.find_neighbours( core_concept, 

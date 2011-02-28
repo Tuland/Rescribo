@@ -1,6 +1,5 @@
 require 'pbuilder/adapter'
-require 'pbuilder/search_engine'
-require 'pbuilder/offline_finder'
+require 'pbuilder/maps_analyzer'
 
 class PatternsBuilderController < ApplicationController
   layout 'main'
@@ -16,14 +15,12 @@ class PatternsBuilderController < ApplicationController
                                     path_to_url(AERIA_PATH),
                                     PERSISTENT_AERIA)
     @url_str = "URL: " + path_to_url(AERIA_PATH)
-    @abstract_concept, @core_concept = Pbuilder::SearchEngine.find_root_concepts
-    
-    @finder = Pbuilder::OfflineFinder.new(@core_concept, Pbuilder::PatternsTree)
-    @finder.start({ :id             =>  session[:user_id],
-                    :report         =>  true,
-                    :patterns_file  =>  PATTERNS_FILE,
-                    :analysis_file  =>  ANALYSIS_FILE,
-                    :report_view    =>  ""} )
+    maps = Pbuilder::MapsAnalyzer.new(PATTERNS_FILE, 
+                                      ANALYSIS_FILE, 
+                                      MAPPINGS_FILE, 
+                                      session[:user_id])
+    @root_concepts_list = maps.root_concepts_list
+    @finders = maps.finders
     adapter.close
   end
   

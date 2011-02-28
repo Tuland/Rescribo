@@ -1,55 +1,59 @@
 %div#result
-  %h3= "Significative concepts"
-  %table{:summary => "Significative concepts"}
-    %thead
-      %tr
-        %th= "Type"
-        %th= "URI"
-    %tbody  
-      %tr
-        %td= "Abstract"
-        %td= h @abstract_concept.to_s
-      %tr
-        %td= "Core"
-        %td= h @core_concept.to_s
-  
-  %h3="Properties"
-  %table{:summary => "Properties identified"}
-    %thead
-      %tr
-        %th= "URI"
-        %th= "Type"
-    %tbody
-      - @finder.analysis.properties_list.each do |p_name, p_type|
-        %tr
-          %td= h p_name
-          %td{:class => "#{h p_type}_edge"}= h p_type
-          
-  %h3="Patterns"
-  
-  - i = 0
-  - @finder.patterns.list.each do |pattern|
-    - i = i.next
-    %table{:summary => "Pattern identified: #{i}"}
-      %caption="Pattern #{i}"
+  - n = 0
+  - @root_concepts_list.each do |root_concepts|
+    %h3.important= "Mapping #{n + 1}"
+    %h3= "Significative concepts"
+    %table{:summary => "Significative concepts"}
       %thead
         %tr
-          %th= "Num"
           %th= "Type"
           %th= "URI"
+      %tbody  
+        %tr
+          %td= "Abstract"
+          %td= h root_concepts[0].to_s # abstract_concept
+        %tr
+          %td= "Core"
+          %td= h root_concepts[1].to_s # core_concept
+  
+    %h3="Properties"
+    %table{:summary => "Properties identified"}
+      %thead
+        %tr
+          %th= "URI"
+          %th= "Type"
       %tbody
-        - j , w = 0 , 0
-        - pattern.each do |item|
-        - j = j.next
+        - @finders[n].analysis.properties_list.each do |p_name, p_type|
           %tr
-            - if j.odd?
-              - w = w.next
-              %td= w
-              %td{:class => "class_1"}= "Concept"
-            -else
-              %td= "&nbsp;"
-              %td{:class => "class_0"}= "Property"
-            %td= h item 
+            %td= h p_name
+            %td{:class => "#{h p_type}_edge"}= h p_type
+          
+    %h3="Patterns"
+  
+    - i = 0
+    - @finders[n].patterns.list.each do |pattern|
+      - i = i.next
+      %table{:summary => "Pattern identified: #{i}"}
+        %caption="Pattern #{i}"
+        %thead
+          %tr
+            %th= "Num"
+            %th= "Type"
+            %th= "URI"
+        %tbody
+          - j , w = 0 , 0
+          - pattern.each do |item|
+          - j = j.next
+            %tr
+              - if j.odd?
+                - w = w.next
+                %td= w
+                %td{:class => "class_1"}= "Concept"
+              -else
+                %td= "&nbsp;"
+                %td{:class => "class_0"}= "Property"
+              %td= h item
+  - n = n.next
         
           
         
