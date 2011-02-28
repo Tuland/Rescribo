@@ -3,16 +3,18 @@ module Pbuilder
   class MapsAnalyzer
     
     # +root_concepts_list+ - A list of root concepts (a pair: abstract concept + core concept)
-    # +finders+ A list of offline finder to request patterns information
+    # +finders+ - A list of offline finder to request patterns information
     attr_reader :root_concepts_list, :finders
     
     # Init
     #  
     # ==== Attributes  
     #  
-    # * +core_concept+ - A core concept representing the root of subgraph
-    # * +storage_klass+ - A class to perform storage (See +PatternsStorage+ : +SimpleStorage+ and +PatternsTree+)
-    def initialize(patterns_file, analysis_file, mapttings_file, id)
+    # * +patterns_file+ - A string determining the name of the patterns file
+    # * +analysis_file+ - A string determining the name of the analysis file
+    # * +mappings_file+ - A string determining the name of the mapping file that contains a list of triples (abstract concept, core concepts, mapping reference number)
+    # * +id+ - A personal identifier
+    def initialize(patterns_file, analysis_file, mappings_file, id)
       @root_concepts_list = SearchEngine.find_root_concepts
       i = 0
       @finders, maps = [], []
@@ -27,7 +29,7 @@ module Pbuilder
         maps << [root_concepts[0].to_s, root_concepts[1].to_s, i]
         i = i.next
       end
-      mappings = { mapttings_file => maps}
+      mappings = { mappings_file => maps}
       YamlWriter.store_reports(mappings, id)
     end
     

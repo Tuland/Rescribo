@@ -22817,3 +22817,21 @@ Rendering patterns_builder/index
 Rendered layouts/_header (0.0ms)
 Rendered layouts/_footer (1.0ms)
 Completed in 108ms (View: 50, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-02-28 12:47:45) [GET]
+  [4;35;1mUser Load (23.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 481ms (View: 133, DB: 24) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-02-28 12:47:49) [POST]
+  Parameters: {"authenticity_token"=>"NGMguy9nc1+BJ41ofLV+vtU5t3FMv7YbOgdAR78L2fE="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (181.0ms)
+Completed in 854ms (View: 235, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
