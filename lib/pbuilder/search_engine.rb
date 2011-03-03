@@ -6,6 +6,8 @@ module Pbuilder
     print "This sample needs activerdf and activerdf_jena.\n"
   end
   
+  include PHelper
+  
   class SearchEngine
   
     #  <b>A forget</b> property: URI string
@@ -69,19 +71,18 @@ module Pbuilder
                               patterns_storage, 
                               finders_list = DEFAULT_FINDERS )
       # Token bound: property count < 1
-      condition = Proc.new do |curr_property|
-        ! analysis.properties_list.has_key?(curr_property.to_s)
+      condition = Proc.new do |curr_property, curr_concept|
+        ! analysis.include_edge?(concept, curr_property, curr_concept)
       end
       # System update analysis and patterns storage
       update_system = Proc.new do | curr_concept, 
                                     curr_property, 
                                     curr_property_type|
 
-        analysis.update(curr_concept, 
+        analysis.update(concept,
+                        curr_concept, 
                         curr_property,
                         curr_property_type)
-
-        
 
         patterns_storage.import(curr_concept,
                                 curr_property)
@@ -115,7 +116,7 @@ module Pbuilder
                                 update_system)
       query= Query.new.distinct(:p).where(concept, :p , concept)
       query.execute do |property|
-        if condition.call(property)
+        if condition.call(property, concept)
           update_system.call( concept, 
                               property, 
                               PROPERTY_TYPES[:reflexive])
@@ -142,13 +143,14 @@ module Pbuilder
                           update_system)
       query= Query.new.distinct(:s, :p).where(:s, :p , concept)
       query.execute do |concept_s, property|
-        if (property != A_GENERALIZE_RESOURCE && 
-            property != A_FORGET_RESOURCE &&
+        if (property.different?(A_GENERALIZE_RESOURCE,
+                                A_FORGET_RESOURCE,
+                                RDFS::label) &&
             concept_s != concept && 
-            condition.call(property))
-          count = update_system.call( concept_s, 
-                                      property, 
-                                      PROPERTY_TYPES[:inverse])
+            condition.call(property, concept_s))
+          update_system.call( concept_s, 
+                              property, 
+                              PROPERTY_TYPES[:inverse])
         end
       end
     end
@@ -166,15 +168,16 @@ module Pbuilder
                               update_system)
       query = Query.new.distinct(:o, :p).where(concept, :p , :o)
       query.execute do |concept_o, property|
-        if (property != RDF::type &&
-            concept_o != concept &&
-            condition.call(property))
-          count = update_system.call( concept_o, 
-                                      property, 
-                                      PROPERTY_TYPES[:simple])
+        if (property != RDF::type &&  
+            concept_o != concept &&   # avoid overlapping with find_reflexive_edge
+            condition.call(property, concept_o))
+          update_system.call( concept_o, 
+                              property, 
+                              PROPERTY_TYPES[:simple])
         end
       end
-    end 
+    end
+     
   end
   
 end

@@ -17,7 +17,8 @@ module Pbuilder
       :simple_edge => "simple_edge_sample.owl",
       :inverse_edge => "inverse_edge_sample.owl",  
       :reflexive_edge => "reflexive_edge_sample.owl",
-      :s_i_r_edges => "s_i_r_edges_sample.owl" 
+      :s_i_r_edges => "s_i_r_edges_sample.owl",
+      :min_prop_dup => "minimal_property_duplication.owl" 
     }.freeze
     ADAPTER_NAME = "name"
     FILE_PATH = Adapter.personal_persistence_file(ADAPTER_NAME,
@@ -105,6 +106,17 @@ module Pbuilder
                           [CORE_CONCEPT_STR, PROPERTY_Q_STR, CONCEPT_C_STR],
                           [CORE_CONCEPT_STR, PROPERTY_R_STR, CORE_CONCEPT_STR]]
       assert_equal(patterns.list, correct_patterns)
+    end
+    
+    test "property_duplication" do
+      @adapter = default_adapter(ONTO_NAME[:min_prop_dup])
+      abstract_concept, core_concept = SearchEngine.find_a_single_pair_of_rc
+      analysis = PatternsAnalysis.new(core_concept)
+      patterns = SimpleStorage.new(core_concept)
+      SearchEngine.find_neighbours( core_concept, 
+                                    analysis,
+                                    patterns )
+      assert_equal(patterns.list.size, 2)
     end
 
     private

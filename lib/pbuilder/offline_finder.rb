@@ -26,7 +26,7 @@ module Pbuilder
     # ==== Options
     #
     # * +:id+ - A personal identifier
-    # * +:report+ - Consent (true or false) to write a report 
+    # * +:report+ - Consent to write a report (value: true or false) 
     # * +:patterns_file+ - A string determining the name of the patterns file
     # * +:analysis_file+ - A string determining the name of the analysis file
     # * +:report_view+ - A method to perform the view

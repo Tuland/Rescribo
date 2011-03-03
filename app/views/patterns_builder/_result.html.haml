@@ -23,10 +23,14 @@
           %th= "URI"
           %th= "Type"
       %tbody
-        - @finders[n].analysis.properties_list.each do |p_name, p_type|
+        - @finders[n].analysis.properties_list.each do |p, p_type|
           %tr
-            %td= h p_name
-            %td{:class => "#{h p_type}_edge"}= h p_type
+            %td{:class => "first"}= h p[0]
+            %td{:class => "#{h p_type}_edge", :rowspan => "3"}= h p_type
+          %tr
+            %td{:class => "middle #{h p_type}_edge"}= h p[1]
+          %tr
+            %td{:class => "last"}= h p[2]
           
     %h3="Patterns"
   
@@ -53,7 +57,7 @@
                 %td= "&nbsp;"
                 %td{:class => "class_0"}= "Property"
               %td= h item
-  - n = n.next
+    - n = n.next
         
           
         

@@ -82,41 +82,9 @@
     
 
 
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P11.had_patertecipant -->
-
-    <owl:ObjectProperty rdf:about="&erlangen;P11.had_patertecipant">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P2.has_type -->
 
     <owl:ObjectProperty rdf:about="&erlangen;P2.has_type">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P4.has_time-span -->
-
-    <owl:ObjectProperty rdf:about="&erlangen;P4.has_time-span">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P7.took_place_at -->
-
-    <owl:ObjectProperty rdf:about="&erlangen;P7.took_place_at">
-        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P82.at_some_time_within -->
-
-    <owl:ObjectProperty rdf:about="&erlangen;P82.at_some_time_within">
         <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
     </owl:ObjectProperty>
     
@@ -166,23 +134,9 @@
     
 
 
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period -->
+    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A4.Location -->
 
-    <skos:Concept rdf:about="&erlangen;A2.Period">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <aeria:a-forget rdf:resource="&rdfs;Litteral"/>
-        <erlangen:P11.had_patertecipant rdf:resource="&erlangen;A5.Actor"/>
-        <aeria:a-forget rdf:resource="&erlangen;E4.Period"/>
-        <aeria:a-generalize rdf:resource="&erlangen;E4.Period"/>
-        <aeria:a-forget rdf:resource="&erlangen;E52.Time-Span"/>
-        <aeria:a-forget rdf:resource="&erlangen;E61.Time_Primitive"/>
-    </skos:Concept>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A4.Place -->
-
-    <skos:Concept rdf:about="&erlangen;A4.Place">
+    <skos:Concept rdf:about="&erlangen;A4.Location">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <aeria:a-forget rdf:resource="&rdfs;Litteral"/>
         <aeria:a-forget rdf:resource="&erlangen;E44.Place_Appellation"/>
@@ -190,45 +144,6 @@
         <aeria:a-forget rdf:resource="&erlangen;E53.Place"/>
         <aeria:a-generalize rdf:resource="&erlangen;E53.Place"/>
         <aeria:a-forget rdf:resource="&erlangen;E55.Type"/>
-    </skos:Concept>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor -->
-
-    <skos:Concept rdf:about="&erlangen;A5.Actor">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <aeria:a-forget rdf:resource="&erlangen;E21.Person"/>
-        <aeria:a-forget rdf:resource="&erlangen;E39.Actor"/>
-        <aeria:a-generalize rdf:resource="&erlangen;E39.Actor"/>
-        <aeria:a-forget rdf:resource="&erlangen;E74.Group"/>
-    </skos:Concept>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person -->
-
-    <skos:Concept rdf:about="&erlangen;E21.Person">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-    </skos:Concept>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor -->
-
-    <skos:Concept rdf:about="&erlangen;E39.Actor">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <aeria:generalize rdf:resource="&erlangen;E21.Person"/>
-        <aeria:generalize rdf:resource="&erlangen;E74.Group"/>
-    </skos:Concept>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E4.Period -->
-
-    <skos:Concept rdf:about="&erlangen;E4.Period">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <erlangen:P4.has_time-span rdf:resource="&erlangen;E52.Time-Span"/>
     </skos:Concept>
     
 
@@ -252,15 +167,6 @@
     
 
 
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E52.Time-Span -->
-
-    <skos:Concept rdf:about="&erlangen;E52.Time-Span">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <erlangen:P82.at_some_time_within rdf:resource="&erlangen;E61.Time_Primitive"/>
-    </skos:Concept>
-    
-
-
     <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place -->
 
     <skos:Concept rdf:about="&erlangen;E53.Place">
@@ -274,23 +180,6 @@
     <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type -->
 
     <skos:Concept rdf:about="&erlangen;E55.Type">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-    </skos:Concept>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E61.Time_Primitive -->
-
-    <skos:Concept rdf:about="&erlangen;E61.Time_Primitive">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <rdfs:label rdf:resource="&rdfs;Litteral"/>
-    </skos:Concept>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E74.Group -->
-
-    <skos:Concept rdf:about="&erlangen;E74.Group">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </skos:Concept>
 </rdf:RDF>

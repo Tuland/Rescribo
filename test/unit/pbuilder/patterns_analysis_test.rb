@@ -27,22 +27,36 @@ module Pbuilder
 
     test "update_analysis" do
       @analysis = PatternsAnalysis.new()
-      @analysis.update(CONCEPT, PROPERTY_NAME, PROPERTY_TYPE)
+      @analysis.update( INIT_CONCEPT, 
+                        CONCEPT, 
+                        PROPERTY_NAME, 
+                        PROPERTY_TYPE)
       assert_equal(@analysis.concepts_list.first, CONCEPT)
-      assert(@analysis.properties_list.has_key?(PROPERTY_NAME))
-      assert_equal(@analysis.properties_list[PROPERTY_NAME], PROPERTY_TYPE)
+      puts @analysis.properties_list.keys
+      assert(@analysis.include_edge?( INIT_CONCEPT,
+                                      PROPERTY_NAME,
+                                      CONCEPT))
+      assert_equal( @analysis.properties_list[[INIT_CONCEPT, 
+                                              PROPERTY_NAME, 
+                                              CONCEPT]], 
+                    PROPERTY_TYPE)
     end
   
     test "update_analysis_with_deafault_type" do
       @analysis = PatternsAnalysis.new()
-      @analysis.update(CONCEPT, PROPERTY_NAME)
-      assert_equal(@analysis.properties_list[PROPERTY_NAME], 
+      @analysis.update(INIT_CONCEPT, CONCEPT, PROPERTY_NAME)
+      assert_equal(@analysis.properties_list[[INIT_CONCEPT, 
+                                              PROPERTY_NAME, 
+                                              CONCEPT]], 
                   PatternsAnalysis::DEFAULT_PROPERTY_TYPE)
     end
   
     test "shift_concepts" do
       @analysis = PatternsAnalysis.new(INIT_CONCEPT)
-      @analysis.update(CONCEPT, PROPERTY_NAME, PROPERTY_TYPE)
+      @analysis.update( INIT_CONCEPT, 
+                        CONCEPT, 
+                        PROPERTY_NAME, 
+                        PROPERTY_TYPE)
       @analysis.shift_concepts
       assert_equal CONCEPT, @analysis.concepts_list.first
     end

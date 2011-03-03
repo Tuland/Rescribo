@@ -58,6 +58,19 @@ td{
   padding: 0 1em;
 }
 
+td.first{
+  border-bottom-style: none;
+}
+
+td.middle{
+  border-bottom-style: dotted;
+  border-top-style: dotted;
+}
+
+td.last{
+  border-top-style: none;
+}
+
 .class_0{
   background-color:#D3D3D3;
 }

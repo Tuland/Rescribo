@@ -7,6 +7,9 @@ module Pbuilder
     IDENTIFIER = 1234
     ONTO_NAME = {
       :semi_cycle => "semi_cycle_sample.owl",
+      :min_prop_dup => "minimal_property_duplication.owl",
+      :prop_dup_1 => "property_duplication_1.owl",
+      :prop_dup_2 => "property_duplication_2.owl", 
     }.freeze
     ADAPTER_NAME = "name"
     # Root concepts: ABSTRACT_CONCEPT_STR, ABSTRACT_CONCEPT_RES, CORE_CONCEPT_STR and CORE_CONCEPT_RES                                              
@@ -19,11 +22,6 @@ module Pbuilder
     def setup
       Adapter.purge(IDENTIFIER,
                     THIS_PATH)
-      @adapter = Adapter.new( IDENTIFIER,
-                              Adapter.local_url(THIS_PATH, ONTO_NAME[:semi_cycle]),
-                              ADAPTER_NAME,
-                              THIS_PATH)
-      @abstract_concept, @core_concept = SearchEngine.find_a_single_pair_of_rc
     end
     
     def teardown
@@ -33,24 +31,28 @@ module Pbuilder
     end
     
     test "simple_storage_instance" do
-      finder = Pbuilder::OfflineFinder.new(@core_concept, SimpleStorage)
+      abstract_concept, core_concept = setup_adapter(ONTO_NAME[:semi_cycle])
+      finder = OfflineFinder.new(core_concept, SimpleStorage)
       assert_instance_of(SimpleStorage, finder.patterns)
     end
     
     test "patterns_tree_instance" do
-      finder = Pbuilder::OfflineFinder.new(@core_concept, PatternsTree)
+      abstract_concept, core_concept = setup_adapter(ONTO_NAME[:semi_cycle])
+      finder = OfflineFinder.new(core_concept, PatternsTree)
       assert_instance_of(PatternsTree, finder.patterns)
     end
     
     test "root_of_patterns_tree_exploring_a_semi_cycle" do
-      finder = Pbuilder::OfflineFinder.new(@core_concept, PatternsTree)
+      abstract_concept, core_concept = setup_adapter(ONTO_NAME[:semi_cycle])
+      finder = OfflineFinder.new(core_concept, PatternsTree)
       finder.start
       assert_instance_of(String, finder.patterns.root.value)
       assert_equal(CORE_CONCEPT_STR, finder.patterns.root.value)
     end
     
     test "leaves_of_patterns_tree_exploring_a_semi_cycle" do
-      finder = Pbuilder::OfflineFinder.new(@core_concept, PatternsTree)
+      abstract_concept, core_concept = setup_adapter(ONTO_NAME[:semi_cycle])
+      finder = OfflineFinder.new(core_concept, PatternsTree)
       finder.start
       correct_leaves = [CONCEPT_C_STR,
                         CONCEPT_D_STR,
@@ -61,10 +63,11 @@ module Pbuilder
     end
     
     test "comparison_simple_storage_with_patterns_tree" do
-      finder = Pbuilder::OfflineFinder.new(@core_concept, PatternsTree)
+      abstract_concept, core_concept = setup_adapter(ONTO_NAME[:semi_cycle])
+      finder = OfflineFinder.new(core_concept, PatternsTree)
       finder.start
       list_t = finder.patterns.list
-      finder = Pbuilder::OfflineFinder.new(@core_concept, SimpleStorage)
+      finder = OfflineFinder.new(core_concept, SimpleStorage)
       finder.start
       # List mode: SimpleStorage = PatternsTree
       list_s = finder.patterns.list
@@ -72,7 +75,8 @@ module Pbuilder
     end
     
     test "semi_cycle_with_simple_storage" do
-      finder = Pbuilder::OfflineFinder.new(@core_concept, SimpleStorage)
+      abstract_concept, core_concept = setup_adapter(ONTO_NAME[:semi_cycle])
+      finder = OfflineFinder.new(core_concept, SimpleStorage)
       finder.start
       correct_patterns = [  [ CORE_CONCEPT_STR,
                               PROPERTY_Q_STR,
@@ -111,16 +115,53 @@ module Pbuilder
                               CONCEPT_D_STR ] ]
       assert_equal(finder.patterns.list, correct_patterns)
       correct_properties = {  
-        PROPERTY_Q_STR => SearchEngine::PROPERTY_TYPES[:simple],
-        PROPERTY_P_STR => SearchEngine::PROPERTY_TYPES[:simple],
-        PROPERTY_T_STR => SearchEngine::PROPERTY_TYPES[:simple],
-        PROPERTY_V_STR => SearchEngine::PROPERTY_TYPES[:inverse],
-        PROPERTY_U_STR => SearchEngine::PROPERTY_TYPES[:reflexive],
-        PROPERTY_S_STR => SearchEngine::PROPERTY_TYPES[:simple],
-        PROPERTY_R_STR => SearchEngine::PROPERTY_TYPES[:inverse],
-        PROPERTY_W_STR => SearchEngine::PROPERTY_TYPES[:reflexive] 
+        [ CORE_CONCEPT_STR, 
+          PROPERTY_Q_STR,
+          CONCEPT_C_STR ] => SearchEngine::PROPERTY_TYPES[:simple],
+        [ CORE_CONCEPT_STR,
+          PROPERTY_P_STR,
+          CONCEPT_B_STR ] => SearchEngine::PROPERTY_TYPES[:simple],
+        [ CONCEPT_C_STR, 
+          PROPERTY_T_STR,
+          CONCEPT_E_STR ] => SearchEngine::PROPERTY_TYPES[:simple],
+        [ CONCEPT_C_STR,
+          PROPERTY_V_STR,
+          CONCEPT_E_STR ] => SearchEngine::PROPERTY_TYPES[:inverse],
+        [ CONCEPT_C_STR,
+          PROPERTY_U_STR,
+          CONCEPT_C_STR ] => SearchEngine::PROPERTY_TYPES[:reflexive],
+        [ CONCEPT_B_STR,
+          PROPERTY_S_STR,
+          CONCEPT_E_STR ] => SearchEngine::PROPERTY_TYPES[:simple],
+        [ CONCEPT_B_STR,
+          PROPERTY_R_STR,
+          CONCEPT_D_STR ] => SearchEngine::PROPERTY_TYPES[:inverse],
+        [ CONCEPT_E_STR,
+          PROPERTY_W_STR,
+          CONCEPT_E_STR ] => SearchEngine::PROPERTY_TYPES[:reflexive] 
       }                    
       assert_equal(finder.analysis.properties_list, correct_properties)
+    end
+    
+    test "min_property_duplication" do
+      abstract_concept, core_concept = setup_adapter(ONTO_NAME[:min_prop_dup])
+      finder = OfflineFinder.new(core_concept, PatternsTree)
+      finder.start
+      assert_equal(finder.patterns.list.size, 2)
+    end
+    
+    test "property_duplication_1" do
+      abstract_concept, core_concept = setup_adapter(ONTO_NAME[:prop_dup_1])
+      finder = OfflineFinder.new(core_concept, PatternsTree)
+      finder.start
+      assert_equal(finder.patterns.list.size, 2)
+    end
+    
+    test "property_duplication_2" do
+      abstract_concept, core_concept = setup_adapter(ONTO_NAME[:prop_dup_2])
+      finder = OfflineFinder.new(core_concept, PatternsTree)
+      finder.start
+      assert_equal(finder.patterns.list.size, 3)
     end
     
     def assert_equal_leaves(correct_leaves, leaves)
@@ -129,6 +170,14 @@ module Pbuilder
         assert_equal(leaf.value, correct_leaves[i])
         i = i.next
       end
+    end
+    
+    def setup_adapter(onto)
+      @adapter = Adapter.new( IDENTIFIER,
+                              Adapter.local_url(THIS_PATH, onto),
+                              ADAPTER_NAME,
+                              THIS_PATH)
+      SearchEngine.find_a_single_pair_of_rc
     end
      
   end

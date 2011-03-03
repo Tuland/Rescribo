@@ -4,22 +4,18 @@ leaves: !ruby/object:Pbuilder::LeavesList
     - &id001 !ruby/object:Pbuilder::TreeNode 
       children: []
 
-      edge: <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P2.has_type>
-      value: <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type>
+      edge: <http://www.siti.disco.unimib.it/cmm/2010/aeria#generalize>
+      value: <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E74.Group>
     - &id002 !ruby/object:Pbuilder::TreeNode 
       children: []
 
-      edge: <http://www.w3.org/2000/01/rdf-schema#label>
-      value: <http://www.w3.org/2000/01/rdf-schema#Litteral>
+      edge: <http://www.siti.disco.unimib.it/cmm/2010/aeria#generalize>
+      value: <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person>
 root: !ruby/object:Pbuilder::TreeNode 
   children: 
-    - !ruby/object:Pbuilder::TreeNode 
-      children: 
-        - *id001
-        - *id002
-      edge: <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P87.is_identified_by>
-      value: <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E47.Spatial_Coordinates>
+    - *id001
+    - *id002
   edge: 
-  value: <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place>
+  value: <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor>
 temp: []
 
