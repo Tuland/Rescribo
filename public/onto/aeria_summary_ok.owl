@@ -201,7 +201,6 @@
         <aeria:a-forget rdf:resource="&erlangen;E21.Person"/>
         <aeria:a-forget rdf:resource="&erlangen;E39.Actor"/>
         <aeria:a-generalize rdf:resource="&erlangen;E39.Actor"/>
-        <aeria:a-forget rdf:resource="&erlangen;E74.Group"/>
     </skos:Concept>
     
 
@@ -219,7 +218,6 @@
     <skos:Concept rdf:about="&erlangen;E39.Actor">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <aeria:generalize rdf:resource="&erlangen;E21.Person"/>
-        <aeria:generalize rdf:resource="&erlangen;E74.Group"/>
     </skos:Concept>
     
 
@@ -284,14 +282,6 @@
     <skos:Concept rdf:about="&erlangen;E61.Time_Primitive">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label rdf:resource="&rdfs;Litteral"/>
-    </skos:Concept>
-    
-
-
-    <!-- http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E74.Group -->
-
-    <skos:Concept rdf:about="&erlangen;E74.Group">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </skos:Concept>
 </rdf:RDF>
 

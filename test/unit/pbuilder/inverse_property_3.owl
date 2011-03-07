@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY prova "http://www.siti.disco.unimib.it/prova#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY aeria "http://www.siti.disco.unimib.it/cmm/2010/aeria#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.siti.disco.unimib.it/prova#"
+     xml:base="http://www.siti.disco.unimib.it/prova"
+     xmlns:prova="http://www.siti.disco.unimib.it/prova#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:aeria="http://www.siti.disco.unimib.it/cmm/2010/aeria#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.siti.disco.unimib.it/prova">
+        <owl:imports rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/aeria#a-forget -->
+
+    <owl:ObjectProperty rdf:about="&aeria;a-forget"/>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/aeria#a-generalize -->
+
+    <owl:ObjectProperty rdf:about="&aeria;a-generalize"/>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship -->
+
+    <owl:ObjectProperty rdf:about="&aeria;directedRelationship"/>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/aeria#generalize -->
+
+    <owl:ObjectProperty rdf:about="&aeria;generalize"/>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#P1.property_p -->
+
+    <owl:ObjectProperty rdf:about="&prova;P1.property_p">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+        <owl:inverseOf rdf:resource="&prova;P2.property_q"/>
+        <owl:inverseOf rdf:resource="&prova;P3.property_r"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#P2.property_q -->
+
+    <owl:ObjectProperty rdf:about="&prova;P2.property_q">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#P3.property_r -->
+
+    <owl:ObjectProperty rdf:about="&prova;P3.property_r">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#P4.property_s -->
+
+    <owl:ObjectProperty rdf:about="&prova;P4.property_s">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#P5.property_t -->
+
+    <owl:ObjectProperty rdf:about="&prova;P5.property_t">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#P6.property_u -->
+
+    <owl:ObjectProperty rdf:about="&prova;P6.property_u">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#P7.property_v -->
+
+    <owl:ObjectProperty rdf:about="&prova;P7.property_v">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#P8.property_z -->
+
+    <owl:ObjectProperty rdf:about="&prova;P8.property_z">
+        <rdfs:subPropertyOf rdf:resource="&aeria;directedRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="&skos;Concept"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#A1.AbstractConcept -->
+
+    <skos:Concept rdf:about="&prova;A1.AbstractConcept">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <aeria:a-generalize rdf:resource="&prova;E1.Concept_A_Core"/>
+        <aeria:a-forget rdf:resource="&prova;E1.Concept_A_Core"/>
+        <aeria:a-forget rdf:resource="&prova;E2.Concept_B"/>
+        <aeria:a-forget rdf:resource="&prova;E3.Concept_C"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#E1.Concept_A_Core -->
+
+    <skos:Concept rdf:about="&prova;E1.Concept_A_Core">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <P1.property_p rdf:resource="&prova;E2.Concept_B"/>
+        <P3.property_r rdf:resource="&prova;E3.Concept_C"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#E2.Concept_B -->
+
+    <skos:Concept rdf:about="&prova;E2.Concept_B">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <P2.property_q rdf:resource="&prova;E1.Concept_A_Core"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.siti.disco.unimib.it/prova#E3.Concept_C -->
+
+    <skos:Concept rdf:about="&prova;E3.Concept_C">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </skos:Concept>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
+

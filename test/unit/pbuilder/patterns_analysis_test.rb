@@ -32,7 +32,6 @@ module Pbuilder
                         PROPERTY_NAME, 
                         PROPERTY_TYPE)
       assert_equal(@analysis.concepts_list.first, CONCEPT)
-      puts @analysis.properties_list.keys
       assert(@analysis.include_edge?( INIT_CONCEPT,
                                       PROPERTY_NAME,
                                       CONCEPT))

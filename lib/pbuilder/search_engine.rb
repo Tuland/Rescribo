@@ -64,15 +64,21 @@ module Pbuilder
     # ==== Example
     #
     # B --p--> A
-    # p is inverse, focusing A
+    # p is an inverse edge, focusing A
     # Into the pattern: A --p_i--> B
+    #
+    # ==== Infos
+    #
+    # Only one inverse property is taken in consideration (See: search_engine_test.rb)
     def self.find_neighbours( concept, 
                               analysis,
                               patterns_storage, 
                               finders_list = DEFAULT_FINDERS )
       # Token bound: property count < 1
       condition = Proc.new do |curr_property, curr_concept|
-        ! analysis.include_edge?(concept, curr_property, curr_concept)
+        ! analysis.include_edge?(concept, curr_property, curr_concept) &&
+        ! analysis.include_property_name?(curr_property.inverseOf) &&
+        ! analysis.include_inverse_of?(curr_property)
       end
       # System update analysis and patterns storage
       update_system = Proc.new do | curr_concept, 

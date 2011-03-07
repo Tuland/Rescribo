@@ -18,7 +18,10 @@ module Pbuilder
       :inverse_edge => "inverse_edge_sample.owl",  
       :reflexive_edge => "reflexive_edge_sample.owl",
       :s_i_r_edges => "s_i_r_edges_sample.owl",
-      :min_prop_dup => "minimal_property_duplication.owl" 
+      :min_prop_dup => "minimal_property_duplication.owl",
+      :inverse_property_1 => "inverse_property_1.owl",
+      :inverse_property_2 => "inverse_property_2.owl",
+      :inverse_property_3 => "inverse_property_3.owl"
     }.freeze
     ADAPTER_NAME = "name"
     FILE_PATH = Adapter.personal_persistence_file(ADAPTER_NAME,
@@ -118,6 +121,36 @@ module Pbuilder
                                     patterns )
       assert_equal(patterns.list.size, 2)
     end
+
+    test "inverse_property_1" do
+      correct_pattern = [ CORE_CONCEPT_STR, 
+                          PROPERTY_P_STR,
+                          CONCEPT_B_STR ]
+      @adapter = default_adapter(ONTO_NAME[:inverse_property_1])
+      abstract_concept, core_concept = SearchEngine.find_a_single_pair_of_rc
+      analysis = PatternsAnalysis.new(core_concept)
+      patterns = SimpleStorage.new(core_concept)
+      SearchEngine.find_neighbours( core_concept, 
+                                    analysis,
+                                    patterns )
+      assert_equal(patterns.list, [correct_pattern])
+    end
+    
+    test "inverse_property_2" do
+      correct_pattern = [ CORE_CONCEPT_STR, 
+                          PROPERTY_P_STR,
+                          CONCEPT_B_STR ]
+      @adapter = default_adapter(ONTO_NAME[:inverse_property_2])
+      abstract_concept, core_concept = SearchEngine.find_a_single_pair_of_rc
+      analysis = PatternsAnalysis.new(core_concept)
+      patterns = SimpleStorage.new(core_concept)
+      SearchEngine.find_neighbours( core_concept, 
+                                    analysis,
+                                    patterns )
+      assert_equal(patterns.list, [correct_pattern])
+    end
+    
+    # TODO: Take in consideration more then one inverse property
 
     private
     
