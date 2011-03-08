@@ -31,10 +31,10 @@ module Pbuilder
       :inverse => "find_inverse_edge",    # See: +find_inverse_edge+
       :reflexive => "find_reflexive_edge" # See: +find_reflexive_edge+
     }.freeze
-    # This finders list detect simple, rinverse and reflexive edges
-    DEFAULT_FINDERS = [ EDGE_FINDERS[:simple], 
-                        EDGE_FINDERS[:inverse], 
-                        EDGE_FINDERS[:reflexive] ]                    
+    # This finders list detect reflexive, simple and rinverse edges (in this order)
+    DEFAULT_FINDERS = [ EDGE_FINDERS[:reflexive],
+                        EDGE_FINDERS[:simple], 
+                        EDGE_FINDERS[:inverse] ]                    
 
     # Core and abstract concepts detection. Return pairs in a list
     def self.find_root_concepts
@@ -84,12 +84,10 @@ module Pbuilder
       update_system = Proc.new do | curr_concept, 
                                     curr_property, 
                                     curr_property_type|
-
         analysis.update(concept,
                         curr_concept, 
                         curr_property,
                         curr_property_type)
-
         patterns_storage.import(curr_concept,
                                 curr_property)
 
