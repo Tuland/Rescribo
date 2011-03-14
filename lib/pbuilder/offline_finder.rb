@@ -56,8 +56,8 @@ module Pbuilder
           view = @patterns.send(options[:report_view])
         end
         reports_hash = {options[:patterns_file] => view,
-                        options[:analysis_file] => @analysis }
-        YamlWriter.store_reports(reports_hash, options[:id])
+                        options[:analysis_file] => @analysis}
+        YamlWriter.store_reports(reports_hash, options[:id], options[:number])
       end
     end
     

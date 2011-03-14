@@ -6,6 +6,7 @@ end
 
 require 'pbuilder/adapter'
 require 'pbuilder/maps_analyzer'
+require 'pbuilder/yaml_reader'
 
 class ApproximatorController < ApplicationController
   layout 'main'
@@ -27,6 +28,9 @@ class ApproximatorController < ApplicationController
     @finders = maps.finders              
     aeria_adapter.close
     @notice = "Ontologies loaded"
+    
+    w = Pbuilder::YamlReader.new(session[:user_id], MAPPINGS_FILE)
+    
   end
 
 end
