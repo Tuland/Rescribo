@@ -1,6 +1,7 @@
 module Pbuilder
   
   class PatternsTree < PatternsStorage
+    include PHelper
       
     attr_reader :root, :leaves
     
@@ -8,10 +9,11 @@ module Pbuilder
     #  
     # ==== Attributes  
     #  
-    # * +init_concept+ - An initial concept to include
+    # * +init_concept+ - An initial concept to include. Allowed: RDFS::Resource, String, <String>
     def initialize(init_concept)
       @leaves = LeavesList.new()
-      @root = @leaves.insert(init_concept.to_s)
+      init_concept = Converter.src_2_str(init_concept)
+      @root = @leaves.insert(init_concept)
       empty_temp
     end
     
@@ -19,11 +21,9 @@ module Pbuilder
      #  
      # ==== Attributes  
      #  
-     # * +prev_concept+ - A concept determining the last item into the pattern to perform the attachment
-     # * +property+ - A property to queue 
-     # * +next_concept+ - A concept to queue
+     # * +prev_concept+ - A concept determining the last item into the pattern to perform the attachment. Allowed: RDFS::Resource, String, <String>
     def update(concept)
-      concept = concept.to_s
+      concept = Converter.src_2_str(concept)
       if ! @temp.empty?
         @leaves.substitute_concept_using_matrix(concept, 
                                                 @temp)

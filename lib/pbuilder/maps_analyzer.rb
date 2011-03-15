@@ -1,6 +1,7 @@
 module Pbuilder
   
   class MapsAnalyzer
+    include PHelper
     
     # +root_concepts_list+ - A list of root concepts (a pair: abstract concept + core concept)
     # +finders+ - A list of offline finder to request patterns information
@@ -24,7 +25,9 @@ module Pbuilder
       i = 0
       @finders, maps = [], {}
       @root_concepts_list.each do |root_concepts|
-        finder = OfflineFinder.new(root_concepts[1], Pbuilder::PatternsTree)
+        abst_concept = Converter.src_2_str(root_concepts[0])
+        core_concept = Converter.src_2_str(root_concepts[1])
+        finder = OfflineFinder.new(core_concept, Pbuilder::PatternsTree)
         finder.start({:id             =>  options[:id],
                       :report         =>  options[:report],
                       :patterns_file  =>  options[:patterns_file].to_s,
@@ -32,7 +35,7 @@ module Pbuilder
                       :number         =>  i,
                       :report_view    =>  ""} )
         @finders << finder
-        maps[root_concepts[0].to_s] = [root_concepts[1].to_s, i]
+        maps[abst_concept] = [core_concept, i]
         i = i.next
       end
       if options[:report]

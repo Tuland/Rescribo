@@ -8,6 +8,7 @@ module Pbuilder
   
   # Analysis used by algorithm that build patterns
   class PatternsAnalysis
+    include PHelper
   
     DEFAULT_PROPERTY_TYPE = SearchEngine::PROPERTY_TYPES[:simple]
   
@@ -37,17 +38,17 @@ module Pbuilder
     #  
     # ==== Attributes  
     #  
-    # * +concept_s+ - A concept (subject) to include into the analysis
-    # * +concept_o+ - A concept (object) to include into the analysis
-    # * +property_name+ - A property to include into the analysis
+    # * +concept_s+ - A concept (subject) to include into the analysis. Allowed: RDFS::Resource, String, <String>
+    # * +concept_o+ - A concept (object) to include into the analysis. Allowed: RDFS::Resource, String, <String>
+    # * +property_name+ - A property to include into the analysis. Allowed: RDFS::Resource, String, <String>
     # * +property_type+ - Type that +property_name+ belong to. See +SearchEngine::PROPERTY_TYPES+
     def update( concept_s,
                 concept_o, 
                 property_name, 
                 property_type = DEFAULT_PROPERTY_TYPE)
-      concept_s = concept_s.to_s
-      concept_o = concept_o.to_s
-      property_name = property_name.to_s
+      concept_s = Converter.src_2_str(concept_s)
+      concept_o = Converter.src_2_str(concept_o)
+      property_name = Converter.src_2_str(property_name)
       @concepts_list.push(concept_o)
       update_properties_list( concept_s,
                               property_name,
@@ -62,9 +63,9 @@ module Pbuilder
     def include_edge?(concept_s, 
                       property_name,
                       concept_o)
-      concept_s = concept_s.to_s
-      concept_o = concept_o.to_s
-      property_name = property_name.to_s
+      concept_s = Converter.src_2_str(concept_s)
+      concept_o = Converter.src_2_str(concept_o)
+      property_name = Converter.src_2_str(property_name)
       result_s = include_directed_edge?(concept_s, 
                                         property_name,
                                         concept_o)
@@ -93,9 +94,9 @@ module Pbuilder
     #
     # ==== Attributes 
     #
-    # +property+ - A property URI (also an ActiveRDF resource)
+    # +property+ - A property URI (also an ActiveRDF resource). Allowed: RDFS::Resource, String, <String>
     def include_property_name?(property)
-      property = property.to_s
+      property = Converter.src_2_str(property)
       each_property_name do |item|
         if item == property
           return true

@@ -13,4 +13,19 @@ module Pbuilder::PHelper
     
   end
   
+  class Converter
+    
+    def self.src_2_str(concept)
+      concept = case concept
+        when RDFS::Resource
+          concept.to_s
+        when /^<([^>]*)>$/
+          concept
+        when String
+          "<" + concept + ">"
+      end
+    end
+    
+  end
+  
 end

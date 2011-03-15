@@ -24657,3 +24657,794 @@ Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-03-14 16:07:01)
 Rendering patterns_builder/load
 Rendered patterns_builder/_result (263.0ms)
 Completed in 1617ms (View: 301, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-03-15 12:42:01) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 189ms (DB: 1) | 302 Found [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-03-15 12:42:01) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (24.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 271ms (View: 265, DB: 3) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-03-15 12:42:07) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (11.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/patterns_builder
+Completed in 139ms (DB: 11) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-03-15 12:42:07) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 172ms (View: 131, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-03-15 12:42:10) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 187ms (View: 128, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-15 12:42:13) [GET]
+
+SyntaxError (/Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/lib/pbuilder/yaml_reader.rb:41: syntax error, unexpected end-of-file
+
+end
+  ^):
+  lib/pbuilder/yaml_reader.rb:31
+  lib/pbuilder/yaml_reader.rb:31:in `require'
+  app/controllers/approximator_controller.rb:9
+  app/controllers/approximator_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (175.0ms)
+Rendered rescues/_request_and_response (19.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 12:42:42) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 149ms (View: 142, DB: 0) | 200 OK [http://0.0.0.0/approximator]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 12:43:17) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 356ms (View: 145, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 12:43:21) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+ArgumentError (wrong # of arguments(2 for 4)):
+  app/controllers/approximator_controller.rb:32:in `initialize'
+  app/controllers/approximator_controller.rb:32:in `new'
+  app/controllers/approximator_controller.rb:32:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (195.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 12:43:23) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+ArgumentError (wrong # of arguments(2 for 4)):
+  app/controllers/approximator_controller.rb:32:in `initialize'
+  app/controllers/approximator_controller.rb:32:in `new'
+  app/controllers/approximator_controller.rb:32:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 12:45:24) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 364ms (View: 150, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 12:45:26) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NameError (undefined local variable or method `abstract_concept' for #<Pbuilder::YamlReader:0x3c2bdb>):
+  lib/pbuilder/yaml_reader.rb:26:in `load'
+  lib/pbuilder/yaml_reader.rb:38:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (195.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 12:47:43) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 362ms (View: 149, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 12:47:46) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  lib/pbuilder/yaml_reader.rb:28:in `load'
+  lib/pbuilder/yaml_reader.rb:27:in `each'
+  lib/pbuilder/yaml_reader.rb:27:in `load'
+  lib/pbuilder/yaml_reader.rb:38:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (189.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 12:48:54) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 354ms (View: 145, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 12:48:57) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NameError (undefined local variable or method `anaysis' for #<Pbuilder::YamlReader:0x799171>):
+  lib/pbuilder/yaml_reader.rb:34:in `load'
+  lib/pbuilder/yaml_reader.rb:38:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (193.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 12:50:21) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 346ms (View: 147, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 12:50:23) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering approximator/load
+Rendered approximator/_query_interface (18.0ms)
+Completed in 1521ms (View: 66, DB: 0) | 200 OK [http://0.0.0.0/approximator/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 13:57:35) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 13:57:37) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering approximator/load
+Rendered approximator/_query_interface (1.0ms)
+Completed in 752ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/approximator/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-15 13:59:12) [GET]
+
+SyntaxError (/Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/lib/pbuilder/yaml_reader.rb:34: syntax error, unexpected tSTRING_BEG
+
+                       "<" + concept ">"
+                                     ^):
+  lib/pbuilder/yaml_reader.rb:31
+  lib/pbuilder/yaml_reader.rb:31:in `require'
+  app/controllers/approximator_controller.rb:9
+  app/controllers/approximator_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (185.0ms)
+Rendered rescues/_request_and_response (19.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:00:20) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 361ms (View: 148, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:00:23) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering approximator/load
+Rendered approximator/_query_interface (5.0ms)
+Completed in 1475ms (View: 34, DB: 1) | 200 OK [http://0.0.0.0/approximator/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:01:31) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:01:33) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering approximator/load
+Rendered approximator/_query_interface (1.0ms)
+Completed in 751ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/approximator/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:13:16) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 361ms (View: 151, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:13:19) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NameError (uninitialized constant Pbuilder::YamlReader::Helper):
+  lib/pbuilder/yaml_reader.rb:29:in `load'
+  lib/pbuilder/yaml_reader.rb:28:in `each'
+  lib/pbuilder/yaml_reader.rb:28:in `load'
+  lib/pbuilder/yaml_reader.rb:41:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (197.0ms)
+Rendered rescues/_request_and_response (6.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:14:27) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 361ms (View: 150, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:14:29) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NameError (uninitialized constant Pbuilder::YamlReader::PHepler):
+  lib/pbuilder/yaml_reader.rb:29:in `load'
+  lib/pbuilder/yaml_reader.rb:28:in `each'
+  lib/pbuilder/yaml_reader.rb:28:in `load'
+  lib/pbuilder/yaml_reader.rb:41:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (190.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:14:59) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 25ms (View: 19, DB: 0) | 200 OK [http://0.0.0.0/approximator]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:15:24) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 356ms (View: 143, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:15:24) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (2.0ms)
+Completed in 31ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:15:26) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NameError (uninitialized constant Pbuilder::YamlReader::PHepler):
+  lib/pbuilder/yaml_reader.rb:29:in `load'
+  lib/pbuilder/yaml_reader.rb:28:in `each'
+  lib/pbuilder/yaml_reader.rb:28:in `load'
+  lib/pbuilder/yaml_reader.rb:41:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (185.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:16:41) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (14.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 357ms (View: 149, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:16:50) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NameError (uninitialized constant Pbuilder::YamlReader::PHepler):
+  lib/pbuilder/yaml_reader.rb:29:in `load'
+  lib/pbuilder/yaml_reader.rb:28:in `each'
+  lib/pbuilder/yaml_reader.rb:28:in `load'
+  lib/pbuilder/yaml_reader.rb:41:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (199.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:17:22) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:17:49) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 350ms (View: 141, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:17:51) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NameError (uninitialized constant Pbuilder::YamlReader::Helper):
+  lib/pbuilder/yaml_reader.rb:29:in `load'
+  lib/pbuilder/yaml_reader.rb:28:in `each'
+  lib/pbuilder/yaml_reader.rb:28:in `load'
+  lib/pbuilder/yaml_reader.rb:41:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (198.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:18:55) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 359ms (View: 149, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:19:01) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NoMethodError (undefined method `Helper' for Pbuilder::PHelper:Module):
+  lib/pbuilder/yaml_reader.rb:29:in `load'
+  lib/pbuilder/yaml_reader.rb:28:in `each'
+  lib/pbuilder/yaml_reader.rb:28:in `load'
+  lib/pbuilder/yaml_reader.rb:41:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (186.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:19:43) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 359ms (View: 148, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:19:56) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+ArgumentError (wrong # of arguments(1 for 0)):
+  lib/pbuilder/yaml_reader.rb:29:in `src_2_str'
+  lib/pbuilder/yaml_reader.rb:29:in `load'
+  lib/pbuilder/yaml_reader.rb:28:in `each'
+  lib/pbuilder/yaml_reader.rb:28:in `load'
+  lib/pbuilder/yaml_reader.rb:41:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (192.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:20:59) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 361ms (View: 150, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:21:02) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering approximator/load
+Rendered approximator/_query_interface (5.0ms)
+Completed in 1419ms (View: 39, DB: 0) | 200 OK [http://0.0.0.0/approximator/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-03-15 14:21:17) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 332ms (View: 168, DB: 12) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-03-15 14:21:20) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 128ms (View: 79, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-03-15 14:21:22) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (209.0ms)
+Completed in 1012ms (View: 264, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-03-15 14:22:58) [GET]
+  [4;35;1mUser Load (21.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 522ms (View: 136, DB: 22) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-03-15 14:23:01) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (263.0ms)
+Completed in 1654ms (View: 304, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-03-15 14:23:08) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 192ms (View: 69, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-15 14:23:10) [GET]
+
+TypeError (wrong argument type Class (expected Module)):
+  lib/pbuilder/yaml_reader.rb:10
+  lib/pbuilder/yaml_reader.rb:31:in `require'
+  app/controllers/approximator_controller.rb:9
+  app/controllers/approximator_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (168.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-15 14:23:10) [GET]
+
+TypeError (wrong argument type Class (expected Module)):
+  lib/pbuilder/yaml_reader.rb:10
+  lib/pbuilder/yaml_reader.rb:31:in `require'
+  app/controllers/approximator_controller.rb:9
+  app/controllers/approximator_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-15 14:24:28) [GET]
+
+TypeError (wrong argument type Class (expected Module)):
+  lib/pbuilder/yaml_reader.rb:10
+  lib/pbuilder/yaml_reader.rb:31:in `require'
+  app/controllers/approximator_controller.rb:9
+  app/controllers/approximator_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (180.0ms)
+Rendered rescues/_request_and_response (17.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-15 14:24:34) [GET]
+
+TypeError (wrong argument type Class (expected Module)):
+  lib/pbuilder/yaml_reader.rb:10
+  lib/pbuilder/yaml_reader.rb:31:in `require'
+  app/controllers/approximator_controller.rb:9
+  app/controllers/approximator_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-15 14:24:40) [GET]
+
+TypeError (wrong argument type Class (expected Module)):
+  lib/pbuilder/yaml_reader.rb:10
+  lib/pbuilder/yaml_reader.rb:31:in `require'
+  app/controllers/approximator_controller.rb:9
+  app/controllers/approximator_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:25:18) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 379ms (View: 152, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:25:21) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NameError (uninitialized constant Pbuilder::YamlReader::Converter):
+  lib/pbuilder/yaml_reader.rb:29:in `load'
+  lib/pbuilder/yaml_reader.rb:28:in `each'
+  lib/pbuilder/yaml_reader.rb:28:in `load'
+  lib/pbuilder/yaml_reader.rb:41:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (192.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:26:39) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 356ms (View: 148, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:26:44) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+
+NameError (uninitialized constant Pbuilder::YamlReader::Converter):
+  lib/pbuilder/yaml_reader.rb:29:in `load'
+  lib/pbuilder/yaml_reader.rb:28:in `each'
+  lib/pbuilder/yaml_reader.rb:28:in `load'
+  lib/pbuilder/yaml_reader.rb:41:in `load_all'
+  app/controllers/approximator_controller.rb:36:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (195.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:28:30) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (12.0ms)
+Rendered layouts/_footer (8.0ms)
+Completed in 361ms (View: 150, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:28:32) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering approximator/load
+Rendered approximator/_query_interface (4.0ms)
+Completed in 1442ms (View: 37, DB: 0) | 200 OK [http://0.0.0.0/approximator/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-03-15 14:32:40) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 994ms (View: 215, DB: 13) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-03-15 14:32:45) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 101ms (View: 64, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-03-15 14:32:48) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (185.0ms)
+Completed in 1555ms (View: 219, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-03-15 14:36:20) [GET]
+  [4;35;1mUser Load (23.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 446ms (View: 136, DB: 24) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-03-15 14:36:22) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (255.0ms)
+Completed in 1770ms (View: 297, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-03-15 14:48:13) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (8.0ms)
+Completed in 522ms (View: 138, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-03-15 14:48:16) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (249.0ms)
+Completed in 1787ms (View: 291, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-03-15 14:48:30) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 145ms (View: 73, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#index (for 127.0.0.1 at 2011-03-15 14:48:32) [GET]
+Rendering template within layouts/main
+Rendering approximator/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 153ms (View: 142, DB: 1) | 200 OK [http://0.0.0.0/approximator]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:48:33) [POST]
+  Parameters: {"authenticity_token"=>"Ivz8hmtLrNMmV5mFP2GiObHRMuxyMuh9dDpLf3JT+Nk="}
+Rendering approximator/load
+Rendered approximator/_query_interface (12.0ms)
+Completed in 787ms (View: 32, DB: 0) | 200 OK [http://0.0.0.0/approximator/load]

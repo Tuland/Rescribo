@@ -28,9 +28,14 @@ class ApproximatorController < ApplicationController
     @finders = maps.finders              
     aeria_adapter.close
     @notice = "Ontologies loaded"
-    
-    w = Pbuilder::YamlReader.new(session[:user_id], MAPPINGS_FILE)
-    
+  end
+  
+  def rewrite
+    reader = Pbuilder::YamlReader.new(session[:user_id],
+                                      MAPPINGS_FILE,
+                                      PATTERNS_FILE,
+                                      ANALYSIS_FILE)
+    patterns, analysis = reader.load_all
   end
 
 end

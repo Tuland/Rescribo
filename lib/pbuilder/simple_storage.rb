@@ -1,6 +1,7 @@
 module Pbuilder
   
   class SimpleStorage < PatternsStorage
+    include PHelper
     
     # * +list+ - List to storage patterns
     attr_reader :list
@@ -9,12 +10,13 @@ module Pbuilder
     #  
     # ==== Attributes  
     #  
-    # * +init_concept+ - An initial concept to include
+    # * +init_concept+ - An initial concept to include. Allowed: RDFS::Resource, String, <String>
     def initialize(init_concept=nil)
       if init_concept.nil?
         @list = Array.new
       else
-        @list = Array[Array[init_concept.to_s]]
+        init_concept = Converter.src_2_str(init_concept)
+        @list = Array[Array[init_concept]]
       end
       empty_temp
     end
@@ -23,10 +25,10 @@ module Pbuilder
     #  
     # ==== Attributes  
     #  
-    # * +concept+ - A concept determining the last item into the pattern to perform the attachment
+    # * +concept+ - A concept determining the last item into the pattern to perform the attachment. Allowed: RDFS::Resource, String, <String>
     def update(concept)
       if ! @temp.empty?
-        concept = concept.to_s
+        concept = Converter.src_2_str(concept)
         new_patterns = []
         @list.each do |pattern|
           if pattern.last == concept
