@@ -17,6 +17,7 @@ module Pbuilder
     # Init
     #  
     # ==== Attributes
+    #
     # * +user_ id+ - A personal identifier
     # * +mappings_file+ - A string determining the name of the mappings file
     # * +patterns_file+ - A string determining the name of the patterns file
@@ -39,7 +40,6 @@ module Pbuilder
       patterns, analysis = {}, {}
       abstract_concepts.each do |concept|
         concept = Converter.src_2_str(concept)
-        puts concept
         number = @mappings[concept][1]
         file_p = YamlWriter.get_file_path(@id, @patterns_file, number)
         patterns[concept] = open(file_p) { |f| YAML.load(f) }

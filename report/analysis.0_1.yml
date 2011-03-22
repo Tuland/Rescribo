@@ -3,25 +3,25 @@ concepts_list: []
 
 properties_list: 
   ? 
-    - <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor>
-    - <http://www.siti.disco.unimib.it/cmm/2010/aeria#generalize>
-    - <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person>
+    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor
+    - http://www.siti.disco.unimib.it/cmm/2010/aeria#generalize
+    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person
   : s
 
   ? 
-    - <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person>
-    - <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P131I.identifies>
-    - <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E82.Actor_Appellation>
+    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person
+    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P131I.identifies
+    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E82.Actor_Appellation
   : i
 
   ? 
-    - <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E82.Actor_Appellation>
-    - <http://www.w3.org/2000/01/rdf-schema#label>
-    - <http://www.w3.org/2000/01/rdf-schema#Litteral>
+    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E82.Actor_Appellation
+    - http://www.w3.org/2000/01/rdf-schema#label
+    - http://www.w3.org/2000/01/rdf-schema#Litteral
   : s
 
 visited_concepts: 
-  - <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor>
-  - <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person>
-  - <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E82.Actor_Appellation>
-  - <http://www.w3.org/2000/01/rdf-schema#Litteral>
+  - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor
+  - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person
+  - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E82.Actor_Appellation
+  - http://www.w3.org/2000/01/rdf-schema#Litteral

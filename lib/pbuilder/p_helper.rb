@@ -18,11 +18,11 @@ module Pbuilder::PHelper
     def self.src_2_str(concept)
       concept = case concept
         when RDFS::Resource
-          concept.to_s
+          concept.to_s.delete("<>")
         when /^<([^>]*)>$/
-          concept
+          concept.delete("<>")
         when String
-          "<" + concept + ">"
+          concept
       end
     end
     

@@ -1,0 +1,3 @@
+page.insert_html(:after, "query_interface", :partial => "result")
+page.visual_effect(:highlight, "result")
+page.visual_effect(:scrollTo, "result")

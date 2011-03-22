@@ -1,0 +1,26 @@
+%div#query_interface
+  %div#form
+    %div.part
+      - form_remote_tag  :url => {  :controller => "rewriter", 
+                                    :action => "rewrite" },
+                         :loading => "Element.show('rewriting_p_indicator')",
+                         :complete => "Element.hide('rewriting_p_indicator')" do 
+        %fieldset
+          %legend= "Settings"
+          %div
+            = label_tag :settings_a_concept, "Abstract concept"
+            = select :settings, :a_concept, @abstract_concepts
+          %div.submitter
+            = submit_tag 'Rewrite'
+
+= image_tag("ajax-loader.gif",
+            :id => 'rewriting_p_indicator',
+            :style => 'display:none')
+        
+          
+        
+          
+          
+  
+    
+    

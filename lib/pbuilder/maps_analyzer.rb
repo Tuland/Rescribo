@@ -5,7 +5,7 @@ module Pbuilder
     
     # +root_concepts_list+ - A list of root concepts (a pair: abstract concept + core concept)
     # +finders+ - A list of offline finder to request patterns information
-    attr_reader :root_concepts_list, :finders
+    attr_reader :root_concepts_list, :finders, :mappings
     
     # Init
     #  
@@ -23,7 +23,7 @@ module Pbuilder
     def initialize(options={})
       @root_concepts_list = SearchEngine.find_root_concepts
       i = 0
-      @finders, maps = [], {}
+      @finders, @mappings = [], {}
       @root_concepts_list.each do |root_concepts|
         abst_concept = Converter.src_2_str(root_concepts[0])
         core_concept = Converter.src_2_str(root_concepts[1])
@@ -35,12 +35,12 @@ module Pbuilder
                       :number         =>  i,
                       :report_view    =>  ""} )
         @finders << finder
-        maps[abst_concept] = [core_concept, i]
+        @mappings[abst_concept] = [core_concept, i]
         i = i.next
       end
       if options[:report]
-        mappings = { options[:mappings_file] => maps}
-        YamlWriter.store_reports(mappings, options[:id])
+        maps = { options[:mappings_file] => @mappings}
+        YamlWriter.store_reports(maps, options[:id])
       end
     end
     

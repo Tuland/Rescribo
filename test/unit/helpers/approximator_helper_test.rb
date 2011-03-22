@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class ApproximatorHelperTest < ActionView::TestCase
+class RewriterHelperTest < ActionView::TestCase
 end

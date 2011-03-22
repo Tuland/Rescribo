@@ -25448,3 +25448,1776 @@ Processing ApproximatorController#load (for 127.0.0.1 at 2011-03-15 14:48:33) [P
 Rendering approximator/load
 Rendered approximator/_query_interface (12.0ms)
 Completed in 787ms (View: 32, DB: 0) | 200 OK [http://0.0.0.0/approximator/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Tue Mar 22 10:35:17 +0100 2011
+  Status: 500 Internal Server Error
+  Expected /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/helpers/approximator_helper.rb to define ApproximatorHelper
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:426:in `load_missing_constant'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing_with_dependencies'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/inflector.rb:364:in `constantize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/inflector.rb:363:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/inflector.rb:363:in `constantize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:137:in `helper'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:115:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:115:in `helper'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:120:in `helper'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:115:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:6
+    /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:380:in `load'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing_with_dependencies'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/haml-3.0.14/lib/sass/plugin/rack.rb:41:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:49:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:159:in `process_client'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `process_client'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `initialize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `new'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `initialize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `new'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:31:in `require'
+    /opt/local/share/java/jruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-03-22 10:37:45) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 366ms (DB: 3) | 302 Found [http://0.0.0.0/guide]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-03-22 10:37:46) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (21.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 226ms (View: 220, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-03-22 10:37:52) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (12.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/guide
+Completed in 121ms (DB: 13) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-03-22 10:37:52) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 179ms (View: 136, DB: 1) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-03-22 10:37:59) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 114ms (View: 66, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 10:38:03) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 105ms (View: 98, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 11:48:05) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 44ms (View: 36, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 11:48:07) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.inject) on line #4 of app/views/rewriter/_query_interface.html.haml:
+1: %div#query_interface
+2:   ="OK"
+3:   - form_for :settings do |form|
+4:     = form.select :a_concept, @abstract_concepts
+5:         
+6:           
+7:         
+
+    app/views/rewriter/_query_interface.html.haml:4:in `_run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:225:in `call'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:225:in `form_for_with_haml'
+    haml (3.0.14) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.14) lib/haml/helpers.rb:588:in `haml_bind_proc'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:231:in `form_for_with_haml'
+    app/views/rewriter/_query_interface.html.haml:3:in `_run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/rewriter/load.js.rjs:6:in `__instance_exec_4246_4512'
+    app/views/rewriter/load.js.rjs:5:in `__instance_exec_4246_4512'
+    app/views/rewriter/load.js.rjs:2:in `__instance_exec_4246_4512'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/rewriter/load.js.rjs:1:in `_run_rjs_app47views47rewriter47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (239.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:10:30) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (11.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 371ms (View: 157, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 12:10:32) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+
+NoMethodError (undefined method `mappings' for #<Pbuilder::MapsAnalyzer:0xbef480>):
+  app/controllers/rewriter_controller.rb:32:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (187.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:11:23) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (11.0ms)
+Rendered layouts/_footer (8.0ms)
+Completed in 364ms (View: 148, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:11:24) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 29ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 12:11:26) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (30.0ms)
+Completed in 1398ms (View: 57, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:20:32) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (2.0ms)
+Completed in 38ms (View: 31, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 12:20:33) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0xf0d263>) on line #6 of app/views/rewriter/_query_interface.html.haml:
+3:     %fieldset
+4:       %legend= "Settings"
+5:       %div
+6:         = f.label :settings_a_concept, "Abstract concept" 
+7:         = form.select :a_concept, @abstract_concepts
+8:       %div.submitter
+9:         = f.submit 'Rewrite'
+
+    app/views/rewriter/_query_interface.html.haml:6:in `_run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:225:in `call'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:225:in `form_for_with_haml'
+    haml (3.0.14) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.14) lib/haml/helpers.rb:588:in `haml_bind_proc'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:231:in `form_for_with_haml'
+    app/views/rewriter/_query_interface.html.haml:2:in `_run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/rewriter/load.js.rjs:6:in `__instance_exec_4266_4532'
+    app/views/rewriter/load.js.rjs:5:in `__instance_exec_4266_4532'
+    app/views/rewriter/load.js.rjs:2:in `__instance_exec_4266_4532'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/rewriter/load.js.rjs:1:in `_run_rjs_app47views47rewriter47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (235.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:21:00) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 46ms (View: 39, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 12:21:01) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (62.0ms)
+Completed in 703ms (View: 88, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:22:29) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 69ms (View: 52, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 12:22:31) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (15.0ms)
+Completed in 662ms (View: 39, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:23:33) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 60ms (View: 50, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 12:23:35) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (14.0ms)
+Completed in 668ms (View: 37, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:25:47) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 66ms (View: 61, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 12:25:50) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (40.0ms)
+Completed in 669ms (View: 82, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:26:18) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 12:26:21) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (126.0ms)
+Completed in 722ms (View: 156, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:41:44) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 28ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 12:41:46) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (28.0ms)
+Completed in 607ms (View: 72, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 12:41:59) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+ActionView::MissingTemplate (Missing template rewriter/rewrite.erb in view path app/views):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:47:17) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 54ms (View: 46, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:48:13) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 28ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:48:15) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 12:48:45) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 63ms (View: 52, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:01:45) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 120ms (View: 115, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:01:46) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+
+ActionView::TemplateError (undefined method `error_messages' for nil:NilClass) on line #7 of app/views/rewriter/_query_interface.html.haml:
+4:       - form_remote_tag  :url => {  :controller => "rewriter", 
+5:                                     :action => "rewrite" } do |form|
+6:         = form.error_messages
+7:         %fieldset
+8:           %legend= "Settings"
+9:           %div
+10:             = label_tag :settings_a_concept, "Abstract concept"
+
+    app/views/rewriter/_query_interface.html.haml:7:in `_run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:199:in `call'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:199:in `form_tag_with_haml'
+    haml (3.0.14) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.14) lib/haml/helpers.rb:588:in `haml_bind_proc'
+    haml (3.0.14) lib/haml/helpers.rb:343:in `call'
+    haml (3.0.14) lib/haml/helpers.rb:343:in `capture_haml'
+    haml (3.0.14) lib/haml/helpers.rb:566:in `with_haml_buffer'
+    haml (3.0.14) lib/haml/helpers.rb:339:in `capture_haml'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:88:in `capture_with_haml'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:205:in `form_tag_with_haml'
+    app/views/rewriter/_query_interface.html.haml:6:in `_run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/rewriter/load.js.rjs:6:in `__instance_exec_6918_7184'
+    app/views/rewriter/load.js.rjs:5:in `__instance_exec_6918_7184'
+    app/views/rewriter/load.js.rjs:2:in `__instance_exec_6918_7184'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/rewriter/load.js.rjs:1:in `_run_rjs_app47views47rewriter47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (144.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:02:15) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 39ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:02:17) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+DEPRECATION WARNING: Passing an array of option_tags to select_tag implicitly joins them without marking them as HTML-safe. Pass option_tags.join.html_safe instead. (called from _run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface at /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/views/rewriter/_query_interface.html.haml:10)
+Rendered rewriter/_query_interface (30.0ms)
+Completed in 621ms (View: 59, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:06:48) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 34ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:06:49) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+
+ActionView::TemplateError (wrong # of arguments(2 for 3)) on line #10 of app/views/rewriter/_query_interface.html.haml:
+7:           %legend= "Settings"
+8:           %div
+9:             = label :settings_a_concept, "Abstract concept"
+10:             = select :a_concept, @abstract_concepts
+11:           %div.submitter
+12:             = submit_tag 'Rewrite'
+13:         
+
+    app/views/rewriter/_query_interface.html.haml:10:in `select'
+    app/views/rewriter/_query_interface.html.haml:10:in `_run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:199:in `call'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:199:in `form_tag_with_haml'
+    haml (3.0.14) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.14) lib/haml/helpers.rb:588:in `haml_bind_proc'
+    haml (3.0.14) lib/haml/helpers.rb:343:in `call'
+    haml (3.0.14) lib/haml/helpers.rb:343:in `capture_haml'
+    haml (3.0.14) lib/haml/helpers.rb:566:in `with_haml_buffer'
+    haml (3.0.14) lib/haml/helpers.rb:339:in `capture_haml'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:88:in `capture_with_haml'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:205:in `form_tag_with_haml'
+    app/views/rewriter/_query_interface.html.haml:6:in `_run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/rewriter/load.js.rjs:6:in `__instance_exec_7578_7844'
+    app/views/rewriter/load.js.rjs:5:in `__instance_exec_7578_7844'
+    app/views/rewriter/load.js.rjs:2:in `__instance_exec_7578_7844'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/rewriter/load.js.rjs:1:in `_run_rjs_app47views47rewriter47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (148.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:07:39) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 42ms (View: 36, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:07:40) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (22.0ms)
+Completed in 592ms (View: 50, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:13:12) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (5.0ms)
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:13:13) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (21.0ms)
+Completed in 589ms (View: 48, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:13:22) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+ActionView::MissingTemplate (Missing template rewriter/rewrite.erb in view path app/views):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:26:25) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 40ms (View: 35, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:26:26) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (10.0ms)
+Completed in 564ms (View: 31, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:26:30) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+ActionView::MissingTemplate (Missing template rewriter/rewrite.erb in view path app/views):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:26:30) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+ActionView::MissingTemplate (Missing template rewriter/rewrite.erb in view path app/views):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (7.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:27:03) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 21ms (View: 13, DB: 7) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:27:05) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 574ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:27:08) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+ActionView::MissingTemplate (Missing template rewriter/rewrite.erb in view path app/views):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:27:36) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+ActionView::MissingTemplate (Missing template rewriter/rewrite.erb in view path app/views):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:27:53) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 358ms (View: 22, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:27:54) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (13.0ms)
+Completed in 528ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:27:58) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+ActionView::MissingTemplate (Missing template rewriter/rewrite.erb in view path app/views):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:29:10) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 32ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:29:11) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (4.0ms)
+Completed in 500ms (View: 28, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:29:15) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+ActionView::MissingTemplate (Missing template rewriter/rewrite.erb in view path app/views):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:33:09) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (3.0ms)
+Completed in 31ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:33:11) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (5.0ms)
+Completed in 504ms (View: 22, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:33:16) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+ActionView::MissingTemplate (Missing template rewriter/rewrite.erb in view path app/views):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:53:10) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:53:12) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Completed in 490ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:53:50) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 42ms (View: 36, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:53:51) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (5.0ms)
+Completed in 478ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:53:57) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (8.0ms)
+Completed in 94ms (View: 32, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:54:33) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (5.0ms)
+Completed in 32ms (View: 18, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:54:35) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 479ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:54:37) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (11.0ms)
+Completed in 574ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:54:39) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 44ms (View: 39, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:54:41) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (13.0ms)
+Completed in 501ms (View: 26, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:54:59) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (2.0ms)
+Completed in 54ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:55:00) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (13.0ms)
+Completed in 488ms (View: 33, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:55:05) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (0.0ms)
+Completed in 71ms (View: 18, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 13:55:28) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 13:55:29) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (9.0ms)
+Completed in 506ms (View: 30, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 13:55:34) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 81ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 15:41:12) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 15:41:14) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (19.0ms)
+Completed in 524ms (View: 32, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:41:22) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (0.0ms)
+Completed in 83ms (View: 31, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 15:41:50) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 15:41:51) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (12.0ms)
+Completed in 520ms (View: 28, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:41:56) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 86ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:42:15) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A4.Place>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 67ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:42:19) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A4.Place>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 67ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 15:43:29) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 47ms (View: 42, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 15:43:33) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (7.0ms)
+Completed in 490ms (View: 21, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:43:37) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (0.0ms)
+Completed in 67ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:43:42) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 79ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:43:45) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 80ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 15:48:02) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 15:48:03) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (8.0ms)
+Completed in 502ms (View: 22, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:48:10) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (0.0ms)
+Completed in 74ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 15:54:28) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 15:54:30) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (24.0ms)
+Completed in 539ms (View: 61, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:54:34) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 87ms (View: 21, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 15:54:39) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 15:54:41) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (7.0ms)
+Completed in 504ms (View: 22, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:54:47) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 83ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 15:55:09) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 15:55:10) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (7.0ms)
+Completed in 512ms (View: 21, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 15:55:15) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 110ms (View: 35, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:20:38) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:20:40) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (7.0ms)
+Completed in 546ms (View: 26, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:20:46) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+
+ActionView::TemplateError (undefined method `root' for nil:NilClass) on line #5 of app/views/rewriter/_result.html.haml:
+2:   %table{:summary => "Pattern at level #{}"}
+3:     %thead
+4:       %tr
+5:         %th= @patters.root.value
+6:     
+
+    app/views/rewriter/_result.html.haml:5:in `_run_haml_app47views47rewriter47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/rewriter/rewrite.js.rjs:1:in `__instance_exec_17052_17142'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/rewriter/rewrite.js.rjs:1:in `_run_rjs_app47views47rewriter47rewrite46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (122.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:23:31) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:23:36) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (10.0ms)
+Completed in 537ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:23:40) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+
+ActionView::TemplateError (undefined method `root' for nil:NilClass) on line #5 of app/views/rewriter/_result.html.haml:
+2:   %table{:summary => "Pattern at level"}
+3:     %thead
+4:       %tr
+5:         %th= @patters.root.value
+6:     
+
+    app/views/rewriter/_result.html.haml:5:in `_run_haml_app47views47rewriter47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/rewriter/rewrite.js.rjs:1:in `__instance_exec_17474_17564'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/rewriter/rewrite.js.rjs:1:in `_run_rjs_app47views47rewriter47rewrite46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (116.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:24:35) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 34ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:24:36) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (5.0ms)
+Completed in 560ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:24:41) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (9.0ms)
+Completed in 101ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:26:03) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 26ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:26:05) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 564ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:26:09) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (0.0ms)
+Completed in 110ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:26:29) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:26:30) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 579ms (View: 39, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:26:35) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+NoMethodError (undefined method `root' for #<Hash:0x5f0c9e>):
+  app/controllers/rewriter_controller.rb:42:in `rewrite'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:27:17) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 31ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:27:18) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 570ms (View: 35, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:27:23) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 105ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:27:50) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 27ms (View: 22, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:27:51) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 574ms (View: 32, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:27:55) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/rewriter_controller.rb:42:in `rewrite'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:27:55) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/rewriter_controller.rb:42:in `rewrite'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:29:52) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (2.0ms)
+Completed in 33ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:29:54) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 581ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:29:58) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+NoMethodError (undefined method `root' for #<Hash:0xb0ad17>):
+  app/controllers/rewriter_controller.rb:42:in `rewrite'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:30:22) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:30:23) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 564ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:30:28) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+
+NoMethodError (undefined method `+' for Hash:Class):
+  app/controllers/rewriter_controller.rb:42:in `rewrite'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:30:50) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (5.0ms)
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:30:51) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (5.0ms)
+Completed in 574ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:30:56) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 93ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:42:15) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:42:16) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (14.0ms)
+Completed in 1092ms (View: 34, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:42:21) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (0.0ms)
+Completed in 91ms (View: 27, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:42:53) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 31ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:42:54) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 537ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:42:58) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 88ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:49:24) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 36ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:49:25) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (8.0ms)
+Completed in 554ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:49:29) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (6.0ms)
+Completed in 105ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:50:34) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (9.0ms)
+Rendered layouts/_footer (8.0ms)
+Completed in 189ms (View: 161, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:50:36) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (7.0ms)
+Completed in 676ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:50:40) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (27.0ms)
+Completed in 108ms (View: 46, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:51:29) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:51:31) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (37.0ms)
+Completed in 577ms (View: 53, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:51:36) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (1.0ms)
+Completed in 90ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:52:04) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 26ms (View: 21, DB: 2) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:52:05) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 568ms (View: 33, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:52:09) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (0.0ms)
+Completed in 84ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:52:55) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (2.0ms)
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 16:53:14) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 16:53:16) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (5.0ms)
+Completed in 575ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 16:53:20) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"<http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor>"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (9.0ms)
+Completed in 113ms (View: 33, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 17:03:53) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 17:03:55) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (50.0ms)
+Completed in 837ms (View: 79, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 17:05:48) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 38ms (View: 18, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 17:05:49) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (6.0ms)
+Completed in 580ms (View: 33, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 17:08:32) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (2.0ms)
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 17:08:33) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+
+ActiveRdfError (cannot create resource <>):
+  activerdf (1.6.11) lib/active_rdf//objectmanager/resource.rb:36:in `initialize'
+  lib/pbuilder/search_engine.rb:97:in `new'
+  lib/pbuilder/search_engine.rb:97:in `find_neighbours'
+  lib/pbuilder/search_engine.rb:96:in `each'
+  lib/pbuilder/search_engine.rb:96:in `find_neighbours'
+  lib/pbuilder/offline_finder.rb:44:in `start'
+  lib/pbuilder/maps_analyzer.rb:31:in `initialize'
+  lib/pbuilder/maps_analyzer.rb:27:in `each'
+  lib/pbuilder/maps_analyzer.rb:27:in `initialize'
+  app/controllers/rewriter_controller.rb:22:in `new'
+  app/controllers/rewriter_controller.rb:22:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 17:08:35) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+
+ActiveRdfError (cannot create resource <>):
+  activerdf (1.6.11) lib/active_rdf//objectmanager/resource.rb:36:in `initialize'
+  lib/pbuilder/search_engine.rb:97:in `new'
+  lib/pbuilder/search_engine.rb:97:in `find_neighbours'
+  lib/pbuilder/search_engine.rb:96:in `each'
+  lib/pbuilder/search_engine.rb:96:in `find_neighbours'
+  lib/pbuilder/offline_finder.rb:44:in `start'
+  lib/pbuilder/maps_analyzer.rb:31:in `initialize'
+  lib/pbuilder/maps_analyzer.rb:27:in `each'
+  lib/pbuilder/maps_analyzer.rb:27:in `initialize'
+  app/controllers/rewriter_controller.rb:22:in `new'
+  app/controllers/rewriter_controller.rb:22:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 17:08:58) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 17:08:59) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (38.0ms)
+Completed in 604ms (View: 58, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 17:12:12) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (3.0ms)
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 17:12:13) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (17.0ms)
+Completed in 584ms (View: 35, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 17:17:45) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (12.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 374ms (View: 157, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 17:17:47) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (68.0ms)
+Completed in 1435ms (View: 103, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-03-22 17:18:07) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 208ms (View: 118, DB: 12) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-03-22 17:18:09) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 99ms (View: 51, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-03-22 17:18:11) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (191.0ms)
+Completed in 946ms (View: 214, DB: 0) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-03-22 17:19:14) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 100ms (View: 40, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-22 17:19:19) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 25ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-22 17:19:21) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (26.0ms)
+Completed in 714ms (View: 48, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-22 17:19:25) [POST]
+  Parameters: {"authenticity_token"=>"5oQLxA12r2HY6MYsttYM5xc+eCwFNQ06DndMSi0xalQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A5.Actor"}, "commit"=>"Rewrite"}
+Rendering rewriter/rewrite
+Rendered rewriter/_result (9.0ms)
+Completed in 134ms (View: 46, DB: 0) | 200 OK [http://0.0.0.0/rewriter/rewrite]

@@ -8,7 +8,7 @@ require 'pbuilder/adapter'
 require 'pbuilder/maps_analyzer'
 require 'pbuilder/yaml_reader'
 
-class ApproximatorController < ApplicationController
+class RewriterController < ApplicationController
   layout 'main'
   
   def index
@@ -28,6 +28,9 @@ class ApproximatorController < ApplicationController
     @finders = maps.finders              
     aeria_adapter.close
     @notice = "Ontologies loaded"
+    
+    @abstract_concepts = maps.mappings.keys
+    
   end
   
   def rewrite
@@ -35,7 +38,9 @@ class ApproximatorController < ApplicationController
                                       MAPPINGS_FILE,
                                       PATTERNS_FILE,
                                       ANALYSIS_FILE)
-    patterns, analysis = reader.load_all
+    a_concept = params[:settings][:a_concept]
+    patterns, analysis = reader.load(a_concept)
+    @patterns, @analysis = patterns[a_concept], analysis[a_concept]
   end
 
 end

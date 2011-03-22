@@ -27,7 +27,7 @@ module Pbuilder
         @concepts_list = Array.new
         @visited_concepts = Array.new
       else
-        init_concept = init_concept.to_s
+        init_concept = Converter.src_2_str(init_concept)
         @concepts_list = Array[init_concept]
         @visited_concepts = Array[init_concept]
       end
