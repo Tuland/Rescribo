@@ -28,6 +28,10 @@ module Pbuilder
     # * +url+ - A url where the ontology is stored
     # * +adapter_name+ - An adapter name
     # * +path+ - A path where store the persistence directory
+    # 
+    # ==== Warning
+    #
+    # * Adaptor must be closed with the public method +close+
     def initialize(identifier, url, adapter_name, path = "")
       @persistence_dir =  Adapter.personal_persistence_dir(identifier, path)
       if ! FileTest.directory?(@persistence_dir)

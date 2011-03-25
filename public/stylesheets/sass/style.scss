@@ -17,6 +17,10 @@ h3 {
   color: #7F2727;
 }
 
+.opt {
+  font-size: 70%;
+}
+
 .notice { 
   border: 2px solid red; 
   padding: 1em; 
@@ -201,6 +205,33 @@ table{
 
 .i_edge {
   background-color: #FFEC8B;
+}
+
+ul.concept li{
+  list-style-type: circle;
+  color: #000099;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+span.concept_tag, span.instance_tag {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  color: white;
+  margin-right: 1em;
+  background-color: #000099;
+}
+
+span.concept_tag{
+  padding: 7px;
+}
+
+span.instance_tag{
+  padding: 1px 5px;
 }
 
 
