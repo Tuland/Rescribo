@@ -9,7 +9,9 @@ require 'pbuilder/maps_analyzer'
 require 'pbuilder/yaml_reader'
 
 class RewriterController < ApplicationController
-  layout 'main'
+  layout 'main', :except => [ :load, :rewrite, :edit_prefix ]
+  
+  before_filter :authorize
   
   def index
     Pbuilder::Adapter.purge(session[:user_id])
@@ -37,7 +39,22 @@ class RewriterController < ApplicationController
     @notice = "Ontologies loaded"
     
     @abstract_concepts = maps.mappings.keys.sort
+   
+    onto_adapter = Pbuilder::Adapter.new( session[:user_id],
+                                          path_to_url(ONTO_PATH),
+                                          PERSISTENT_ONTO)
+    begin
+      @prefixes = onto_adapter.prefixes
+      puts @prefixes 
+    rescue Exception => e
+      puts e.message  
+      puts e.backtrace.inspect
+    ensure 
+      onto_adapter.close 
+    end
     
+    @undefined_prefix = "[Undefined]"
+          
   end
   
   def rewrite
@@ -50,13 +67,12 @@ class RewriterController < ApplicationController
     core_concept_node = patterns[a_concept].root
     @patterns = core_concept_node.build_patterns
     @analysis = analysis[a_concept]
-
-    Pbuilder::Adapter.purge(session[:user_id])
-    onto_adapter = Pbuilder::Adapter.new( session[:user_id],
-                                          path_to_url(ONTO_PATH),
-                                          PERSISTENT_ONTO)
+    
+    onto_adapter = Pbuilder::Adapter.get_connection(PERSISTENT_ONTO, 
+                                                    session[:user_id])       
     @core_instances = []
     begin
+      
       @core_concept = core_concept_node.value
       core_concept_rsc = RDFS::Resource.new(@core_concept)
       query = Query.new.distinct(:i).where(:i, RDF::type , core_concept_rsc)
@@ -70,6 +86,10 @@ class RewriterController < ApplicationController
       onto_adapter.close 
     end
 
+  end
+  
+  def edit_prefix
+    
   end
 
 end

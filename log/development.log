@@ -30891,3 +30891,709 @@ Processing QueryTesterController#load (for 127.0.0.1 at 2011-03-25 18:09:41) [PO
 Rendering query_tester/load
 Rendered query_tester/_sparql_form (132.0ms)
 Completed in 2066ms (View: 240, DB: 2) | 200 OK [http://0.0.0.0/query_tester/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 10:44:42) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (28.0ms)
+Rendered layouts/_footer (11.0ms)
+Completed in 360ms (View: 285, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 10:44:44) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (77.0ms)
+Completed in 4006ms (View: 209, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 10:46:30) [GET]
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 10:46:32) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+Rendering rewriter/load
+Rendered rewriter/_query_interface (22.0ms)
+Completed in 2447ms (View: 35, DB: 0) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 10:49:41) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 202ms (DB: 1) | 302 Found [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-03-28 10:49:41) [GET]
+Rendering template within layouts/main
+Rendering admin/login
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 135ms (View: 129, DB: 1) | 200 OK [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-03-28 10:49:45) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "name"=>"user", "password"=>"user", "commit"=>"Login"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'user') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/rewriter
+Completed in 140ms (DB: 16) | 302 Found [http://0.0.0.0/admin/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 10:49:46) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 132ms (View: 34, DB: 3) | 200 OK [http://0.0.0.0/rewriter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 10:49:47) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (12.0ms)
+Completed in 2549ms (View: 37, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 10:56:57) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 450ms (View: 146, DB: 12) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 10:56:59) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (65.0ms)
+Completed in 1430ms (View: 99, DB: 3) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 10:57:05) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (112.0ms)
+Completed in 2593ms (View: 208, DB: 4) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 10:58:37) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 100ms (View: 30, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 10:58:40) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (23.0ms)
+Completed in 733ms (View: 43, DB: 2) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 10:58:44) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (12.0ms)
+Completed in 1947ms (View: 32, DB: 2) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 10:59:26) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 137ms (View: 28, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 10:59:28) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (11.0ms)
+Completed in 631ms (View: 33, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 10:59:32) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (15.0ms)
+Completed in 2220ms (View: 40, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 11:02:13) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 162ms (View: 49, DB: 2) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 11:02:14) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (10.0ms)
+Completed in 595ms (View: 26, DB: 2) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 11:02:18) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (12.0ms)
+Completed in 1931ms (View: 56, DB: 2) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 11:21:49) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 71ms (View: 32, DB: 2) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 11:21:51) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (8.0ms)
+Completed in 779ms (View: 53, DB: 2) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 11:21:58) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NoMethodError (undefined method `get_prefixes' for Pbuilder::Adapter:Class):
+  app/controllers/rewriter_controller.rb:75:in `rewrite'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (160.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 11:23:46) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 528ms (View: 147, DB: 12) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 11:23:48) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (68.0ms)
+Completed in 1442ms (View: 101, DB: 3) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 11:23:54) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NoMethodError (undefined method `model' for Pbuilder::Adapter:Class):
+  lib/pbuilder/adapter.rb:51:in `get_prefixes'
+  app/controllers/rewriter_controller.rb:75:in `rewrite'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (163.0ms)
+Rendered rescues/_request_and_response (7.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 11:27:07) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (8.0ms)
+Completed in 746ms (View: 145, DB: 12) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 11:27:09) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (69.0ms)
+Completed in 1436ms (View: 101, DB: 2) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 11:27:24) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ArgumentError (wrong # of arguments(0 for 1)):
+  app/controllers/rewriter_controller.rb:75:in `get_prefixes'
+  app/controllers/rewriter_controller.rb:75:in `rewrite'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (161.0ms)
+Rendered rescues/_request_and_response (7.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 11:28:20) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 729ms (View: 144, DB: 12) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 11:28:22) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (62.0ms)
+Completed in 1442ms (View: 97, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 11:28:28) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ArgumentError (wrong # of arguments(0 for 1)):
+  app/controllers/rewriter_controller.rb:75:in `get_prefixes'
+  app/controllers/rewriter_controller.rb:75:in `rewrite'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (164.0ms)
+Rendered rescues/_request_and_response (7.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 11:30:07) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 536ms (View: 148, DB: 12) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 11:30:08) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (115.0ms)
+Completed in 2947ms (View: 147, DB: 4) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 11:30:11) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (33.0ms)
+Completed in 939ms (View: 60, DB: 2) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 11:30:15) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (25.0ms)
+Completed in 2949ms (View: 39, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 11:47:02) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 341ms (View: 39, DB: 2) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 11:47:04) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (11.0ms)
+Completed in 718ms (View: 28, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 11:47:08) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (9.0ms)
+Completed in 1946ms (View: 45, DB: 4) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 11:49:30) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (10.0ms)
+Completed in 740ms (View: 156, DB: 13) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 11:49:33) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (56.0ms)
+Completed in 3701ms (View: 85, DB: 1) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:10:31) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (2.0ms)
+Completed in 361ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:10:58) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 473ms (View: 154, DB: 11) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 12:11:00) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (60.0ms)
+Completed in 3748ms (View: 91, DB: 3) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 12:11:12) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (54.0ms)
+Completed in 2196ms (View: 73, DB: 1) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:27:17) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 465ms (View: 149, DB: 12) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 12:27:19) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (55.0ms)
+Completed in 3811ms (View: 92, DB: 3) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 12:27:27) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (95.0ms)
+Completed in 2087ms (View: 117, DB: 3) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:28:32) [GET]
+  [4;35;1mUser Load (26.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (11.0ms)
+Completed in 854ms (View: 191, DB: 27) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 12:28:36) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (61.0ms)
+Completed in 3830ms (View: 94, DB: 3) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 12:28:43) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (55.0ms)
+Completed in 2068ms (View: 74, DB: 5) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:29:15) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (8.0ms)
+Completed in 1244ms (View: 156, DB: 12) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 12:29:18) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (54.0ms)
+Completed in 3810ms (View: 85, DB: 2) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 12:29:27) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (96.0ms)
+Completed in 2159ms (View: 119, DB: 2) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:37:19) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 181ms (View: 32, DB: 2) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 12:37:20) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+
+ActionView::TemplateError (The line was indented 2 levels deeper than the previous line.) on line #20 of app/views/rewriter/_query_interface.html.haml:
+17:             :id => 'rewriting_p_indicator',
+18:             :style => 'display:none')
+19:             
+20:     - line=0
+21:     %div.part
+22:       %table
+23:         %tr
+
+    app/views/rewriter/_query_interface.html.haml:20
+    haml (3.0.14) lib/haml/precompiler.rb:181:in `precompile'
+    haml (3.0.14) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.14) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.14) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/rewriter/load.js.rjs:6:in `__instance_exec_4324_4596'
+    app/views/rewriter/load.js.rjs:5:in `__instance_exec_4324_4596'
+    app/views/rewriter/load.js.rjs:2:in `__instance_exec_4324_4596'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/rewriter/load.js.rjs:1:in `_run_rjs_app47views47rewriter47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (230.0ms)
+Rendered rescues/_request_and_response (8.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:38:59) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 92ms (View: 45, DB: 4) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 12:39:01) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+
+ActionView::TemplateError (undefined local variable or method `uri' for #<ActionView::Base:0xe2c6d6>) on line #39 of app/views/rewriter/_query_interface.html.haml:
+36:                                                   :namespace => "#{h(namespace)}",
+37:                                                   :old_prefix => prefix)})
+38:             %td= uri
+39:             
+40: %div#result
+41:   &nbsp;
+42:         
+
+    app/views/rewriter/_query_interface.html.haml:39:in `_run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface'
+    /opt/local/share/java/jruby/lib/ruby/site_ruby/shared/builtin/java/java.util.rb:5:in `call'
+    /opt/local/share/java/jruby/lib/ruby/site_ruby/shared/builtin/java/java.util.rb:5:in `each'
+    /opt/local/share/java/jruby/lib/ruby/site_ruby/shared/builtin/java/java.util.rb:21:in `call'
+    /opt/local/share/java/jruby/lib/ruby/site_ruby/shared/builtin/java/java.util.rb:21:in `each'
+    /opt/local/share/java/jruby/lib/ruby/site_ruby/shared/builtin/java/java.util.rb:5:in `each'
+    app/views/rewriter/_query_interface.html.haml:26:in `_run_haml_app47views47rewriter47_query_interface46html46haml_locals_object_query_interface'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/rewriter/load.js.rjs:6:in `__instance_exec_4670_4942'
+    app/views/rewriter/load.js.rjs:5:in `__instance_exec_4670_4942'
+    app/views/rewriter/load.js.rjs:2:in `__instance_exec_4670_4942'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/rewriter/load.js.rjs:1:in `_run_rjs_app47views47rewriter47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (152.0ms)
+Rendered rescues/_request_and_response (6.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:39:56) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (7.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 68ms (View: 33, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 12:39:58) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (183.0ms)
+Completed in 2718ms (View: 218, DB: 2) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:40:57) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 67ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 12:40:59) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (223.0ms)
+Completed in 2750ms (View: 251, DB: 2) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:41:38) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (13.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 162ms (View: 48, DB: 2) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 12:41:40) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (94.0ms)
+Completed in 2508ms (View: 123, DB: 2) | 200 OK [http://0.0.0.0/rewriter/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#rewrite (for 127.0.0.1 at 2011-03-28 12:41:49) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ=", "settings"=>{"a_concept"=>"http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#A2.Period"}, "commit"=>"Rewrite"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/rewrite
+Rendered rewriter/_result (11.0ms)
+Completed in 1974ms (View: 27, DB: 2) | 200 OK [http://0.0.0.0/rewriter/rewrite]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#index (for 127.0.0.1 at 2011-03-28 12:41:57) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering rewriter/index
+Rendered layouts/_header (16.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 96ms (View: 64, DB: 3) | 200 OK [http://0.0.0.0/rewriter]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RewriterController#load (for 127.0.0.1 at 2011-03-28 12:41:59) [POST]
+  Parameters: {"authenticity_token"=>"NZxUZP2PnpGSRk9hR/AIMxnhWV1hNl/C2bgS6iFnLYQ="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering rewriter/load
+Rendered rewriter/_query_interface (38.0ms)
+Completed in 2495ms (View: 86, DB: 2) | 200 OK [http://0.0.0.0/rewriter/load]

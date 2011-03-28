@@ -7,7 +7,7 @@
     %table
       %tr
         %th= "Prefix"
-        %th= "Uri"
+        %th= "Namespace"
       - @prefix_map.each do |prefix, uri|
         - if prefix == ""
           - prefix = QueryTesterController::UNDEFINED_PREFIX

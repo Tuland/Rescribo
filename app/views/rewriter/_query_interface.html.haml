@@ -13,9 +13,29 @@
           %div.submitter
             = submit_tag 'Rewrite'
 
-= image_tag("ajax-loader.gif",
-            :id => 'rewriting_p_indicator',
-            :style => 'display:none')
+    = image_tag("ajax-loader.gif",
+                :id => 'rewriting_p_indicator',
+                :style => 'display:none')
+            
+    - line=0
+    %div.part
+      %table
+        %tr
+          %th= "Prefix"
+          %th= "Namespace"
+        - @prefixes.each do |prefix, namespace|
+          - if prefix == ""
+            - prefix = @undefined_prefix
+          - line = line + 1
+          - class_line = line % 2
+          %tr{:class => "class_#{class_line}"}
+            %td
+              %span{:id => "id_#{line}"}= prefix
+              = in_place_editor("id_#{line}",
+                                {:url => url_for( :action => "edit_prefix",
+                                                  :namespace => "#{h(namespace)}",
+                                                  :old_prefix => prefix)})
+            %td= namespace
             
 %div#result
   &nbsp;

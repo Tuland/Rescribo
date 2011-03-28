@@ -2,9 +2,9 @@ require 'pbuilder/adapter'
 require 'pbuilder/maps_analyzer'
 
 class PatternsBuilderController < ApplicationController
-  layout 'main'
+  layout 'main', :except => [ :load ]
   
-  before_filter :authorize, :except => [ :load ]
+  before_filter :authorize
   
   def index
     Pbuilder::Adapter.purge(session[:user_id])

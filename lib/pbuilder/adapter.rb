@@ -18,7 +18,7 @@ module Pbuilder
     
     # * +persistence_dir+ - Path of the persistence directory
     # * +model+ - The activeRdf/Jena model
-    attr_reader :persistence_dir, :model
+    attr_reader :persistence_dir, :model, :prefixes
     
     # Init
     #  
@@ -40,11 +40,24 @@ module Pbuilder
       @adapter = init_load(url, adapter_name)
       init_setup
       @model = @adapter.model
+      @prefixes = Adapter.get_prefixes(@adapter)
     end
   
     # Close adaptor
     def close
       @adapter.close
+    end
+    
+    def self.get_prefixes(adapter)
+      @prefixes = adapter.model.getNsPrefixMap
+    end
+    
+    def self.remove_prefix(adapter, prefix)
+      adapter.model.removeNsPrefix("")
+    end
+    
+    def self.set_prefix(adapter, prefix, namespace)
+      adapter.model.setNsPrefix(prefix, namespace)
     end
   
     # Destroy the persistence file
@@ -68,6 +81,7 @@ module Pbuilder
       adapter = ConnectionPool.add_data_source( :type => :jena, 
                                                 :model => adapter_name,
                                                 :file =>  persistence_dir )
+      adapter.enabled = true
       adapter
     end
     
