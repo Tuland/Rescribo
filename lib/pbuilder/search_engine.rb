@@ -10,6 +10,10 @@ module Pbuilder
   
   class SearchEngine
   
+    #  <b>Marker</b> class: URI string
+    MARKER_STR = "http://www.siti.disco.unimib.it/cmm/2010/aeria#Marker"
+    #  <b>Marker</b> class: ActiveRDF resource
+    MARKER_RESOURCE = RDFS::Resource.new(MARKER_STR)
     #  <b>A forget</b> property: URI string
     A_FORGET_STR = "http://www.siti.disco.unimib.it/cmm/2010/aeria#a-forget"
     #  <b>A forget</b> property: ActiveRDF resource

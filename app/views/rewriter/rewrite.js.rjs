@@ -1,3 +1,5 @@
 page.replace_html 'result', :partial => "result"
-page.visual_effect(:highlight, "result")
 page.visual_effect(:scrollTo, "result")
+page.visual_effect(:highlight, "result")
+
+

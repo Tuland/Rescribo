@@ -4,17 +4,19 @@
   %h3.important
     = "Pattern #{i}"
     = link_to_remote "[ Hide ]",
-                      :url => {:action => "hide"},
-                      :class => "opt"
+                      :url => {:action => "hide_pattern", :id => i},
+                      :html => {:class => "opt", :id => "hide_#{i}"}
+    = link_to_remote "[ Show ]",
+                      :url => {:action => "show_pattern", :id => i},
+                      :html => {:class => "opt", :id => "show_#{i}", :style => 'display:none'}
   %div{:id => "pattern_#{i}"} 
     %ul.concept
       %li
         %span.concept_tag= "CONCEPT 1"
-        = h @core_concept
+        = h abbreviate(@core_concept_rsc)
     %ul
       -@core_instances.each do |instance|
-        %li
+        %li{:id => "#{h abbreviate(instance)}"}
           %span.instance_tag= "1"
-          =h convert_to_str(instance)
-        
+          =h abbreviate(instance) 
     

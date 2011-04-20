@@ -26,6 +26,10 @@ module Pbuilder::PHelper
       end
     end
     
+    def self.abbreviate(resource)
+      Namespace.prefix(resource).to_s + "#" + Namespace.localname(resource)
+    end
+    
   end
   
 end

@@ -10,6 +10,15 @@
           = file_field 'upload', 'datafile'
         %div.submitter
         = submit_tag "Upload"
+  %div.part
+    %fieldset
+      %legend= "Files uploaded"
+      %ul
+        - @files_uploaded.each do |file|
+          %li
+            =h file
+            =link_to "[Delete]", :controller => "uploader", :action => "delete_aeria", :file => h(file)
+
         
 %div.links_list
   = link_to 'Guide', :controller => "guide", :action => "index"

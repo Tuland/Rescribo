@@ -19,6 +19,7 @@ class UploaderController < ApplicationController
   end
   
   def upload_aeria
+    @files_uploaded = Dir.entries(UploadedAeria::DIRECTORY) - [".", ".."]
     render :action => "save_aeria"
   end
   
@@ -32,5 +33,16 @@ class UploaderController < ApplicationController
     end
     redirect_to :action => "upload_aeria"
   end
-  
+
+
+  def delete_aeria
+    file = params[:file]
+    if File.exist?("#{UploadedAeria::DIRECTORY}/#{file}") && ! file.include?("..")
+      File.delete("#{UploadedAeria::DIRECTORY}/#{file}")
+    end
+      
+    redirect_to :action => "upload_aeria"
+  end
+
+
 end

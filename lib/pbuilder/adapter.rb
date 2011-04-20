@@ -58,6 +58,7 @@ module Pbuilder
     
     def self.set_prefix(adapter, prefix, namespace)
       adapter.model.setNsPrefix(prefix, namespace)
+      Namespace.register(prefix, namespace)
     end
   
     # Destroy the persistence file
@@ -143,7 +144,17 @@ module Pbuilder
     def init_setup
       Namespace.register :skos, SKOS
       Namespace.register :aeria, AERIA
+      load_namespaces
       ObjectManager.construct_classes
+    end
+    
+    def load_namespaces
+      default_namespaces = [:xsd, :rdf, :rdfs, :owl, :shdm, :swui]
+      namespaces = @adapter.model.getNsPrefixMap.to_a
+      namespaces.map!{|ns| [ns.first.to_sym, ns.last] unless ns.first.nil? || ns.first.blank? }
+      namespaces.compact!
+      namespaces.reject!{|ns| default_namespaces.include?(ns.first) }   
+      namespaces.map{|ns| Namespace.register(*ns) }
     end
     
   end

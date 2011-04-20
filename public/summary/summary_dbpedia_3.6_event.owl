@@ -428,13 +428,6 @@
 
     <skos:Concept rdf:about="&ontology;Band">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <ontology:associatedBand rdf:resource="&ontology;Band"/>
-        <ontology:pastMember rdf:resource="&ontology;MusicalArtist"/>
-        <ontology:currentMember rdf:resource="&ontology;MusicalArtist"/>
-        <ontology:location rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:country rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:area rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:membership rdf:resource="&xsd;string"/>
     </skos:Concept>
     
 
@@ -450,7 +443,14 @@
     <!-- http://dbpedia.org/ontology/Event -->
 
     <skos:Concept rdf:about="&ontology;Event">
+        <rdf:type rdf:resource="&aeria;Marker"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <ontology:location rdf:resource="&ontology;Building"/>
+        <ontology:previousEvent rdf:resource="&ontology;Event"/>
+        <ontology:followingEvent rdf:resource="&ontology;Event"/>
+        <ontology:location rdf:resource="&ontology;PopulatedPlace"/>
+        <ontology:endDate rdf:resource="&xsd;date"/>
+        <ontology:startDate rdf:resource="&xsd;date"/>
     </skos:Concept>
     
 
@@ -459,7 +459,6 @@
 
     <skos:Concept rdf:about="&ontology;Instrument">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <ontology:musicians rdf:resource="&ontology;MusicalArtist"/>
     </skos:Concept>
     
 
@@ -483,16 +482,7 @@
     <!-- http://dbpedia.org/ontology/MusicalArtist -->
 
     <skos:Concept rdf:about="&ontology;MusicalArtist">
-        <rdf:type rdf:resource="&aeria;Marker"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <ontology:instrument rdf:resource="&ontology;Instrument"/>
-        <ontology:associatedMusicalArtist rdf:resource="&ontology;MusicalArtist"/>
-        <ontology:influencedBy rdf:resource="&ontology;MusicalArtist"/>
-        <ontology:influenced rdf:resource="&ontology;MusicalArtist"/>
-        <ontology:hometown rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:stateOfOrigin rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:birthPlace rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:country rdf:resource="&ontology;PopulatedPlace"/>
     </skos:Concept>
     
 
@@ -520,11 +510,11 @@
     
 
 
-    <!-- http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Artist -->
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Event -->
 
-    <owl:NamedIndividual rdf:about="&music_dbpedia;Artist">
+    <owl:NamedIndividual rdf:about="&music_dbpedia;Event">
         <rdf:type rdf:resource="&aeria;Abstract"/>
-        <aeria:a-generalize rdf:resource="&ontology;MusicalArtist"/>
+        <aeria:a-generalize rdf:resource="&ontology;Event"/>
     </owl:NamedIndividual>
     
 

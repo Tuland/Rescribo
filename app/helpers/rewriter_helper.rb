@@ -6,5 +6,7 @@ module RewriterHelper
     Converter.src_2_str(resource)
   end
   
-  
+  def abbreviate(resource)
+    Converter.abbreviate(resource)
+  end
 end

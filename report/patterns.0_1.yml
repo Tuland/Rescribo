@@ -4,20 +4,444 @@ leaves: !ruby/object:Pbuilder::LeavesList
     - &id001 !ruby/object:Pbuilder::TreeNode 
       children: []
 
-      edge: http://www.w3.org/2000/01/rdf-schema#label
-      value: http://www.w3.org/2000/01/rdf-schema#Litteral
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id002 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id003 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id004 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id057 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id005 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/capital
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id006 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/city
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id007 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestSettlement
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id008 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/principalArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id009 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id010 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/locatedInArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id011 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestCity
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id018 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/capital
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id019 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/city
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id020 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestSettlement
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id021 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/principalArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id022 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id023 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/locatedInArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id024 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestCity
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id031 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/capital
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id032 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/city
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id033 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestSettlement
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id034 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/principalArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id035 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id036 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/locatedInArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id037 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestCity
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id044 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/capital
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id045 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/city
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id046 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestSettlement
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id047 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/principalArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id048 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id049 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/locatedInArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id050 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestCity
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id058 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id059 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id060 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id061 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id012 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id013 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id014 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id015 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id016 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id017 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id025 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id026 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id027 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id028 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id029 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id030 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id038 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id039 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id040 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id041 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id042 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id043 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id051 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id052 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id053 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id054 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
+    - &id055 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id056 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
 root: !ruby/object:Pbuilder::TreeNode 
   children: 
+    - *id001
+    - *id002
+    - *id003
+    - *id004
     - !ruby/object:Pbuilder::TreeNode 
       children: 
+        - *id005
+        - *id006
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
         - !ruby/object:Pbuilder::TreeNode 
           children: 
-            - *id001
-          edge: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P131I.identifies
-          value: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E82.Actor_Appellation
-      edge: http://www.siti.disco.unimib.it/cmm/2010/aeria#generalize
-      value: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person
+            - *id012
+            - *id013
+          edge: http://dbpedia.org/ontology/country
+          value: http://dbpedia.org/ontology/Band
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id014
+            - *id015
+          edge: http://dbpedia.org/ontology/location
+          value: http://dbpedia.org/ontology/Band
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id016
+            - *id017
+          edge: http://dbpedia.org/ontology/area
+          value: http://dbpedia.org/ontology/Band
+      edge: http://dbpedia.org/ontology/country
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id018
+        - *id019
+        - *id020
+        - *id021
+        - *id022
+        - *id023
+        - *id024
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id025
+            - *id026
+          edge: http://dbpedia.org/ontology/country
+          value: http://dbpedia.org/ontology/Band
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id027
+            - *id028
+          edge: http://dbpedia.org/ontology/location
+          value: http://dbpedia.org/ontology/Band
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id029
+            - *id030
+          edge: http://dbpedia.org/ontology/area
+          value: http://dbpedia.org/ontology/Band
+      edge: http://dbpedia.org/ontology/stateOfOrigin
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id031
+        - *id032
+        - *id033
+        - *id034
+        - *id035
+        - *id036
+        - *id037
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id038
+            - *id039
+          edge: http://dbpedia.org/ontology/country
+          value: http://dbpedia.org/ontology/Band
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id040
+            - *id041
+          edge: http://dbpedia.org/ontology/location
+          value: http://dbpedia.org/ontology/Band
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id042
+            - *id043
+          edge: http://dbpedia.org/ontology/area
+          value: http://dbpedia.org/ontology/Band
+      edge: http://dbpedia.org/ontology/hometown
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id044
+        - *id045
+        - *id046
+        - *id047
+        - *id048
+        - *id049
+        - *id050
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id051
+            - *id052
+          edge: http://dbpedia.org/ontology/country
+          value: http://dbpedia.org/ontology/Band
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id053
+            - *id054
+          edge: http://dbpedia.org/ontology/location
+          value: http://dbpedia.org/ontology/Band
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id055
+            - *id056
+          edge: http://dbpedia.org/ontology/area
+          value: http://dbpedia.org/ontology/Band
+      edge: http://dbpedia.org/ontology/birthPlace
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - *id057
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id058
+        - *id059
+      edge: http://dbpedia.org/ontology/currentMember
+      value: http://dbpedia.org/ontology/Band
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id060
+        - *id061
+      edge: http://dbpedia.org/ontology/pastMember
+      value: http://dbpedia.org/ontology/Band
   edge: 
-  value: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor
+  value: http://dbpedia.org/ontology/MusicalArtist
 temp: []
 

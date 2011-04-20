@@ -1,6 +1,6 @@
 class UploadedAeria < ActiveRecord::Base
   NAME = "aeria_summary.owl"
-  PUBLIC_DIRECTORY = "onto"
+  PUBLIC_DIRECTORY = "summary"
   
   PUBLIC_ADDRESS = PUBLIC_DIRECTORY + "/" + NAME
   
@@ -9,7 +9,7 @@ class UploadedAeria < ActiveRecord::Base
   def self.save(upload)
     name = upload['datafile'].original_filename
     # create the file path
-    path = File.join(DIRECTORY, NAME)
+    path = File.join(DIRECTORY, name)
     # write the file
     File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
   end

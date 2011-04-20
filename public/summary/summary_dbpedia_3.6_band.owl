@@ -427,6 +427,7 @@
     <!-- http://dbpedia.org/ontology/Band -->
 
     <skos:Concept rdf:about="&ontology;Band">
+        <rdf:type rdf:resource="&aeria;Marker"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <ontology:associatedBand rdf:resource="&ontology;Band"/>
         <ontology:pastMember rdf:resource="&ontology;MusicalArtist"/>
@@ -483,7 +484,6 @@
     <!-- http://dbpedia.org/ontology/MusicalArtist -->
 
     <skos:Concept rdf:about="&ontology;MusicalArtist">
-        <rdf:type rdf:resource="&aeria;Marker"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <ontology:instrument rdf:resource="&ontology;Instrument"/>
         <ontology:associatedMusicalArtist rdf:resource="&ontology;MusicalArtist"/>
@@ -520,11 +520,11 @@
     
 
 
-    <!-- http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Artist -->
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Band -->
 
-    <owl:NamedIndividual rdf:about="&music_dbpedia;Artist">
+    <owl:NamedIndividual rdf:about="&music_dbpedia;Band">
         <rdf:type rdf:resource="&aeria;Abstract"/>
-        <aeria:a-generalize rdf:resource="&ontology;MusicalArtist"/>
+        <aeria:a-generalize rdf:resource="&ontology;Band"/>
     </owl:NamedIndividual>
     
 
