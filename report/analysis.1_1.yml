@@ -3,38 +3,85 @@ concepts_list: []
 
 properties_list: 
   ? 
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P87.is_identified_by
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E47.Spatial_Coordinates
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/previousEvent
+    - http://dbpedia.org/ontology/Event
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/followingEvent
+    - http://dbpedia.org/ontology/Event
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/location
+    - http://dbpedia.org/ontology/Building
   : s
 
   ? 
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P87.is_identified_by
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E44.Place_Appellation
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/location
+    - http://dbpedia.org/ontology/PopulatedPlace
   : s
 
   ? 
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E47.Spatial_Coordinates
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P2.has_type
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/endDate
+    - http://www.w3.org/2001/XMLSchema#date
   : s
 
   ? 
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E44.Place_Appellation
-    - http://www.w3.org/2000/01/rdf-schema#label
-    - http://www.w3.org/2000/01/rdf-schema#Litteral
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/startDate
+    - http://www.w3.org/2001/XMLSchema#date
   : s
 
   ? 
-    - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type
-    - http://www.w3.org/2000/01/rdf-schema#label
-    - http://www.w3.org/2000/01/rdf-schema#Litteral
-  : s
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/largestCity
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/locatedInArea
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/location
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/principalArea
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/largestSettlement
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/city
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/capital
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
 
 visited_concepts: 
-  - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place
-  - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E47.Spatial_Coordinates
-  - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E44.Place_Appellation
-  - http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type
-  - http://www.w3.org/2000/01/rdf-schema#Litteral
+  - http://dbpedia.org/ontology/Event
+  - http://dbpedia.org/ontology/Building
+  - http://dbpedia.org/ontology/PopulatedPlace
+  - http://www.w3.org/2001/XMLSchema#date

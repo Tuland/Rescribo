@@ -12,6 +12,8 @@ class ApplicationController < ActionController::Base
   ONTO_PATH = UploadedOnto::PUBLIC_ADDRESS
   AERIA_PATH =  UploadedAeria::PUBLIC_ADDRESS
   
+  AERIA_DIRECTORY = UploadedAeria::DIRECTORY
+  
   # Persistence file related to the user ontology
   PERSISTENT_ONTO = "onto"
   # Persistence file related to the AERIA ontology
@@ -23,7 +25,7 @@ class ApplicationController < ActionController::Base
   PATTERNS_FILE = REPORT_DIR + "patterns"
   
   def path_to_url(path)
-    "http://#{request.host_with_port}/#{path.sub(%r[^/],'')}"
+    "http://#{request.host_with_port}/#{path.sub(%r[^/],'').sub('public/', '')}"
   end
   
   protected 

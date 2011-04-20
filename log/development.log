@@ -36192,3 +36192,781 @@ Rendering uploader/save_aeria
 Rendered layouts/_header (1.0ms)
 Rendered layouts/_footer (1.0ms)
 Completed in 114ms (View: 81, DB: 6) | 200 OK [http://0.0.0.0/uploader/upload_aeria]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-04-20 16:39:06) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 51ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/guide]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 16:39:09) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+Errno::ENOENT (No such file or directory - No such directory):
+  app/controllers/patterns_builder_controller.rb:12:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 16:40:10) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+Errno::ENOENT (No such file or directory - No such directory):
+  app/controllers/patterns_builder_controller.rb:14:in `index'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (65.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 16:43:26) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 126ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 16:43:57) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 55ms (View: 18, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 16:44:35) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 67ms (View: 30, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 16:46:21) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 322ms (View: 13, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 16:47:03) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 54ms (View: 20, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 16:47:24) [GET]
+  [4;36;1mUser Load (5.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 50ms (View: 12, DB: 6) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 16:48:33) [GET]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 59ms (View: 13, DB: 4) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 16:48:50) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 60ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#load (for 127.0.0.1 at 2011-04-20 17:00:59) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+
+SyntaxError (/Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/patterns_builder_controller.rb:67: syntax error, unexpected end-of-file
+):
+  app/controllers/patterns_builder_controller.rb:380
+  app/controllers/patterns_builder_controller.rb:380:in `load'
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:01:37) [GET]
+  [4;35;1mUser Load (4.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 173ms (View: 13, DB: 5) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:01:39) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:06:16) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (19.0ms)
+Completed in 466ms (View: 150, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:06:19) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:08:01) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 542ms (View: 140, DB: 13) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:08:03) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #3 of app/views/patterns_builder/_result.html.haml:
+1: %div#result
+2:   - n = 0
+3:   - @root_concepts_list.each do |root_concepts|
+4:     %h3.important= "Mapping #{n + 1}"
+5:     %h3= "Significative concepts"
+6:     %table{:summary => "Significative concepts"}
+
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_3874_3940'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_3874_3940'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_3874_3940'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (251.0ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 17:08:53) [GET]
+
+ActionController::RoutingError (No route matches "/public/summary/summary_dbpedia_3.6_band.owl" with {:method=>:get}):
+  haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Wed Apr 20 17:17:14 +0200 2011
+  Status: 500 Internal Server Error
+  /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:29: syntax error, unexpected tSTRING_BEG
+
+    "http://#{request.host_with_port}/#{path.sub(%r[^/],'').sub('public/')}"
+    ^
+    /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:380
+    /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:380:in `load'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing_with_dependencies'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/haml-3.0.14/lib/sass/plugin/rack.rb:41:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:49:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:159:in `process_client'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `process_client'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `initialize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `new'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `initialize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `new'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:31:in `require'
+    /opt/local/share/java/jruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Wed Apr 20 17:17:49 +0200 2011
+  Status: 500 Internal Server Error
+  /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:29: syntax error, unexpected tSTRING_BEG
+
+    "http://#{request.host_with_port}/#{path.sub(%r[^/],'').sub('public/', '')}"
+    ^
+    /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:380
+    /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:380:in `load'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing_with_dependencies'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/haml-3.0.14/lib/sass/plugin/rack.rb:41:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:49:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:159:in `process_client'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `process_client'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `initialize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `new'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `initialize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `new'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:31:in `require'
+    /opt/local/share/java/jruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Wed Apr 20 17:18:25 +0200 2011
+  Status: 500 Internal Server Error
+  /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:29: syntax error, unexpected tSTRING_BEG
+
+    "http://#{request.host_with_port}/#{path.sub(%r[^/],'').sub('public/', '')}"
+    ^
+    /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:380
+    /Users/tuland/Documents/Aptana RadRails Workspace/Rescribo/app/controllers/application_controller.rb:380:in `load'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing_with_dependencies'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/haml-3.0.14/lib/sass/plugin/rack.rb:41:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:49:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:159:in `process_client'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `each'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `process_client'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `initialize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `new'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `initialize'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `new'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:268:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+    /opt/local/share/java/jruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:31:in `require'
+    /opt/local/share/java/jruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:20:02) [GET]
+  [4;35;1mUser Load (13.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (19.0ms)
+Completed in 619ms (View: 186, DB: 14) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:22:15) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #3 of app/views/patterns_builder/_result.html.haml:
+1: %div#result
+2:   - n = 0
+3:   - @root_concepts_list.each do |root_concepts|
+4:     %h3.important= "Mapping #{n + 1}"
+5:     %h3= "Significative concepts"
+6:     %table{:summary => "Significative concepts"}
+
+    app/views/patterns_builder/_result.html.haml:3:in `_run_haml_app47views47patterns_builder47_result46html46haml_locals_object_result'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/patterns_builder/load.js.rjs:6:in `__instance_exec_3874_3940'
+    app/views/patterns_builder/load.js.rjs:5:in `__instance_exec_3874_3940'
+    app/views/patterns_builder/load.js.rjs:2:in `__instance_exec_3874_3940'
+    activerdf (1.6.11) lib/active_rdf//instance_exec.rb:7:in `instance_exec'
+    app/views/patterns_builder/load.js.rjs:1:in `_run_rjs_app47views47patterns_builder47load46js46rjs'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (245.0ms)
+Rendered rescues/_request_and_response (19.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:23:10) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 83ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:23:12) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (269.0ms)
+Completed in 7106ms (View: 365, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-04-20 17:24:13) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 204ms (View: 96, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_aeria (for 127.0.0.1 at 2011-04-20 17:24:16) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_aeria
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 113ms (View: 73, DB: 2) | 200 OK [http://0.0.0.0/uploader/upload_aeria]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#delete_aeria (for 127.0.0.1 at 2011-04-20 17:24:18) [GET]
+  Parameters: {"file"=>"summary_dbpedia_3.6_band.owl"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/uploader/upload_aeria
+Completed in 37ms (DB: 2) | 302 Found [http://0.0.0.0/uploader/delete_aeria?file=summary_dbpedia_3.6_band.owl]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_aeria (for 127.0.0.1 at 2011-04-20 17:24:19) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_aeria
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 77ms (View: 48, DB: 0) | 200 OK [http://0.0.0.0/uploader/upload_aeria]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#delete_aeria (for 127.0.0.1 at 2011-04-20 17:24:19) [GET]
+  Parameters: {"file"=>"summary_dbpedia_3.6_event.owl"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/uploader/upload_aeria
+Completed in 82ms (DB: 2) | 302 Found [http://0.0.0.0/uploader/delete_aeria?file=summary_dbpedia_3.6_event.owl]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#delete_aeria (for 127.0.0.1 at 2011-04-20 17:24:20) [GET]
+  Parameters: {"file"=>"summary_dbpedia_3.6_event.owl"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/uploader/upload_aeria
+Completed in 43ms (DB: 1) | 302 Found [http://0.0.0.0/uploader/delete_aeria?file=summary_dbpedia_3.6_event.owl]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_aeria (for 127.0.0.1 at 2011-04-20 17:24:20) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_aeria
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 72ms (View: 30, DB: 1) | 200 OK [http://0.0.0.0/uploader/upload_aeria]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#save_aeria (for 127.0.0.1 at 2011-04-20 17:24:31) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc=", "upload"=>{"datafile"=>#<File:/var/folders/qk/qk-rWbAlHle6IYUHAQiFiU+++TI/-Tmp-/RackMultipart.816.59038>}, "commit"=>"Upload"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/uploader/upload_aeria
+Completed in 45ms (DB: 2) | 302 Found [http://0.0.0.0/uploader/save_aeria]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_aeria (for 127.0.0.1 at 2011-04-20 17:24:31) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_aeria
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 77ms (View: 37, DB: 1) | 200 OK [http://0.0.0.0/uploader/upload_aeria]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#save_aeria (for 127.0.0.1 at 2011-04-20 17:25:12) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc=", "upload"=>{"datafile"=>#<File:/var/folders/qk/qk-rWbAlHle6IYUHAQiFiU+++TI/-Tmp-/RackMultipart.816.59039>}, "commit"=>"Upload"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/uploader/upload_aeria
+Completed in 32ms (DB: 1) | 302 Found [http://0.0.0.0/uploader/save_aeria]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploaderController#upload_aeria (for 127.0.0.1 at 2011-04-20 17:25:13) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering uploader/save_aeria
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 44ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/uploader/upload_aeria]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GuideController#index (for 127.0.0.1 at 2011-04-20 17:25:15) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering guide/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 67ms (View: 31, DB: 2) | 200 OK [http://0.0.0.0/guide]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:25:17) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 208ms (View: 149, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:25:18) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (52.0ms)
+Completed in 1097ms (View: 73, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:45:43) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (20.0ms)
+Completed in 953ms (View: 147, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:45:46) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (285.0ms)
+Completed in 3106ms (View: 334, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:46:38) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (2.0ms)
+Completed in 332ms (View: 16, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:46:47) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (40.0ms)
+Completed in 1827ms (View: 60, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:56:14) [GET]
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 60ms (View: 19, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:56:16) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (33.0ms)
+Completed in 1315ms (View: 58, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:58:06) [GET]
+  [4;35;1mUser Load (13.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 458ms (View: 138, DB: 14) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:58:08) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (291.0ms)
+Completed in 3160ms (View: 343, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:58:11) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (68.0ms)
+Completed in 2141ms (View: 94, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 17:58:34) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 105ms (View: 26, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 17:58:49) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (26.0ms)
+Completed in 1388ms (View: 60, DB: 1) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 18:00:04) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 797ms (View: 141, DB: 13) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 18:00:07) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (278.0ms)
+Completed in 3358ms (View: 332, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 18:01:37) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (5.0ms)
+Rendered layouts/_footer (21.0ms)
+Completed in 511ms (View: 156, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 18:01:40) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (300.0ms)
+Completed in 3238ms (View: 367, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 18:07:57) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 824ms (View: 233, DB: 13) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 18:08:00) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (293.0ms)
+Completed in 3123ms (View: 350, DB: 3) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 18:09:38) [GET]
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (19.0ms)
+Completed in 735ms (View: 147, DB: 14) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 18:09:41) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (283.0ms)
+Completed in 3118ms (View: 332, DB: 2) | 200 OK [http://0.0.0.0/patterns_builder/load]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#index (for 127.0.0.1 at 2011-04-20 18:11:54) [GET]
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering patterns_builder/index
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (9.0ms)
+Completed in 531ms (View: 138, DB: 12) | 200 OK [http://0.0.0.0/patterns_builder]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PatternsBuilderController#load (for 127.0.0.1 at 2011-04-20 18:11:57) [POST]
+  Parameters: {"authenticity_token"=>"HGC6EehPDA+jqH4XH8OQOeGDkU30gArr2gpwJeR42nc="}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering patterns_builder/load
+Rendered patterns_builder/_result (279.0ms)
+Completed in 3101ms (View: 330, DB: 4) | 200 OK [http://0.0.0.0/patterns_builder/load]

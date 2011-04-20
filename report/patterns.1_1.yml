@@ -1,33 +1,85 @@
 --- !ruby/object:Pbuilder::PatternsTree 
 leaves: !ruby/object:Pbuilder::LeavesList 
   list: 
-    - &id002 !ruby/object:Pbuilder::TreeNode 
-      children: []
-
-      edge: http://www.w3.org/2000/01/rdf-schema#label
-      value: http://www.w3.org/2000/01/rdf-schema#Litteral
     - &id001 !ruby/object:Pbuilder::TreeNode 
       children: []
 
-      edge: http://www.w3.org/2000/01/rdf-schema#label
-      value: http://www.w3.org/2000/01/rdf-schema#Litteral
+      edge: http://dbpedia.org/ontology/previousEvent
+      value: http://dbpedia.org/ontology/Event
+    - &id002 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/followingEvent
+      value: http://dbpedia.org/ontology/Event
+    - &id003 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/Building
+    - &id011 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/endDate
+      value: http://www.w3.org/2001/XMLSchema#date
+    - &id012 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/startDate
+      value: http://www.w3.org/2001/XMLSchema#date
+    - &id004 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestCity
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id005 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/locatedInArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id006 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id007 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/principalArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id008 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestSettlement
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id009 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/city
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id010 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/capital
+      value: http://dbpedia.org/ontology/PopulatedPlace
 root: !ruby/object:Pbuilder::TreeNode 
   children: 
+    - *id001
+    - *id002
+    - *id003
     - !ruby/object:Pbuilder::TreeNode 
       children: 
-        - !ruby/object:Pbuilder::TreeNode 
-          children: 
-            - *id001
-          edge: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P2.has_type
-          value: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type
-      edge: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P87.is_identified_by
-      value: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E47.Spatial_Coordinates
-    - !ruby/object:Pbuilder::TreeNode 
-      children: 
-        - *id002
-      edge: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#P87.is_identified_by
-      value: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E44.Place_Appellation
+        - *id004
+        - *id005
+        - *id006
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - *id011
+    - *id012
   edge: 
-  value: http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place
+  value: http://dbpedia.org/ontology/Event
 temp: []
 

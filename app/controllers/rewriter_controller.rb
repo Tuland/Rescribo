@@ -42,8 +42,6 @@ class RewriterController < ApplicationController
       aeria_adapter.close
     end              
     
-    @notice = "Ontologies loaded"
-    
     @abstract_concepts = maps.mappings.keys.sort
    
     onto_adapter = Pbuilder::Adapter.new( session[:user_id],
@@ -58,6 +56,7 @@ class RewriterController < ApplicationController
       onto_adapter.close 
     end
     
+    @notice = "Ontologies loaded"
     @undefined_prefix = UNDEFINED_PREFIX
           
   end

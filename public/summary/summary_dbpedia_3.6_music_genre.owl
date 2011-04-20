@@ -427,15 +427,7 @@
     <!-- http://dbpedia.org/ontology/Band -->
 
     <skos:Concept rdf:about="&ontology;Band">
-        <rdf:type rdf:resource="&aeria;Marker"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <ontology:associatedBand rdf:resource="&ontology;Band"/>
-        <ontology:pastMember rdf:resource="&ontology;MusicalArtist"/>
-        <ontology:currentMember rdf:resource="&ontology;MusicalArtist"/>
-        <ontology:location rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:country rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:area rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:membership rdf:resource="&xsd;string"/>
     </skos:Concept>
     
 
@@ -460,7 +452,6 @@
 
     <skos:Concept rdf:about="&ontology;Instrument">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <ontology:musicians rdf:resource="&ontology;MusicalArtist"/>
     </skos:Concept>
     
 
@@ -476,7 +467,12 @@
     <!-- http://dbpedia.org/ontology/MusicGenre -->
 
     <skos:Concept rdf:about="&ontology;MusicGenre">
+        <rdf:type rdf:resource="&aeria;Marker"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <ontology:musicSubgenre rdf:resource="&ontology;MusicGenre"/>
+        <ontology:musicFusionGenre rdf:resource="&ontology;MusicGenre"/>
+        <ontology:derivative rdf:resource="&ontology;MusicGenre"/>
+        <ontology:stylisticOrigin rdf:resource="&ontology;MusicGenre"/>
     </skos:Concept>
     
 
@@ -485,14 +481,6 @@
 
     <skos:Concept rdf:about="&ontology;MusicalArtist">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <ontology:instrument rdf:resource="&ontology;Instrument"/>
-        <ontology:associatedMusicalArtist rdf:resource="&ontology;MusicalArtist"/>
-        <ontology:influencedBy rdf:resource="&ontology;MusicalArtist"/>
-        <ontology:influenced rdf:resource="&ontology;MusicalArtist"/>
-        <ontology:hometown rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:stateOfOrigin rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:birthPlace rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:country rdf:resource="&ontology;PopulatedPlace"/>
     </skos:Concept>
     
 
@@ -509,22 +497,15 @@
 
     <skos:Concept rdf:about="&ontology;PopulatedPlace">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <ontology:largestCity rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:locatedInArea rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:location rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:principalArea rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:largestSettlement rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:city rdf:resource="&ontology;PopulatedPlace"/>
-        <ontology:capital rdf:resource="&ontology;PopulatedPlace"/>
     </skos:Concept>
     
 
 
-    <!-- http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Band -->
+    <!-- http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Genre -->
 
-    <owl:NamedIndividual rdf:about="&music_dbpedia;Band">
+    <owl:NamedIndividual rdf:about="&music_dbpedia;Genre">
         <rdf:type rdf:resource="&aeria;Abstract"/>
-        <aeria:a-generalize rdf:resource="&ontology;Band"/>
+        <aeria:a-generalize rdf:resource="&ontology;MusicGenre"/>
     </owl:NamedIndividual>
     
 
