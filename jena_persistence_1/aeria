@@ -9,134 +9,127 @@
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns="file:/Users/tuland/Documents/workspace/SummO/OntoOut/summary_dbpedia_3.6_mod.owl#" > 
   <rdf:Description rdf:about="http://dbpedia.org/ontology/startDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/writer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/Building">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/membership">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/Instrument">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/musicSubgenre">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/artist">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/genre">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/country">
+    <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://dbpedia.org/ontology/country">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/previousEvent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/area">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/instrument">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/derivative">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/stateOfOrigin">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/endDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/largestCity">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/musicFusionGenre">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/Event">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#Marker"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <ontology:location rdf:resource="http://dbpedia.org/ontology/Building"/>
-    <ontology:previousEvent rdf:resource="http://dbpedia.org/ontology/Event"/>
-    <ontology:followingEvent rdf:resource="http://dbpedia.org/ontology/Event"/>
-    <ontology:location rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
-    <ontology:endDate rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <ontology:startDate rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/stylisticOrigin">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/currentMember">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/anthem">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/hometown">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/location">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/composer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/Band">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/followingEvent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/pastMember">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/aeria#Abstract">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/capital">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Genre">
     <aeria:a-generalize rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
@@ -147,123 +140,111 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/musicians">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/musicalArtist">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/MusicalArtist">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/birthPlace">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/associatedMusicalArtist">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/PopulatedPlace">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <ontology:largestCity rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
-    <ontology:locatedInArea rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
-    <ontology:location rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
-    <ontology:principalArea rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
-    <ontology:largestSettlement rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
-    <ontology:city rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
-    <ontology:capital rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/album">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/MusicGenre">
     <ontology:stylisticOrigin rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
     <ontology:derivative rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
     <ontology:musicFusionGenre rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
     <ontology:musicSubgenre rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#Marker"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/producer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/city">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/influencedBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/largestSettlement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/associatedBand">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/language">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/aeria#a-generalize">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/musicalBand">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/aeria#Marker">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/Language">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/MusicalWork">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/locatedInArea">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="file:/Users/tuland/Documents/workspace/SummO/OntoOut/summary_dbpedia_3.6_mod.owl">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:imports rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/influenced">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/principalArea">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Event">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#Abstract"/>
-    <aeria:a-generalize rdf:resource="http://dbpedia.org/ontology/Event"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/recordedIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
 </rdf:RDF>

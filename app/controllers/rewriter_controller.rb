@@ -43,7 +43,7 @@ class RewriterController < ApplicationController
     end              
     
     @abstract_concepts = maps.mappings.keys.sort
-   
+    
     onto_adapter = Pbuilder::Adapter.new( session[:user_id],
                                           path_to_url(ONTO_PATH),
                                           PERSISTENT_ONTO)

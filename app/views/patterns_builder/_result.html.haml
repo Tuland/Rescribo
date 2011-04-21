@@ -1,7 +1,7 @@
 %div#result
   - n = 0
-  - @root_concepts_list.each do |root_concepts|
-    %h3.important= "Mapping #{n + 1}"
+  - @global_rc_list.each do |root_concepts|
+    %h3.important= "Cloud #{n + 1}"
     %h3= "Significative concepts"
     %table{:summary => "Significative concepts"}
       %thead
@@ -23,7 +23,7 @@
           %th= "URI"
           %th= "Type"
       %tbody
-        - @finders[n].analysis.properties_list.each do |p, p_type|
+        - @global_finders[n].analysis.properties_list.each do |p, p_type|
           %tr
             %td{:class => "first"}= h p[0]
             %td{:class => "#{h p_type}_edge", :rowspan => "3"}= h p_type
@@ -35,7 +35,7 @@
     %h3="Patterns"
   
     - i = 0
-    - @finders[n].patterns.list.each do |pattern|
+    - @global_finders[n].patterns.list.each do |pattern|
       - i = i.next
       %table{:summary => "Pattern identified: #{i}"}
         %caption="Pattern #{i}"
