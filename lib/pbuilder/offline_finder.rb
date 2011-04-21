@@ -21,7 +21,7 @@ module Pbuilder
     #  
     # ==== Attributes  
     #  
-    # * +options+ - An hash determining option
+    # * +options+ - An hash determining options
     #
     # ==== Options
     #

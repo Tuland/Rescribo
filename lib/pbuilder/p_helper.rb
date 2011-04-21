@@ -1,4 +1,9 @@
 module Pbuilder::PHelper
+  begin
+    require 'active_rdf'
+  rescue Exception
+    print "This sample needs activerdf and activerdf_jena.\n"
+  end
   
   class RDFS::Resource
     

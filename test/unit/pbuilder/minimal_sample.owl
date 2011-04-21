@@ -9,13 +9,11 @@
     <!ENTITY summ "http://www.siti.disco.unimib.it/prova#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY aeria "http://www.siti.disco.unimib.it/cmm/2010/aeria#" >
-    <!ENTITY erlangen-crm_090330_5_0_1 "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="http://www.siti.disco.unimib.it/prova#"
      xml:base="http://www.siti.disco.unimib.it/prova"
-     xmlns:erlangen-crm_090330_5_0_1="http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#"
      xmlns:summ="http://www.siti.disco.unimib.it/prova#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:aeria="http://www.siti.disco.unimib.it/cmm/2010/aeria#"

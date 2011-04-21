@@ -108,7 +108,7 @@ module Pbuilder
       correct_patterns = [[CORE_CONCEPT_STR, PROPERTY_P_STR, CONCEPT_B_STR],
                           [CORE_CONCEPT_STR, PROPERTY_Q_STR, CONCEPT_C_STR],
                           [CORE_CONCEPT_STR, PROPERTY_R_STR, CORE_CONCEPT_STR]]
-      assert_equal(patterns.list, correct_patterns)
+      assert_equal(patterns.list.sort, correct_patterns.sort)
     end
     
     test "property_duplication" do

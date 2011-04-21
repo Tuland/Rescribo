@@ -6,29 +6,31 @@ module Pbuilder
     # Init
     #  
     # ==== Attributes  
-    #  
-    # * +options+ - An hash determining option
+    # 
+    # * +identifier+ - A personal identifier 
+    # * +options+ - An hash determining options
+    # * +adapter_name+ - An adapter name
     #
     # ==== Options
     #  
-    # * +:report+ - Consent to write a report (value: true or false) 
+    # * +:report+ - Consent to write a report (value: true or false)
     # * +:patterns_file+ - A string determining the name of the patterns file
     # * +:analysis_file+ - A string determining the name of the analysis file
     # * +:id+ - A personal identifier
     # * +:mappings_file+ - A string determining the name of the mapping file that contains a list of triples (abstract concept, core concepts, mapping reference number)
-    def initialize(directory_str, persistent_dir, options={})
-      files = Dir["#{directory_str}/*"]
+    def initialize(files, adapter_name, identifier, options={}, path="")
       @global_root_concepts, @global_finders = [], []
       mappings = {}
       i = 0
       files.each do |file|
-        Adapter.purge(options[:id])
-        adapter = Adapter.new(options[:id],
-                              yield(file),
-                              persistent_dir)
+        Adapter.purge(options[:id], path)
+        adapter = Adapter.new(identifier,
+                              file,
+                              adapter_name,
+                              path)
         begin
           maps = MapsAnalyzer.new({ :report         =>  options[:report],
-                                    :id             =>  options[:id] ,
+                                    :id             =>  identifier ,
                                     :patterns_file  =>  options[:patterns_file],
                                     :analysis_file  =>  options[:analysis_file],
                                     :counter => i} )
@@ -49,12 +51,8 @@ module Pbuilder
       end
       if options[:report]
         m = { options[:mappings_file] => mappings}
-        YamlWriter.store_reports(m, options[:id])
+        YamlWriter.store_reports(m, identifier)
       end
-    end
-    
-    def path_to_url(path)
-      "http://#{request.host_with_port}/#{path.sub(%r[^/],'').sub('public/', '')}"
     end
     
   end

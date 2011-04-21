@@ -1,0 +1,87 @@
+--- !ruby/object:Pbuilder::PatternsAnalysis 
+concepts_list: []
+
+properties_list: 
+  ? 
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/previousEvent
+    - http://dbpedia.org/ontology/Event
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/followingEvent
+    - http://dbpedia.org/ontology/Event
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/location
+    - http://dbpedia.org/ontology/Building
+  : s
+
+  ? 
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/location
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : s
+
+  ? 
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/endDate
+    - http://www.w3.org/2001/XMLSchema#date
+  : s
+
+  ? 
+    - http://dbpedia.org/ontology/Event
+    - http://dbpedia.org/ontology/startDate
+    - http://www.w3.org/2001/XMLSchema#date
+  : s
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/largestCity
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/locatedInArea
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/location
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/principalArea
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/largestSettlement
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/city
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/PopulatedPlace
+    - http://dbpedia.org/ontology/capital
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : r
+
+visited_concepts: 
+  - http://dbpedia.org/ontology/Event
+  - http://dbpedia.org/ontology/Building
+  - http://dbpedia.org/ontology/PopulatedPlace
+  - http://www.w3.org/2001/XMLSchema#date

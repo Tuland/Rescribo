@@ -16,15 +16,15 @@ class PatternsBuilderController < ApplicationController
   end
   
   def load
+    files = Dir["#{AERIA_DIRECTORY}/*"].collect { |path| path_to_url(path) }
     @url_str = "Files loaded from " + path_to_url(AERIA_DIRECTORY)
-    
-    explorer = Pbuilder::CloudsExplorer.new(AERIA_DIRECTORY,
+    explorer = Pbuilder::CloudsExplorer.new(files,
                                             PERSISTENT_AERIA,
+                                            session[:user_id],
                                             { :report => true,
-                                              :id             =>  session[:user_id],
                                               :patterns_file  =>  PATTERNS_FILE,
                                               :analysis_file  =>  ANALYSIS_FILE,
-                                              :mappings_file  =>  MAPPINGS_FILE } ) { |path| path_to_url(path) }
+                                              :mappings_file  =>  MAPPINGS_FILE } )
     @global_rc_list = explorer.global_root_concepts
     @global_finders = explorer.global_finders
   end

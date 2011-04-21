@@ -113,7 +113,7 @@ module Pbuilder
                               CONCEPT_B_STR,
                               PROPERTY_R_STR,
                               CONCEPT_D_STR ] ]
-      assert_equal(finder.patterns.list, correct_patterns)
+      assert_equal(finder.patterns.list.sort, correct_patterns.sort)
       correct_properties = {  
         [ CORE_CONCEPT_STR, 
           PROPERTY_Q_STR,

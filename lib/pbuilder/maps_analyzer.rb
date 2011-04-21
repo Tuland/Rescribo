@@ -11,17 +11,19 @@ module Pbuilder
     #  
     # ==== Attributes  
     #  
-    # * +options+ - An hash determining option
+    # * +options+ - An hash determining options
     #
     # ==== Options
-    #  
+    #
+    # * +:files+ - An array including file address (string) of clouds
     # * +:report+ - Consent to write a report (value: true or false) 
     # * +:patterns_file+ - A string determining the name of the patterns file
     # * +:analysis_file+ - A string determining the name of the analysis file
     # * +:id+ - A personal identifier
+    # * +:counter+ - A global counter that enumerate clouds
     def initialize(options={})
       rc_list = SearchEngine.find_root_concepts
-      @counter = options[:counter]
+      @counter = options[:counter] || 0
       @finders, @root_concepts_list = [], []
       rc_list.each do |root_concepts|
         abst_concept = Converter.src_2_str(root_concepts[0])
