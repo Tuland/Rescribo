@@ -3,13 +3,31 @@
 %div#form
   %div.part
     %fieldset
-      %legend= "Enter ontology address"
-      - form_tag ({:action => 'save_onto'}, :multipart => true) do
+      %legend= "Local dataset"
+      - form_tag({:action => 'save_onto'}, :multipart => true) do
         %div
-          %label{:for => 'upload_onto'}Select File
+          %label{:for => 'save_onto'}Select File
           = file_field 'upload', 'datafile'
         %div.submitter
-        = submit_tag "Upload"
+          = submit_tag "Upload"
+  %div.part
+    %fieldset
+      %legend= "Files uploaded"
+      %ul
+        - @files_uploaded.each do |file|
+          %li
+            =h file
+            =link_to "[Delete]", :controller => "uploader", :action => "delete_onto", :file => h(file)
+  %div.part
+    %fieldset
+      %legend= "SPARQL Endpoint"
+      - form_tag({:action => 'save_url'}) do
+        %div
+          %label{:for => 'save_onto'}Url
+          = text_field 'ontology', 'url'
+        %div.submitter
+          = submit_tag "Define"
+      
         
 %div.links_list
   = link_to 'Guide', :controller => "guide", :action => "index"

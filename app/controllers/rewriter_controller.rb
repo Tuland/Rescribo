@@ -5,7 +5,7 @@ rescue Exception
 end
 
 require 'pbuilder/adapter'
-require 'pbuilder/maps_analyzer'
+require 'pbuilder/clouds_explorer'
 require 'pbuilder/yaml_reader'
 
 class RewriterController < ApplicationController
@@ -20,35 +20,29 @@ class RewriterController < ApplicationController
   UNDEFINED_PREFIX = "[Undefined]"
   
   def index
-    Pbuilder::Adapter.purge(session[:user_id])
+    #Pbuilder::Adapter.purge(session[:user_id])
   end
   
   def load
-    aeria_adapter = Pbuilder::Adapter.new(session[:user_id],
-                                          path_to_url(AERIA_PATH),
-                                          PERSISTENT_AERIA)
-    begin
-      maps = Pbuilder::MapsAnalyzer.new({ :report         =>  true,
-                                          :id             =>  session[:user_id] ,
-                                          :patterns_file  =>  PATTERNS_FILE,
-                                          :analysis_file  =>  ANALYSIS_FILE,
-                                          :mappings_file  =>  MAPPINGS_FILE} )
-      @root_concepts_list = maps.root_concepts_list
-      @finders = maps.finders
-    rescue Exception => e
-      puts e.message  
-      puts e.backtrace.inspect
-    ensure 
-      aeria_adapter.close
-    end              
+    files = Dir["#{AERIA_DIRECTORY}/*"].collect { |path| path_to_url(path) }
+    @url_str = "Files loaded from " + path_to_url(AERIA_DIRECTORY)
+    explorer = Pbuilder::CloudsExplorer.new(files,
+                                            PERSISTENT_AERIA,
+                                            session[:user_id],
+                                            { :report => true,
+                                              :patterns_file  =>  PATTERNS_FILE,
+                                              :analysis_file  =>  ANALYSIS_FILE,
+                                              :mappings_file  =>  MAPPINGS_FILE } )
+    @global_rc_list = explorer.global_root_concepts
+    @global_finders = explorer.global_finders
+    @abstract_concepts = explorer.mappings.keys.sort
     
-    @abstract_concepts = maps.mappings.keys.sort
-    
-    onto_adapter = Pbuilder::Adapter.new( session[:user_id],
-                                          path_to_url(ONTO_PATH),
-                                          PERSISTENT_ONTO)
+    # Adapter already bluided in uploading step
+    onto_adapter = Pbuilder::Adapter.get_connection(PERSISTENT_ONTO, 
+                                                    session[:user_id],
+                                                    "", PERSISTENCE_DIR)
     begin
-      @prefixes = onto_adapter.prefixes
+      @prefixes = Pbuilder::Adapter.get_prefixes(onto_adapter)
     rescue Exception => e
       puts e.message  
       puts e.backtrace.inspect

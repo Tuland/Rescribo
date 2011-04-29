@@ -18,11 +18,13 @@ class ApplicationController < ActionController::Base
   PERSISTENT_ONTO = "onto"
   # Persistence file related to the AERIA ontology
   PERSISTENT_AERIA = "aeria"
+  PERSISTENCE_DIR = "persistence_onto"
   
   REPORT_DIR = "report/"
   MAPPINGS_FILE = REPORT_DIR + "mappings"
   ANALYSIS_FILE = REPORT_DIR + "analysis"
   PATTERNS_FILE = REPORT_DIR + "patterns"
+  
   
   def path_to_url(path)
     "http://#{request.host_with_port}/#{path.sub(%r[^/],'').sub('public/', '')}"

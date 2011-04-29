@@ -169,7 +169,7 @@ module Pbuilder
     
     def default_adapter(onto_name)
       Adapter.new(IDENTIFIER,
-                  Adapter.local_url(THIS_PATH, onto_name),
+                  [Adapter.local_url(THIS_PATH, onto_name)],
                   ADAPTER_NAME,
                   THIS_PATH)
     end

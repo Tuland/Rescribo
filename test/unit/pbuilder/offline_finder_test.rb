@@ -174,7 +174,7 @@ module Pbuilder
     
     def setup_adapter(onto)
       @adapter = Adapter.new( IDENTIFIER,
-                              Adapter.local_url(THIS_PATH, onto),
+                              [Adapter.local_url(THIS_PATH, onto)],
                               ADAPTER_NAME,
                               THIS_PATH)
       SearchEngine.find_a_single_pair_of_rc

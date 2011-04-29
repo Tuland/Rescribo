@@ -19,7 +19,7 @@ module Pbuilder
       Adapter.purge(IDENTIFIER,
                     THIS_PATH)
       @adapter = Adapter.new( IDENTIFIER, 
-                              URL, 
+                              [URL], 
                               ADAPTER_NAME,
                               THIS_PATH)
       @adapter.close

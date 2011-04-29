@@ -14,8 +14,8 @@ module Pbuilder
       Adapter.purge(IDENTIFIER,
                     THIS_PATH)
       adapter = Adapter.new(IDENTIFIER,
-                            Adapter.local_url(THIS_PATH, 
-                                              ONTO_NAME[:simple_multiple_maps]),
+                            [Adapter.local_url(THIS_PATH, 
+                                              ONTO_NAME[:simple_multiple_maps])],
                             ADAPTER_NAME,
                             THIS_PATH)
       @maps = Pbuilder::MapsAnalyzer.new

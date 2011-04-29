@@ -25,19 +25,25 @@ module Pbuilder
     # ==== Attributes  
     #  
     # * +identifier+ - A personal identifier
-    # * +url+ - A url where the ontology is stored
+    # * +urls+ - An array of string. Every string is a url where the ontology is stored
     # * +adapter_name+ - An adapter name
     # * +path+ - A path where store the persistence directory
     # 
     # ==== Warning
     #
     # * Adaptor must be closed with the public method +close+
-    def initialize(identifier, url, adapter_name, path = "")
-      @persistence_dir =  Adapter.personal_persistence_dir(identifier, path)
+    def initialize( identifier, 
+                    urls, 
+                    adapter_name, 
+                    path = "", 
+                    persistence_dir = PERSISTENCE_DIR)
+      @persistence_dir =  Adapter.personal_persistence_dir(identifier, path, persistence_dir)
       if ! FileTest.directory?(@persistence_dir)
         FileUtils.mkdir(@persistence_dir)
       end
-      @adapter = init_load(url, adapter_name)
+      urls.each do |url|
+        @adapter = init_load(url, adapter_name)
+      end
       init_setup
       @model = @adapter.model
       @prefixes = Adapter.get_prefixes(@adapter)
@@ -67,8 +73,10 @@ module Pbuilder
     #  
     # * +identifier+ - A personal identifier
     # * +path+ - A path where is stored the persistence directory
-    def self.purge(identifier, path = "")
-      FileUtils.rm_rf(self.personal_persistence_dir(identifier, path))
+    def self.purge( identifier, 
+                    path = "", 
+                    persistence_dir = PERSISTENCE_DIR )
+      FileUtils.rm_rf(self.personal_persistence_dir(identifier, path, persistence_dir))
     end
     
     # Perform the connetection with an adapter built in the past
@@ -77,8 +85,11 @@ module Pbuilder
     #  
     # * +identifier+ - A personal identifier
     # * +path+ - A path where is stored the persistence directory
-    def self.get_connection(adapter_name, identifier, path = "")
-      persistence_dir =  Adapter.personal_persistence_dir(identifier, path)
+    def self.get_connection(adapter_name, 
+                            identifier, 
+                            path = "", 
+                            persistence_dir = PERSISTENCE_DIR)
+      persistence_dir =  Adapter.personal_persistence_dir(identifier, path, persistence_dir)
       adapter = ConnectionPool.add_data_source( :type => :jena, 
                                                 :model => adapter_name,
                                                 :file =>  persistence_dir )
@@ -92,8 +103,10 @@ module Pbuilder
     #  
     # * +identifier+ - A personal identifier
     # * +path+ - A path where store the persistence directory
-    def self.personal_persistence_dir(identifier, path = "")
-      path + PERSISTENCE_DIR + "_" + identifier.to_s
+    def self.personal_persistence_dir(identifier, 
+                                      path = "", 
+                                      persistence_dir = PERSISTENCE_DIR)
+      path + persistence_dir + "_" + identifier.to_s
     end
     
     # Return the persistence file path
@@ -105,8 +118,9 @@ module Pbuilder
     # * +path+ - A path where store the persistence directory
     def self.personal_persistence_file( adapter_name, 
                                         identifier, 
-                                        path = "" )
-      dir = self.personal_persistence_dir(identifier, path)
+                                        path = "",
+                                        persistence_dir = PERSISTENCE_DIR)
+      dir = self.personal_persistence_dir(identifier, path, persistence_dir)
       file = dir.add_slash + adapter_name
       file
     end

@@ -1,10 +1,6 @@
 require 'pbuilder/adapter'
 require 'pbuilder/clouds_explorer'
 
-#require 'pbuilder/maps_analyzer'
-#require 'pbuilder/yaml_writer'
-
-
 class PatternsBuilderController < ApplicationController
   layout 'main', :except => [ :load ]
   
