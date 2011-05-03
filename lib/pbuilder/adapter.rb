@@ -26,8 +26,9 @@ module Pbuilder
     #  
     # * +identifier+ - A personal identifier
     # * +urls+ - An array of string. Every string is a url where the ontology is stored
-    # * +adapter_name+ - An adapter name
+    # * +adapter_name+ - An adapter name (String)
     # * +path+ - A path where store the persistence directory
+    # * +persistence_dor+ - A string representing the persistence directory name
     # 
     # ==== Warning
     #
@@ -73,6 +74,7 @@ module Pbuilder
     #  
     # * +identifier+ - A personal identifier
     # * +path+ - A path where is stored the persistence directory
+    # * +persistence_dor+ - A string representing the persistence directory name
     def self.purge( identifier, 
                     path = "", 
                     persistence_dir = PERSISTENCE_DIR )
@@ -82,9 +84,11 @@ module Pbuilder
     # Perform the connetection with an adapter built in the past
     #
     # ==== Attributes  
-    #  
+    #
+    # * +adapter_name+ - An adapter name (String)
     # * +identifier+ - A personal identifier
     # * +path+ - A path where is stored the persistence directory
+    # * +persistence_dor+ - A string representing the persistence directory name
     def self.get_connection(adapter_name, 
                             identifier, 
                             path = "", 
@@ -103,6 +107,7 @@ module Pbuilder
     #  
     # * +identifier+ - A personal identifier
     # * +path+ - A path where store the persistence directory
+    # * +persistence_dor+ - A string representing the persistence directory name
     def self.personal_persistence_dir(identifier, 
                                       path = "", 
                                       persistence_dir = PERSISTENCE_DIR)
@@ -116,6 +121,7 @@ module Pbuilder
     # * +adapter_name+ - An adapter name
     # * +identifier+ - A personal identifier
     # * +path+ - A path where store the persistence directory
+    # * +persistence_dor+ - A string representing the persistence directory name
     def self.personal_persistence_file( adapter_name, 
                                         identifier, 
                                         path = "",

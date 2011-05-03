@@ -4,82 +4,632 @@ leaves: !ruby/object:Pbuilder::LeavesList
     - &id001 !ruby/object:Pbuilder::TreeNode 
       children: []
 
-      edge: http://dbpedia.org/ontology/followingEvent
-      value: http://dbpedia.org/ontology/Event
+      edge: http://dbpedia.org/ontology/associatedBand
+      value: http://dbpedia.org/ontology/Band
+    - &id088 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/membership
+      value: http://www.w3.org/2001/XMLSchema#string
     - &id002 !ruby/object:Pbuilder::TreeNode 
-      children: []
-
-      edge: http://dbpedia.org/ontology/previousEvent
-      value: http://dbpedia.org/ontology/Event
-    - &id003 !ruby/object:Pbuilder::TreeNode 
-      children: []
-
-      edge: http://dbpedia.org/ontology/startDate
-      value: http://www.w3.org/2001/XMLSchema#date
-    - &id004 !ruby/object:Pbuilder::TreeNode 
-      children: []
-
-      edge: http://dbpedia.org/ontology/endDate
-      value: http://www.w3.org/2001/XMLSchema#date
-    - &id012 !ruby/object:Pbuilder::TreeNode 
-      children: []
-
-      edge: http://dbpedia.org/ontology/location
-      value: http://dbpedia.org/ontology/Building
-    - &id005 !ruby/object:Pbuilder::TreeNode 
       children: []
 
       edge: http://dbpedia.org/ontology/capital
       value: http://dbpedia.org/ontology/PopulatedPlace
-    - &id006 !ruby/object:Pbuilder::TreeNode 
+    - &id003 !ruby/object:Pbuilder::TreeNode 
       children: []
 
       edge: http://dbpedia.org/ontology/city
       value: http://dbpedia.org/ontology/PopulatedPlace
-    - &id007 !ruby/object:Pbuilder::TreeNode 
+    - &id004 !ruby/object:Pbuilder::TreeNode 
       children: []
 
       edge: http://dbpedia.org/ontology/largestSettlement
       value: http://dbpedia.org/ontology/PopulatedPlace
-    - &id008 !ruby/object:Pbuilder::TreeNode 
+    - &id005 !ruby/object:Pbuilder::TreeNode 
       children: []
 
       edge: http://dbpedia.org/ontology/principalArea
       value: http://dbpedia.org/ontology/PopulatedPlace
-    - &id009 !ruby/object:Pbuilder::TreeNode 
+    - &id006 !ruby/object:Pbuilder::TreeNode 
       children: []
 
       edge: http://dbpedia.org/ontology/location
       value: http://dbpedia.org/ontology/PopulatedPlace
-    - &id010 !ruby/object:Pbuilder::TreeNode 
+    - &id007 !ruby/object:Pbuilder::TreeNode 
       children: []
 
       edge: http://dbpedia.org/ontology/locatedInArea
       value: http://dbpedia.org/ontology/PopulatedPlace
-    - &id011 !ruby/object:Pbuilder::TreeNode 
+    - &id008 !ruby/object:Pbuilder::TreeNode 
       children: []
 
       edge: http://dbpedia.org/ontology/largestCity
       value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id034 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/capital
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id035 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/city
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id036 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestSettlement
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id037 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/principalArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id038 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id039 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/locatedInArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id040 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestCity
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id061 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/capital
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id062 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/city
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id063 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestSettlement
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id064 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/principalArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id065 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id066 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/locatedInArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id067 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestCity
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id029 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id030 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id031 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id032 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id033 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id089 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id090 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id091 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id092 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id093 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id009 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id010 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id011 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id012 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id013 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id014 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id015 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id016 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id017 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id018 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id019 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id020 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id021 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id022 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id023 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id024 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id025 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id026 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id027 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id028 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id041 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id042 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id043 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id044 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id045 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id046 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id047 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id048 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id049 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id050 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id051 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id052 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id053 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id054 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id055 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id056 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id057 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id058 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id059 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id060 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id068 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id069 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id070 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id071 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id072 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id073 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id074 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id075 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id076 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id077 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id078 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id079 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id080 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id081 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id082 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
+    - &id083 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influencedBy
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id084 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/associatedMusicalArtist
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id085 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/influenced
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - &id086 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/instrument
+      value: http://dbpedia.org/ontology/Instrument
+    - &id087 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/musicians
+      value: http://dbpedia.org/ontology/Instrument
 root: !ruby/object:Pbuilder::TreeNode 
   children: 
     - *id001
-    - *id002
-    - *id003
-    - *id004
     - !ruby/object:Pbuilder::TreeNode 
       children: 
+        - *id002
+        - *id003
+        - *id004
         - *id005
         - *id006
         - *id007
         - *id008
-        - *id009
-        - *id010
-        - *id011
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id009
+            - *id010
+            - *id011
+            - *id012
+            - *id013
+          edge: http://dbpedia.org/ontology/country
+          value: http://dbpedia.org/ontology/MusicalArtist
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id014
+            - *id015
+            - *id016
+            - *id017
+            - *id018
+          edge: http://dbpedia.org/ontology/stateOfOrigin
+          value: http://dbpedia.org/ontology/MusicalArtist
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id019
+            - *id020
+            - *id021
+            - *id022
+            - *id023
+          edge: http://dbpedia.org/ontology/hometown
+          value: http://dbpedia.org/ontology/MusicalArtist
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id024
+            - *id025
+            - *id026
+            - *id027
+            - *id028
+          edge: http://dbpedia.org/ontology/birthPlace
+          value: http://dbpedia.org/ontology/MusicalArtist
+      edge: http://dbpedia.org/ontology/country
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id029
+        - *id030
+        - *id031
+        - *id032
+        - *id033
+      edge: http://dbpedia.org/ontology/currentMember
+      value: http://dbpedia.org/ontology/MusicalArtist
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id034
+        - *id035
+        - *id036
+        - *id037
+        - *id038
+        - *id039
+        - *id040
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id041
+            - *id042
+            - *id043
+            - *id044
+            - *id045
+          edge: http://dbpedia.org/ontology/country
+          value: http://dbpedia.org/ontology/MusicalArtist
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id046
+            - *id047
+            - *id048
+            - *id049
+            - *id050
+          edge: http://dbpedia.org/ontology/stateOfOrigin
+          value: http://dbpedia.org/ontology/MusicalArtist
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id051
+            - *id052
+            - *id053
+            - *id054
+            - *id055
+          edge: http://dbpedia.org/ontology/hometown
+          value: http://dbpedia.org/ontology/MusicalArtist
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id056
+            - *id057
+            - *id058
+            - *id059
+            - *id060
+          edge: http://dbpedia.org/ontology/birthPlace
+          value: http://dbpedia.org/ontology/MusicalArtist
       edge: http://dbpedia.org/ontology/location
       value: http://dbpedia.org/ontology/PopulatedPlace
-    - *id012
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id061
+        - *id062
+        - *id063
+        - *id064
+        - *id065
+        - *id066
+        - *id067
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id068
+            - *id069
+            - *id070
+            - *id071
+            - *id072
+          edge: http://dbpedia.org/ontology/country
+          value: http://dbpedia.org/ontology/MusicalArtist
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id073
+            - *id074
+            - *id075
+            - *id076
+            - *id077
+          edge: http://dbpedia.org/ontology/stateOfOrigin
+          value: http://dbpedia.org/ontology/MusicalArtist
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id078
+            - *id079
+            - *id080
+            - *id081
+            - *id082
+          edge: http://dbpedia.org/ontology/hometown
+          value: http://dbpedia.org/ontology/MusicalArtist
+        - !ruby/object:Pbuilder::TreeNode 
+          children: 
+            - *id083
+            - *id084
+            - *id085
+            - *id086
+            - *id087
+          edge: http://dbpedia.org/ontology/birthPlace
+          value: http://dbpedia.org/ontology/MusicalArtist
+      edge: http://dbpedia.org/ontology/area
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - *id088
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id089
+        - *id090
+        - *id091
+        - *id092
+        - *id093
+      edge: http://dbpedia.org/ontology/pastMember
+      value: http://dbpedia.org/ontology/MusicalArtist
   edge: 
-  value: http://dbpedia.org/ontology/Event
+  value: http://dbpedia.org/ontology/Band
 temp: []
 

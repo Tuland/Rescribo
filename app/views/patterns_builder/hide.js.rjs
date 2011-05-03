@@ -1,0 +1,6 @@
+page.visual_effect(:fade, @hide_str)
+page.visual_effect(:blindUp, @div)
+page.visual_effect(:appear, @show_str)
+page.delay(1) do
+  page.visual_effect(:highlight, @show_str)
+end

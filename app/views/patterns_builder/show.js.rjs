@@ -1,0 +1,10 @@
+page.visual_effect(:fade, @show_str)
+page.visual_effect(:blindDown, @div)
+page.visual_effect(:appear, @hide_str)
+page.delay(1) do
+  page.visual_effect(:highlight, @hide_str)
+  page.visual_effect(:highlight, @div)
+end
+page.delay(1) do
+  page.visual_effect(:scrollTo, @div)
+end

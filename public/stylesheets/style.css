@@ -139,19 +139,31 @@ table {
   margin-top: 2em; }
 
 .s_edge {
-  background-color: #90EE90; }
+  background-color: #90ee90; }
 
 .r_edge {
-  background-color: #67B1CF; }
+  background-color: #67b1cf; }
 
 .i_edge {
-  background-color: #FFEC8B; }
+  background-color: #ffec8b; }
 
 ul.concept li {
   list-style-type: circle;
   color: #000099;
   margin-bottom: 10px;
   font-weight: bold; }
+
+li.child {
+  list-style-image: url("/images/tree_bullet.gif");
+  margin: 7px; }
+  li.child span {
+    padding: 2px 5px; }
+  li.child span.value {
+    color: #0000FF;
+    font-weight: bold; }
+  li.child span.edge {
+    font-style: italic;
+    border: 1px dotted Black; }
 
 span.concept_tag, span.instance_tag {
   -moz-border-radius: 10px;

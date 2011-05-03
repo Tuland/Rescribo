@@ -2,6 +2,9 @@
 
 $grey: #BFBFBF;
 $soft_grey: #EFEFEF;
+$green_bg: #90EE90;
+$blue_bg: #67B1CF;
+$yellow_bg: #FFEC8B;
 
 h1, h2 {
   font-family: Helvetica, Arial, sans-serif;
@@ -196,15 +199,15 @@ table{
 }
 
 .s_edge {
-  background-color: #90EE90;
+  background-color: $green_bg;
 }
 
 .r_edge {
-  background-color: #67B1CF;
+  background-color: $blue_bg;
 }
 
 .i_edge {
-  background-color: #FFEC8B;
+  background-color: $yellow_bg;
 }
 
 ul.concept li{
@@ -212,6 +215,25 @@ ul.concept li{
   color: #000099;
   margin-bottom: 10px;
   font-weight: bold;
+}
+
+li.child {
+  list-style-image: url('/images/tree_bullet.gif');
+  margin: 7px;
+  
+  span {
+    padding: 2px 5px;
+  }
+  
+  span.value {
+    color: #0000FF;
+    font-weight: bold;
+  }
+  
+  span.edge {
+    font-style: italic;
+    border: 1px dotted Black;
+  }
 }
 
 span.concept_tag, span.instance_tag {
@@ -233,5 +255,6 @@ span.concept_tag{
 span.instance_tag{
   padding: 1px 5px;
 }
+
 
 

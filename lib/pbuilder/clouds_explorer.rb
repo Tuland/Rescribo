@@ -7,9 +7,11 @@ module Pbuilder
     #  
     # ==== Attributes  
     # 
+    # * +files+ - An array including file address (string) of clouds
     # * +identifier+ - A personal identifier 
-    # * +options+ - An hash determining options
     # * +adapter_name+ - An adapter name
+    # * +options+ - An hash determining options
+    # * +path+ - A path where store the persistence directory
     #
     # ==== Options
     #  
@@ -18,6 +20,7 @@ module Pbuilder
     # * +:analysis_file+ - A string determining the name of the analysis file
     # * +:id+ - A personal identifier
     # * +:mappings_file+ - A string determining the name of the mapping file that contains a list of triples (abstract concept, core concepts, mapping reference number)
+    # * +:counter+ - A global counter that enumerate clouds
     def initialize(files, adapter_name, identifier, options={}, path="")
       @global_root_concepts, @global_finders = [], []
       @mappings = {}

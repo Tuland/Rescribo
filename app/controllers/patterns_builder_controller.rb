@@ -25,4 +25,56 @@ class PatternsBuilderController < ApplicationController
     @global_finders = explorer.global_finders
   end
   
+  def show
+    
+  end
+  
+  def show_properties
+    @id = params[:id]
+    @hide_str = "hide_pr_#{@id}"
+    @show_str = "show_pr_#{@id}"
+    @div = "properties_#{@id}"
+    render :action => "show"
+  end
+  
+  def hide_properties
+    @id = params[:id]
+    @hide_str = "hide_pr_#{@id}"
+    @show_str = "show_pr_#{@id}"
+    @div = "properties_#{@id}"
+    render :action => "hide"
+  end
+  
+  def show_tree
+    @id = params[:id]
+    @hide_str = "hide_t_#{@id}"
+    @show_str = "show_t_#{@id}"
+    @div = "tree_#{@id}"
+    render :action => "show"
+  end
+  
+  def hide_tree
+    @id = params[:id]
+    @hide_str = "hide_t_#{@id}"
+    @show_str = "show_t_#{@id}"
+    @div = "tree_#{@id}"
+    render :action => "hide"
+  end
+    
+  def show_patterns
+    @id = params[:id]
+    @hide_str = "hide_pa_#{@id}"
+    @show_str = "show_pa_#{@id}"
+    @div = "patterns_#{@id}"
+    render :action => "show"
+  end
+  
+  def hide_patterns
+    @id = params[:id]
+    @hide_str = "hide_pa_#{@id}"
+    @show_str = "show_pa_#{@id}"
+    @div = "patterns_#{@id}"
+    render :action => "hide"
+  end 
+  
 end

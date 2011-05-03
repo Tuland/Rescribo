@@ -7,7 +7,7 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns="file:/Users/tuland/Documents/workspace/SummO/OntoOut/summary_dbpedia_3.6_mod.owl#" > 
+    xmlns:summary_dbpedia_3="file:/Users/tuland/Documents/workspace/SummO/OntoOut/summary_dbpedia_3.6_mod.owl#" > 
   <rdf:Description rdf:about="http://dbpedia.org/ontology/startDate">
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -127,14 +127,14 @@
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Work">
+    <aeria:a-generalize rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#Abstract"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/capital">
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Genre">
-    <aeria:a-generalize rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
-    <rdf:type rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#Abstract"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -147,10 +147,6 @@
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://dbpedia.org/ontology/MusicalArtist">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/birthPlace">
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -160,20 +156,24 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/PopulatedPlace">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ontology:city rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+    <ontology:language rdf:resource="http://dbpedia.org/ontology/Language"/>
+    <ontology:principalArea rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+    <ontology:location rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ontology:anthem rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ontology:largestCity rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+    <ontology:capital rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+    <ontology:largestSettlement rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+    <ontology:locatedInArea rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/album">
     <rdfs:subPropertyOf rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#directedRelationship"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/MusicGenre">
-    <ontology:stylisticOrigin rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
-    <ontology:derivative rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
-    <ontology:musicFusionGenre rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
-    <ontology:musicSubgenre rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#Marker"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/producer">
@@ -217,7 +217,11 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/MusicalWork">
+    <ontology:recordedIn rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+    <ontology:album rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <ontology:language rdf:resource="http://dbpedia.org/ontology/Language"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria#Marker"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/ontology/locatedInArea">

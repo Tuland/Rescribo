@@ -3,46 +3,70 @@ concepts_list: []
 
 properties_list: 
   ? 
-    - http://dbpedia.org/ontology/Band
-    - http://dbpedia.org/ontology/associatedBand
-    - http://dbpedia.org/ontology/Band
+    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/influencedBy
+    - http://dbpedia.org/ontology/MusicalArtist
   : r
 
   ? 
-    - http://dbpedia.org/ontology/Band
+    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/associatedMusicalArtist
+    - http://dbpedia.org/ontology/MusicalArtist
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/influenced
+    - http://dbpedia.org/ontology/MusicalArtist
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/instrument
+    - http://dbpedia.org/ontology/Instrument
+  : s
+
+  ? 
+    - http://dbpedia.org/ontology/MusicalArtist
     - http://dbpedia.org/ontology/country
     - http://dbpedia.org/ontology/PopulatedPlace
   : s
 
   ? 
-    - http://dbpedia.org/ontology/Band
+    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/stateOfOrigin
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : s
+
+  ? 
+    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/hometown
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : s
+
+  ? 
+    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/birthPlace
+    - http://dbpedia.org/ontology/PopulatedPlace
+  : s
+
+  ? 
+    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/musicians
+    - http://dbpedia.org/ontology/Instrument
+  : i
+
+  ? 
+    - http://dbpedia.org/ontology/MusicalArtist
     - http://dbpedia.org/ontology/currentMember
+    - http://dbpedia.org/ontology/Band
+  : i
+
+  ? 
     - http://dbpedia.org/ontology/MusicalArtist
-  : s
-
-  ? 
-    - http://dbpedia.org/ontology/Band
-    - http://dbpedia.org/ontology/location
-    - http://dbpedia.org/ontology/PopulatedPlace
-  : s
-
-  ? 
-    - http://dbpedia.org/ontology/Band
-    - http://dbpedia.org/ontology/area
-    - http://dbpedia.org/ontology/PopulatedPlace
-  : s
-
-  ? 
-    - http://dbpedia.org/ontology/Band
-    - http://dbpedia.org/ontology/membership
-    - http://www.w3.org/2001/XMLSchema#string
-  : s
-
-  ? 
-    - http://dbpedia.org/ontology/Band
     - http://dbpedia.org/ontology/pastMember
-    - http://dbpedia.org/ontology/MusicalArtist
-  : s
+    - http://dbpedia.org/ontology/Band
+  : i
 
   ? 
     - http://dbpedia.org/ontology/PopulatedPlace
@@ -89,60 +113,36 @@ properties_list:
   ? 
     - http://dbpedia.org/ontology/PopulatedPlace
     - http://dbpedia.org/ontology/country
-    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/Band
   : i
 
   ? 
     - http://dbpedia.org/ontology/PopulatedPlace
-    - http://dbpedia.org/ontology/stateOfOrigin
-    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/location
+    - http://dbpedia.org/ontology/Band
   : i
 
   ? 
     - http://dbpedia.org/ontology/PopulatedPlace
-    - http://dbpedia.org/ontology/hometown
-    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/area
+    - http://dbpedia.org/ontology/Band
   : i
 
   ? 
-    - http://dbpedia.org/ontology/PopulatedPlace
-    - http://dbpedia.org/ontology/birthPlace
-    - http://dbpedia.org/ontology/MusicalArtist
-  : i
-
-  ? 
-    - http://dbpedia.org/ontology/MusicalArtist
-    - http://dbpedia.org/ontology/influencedBy
-    - http://dbpedia.org/ontology/MusicalArtist
+    - http://dbpedia.org/ontology/Band
+    - http://dbpedia.org/ontology/associatedBand
+    - http://dbpedia.org/ontology/Band
   : r
 
   ? 
-    - http://dbpedia.org/ontology/MusicalArtist
-    - http://dbpedia.org/ontology/associatedMusicalArtist
-    - http://dbpedia.org/ontology/MusicalArtist
-  : r
-
-  ? 
-    - http://dbpedia.org/ontology/MusicalArtist
-    - http://dbpedia.org/ontology/influenced
-    - http://dbpedia.org/ontology/MusicalArtist
-  : r
-
-  ? 
-    - http://dbpedia.org/ontology/MusicalArtist
-    - http://dbpedia.org/ontology/instrument
-    - http://dbpedia.org/ontology/Instrument
+    - http://dbpedia.org/ontology/Band
+    - http://dbpedia.org/ontology/membership
+    - http://www.w3.org/2001/XMLSchema#string
   : s
 
-  ? 
-    - http://dbpedia.org/ontology/MusicalArtist
-    - http://dbpedia.org/ontology/musicians
-    - http://dbpedia.org/ontology/Instrument
-  : i
-
 visited_concepts: 
-  - http://dbpedia.org/ontology/Band
-  - http://dbpedia.org/ontology/PopulatedPlace
   - http://dbpedia.org/ontology/MusicalArtist
-  - http://www.w3.org/2001/XMLSchema#string
   - http://dbpedia.org/ontology/Instrument
+  - http://dbpedia.org/ontology/PopulatedPlace
+  - http://dbpedia.org/ontology/Band
+  - http://www.w3.org/2001/XMLSchema#string

@@ -15,49 +15,74 @@
         %tr
           %td= "Core"
           %td= h root_concepts[1].to_s # core_concept
-  
-    %h3="Properties"
-    %table{:summary => "Properties identified"}
-      %thead
-        %tr
-          %th= "URI"
-          %th= "Type"
-      %tbody
-        - @global_finders[n].analysis.properties_list.each do |p, p_type|
-          %tr
-            %td{:class => "first"}= h p[0]
-            %td{:class => "#{h p_type}_edge", :rowspan => "3"}= h p_type
-          %tr
-            %td{:class => "middle #{h p_type}_edge"}= h p[1]
-          %tr
-            %td{:class => "last"}= h p[2]
-          
-    %h3="Patterns"
-  
-    - i = 0
-    - @global_finders[n].patterns.list.each do |pattern|
-      - i = i.next
-      %table{:summary => "Pattern identified: #{i}"}
-        %caption="Pattern #{i}"
+    = link_to_remote  '[Show Properties]', 
+                      :url => {:action => "show_properties", :id => n}, 
+                      :html => {:id => "show_pr_#{n}"}
+    = link_to_remote  '[Hide Properties]',
+                      :url => {:action => "hide_properties", :id => n}, 
+                      :html => {:id => "hide_pr_#{n}", :style => 'display:none'}
+    = link_to_remote  '[Show Tree]',
+                      :url => {:action => "show_tree", :id => n}, 
+                      :html => {:id => "show_t_#{n}"}
+    = link_to_remote  '[Hide Tree]',
+                      :url => {:action => "hide_tree", :id => n}, 
+                      :html => {:id => "hide_t_#{n}", :style => 'display:none'}
+    = link_to_remote  '[Show Patterns]',
+                      :url => {:action => "show_patterns", :id => n}, 
+                      :html => {:id => "show_pa_#{n}"}
+    = link_to_remote '[Hide Patterns]',
+                      :url => {:action => "hide_patterns", :id => n}, 
+                      :html => {:id => "hide_pa_#{n}", :style => 'display:none'}
+    %div{:id => "properties_#{n}", :style => 'display:none'}
+      %h3="Properties"
+      %table{:summary => "Properties identified"}
         %thead
           %tr
-            %th= "Num"
-            %th= "Type"
             %th= "URI"
+            %th= "Type"
         %tbody
-          - j , w = 0 , 0
-          - pattern.each do |item|
-          - j = j.next
+          - @global_finders[n].analysis.properties_list.each do |p, p_type|
             %tr
-              - if j.odd?
-                - w = w.next
-                %td= w
-                %td{:class => "class_1"}= "Concept"
-              -else
-                %td= "&nbsp;"
-                %td{:class => "class_0"}= "Property"
-              %td= h item
+              %td{:class => "first"}= h p[0]
+              %td{:class => "#{h p_type}_edge", :rowspan => "3"}= h p_type
+            %tr
+              %td{:class => "middle #{h p_type}_edge"}= h p[1]
+            %tr
+              %td{:class => "last"}= h p[2]
+    
+    %div{:id => "tree_#{n}", :style => 'display:none'}        
+      %h3="Patterns Tree"
+      = tree_to_html_list( @global_finders[n].patterns.root )
+    
+    %div{:id => "patterns_#{n}", :style => 'display:none'}  
+      %h3="Patterns"
+      - i = 0
+      - @global_finders[n].patterns.list.each do |pattern|
+        - i = i.next
+        %table{:summary => "Pattern identified: #{i}"}
+          %caption="Pattern #{i}"
+          %thead
+            %tr
+              %th= "Num"
+              %th= "Type"
+              %th= "URI"
+          %tbody
+            - j , w = 0 , 0
+            - pattern.each do |item|
+            - j = j.next
+              %tr
+                - if j.odd?
+                  - w = w.next
+                  %td= w
+                  %td{:class => "class_1"}= "Concept"
+                -else
+                  %td= "&nbsp;"
+                  %td{:class => "class_0"}= "Property"
+                %td= h item
+              
+              
     - n = n.next
+    
         
           
         

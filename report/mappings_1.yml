@@ -1,7 +1,16 @@
 --- 
+http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Band: 
+  - http://dbpedia.org/ontology/Band
+  - 0
 http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Event: 
   - http://dbpedia.org/ontology/Event
-  - 0
+  - 1
 http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Genre: 
   - http://dbpedia.org/ontology/MusicGenre
-  - 1
+  - 2
+http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Artist: 
+  - http://dbpedia.org/ontology/MusicalArtist
+  - 3
+http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#Work: 
+  - http://dbpedia.org/ontology/MusicalWork
+  - 4
