@@ -38,6 +38,17 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "Please log in" 
       redirect_to :controller => 'admin', :action => 'login' 
     end 
+  end
+  
+  def get_db_config
+    c = {}
+    config   = Rails::Configuration.new
+    c[:host]     = config.database_configuration[RAILS_ENV]["host"] || "127.0.0.1"
+    c[:database] = config.database_configuration[RAILS_ENV]["database"]
+    c[:username] = config.database_configuration[RAILS_ENV]["username"]
+    c[:password] = config.database_configuration[RAILS_ENV]["password"]
+    puts c
+    c
   end 
  
 end

@@ -8,17 +8,12 @@ module Pbuilder
 
   require 'fileutils'
 
-  class Adapter
+  class Adapter < AbstractAdapter
     # Directory where the persistence file is included
     PERSISTENCE_DIR = "jena_persistence"
-    # SKOS base
-    SKOS = "http://www.w3.org/2004/02/skos/core#"
-    # AERIA base
-    AERIA = "http://www.siti.disco.unimib.it/cmm/2010/aeria#"
     
     # * +persistence_dir+ - Path of the persistence directory
-    # * +model+ - The activeRdf/Jena model
-    attr_reader :persistence_dir, :model, :prefixes
+    attr_reader :persistence_dir
     
     # Init
     #  
@@ -45,27 +40,7 @@ module Pbuilder
       urls.each do |url|
         @adapter = init_load(url, adapter_name)
       end
-      init_setup
-      @model = @adapter.model
-      @prefixes = Adapter.get_prefixes(@adapter)
-    end
-  
-    # Close adaptor
-    def close
-      @adapter.close
-    end
-    
-    def self.get_prefixes(adapter)
-      @prefixes = adapter.model.getNsPrefixMap
-    end
-    
-    def self.remove_prefix(adapter, prefix)
-      adapter.model.removeNsPrefix("")
-    end
-    
-    def self.set_prefix(adapter, prefix, namespace)
-      adapter.model.setNsPrefix(prefix, namespace)
-      Namespace.register(prefix, namespace)
+      init_setup(@adapter)
     end
   
     # Destroy the persistence file
@@ -94,11 +69,7 @@ module Pbuilder
                             path = "", 
                             persistence_dir = PERSISTENCE_DIR)
       persistence_dir =  Adapter.personal_persistence_dir(identifier, path, persistence_dir)
-      adapter = ConnectionPool.add_data_source( :type => :jena, 
-                                                :model => adapter_name,
-                                                :file =>  persistence_dir )
-      adapter.enabled = true
-      adapter
+      Adapter.add_source(adapter_name, persistence_dir)
     end
     
     # Return the persistence directory path
@@ -150,31 +121,20 @@ module Pbuilder
     # * +url+ - A url where the ontology is stored
     # * +adapter_name+ - An adapter name
     def init_load(url, adapter_name)
-      adapter = ConnectionPool.add_data_source( :type => :jena, 
-                                                :model => adapter_name,
-                                                :file =>  @persistence_dir )
-      adapter.enabled = true
+      adapter = Adapter.add_source(adapter_name, @persistence_dir)
       adapter.load( url, 
                     :format => :rdfxml, 
                     :into => :default_model )
       adapter
     end
-  
-    # Perform mapping from RDF type to Ruby classes
-    def init_setup
-      Namespace.register :skos, SKOS
-      Namespace.register :aeria, AERIA
-      load_namespaces
-      ObjectManager.construct_classes
-    end
     
-    def load_namespaces
-      default_namespaces = [:xsd, :rdf, :rdfs, :owl, :shdm, :swui]
-      namespaces = @adapter.model.getNsPrefixMap.to_a
-      namespaces.map!{|ns| [ns.first.to_sym, ns.last] unless ns.first.nil? || ns.first.blank? }
-      namespaces.compact!
-      namespaces.reject!{|ns| default_namespaces.include?(ns.first) }   
-      namespaces.map{|ns| Namespace.register(*ns) }
+    def self.add_source(adapter_name,
+                        persistence_dir = PERSISTENCE_DIR)
+      adapter = ConnectionPool.add_data_source( :type => :jena, 
+                                                :model => adapter_name,
+                                                :file =>  persistence_dir )
+      adapter.enabled = true
+      adapter
     end
     
   end

@@ -13,6 +13,7 @@ class UploaderController < ApplicationController
   
   def upload_onto
     @ontology = Ontology.find(:first, :conditions => "user_id='#{session[:user_id]}'")
+    @onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
     @files_uploaded = search_file(UploadedOnto::DIRECTORY)  
     render :action => "save_onto"
   end
@@ -27,6 +28,13 @@ class UploaderController < ApplicationController
       build_adapter_from_directory( UploadedOnto::DIRECTORY, 
                                     PERSISTENCE_DIR,
                                     PERSISTENT_ONTO )
+      @onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
+      if ! @onto_source
+        @onto_source = OntoSource.new()
+        @onto_source.user_id = session[:user_id]
+      end
+      @onto_source.source = "local"
+      @onto_source.save
     end                                  
     redirect_to :action => "upload_onto"
   end
@@ -77,7 +85,29 @@ class UploaderController < ApplicationController
     @ontology.url = params[:ontology][:url]
     @ontology.user_id = session[:user_id]
     if @ontology.save
-      flash[:notice] = "Ontology defined correctly"
+      flash[:notice] = "Dataset defined correctly"
+      @onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
+      if ! @onto_source
+        @onto_source = OntoSource.new()
+        @onto_source.user_id = session[:user_id]
+      end
+      @onto_source.source = "endpoint"
+      @onto_source.save
+    else
+      flash[:notice] = "Something went wrong"
+    end
+    redirect_to :action => "upload_onto"
+  end
+  
+  def select_source
+    @onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
+    if ! @onto_source
+      @onto_source = OntoSource.new()
+      @onto_source.user_id = session[:user_id]
+    end
+    @onto_source.source = params[:onto_source][:source]
+    if @onto_source.save
+      flash[:notice] = "Last update applied correctly"
     else
       flash[:notice] = "Something went wrong"
     end

@@ -23,10 +23,21 @@
       %legend= "SPARQL Endpoint"
       - form_tag({:action => 'save_url'}) do
         %div
-          %label{:for => 'save_onto'}Url
+          %label{:for => 'save_url'}Url
           = text_field 'ontology', 'url'
         %div.submitter
           = submit_tag "Define"
+  %div.part
+    %fieldset
+      %legend= "Source"
+      - form_tag({:action => 'select_source'}) do
+        %div
+          %label{:for => 'select_source'}SPARQL Endpoint
+          = radio_button 'onto_source', 'source', 'endpoint'
+          %label{:for => 'select_source'}Local dataset
+          = radio_button 'onto_source', 'source', 'local'
+        %div.submitter
+          = submit_tag "Chose"
       
         
 %div.links_list

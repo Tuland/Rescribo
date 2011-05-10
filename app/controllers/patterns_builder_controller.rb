@@ -1,6 +1,8 @@
 require 'pbuilder/adapter'
 require 'pbuilder/clouds_explorer'
 
+require 'pbuilder/db_adapter'
+
 class PatternsBuilderController < ApplicationController
   layout 'main', :except => [ :load ]
   
@@ -8,6 +10,13 @@ class PatternsBuilderController < ApplicationController
   
   def index
     # Actually this line code is redundant
+    
+    adapter = Pbuilder::DbAdapter.new(session[:user_id],
+                                      ["http://0.0.0.0:3000/onto/aeria_summary_test.owl"],
+                                      "prova",
+                                      get_db_config)
+    
+    
     Pbuilder::Adapter.purge(session[:user_id])
   end
   
@@ -25,9 +34,6 @@ class PatternsBuilderController < ApplicationController
     @global_finders = explorer.global_finders
   end
   
-  def show
-    
-  end
   
   def show_properties
     @id = params[:id]
