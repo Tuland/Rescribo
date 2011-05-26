@@ -7,6 +7,11 @@ module Pbuilder::PHelper
   
   class RDFS::Resource
     
+    # Compares the resource with a list of items. If there is an item equal to the resource return false, true otherwise
+    #
+    # === Attributes
+    #
+    # +*items+ - a list of items to compare with the resource
     def different?(*items)
       items.each do |item|
         if item == self
@@ -20,6 +25,11 @@ module Pbuilder::PHelper
   
   class Converter
     
+    # Convertion from concept to string
+    #
+    # ==== Attributes
+    #
+    # * +concept+ - concept (source, simple string or string with <>) 
     def self.src_2_str(concept)
       concept = case concept
         when RDFS::Resource
@@ -31,6 +41,11 @@ module Pbuilder::PHelper
       end
     end
     
+    # Abbreviation into prefix#local_name
+    #
+    # === Attributes
+    #
+    # * +resource+ - Resource to abbreviate
     def self.abbreviate(resource)
       Namespace.prefix(resource).to_s + "#" + Namespace.localname(resource)
     end

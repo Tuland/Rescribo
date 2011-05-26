@@ -43,14 +43,32 @@ module Pbuilder
       @adapter.close
     end
     
+    # Gets prefixes used
+    #
+    # ==== Attributes
+    #
+    # +adapter+ - An adapter
     def self.get_prefixes(adapter)
       @prefixes = adapter.model.getNsPrefixMap
     end
     
-    def self.remove_prefix(adapter, prefix)
-      adapter.model.removeNsPrefix("")
+    # Remove a prefix
+    #
+    # ==== Attributes
+    #
+    # +adapter+ - An adapter
+    # +prefix+ - A string determining the prefix
+    def self.remove_prefix(adapter, prefix = "")
+      adapter.model.removeNsPrefix(prefix)
     end
     
+    # Remove a prefix
+    #
+    # ==== Attributes
+    #
+    # +adapter+ - An adapter
+    # +prefix+ - A string determining the prefix
+    # +namespace - A string determining the namespace associated to the prefix
     def self.set_prefix(adapter, prefix, namespace)
       adapter.model.setNsPrefix(prefix, namespace)
       Namespace.register(prefix, namespace)
