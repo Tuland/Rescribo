@@ -13,7 +13,6 @@ module PatternsBuilderHelper
                                             :starting_value_tag => "<span class='value'>",
                                             :ending_value_tag => "</span>" } )
     global_str << "</ul>"
-    puts global_str
     global_str
   end
   

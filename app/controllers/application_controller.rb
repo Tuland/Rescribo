@@ -47,7 +47,6 @@ class ApplicationController < ActionController::Base
     c[:database] = config.database_configuration[RAILS_ENV]["database"]
     c[:username] = config.database_configuration[RAILS_ENV]["username"]
     c[:password] = config.database_configuration[RAILS_ENV]["password"]
-    puts c
     c
   end 
  

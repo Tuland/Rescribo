@@ -5,6 +5,7 @@ rescue Exception
 end
 
 require 'pbuilder/adapter'
+#require 'pbuilder/endpoint_adapter'
 require 'pbuilder/clouds_explorer'
 require 'pbuilder/yaml_reader'
 
@@ -37,19 +38,27 @@ class RewriterController < ApplicationController
     @global_finders = explorer.global_finders
     @abstract_concepts = explorer.mappings.keys.sort
     
-    # Adapter already bluided in uploading step
-    onto_adapter = Pbuilder::Adapter.get_connection(PERSISTENT_ONTO, 
-                                                    session[:user_id],
-                                                    "", PERSISTENCE_DIR)
-    begin
-      @prefixes = Pbuilder::Adapter.get_prefixes(onto_adapter)
-    rescue Exception => e
-      puts e.message  
-      puts e.backtrace.inspect
-    ensure 
-      onto_adapter.close 
+    onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
+    if onto_source == "endpoint"
+      ####
+      #### TODO : prendere url
+      ####
+      Pbuilder::EndpointAdapter.add_source("http://dbpedia.org/sparql")
+      #Pbuilder::EndpointAdapter.add_source(url)
+    else
+    # Adapter already builded in uploading step
+      onto_adapter = Pbuilder::Adapter.get_connection(PERSISTENT_ONTO, 
+                                                      session[:user_id],
+                                                      "", PERSISTENCE_DIR)
+      begin
+        @prefixes = Pbuilder::Adapter.get_prefixes(onto_adapter)
+      rescue Exception => e
+        puts e.message  
+        puts e.backtrace.inspect
+      ensure 
+        onto_adapter.close 
+      end
     end
-    
     @notice = "Ontologies loaded"
     @undefined_prefix = UNDEFINED_PREFIX
           

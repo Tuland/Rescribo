@@ -70,9 +70,7 @@ module Pbuilder
       adapter.enabled = true
       adapter
     end
-    
-    
-    
+      
   end
   
 end
