@@ -10,11 +10,20 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY aeria "http://www.siti.disco.unimib.it/cmm/2010/aeria#" >
     <!ENTITY music_dbpedia "http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#" >
+    <!ENTITY dbpedia "http://dbpedia.org/resource/" >
+    <!ENTITY dbpowl "http://dbpedia.org/ontology/" >
+    <!ENTITY dbprop "http://dbpedia.org/property/" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY dcmitype "http://purl.org/dc/dcmitype/" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/">
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
+    <!ENTITY geo "http://www.w3.org/2003/01/geo/wgs84_pos#">
+    <!ENTITY geonames "http://www.geonames.org/ontology#">
+    <!ENTITY yago "http://dbpedia.org/class/yago/">
 ]>
 
 
-<rdf:RDF xmlns="file:/Users/tuland/Documents/workspace/SummO/OntoOut/summary_dbpedia_3.6_mod.owl#"
-     xml:base="file:/Users/tuland/Documents/workspace/SummO/OntoOut/summary_dbpedia_3.6_mod.owl"
+<rdf:RDF xml:base="file:/Users/tuland/Documents/workspace/SummO/OntoOut/summary_dbpedia_3.6_mod.owl"
      xmlns:ontology="http://dbpedia.org/ontology/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:music_dbpedia="http://www.siti.disco.unimib.it/cmm/2010/abstract/music_dbpedia#"
@@ -22,7 +31,17 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dbpedia="http://dbpedia.org/resource/"
+     xmlns:dbpowl="http://dbpedia.org/ontology/"
+     xmlns:dbprop="http://dbpedia.org/property/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dcmitype="http://purl.org/dc/dcmitype/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:geonames="http://www.geonames.org/ontology#"
+     xmlns:yago="http://dbpedia.org/class/yago/">
     <owl:Ontology rdf:about="file:/Users/tuland/Documents/workspace/SummO/OntoOut/summary_dbpedia_3.6_mod.owl">
         <owl:imports rdf:resource="http://www.siti.disco.unimib.it/cmm/2010/aeria"/>
     </owl:Ontology>

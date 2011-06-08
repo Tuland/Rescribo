@@ -10,7 +10,7 @@ module Pbuilder
 
   class Adapter < AbstractAdapter
     # Directory where the persistence file is included
-    PERSISTENCE_DIR = "jena_persistence"
+    PERSISTENCE_DIR = "output/jena_persistence"
     
     # * +persistence_dir+ - Path of the persistence directory
     attr_reader :persistence_dir

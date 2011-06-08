@@ -24,13 +24,22 @@ h3 {
   font-size: 70%;
 }
 
-.notice { 
-  border: 2px solid red; 
+.notice{  
   padding: 1em; 
   margin-bottom: 2em; 
   background-color: #f0f0f0; 
   font: bold smaller sans-serif; 
-} 
+}
+
+.notice_bad {
+  @extend .notice;
+  border: 2px solid red;
+}
+
+.notice_ok{
+  @extend .notice;
+  border: 2px solid green;
+}
 
 /* Menu */
 

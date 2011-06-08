@@ -1,0 +1,30 @@
+--- !ruby/object:Pbuilder::PatternsAnalysis 
+concepts_list: []
+
+properties_list: 
+  ? 
+    - http://dbpedia.org/ontology/MusicGenre
+    - http://dbpedia.org/ontology/stylisticOrigin
+    - http://dbpedia.org/ontology/MusicGenre
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/MusicGenre
+    - http://dbpedia.org/ontology/derivative
+    - http://dbpedia.org/ontology/MusicGenre
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/MusicGenre
+    - http://dbpedia.org/ontology/musicFusionGenre
+    - http://dbpedia.org/ontology/MusicGenre
+  : r
+
+  ? 
+    - http://dbpedia.org/ontology/MusicGenre
+    - http://dbpedia.org/ontology/musicSubgenre
+    - http://dbpedia.org/ontology/MusicGenre
+  : r
+
+visited_concepts: 
+  - http://dbpedia.org/ontology/MusicGenre

@@ -1,0 +1,125 @@
+--- !ruby/object:Pbuilder::PatternsTree 
+leaves: !ruby/object:Pbuilder::LeavesList 
+  list: 
+    - &id001 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/album
+      value: http://dbpedia.org/ontology/MusicalWork
+    - &id010 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/language
+      value: http://dbpedia.org/ontology/Language
+    - &id002 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/city
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id003 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/principalArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id004 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id005 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestCity
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id006 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/capital
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id007 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestSettlement
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id008 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/locatedInArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id009 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/language
+      value: http://dbpedia.org/ontology/Language
+    - &id011 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/city
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id012 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/principalArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id013 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id014 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestCity
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id015 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/capital
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id016 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestSettlement
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id017 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/locatedInArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id018 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/language
+      value: http://dbpedia.org/ontology/Language
+root: !ruby/object:Pbuilder::TreeNode 
+  children: 
+    - *id001
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id002
+        - *id003
+        - *id004
+        - *id005
+        - *id006
+        - *id007
+        - *id008
+        - *id009
+      edge: http://dbpedia.org/ontology/recordedIn
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - *id010
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id011
+        - *id012
+        - *id013
+        - *id014
+        - *id015
+        - *id016
+        - *id017
+        - *id018
+      edge: http://dbpedia.org/ontology/anthem
+      value: http://dbpedia.org/ontology/PopulatedPlace
+  edge: 
+  value: http://dbpedia.org/ontology/MusicalWork
+temp: []
+

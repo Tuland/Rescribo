@@ -14,13 +14,15 @@ class ApplicationController < ActionController::Base
   
   AERIA_DIRECTORY = UploadedAeria::DIRECTORY
   
+  BASE_DIRECTORY = "output/"
+  
   # Persistence file related to the user ontology
   PERSISTENT_ONTO = "onto"
   # Persistence file related to the AERIA ontology
   PERSISTENT_AERIA = "aeria"
-  PERSISTENCE_DIR = "persistence_onto"
+  PERSISTENCE_DIR = BASE_DIRECTORY + "persistence_onto"
   
-  REPORT_DIR = "report/"
+  REPORT_DIR = BASE_DIRECTORY + "report/"
   MAPPINGS_FILE = REPORT_DIR + "mappings"
   ANALYSIS_FILE = REPORT_DIR + "analysis"
   PATTERNS_FILE = REPORT_DIR + "patterns"

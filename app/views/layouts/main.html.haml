@@ -18,6 +18,10 @@
     #container
       - if flash[:notice]
         %p.notice= flash[:notice]
+      - if flash[:notice_ok]
+        %p.notice_ok= flash[:notice_ok]
+      - if flash[:notice_bad]
+        %p.notice_bad{:id => "bad"}= flash[:notice_bad]
       = yield :layout
     #footer= render( :partial => 'layouts/footer')
 		

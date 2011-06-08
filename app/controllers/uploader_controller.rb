@@ -22,9 +22,9 @@ class UploaderController < ApplicationController
     begin
       post = UploadedOnto.save(params[:upload])
     rescue
-      flash[:notice] = "Something went wrong"
+      flash[:notice_bad] = "Something went wrong"
     else
-      flash[:notice] = "File has been uploaded successfully"
+      flash[:notice_ok] = "File has been uploaded successfully"
       build_adapter_from_directory( UploadedOnto::DIRECTORY, 
                                     PERSISTENCE_DIR,
                                     PERSISTENT_ONTO )
@@ -48,9 +48,9 @@ class UploaderController < ApplicationController
     begin
       post = UploadedAeria.save(params[:upload])
     rescue
-      flash[:notice] = "Something went wrong"
+      flash[:notice_bad] = "Something went wrong"
     else
-      flash[:notice] = "File has been uploaded successfully"
+      flash[:notice_ok] = "File has been uploaded successfully"
     end
     redirect_to :action => "upload_aeria"
   end
@@ -72,7 +72,7 @@ class UploaderController < ApplicationController
         build_adapter_from_directory(UploadedOnto::DIRECTORY, PERSISTENCE_DIR, PERSISTENT_ONTO )
       end
     rescue
-      flash[:notice] = "Something went wrong"
+      flash[:notice_bad] = "Something went wrong"
     end
     redirect_to :action => "upload_onto"
   end
@@ -85,7 +85,7 @@ class UploaderController < ApplicationController
     @ontology.url = params[:ontology][:url]
     @ontology.user_id = session[:user_id]
     if @ontology.save
-      flash[:notice] = "Dataset defined correctly"
+      flash[:notice_ok] = "Dataset defined correctly"
       @onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
       if ! @onto_source
         @onto_source = OntoSource.new()
@@ -94,7 +94,7 @@ class UploaderController < ApplicationController
       @onto_source.source = "endpoint"
       @onto_source.save
     else
-      flash[:notice] = "Something went wrong"
+      flash[:notice_bad] = "Something went wrong"
     end
     redirect_to :action => "upload_onto"
   end
@@ -107,9 +107,9 @@ class UploaderController < ApplicationController
     end
     @onto_source.source = params[:onto_source][:source]
     if @onto_source.save
-      flash[:notice] = "Last update applied correctly"
+      flash[:notice_ok] = "Last update applied correctly"
     else
-      flash[:notice] = "Something went wrong"
+      flash[:notice_bad] = "Something went wrong"
     end
     redirect_to :action => "upload_onto"
   end
@@ -127,12 +127,12 @@ class UploaderController < ApplicationController
                                               "", persistence_dir)
         onto_adapter.close
       rescue
-        flash[:notice] = "Something went wrong"
+        flash[:notice_bad] = "Something went wrong"
       else
-        flash[:notice] = "The model has been successfully updated (import: #{files.size} files)"
+        flash[:notice_ok] = "The model has been successfully updated (import: #{files.size} files)"
       end
     else
-      flash[:notice] = "There aren't files to import into the model"
+      flash[:notice_bad] = "There aren't files to import into the model"
     end
   end
   

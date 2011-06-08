@@ -13,12 +13,17 @@ h3 {
 .opt {
   font-size: 70%; }
 
-.notice {
-  border: 2px solid red;
+.notice, .notice_bad, .notice_ok {
   padding: 1em;
   margin-bottom: 2em;
   background-color: #f0f0f0;
   font: bold smaller sans-serif; }
+
+.notice_bad {
+  border: 2px solid red; }
+
+.notice_ok {
+  border: 2px solid green; }
 
 /* Menu */
 div.links_list {

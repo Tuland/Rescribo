@@ -18,7 +18,7 @@ class AdminController < ApplicationController
         redirect_to(uri || {  :controller => "guide", 
                               :action => "index" })
       else 
-        flash.now[:notice] = "Invalid user/password combination" 
+        flash.now[:notice_bad] = "Invalid user/password combination" 
       end 
     end
   end

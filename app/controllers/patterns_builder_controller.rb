@@ -1,16 +1,26 @@
 require 'pbuilder/adapter'
 require 'pbuilder/clouds_explorer'
+require 'pbuilder/db_adapter'
+
 
 class PatternsBuilderController < ApplicationController
   
-  include_class 'com.mysql.jdbc.Driver'
+  # include_class "com.mysql.jdbc.Driver"
   
   
   layout 'main', :except => [ :load ]
   
   before_filter :authorize
   
-  def index    
+  def index
+    
+=begin
+    adapter = Pbuilder::DbAdapter.new(session[:user_id],
+                                      "http://0.0.0.0:3000/onto/aeria_summary_test.owl",
+                                      "prova",
+                                      get_db_config)
+=end
+    
     # Actually this line code is redundant
     Pbuilder::Adapter.purge(session[:user_id])
   end

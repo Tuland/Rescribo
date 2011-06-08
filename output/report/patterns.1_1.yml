@@ -1,0 +1,85 @@
+--- !ruby/object:Pbuilder::PatternsTree 
+leaves: !ruby/object:Pbuilder::LeavesList 
+  list: 
+    - &id001 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/followingEvent
+      value: http://dbpedia.org/ontology/Event
+    - &id002 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/previousEvent
+      value: http://dbpedia.org/ontology/Event
+    - &id003 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/startDate
+      value: http://www.w3.org/2001/XMLSchema#date
+    - &id004 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/endDate
+      value: http://www.w3.org/2001/XMLSchema#date
+    - &id012 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/Building
+    - &id005 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/capital
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id006 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/city
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id007 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestSettlement
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id008 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/principalArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id009 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id010 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/locatedInArea
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - &id011 !ruby/object:Pbuilder::TreeNode 
+      children: []
+
+      edge: http://dbpedia.org/ontology/largestCity
+      value: http://dbpedia.org/ontology/PopulatedPlace
+root: !ruby/object:Pbuilder::TreeNode 
+  children: 
+    - *id001
+    - *id002
+    - *id003
+    - *id004
+    - !ruby/object:Pbuilder::TreeNode 
+      children: 
+        - *id005
+        - *id006
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+      edge: http://dbpedia.org/ontology/location
+      value: http://dbpedia.org/ontology/PopulatedPlace
+    - *id012
+  edge: 
+  value: http://dbpedia.org/ontology/Event
+temp: []
+

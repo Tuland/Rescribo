@@ -1,5 +1,9 @@
 require 'digest/sha1' 
-class User < ActiveRecord::Base 
+class User < ActiveRecord::Base
+  has_one :onto_source
+  has_one :ontology
+  
+  
   validates_presence_of :name 
   validates_uniqueness_of :name
   

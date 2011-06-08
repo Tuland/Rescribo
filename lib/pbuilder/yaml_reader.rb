@@ -25,7 +25,7 @@ module Pbuilder
     def initialize(user_id, mappings_file, patterns_file, analysis_file)
       @id = user_id
       file = YamlWriter.get_file_path(user_id, mappings_file)
-      @mappings = open(file) { |f| YAML.load(f) }
+      @mappings = YamlReader.read_yaml(file)
       @mappings_file = mappings_file
       @patterns_file = patterns_file
       @analysis_file = analysis_file
@@ -53,6 +53,11 @@ module Pbuilder
     def load_all
       load(*@mappings.keys)
     end
+    
+    def self.read_yaml
+      open(file) { |f| YAML.load(f) }
+    end
+    
     
   end
   

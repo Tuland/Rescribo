@@ -37,26 +37,22 @@ class RewriterController < ApplicationController
     @global_rc_list = explorer.global_root_concepts
     @global_finders = explorer.global_finders
     @abstract_concepts = explorer.mappings.keys.sort
+    @prefixes = explorer.prefixes
     
     onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
-    if onto_source == "endpoint"
-      ####
-      #### TODO : prendere url
-      ####
-      Pbuilder::EndpointAdapter.add_source("http://dbpedia.org/sparql")
-      #Pbuilder::EndpointAdapter.add_source(url)
-    else
+    if onto_source.source == "local"
     # Adapter already builded in uploading step
-      onto_adapter = Pbuilder::Adapter.get_connection(PERSISTENT_ONTO, 
-                                                      session[:user_id],
-                                                      "", PERSISTENCE_DIR)
+      adapter = Pbuilder::Adapter.get_connection( PERSISTENT_ONTO, 
+                                                  session[:user_id],
+                                                  "", PERSISTENCE_DIR)
       begin
-        @prefixes = Pbuilder::Adapter.get_prefixes(onto_adapter)
+        prefixes = Pbuilder::Adapter.get_prefixes(onto_adapter)
+        @prefixes.putAll(prefixes) # Java
       rescue Exception => e
         puts e.message  
         puts e.backtrace.inspect
       ensure 
-        onto_adapter.close 
+        adapter.close 
       end
     end
     @notice = "Ontologies loaded"
@@ -75,8 +71,15 @@ class RewriterController < ApplicationController
     @patterns = core_concept_node.build_patterns
     @analysis = analysis[a_concept]
     
-    onto_adapter = Pbuilder::Adapter.get_connection(PERSISTENT_ONTO, 
-                                                    session[:user_id]) 
+    onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
+    if onto_source.source == "endpoint"
+      onto = Ontology.find(:first, :conditions => "user_id='#{session[:user_id]}'")
+      adapter = Pbuilder::EndpointAdapter.add_source(onto.url)
+      adapter.close
+    else
+      onto_adapter = Pbuilder::Adapter.get_connection(PERSISTENT_ONTO, 
+                                                      session[:user_id])
+    end
     @core_instances = []                                  
     begin
       @core_concept_rsc = RDFS::Resource.new(core_concept_node.value)

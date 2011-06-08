@@ -5,6 +5,7 @@ module Pbuilder
   rescue Exception
     print "This sample needs activerdf and activerdf_jena.\n"
   end
+
   
   class DbAdapter < AbstractAdapter
     
@@ -64,7 +65,7 @@ module Pbuilder
                                                 :model => adapter_name, 
                                                 :id => identifier,
                                                 :database => {:url => database + ";create=true", 
-                                                              :type => "MySQL", 
+                                                              :type => "mysql", 
                                                               :username => db_user, 
                                                               :password => db_password})
       adapter.enabled = true

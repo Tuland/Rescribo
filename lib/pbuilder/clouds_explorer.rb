@@ -1,7 +1,10 @@
 module Pbuilder
   
+  include Java
+  
   class CloudsExplorer
     attr_reader :global_root_concepts, :global_finders, :mappings
+    attr_accessor :prefixes
     
     # Init
     #  
@@ -24,6 +27,7 @@ module Pbuilder
     def initialize(files, adapter_name, identifier, options={}, path="")
       @global_root_concepts, @global_finders = [], []
       @mappings = {}
+      @prefixes = java.util.HashMap.new
       i = 0
       files.each do |file|
         Adapter.purge(identifier, path)
@@ -31,6 +35,8 @@ module Pbuilder
                               [file],
                               adapter_name,
                               path)
+        @prefixes.putAll(adapter.prefixes)
+        
         begin
           maps = MapsAnalyzer.new({ :report         =>  options[:report],
                                     :id             =>  identifier ,
@@ -59,4 +65,5 @@ module Pbuilder
     end
     
   end
+  
 end
