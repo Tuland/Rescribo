@@ -20,5 +20,12 @@ module Pbuilder
       adapter
     end
     
+    def self.set_prefixes(prefixes)
+      prefixes.each do |p|
+        hash = yield p
+        Namespace.register(hash[:prefix], p[:namespace]) 
+      end
+    end
+    
   end
 end

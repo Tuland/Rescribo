@@ -10,6 +10,8 @@
           %div
             = label_tag :settings_a_concept, "Abstract concept"
             = select :settings, :a_concept, @abstract_concepts
+            = label_tag :setting_constraint, "Syntactical constraint"
+            = text_field :setting, :constraint
           %div.submitter
             = submit_tag 'Rewrite'
 

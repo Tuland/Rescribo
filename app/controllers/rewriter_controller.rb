@@ -5,7 +5,7 @@ rescue Exception
 end
 
 require 'pbuilder/adapter'
-#require 'pbuilder/endpoint_adapter'
+require 'pbuilder/endpoint_adapter'
 require 'pbuilder/clouds_explorer'
 require 'pbuilder/yaml_reader'
 
@@ -22,6 +22,7 @@ class RewriterController < ApplicationController
   
   def index
     #Pbuilder::Adapter.purge(session[:user_id])
+    Prefix.delete_all(["user_id = ?", session[:user_id]])
   end
   
   def load
@@ -46,13 +47,21 @@ class RewriterController < ApplicationController
                                                   session[:user_id],
                                                   "", PERSISTENCE_DIR)
       begin
-        prefixes = Pbuilder::Adapter.get_prefixes(onto_adapter)
-        @prefixes.putAll(prefixes) # Java
+        @prefixes = Pbuilder::Adapter.get_prefixes(onto_adapter)
       rescue Exception => e
         puts e.message  
         puts e.backtrace.inspect
       ensure 
         adapter.close 
+      end
+    else
+      @prefixes = explorer.prefixes
+      @prefixes.each do |prefix, namespace|
+        p = Prefix.new
+        p.prefix = prefix
+        p.namespace = namespace
+        p.user_id = session[:user_id]
+        p.save
       end
     end
     @notice = "Ontologies loaded"
@@ -75,10 +84,10 @@ class RewriterController < ApplicationController
     if onto_source.source == "endpoint"
       onto = Ontology.find(:first, :conditions => "user_id='#{session[:user_id]}'")
       adapter = Pbuilder::EndpointAdapter.add_source(onto.url)
-      adapter.close
+      Prefix.get_prefixes(session[:user_id])
     else
-      onto_adapter = Pbuilder::Adapter.get_connection(PERSISTENT_ONTO, 
-                                                      session[:user_id])
+      adapter = Pbuilder::Adapter.get_connection( PERSISTENT_ONTO, 
+                                                  session[:user_id])
     end
     @core_instances = []                                  
     begin
@@ -92,7 +101,7 @@ class RewriterController < ApplicationController
       puts e.message  
       puts e.backtrace.inspect
     ensure 
-      onto_adapter.close 
+      adapter.close 
     end
 
   end
@@ -103,16 +112,31 @@ class RewriterController < ApplicationController
     @e_editorId = params[:editorId]
     @e_old_prefix = params[:old_prefix]
     
-    adapter = Pbuilder::Adapter.get_connection( PERSISTENT_ONTO, 
+    onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
+    if onto_source.source == "local"
+      adapter = Pbuilder::Adapter.get_connection( PERSISTENT_ONTO, 
                                                 session[:user_id].to_s)
-    if @e_old_prefix == UNDEFINED_PREFIX
-      Pbuilder::Adapter.remove_prefix(adapter, "")
-    else
-      Pbuilder::Adapter.remove_prefix(adapter, @e_old_prefix)
-    end
-    Pbuilder::Adapter.set_prefix(adapter, @e_value, @e_namespace)
+      if @e_old_prefix == UNDEFINED_PREFIX
+        Pbuilder::Adapter.remove_prefix(adapter, "")
+      else
+        Pbuilder::Adapter.remove_prefix(adapter, @e_old_prefix)
+      end
+      Pbuilder::Adapter.set_prefix(adapter, @e_value, @e_namespace)
                   
-    adapter.close
+      adapter.close
+    else
+      if @e_old_prefix == UNDEFINED_PREFIX
+        p = Prefix.find(:first, 
+                        :conditions => ["prefix = ? and user_id = ?", "", session[:user_id]])
+      else
+        p = Prefix.find(:first, 
+                        :conditions => ["prefix = ? and user_id = ?", @e_old_prefix, session[:user_id]])
+      end
+      p.prefix = @e_value
+      if ! p.save
+        @e_value = @e_old_prefix
+      end
+    end
   end
   
   def hide_pattern

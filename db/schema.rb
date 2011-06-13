@@ -9,18 +9,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110504083519) do
+ActiveRecord::Schema.define(:version => 20110608152411) do
 
   create_table "onto_sources", :force => true do |t|
     t.text     "source"
-    t.text     "user_id",    :null => false
+    t.integer  "user_id",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "ontologies", :force => true do |t|
     t.text     "url"
-    t.text     "user_id",    :null => false
+    t.integer  "user_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "prefixes", :force => true do |t|
+    t.text     "namespace"
+    t.text     "prefix"
+    t.integer  "user_id",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

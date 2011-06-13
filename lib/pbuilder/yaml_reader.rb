@@ -54,7 +54,7 @@ module Pbuilder
       load(*@mappings.keys)
     end
     
-    def self.read_yaml
+    def self.read_yaml(file)
       open(file) { |f| YAML.load(f) }
     end
     
