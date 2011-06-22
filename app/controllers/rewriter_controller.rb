@@ -10,6 +10,7 @@ require 'pbuilder/clouds_explorer'
 require 'pbuilder/yaml_reader'
 
 class RewriterController < ApplicationController
+  
   layout 'main', :except => [ :load, 
                               :rewrite, 
                               :edit_prefix, 
@@ -39,7 +40,6 @@ class RewriterController < ApplicationController
     @global_finders = explorer.global_finders
     @abstract_concepts = explorer.mappings.keys.sort
     @prefixes = explorer.prefixes
-    
     onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
     if onto_source.source == "local"
     # Adapter already builded in uploading step
@@ -70,16 +70,17 @@ class RewriterController < ApplicationController
   end
   
   def rewrite
+    
     reader = Pbuilder::YamlReader.new(session[:user_id],
                                       MAPPINGS_FILE,
                                       PATTERNS_FILE,
                                       ANALYSIS_FILE)
     a_concept = params[:settings][:a_concept]
+    constraint = params[:settings][:constraint]  
     patterns, analysis = reader.load(a_concept)
     core_concept_node = patterns[a_concept].root
     @patterns = core_concept_node.build_patterns
     @analysis = analysis[a_concept]
-    
     onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
     if onto_source.source == "endpoint"
       onto = Ontology.find(:first, :conditions => "user_id='#{session[:user_id]}'")
@@ -92,8 +93,8 @@ class RewriterController < ApplicationController
     @core_instances = []                                  
     begin
       @core_concept_rsc = RDFS::Resource.new(core_concept_node.value)
-      
-      query = Query.new.distinct(:i).where(:i, RDF::type , @core_concept_rsc)
+      query = Query.new.extend(Pbuilder::Query)
+      query = query.search_by_concept(@core_concept_rsc, constraint)
       query.execute do |instance|
         @core_instances << instance
       end
@@ -154,3 +155,5 @@ class RewriterController < ApplicationController
   end
 
 end
+
+

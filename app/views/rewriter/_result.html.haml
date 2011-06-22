@@ -16,7 +16,7 @@
         = h abbreviate(@core_concept_rsc)
     %ul
       -@core_instances.each do |instance|
-        %li{:id => "#{h abbreviate(instance)}"}
+        %li.child{:id => "#{h abbreviate(instance)}"}
           %span.instance_tag= "1"
           =h abbreviate(instance) 
     
