@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110608152411) do
+ActiveRecord::Schema.define(:version => 20110624085613) do
+
+  create_table "instances", :force => true do |t|
+    t.string   "uri",        :null => false
+    t.string   "concept"
+    t.integer  "pattern"
+    t.integer  "level"
+    t.integer  "user_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "onto_sources", :force => true do |t|
     t.text     "source"

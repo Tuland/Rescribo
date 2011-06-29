@@ -10,6 +10,7 @@ require 'pbuilder/clouds_explorer'
 require 'pbuilder/yaml_reader'
 
 class RewriterController < ApplicationController
+  include Pbuilder::PHelper
   
   layout 'main', :except => [ :load, 
                               :rewrite, 
@@ -20,10 +21,13 @@ class RewriterController < ApplicationController
   before_filter :authorize
   
   UNDEFINED_PREFIX = "[Undefined]"
+  MAX_SIZE = 20
   
   def index
     #Pbuilder::Adapter.purge(session[:user_id])
     Prefix.delete_all(["user_id = ?", session[:user_id]])
+    Instance.delete_all(["user_id = ?", session[:user_id]])
+    session[:level] = 0
   end
   
   def load
@@ -81,6 +85,7 @@ class RewriterController < ApplicationController
     core_concept_node = patterns[a_concept].root
     @patterns = core_concept_node.build_patterns
     @analysis = analysis[a_concept]
+    @max_size = max_size
     onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
     if onto_source.source == "endpoint"
       onto = Ontology.find(:first, :conditions => "user_id='#{session[:user_id]}'")
@@ -98,13 +103,30 @@ class RewriterController < ApplicationController
       query.execute do |instance|
         @core_instances << instance
       end
+      for i in 1..@patterns.size
+        Instance.save_grouping_by_pattern(@core_instances, i, session[:user_id], session[:level])
+      end
     rescue Exception => e
       puts e.message  
       puts e.backtrace.inspect
     ensure 
       adapter.close 
     end
-
+  end
+  
+  def rewrite_periodically
+    old_instances = Instance.find(:all, 
+                                  :conditions => "user_id='#{session[:user_id]} and 
+                                                  level='#{session[:level]}'")
+    # TODO:
+    # prendere il concetto+property del pattern a livello giusto
+    # associare a instance un campo padre nel db?
+    # (old_i, property, ?x) (?x, RDF::type, concetto) -> @[old_i, ?x] ... e salvare ?x nel db
+    old_instances.each do |old_i|
+      # Query.new.distinct(:i).where(:i, RDF::type, concept).where(:i, RDFS::label, :lab)
+    end
+    session[:level] = session[:level].next
+    @level = session[:level]
   end
   
   def edit_prefix
@@ -152,6 +174,14 @@ class RewriterController < ApplicationController
     @hide_str = "hide_#{i}"
     @pattern_str = "pattern_#{i}"
     @show_str = "show_#{i}"
+  end
+  
+  private
+  
+  def max_size
+    max_size = Counter.max_patterns_size(@patterns)
+    max_size = MAX_SIZE if MAX_SIZE < @max_size
+    max_size
   end
 
 end

@@ -43,8 +43,8 @@ module Pbuilder
     # * +property+ - A property to queue. Allowed: RDFS::Resource, String, <String>
     # * +concept+ - A concept to queue. Allowed: RDFS::Resource, String, <String>
     def import(concept, property)
-      property = Converter.src_2_str(property)
-      concept = Converter.src_2_str(concept)
+      property = Converter.rsc_2_str(property)
+      concept = Converter.rsc_2_str(concept)
       @temp << [concept.to_s, property.to_s]
     end
     

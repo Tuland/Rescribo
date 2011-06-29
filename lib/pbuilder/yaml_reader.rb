@@ -39,7 +39,7 @@ module Pbuilder
     def load(*abstract_concepts)
       patterns, analysis = {}, {}
       abstract_concepts.each do |concept|
-        concept = Converter.src_2_str(concept)
+        concept = Converter.rsc_2_str(concept)
         number = @mappings[concept][1]
         file_p = YamlWriter.get_file_path(@id, @patterns_file, number)
         patterns[concept] = open(file_p) { |f| YAML.load(f) }

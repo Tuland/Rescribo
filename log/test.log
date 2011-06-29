@@ -1983,3 +1983,80 @@ Migrating to CreatePrefixes (20110608152411)
   [4;36;1mSQL (56.0ms)[0m   [0;1mCREATE TABLE `prefixes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `namespace` text, `prefix` text, `user_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110608152411')[0m
   [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101125111013)
+Migrating to CreateOntoUploadeds (20101206155554)
+Migrating to CreateAeriaUploadeds (20101206164223)
+Migrating to RenameAeriaUploadedToUploadedAeria (20110208151540)
+Migrating to RenameOntoUploadedToUploadedOnto (20110208152353)
+Migrating to CreateOntologies (20110422155318)
+Migrating to CreateOntoSources (20110504083519)
+Migrating to CreatePrefixes (20110608152411)
+Migrating to CreateInstances (20110622130644)
+  [4;36;1mSQL (53.0ms)[0m   [0;1mCREATE TABLE `instances` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `uri` varchar(255) NOT NULL, `concept` varchar(255), `pattern` int(11), `level` int(11), `user_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110622130644')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101125111013)
+Migrating to CreateOntoUploadeds (20101206155554)
+Migrating to CreateAeriaUploadeds (20101206164223)
+Migrating to RenameAeriaUploadedToUploadedAeria (20110208151540)
+Migrating to RenameOntoUploadedToUploadedOnto (20110208152353)
+Migrating to CreateOntologies (20110422155318)
+Migrating to CreateOntoSources (20110504083519)
+Migrating to CreatePrefixes (20110608152411)
+Migrating to CreateInstances (20110622130644)
+Migrating to ChangeInstances (20110624085613)
+  [4;36;1mSQL (69.0ms)[0m   [0;1mALTER TABLE `instances` CHANGE `uri` `uri` int(11) DEFAULT NULL[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110624085613')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101125111013)
+Migrating to CreateOntoUploadeds (20101206155554)
+Migrating to CreateAeriaUploadeds (20101206164223)
+Migrating to RenameAeriaUploadedToUploadedAeria (20110208151540)
+Migrating to RenameOntoUploadedToUploadedOnto (20110208152353)
+Migrating to CreateOntologies (20110422155318)
+Migrating to CreateOntoSources (20110504083519)
+Migrating to CreatePrefixes (20110608152411)
+Migrating to CreateInstances (20110622130644)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101125111013)
+Migrating to CreateOntoUploadeds (20101206155554)
+Migrating to CreateAeriaUploadeds (20101206164223)
+Migrating to RenameAeriaUploadedToUploadedAeria (20110208151540)
+Migrating to RenameOntoUploadedToUploadedOnto (20110208152353)
+Migrating to CreateOntologies (20110422155318)
+Migrating to CreateOntoSources (20110504083519)
+Migrating to CreatePrefixes (20110608152411)
+Migrating to CreateInstances (20110622130644)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101125111013)
+Migrating to CreateOntoUploadeds (20101206155554)
+Migrating to CreateAeriaUploadeds (20101206164223)
+Migrating to RenameAeriaUploadedToUploadedAeria (20110208151540)
+Migrating to RenameOntoUploadedToUploadedOnto (20110208152353)
+Migrating to CreateOntologies (20110422155318)
+Migrating to CreateOntoSources (20110504083519)
+Migrating to CreatePrefixes (20110608152411)
+Migrating to CreateInstances (20110622130644)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101125111013)
+Migrating to CreateOntoUploadeds (20101206155554)
+Migrating to CreateAeriaUploadeds (20101206164223)
+Migrating to RenameAeriaUploadedToUploadedAeria (20110208151540)
+Migrating to RenameOntoUploadedToUploadedOnto (20110208152353)
+Migrating to CreateOntologies (20110422155318)
+Migrating to CreateOntoSources (20110504083519)
+Migrating to CreatePrefixes (20110608152411)
+Migrating to CreateInstances (20110622130644)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m

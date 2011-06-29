@@ -26,8 +26,8 @@ module Pbuilder
       @counter = options[:counter] || 0
       @finders, @root_concepts_list = [], []
       rc_list.each do |root_concepts|
-        abst_concept = Converter.src_2_str(root_concepts[0])
-        core_concept = Converter.src_2_str(root_concepts[1])
+        abst_concept = Converter.rsc_2_str(root_concepts[0])
+        core_concept = Converter.rsc_2_str(root_concepts[1])
         finder = OfflineFinder.new(core_concept, Pbuilder::PatternsTree)
         finder.start({:id             =>  options[:id],
                       :report         =>  options[:report],

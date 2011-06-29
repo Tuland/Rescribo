@@ -15,7 +15,7 @@ module Pbuilder
       if init_concept.nil?
         @list = Array.new
       else
-        init_concept = Converter.src_2_str(init_concept)
+        init_concept = Converter.rsc_2_str(init_concept)
         @list = Array[Array[init_concept]]
       end
       empty_temp
@@ -28,7 +28,7 @@ module Pbuilder
     # * +concept+ - A concept determining the last item into the pattern to perform the attachment. Allowed: RDFS::Resource, String, <String>
     def update(concept)
       if ! @temp.empty?
-        concept = Converter.src_2_str(concept)
+        concept = Converter.rsc_2_str(concept)
         new_patterns = []
         @list.each do |pattern|
           if pattern.last == concept

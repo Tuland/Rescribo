@@ -12,7 +12,7 @@ module Pbuilder
     # * +init_concept+ - An initial concept to include. Allowed: RDFS::Resource, String, <String>
     def initialize(init_concept)
       @leaves = LeavesList.new()
-      init_concept = Converter.src_2_str(init_concept)
+      init_concept = Converter.rsc_2_str(init_concept)
       @root = @leaves.insert(init_concept)
       empty_temp
     end
@@ -23,7 +23,7 @@ module Pbuilder
      #  
      # * +prev_concept+ - A concept determining the last item into the pattern to perform the attachment. Allowed: RDFS::Resource, String, <String>
     def update(concept)
-      concept = Converter.src_2_str(concept)
+      concept = Converter.rsc_2_str(concept)
       if ! @temp.empty?
         @leaves.substitute_concept_using_matrix(concept, 
                                                 @temp)

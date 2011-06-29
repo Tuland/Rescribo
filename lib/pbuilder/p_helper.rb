@@ -29,8 +29,8 @@ module Pbuilder::PHelper
     #
     # ==== Attributes
     #
-    # * +concept+ - concept (source, simple string or string with <>) 
-    def self.src_2_str(concept)
+    # * +concept+ - concept (resource, simple string or string with <>) 
+    def self.rsc_2_str(concept)
       concept = case concept
         when RDFS::Resource
           concept.to_s.delete("<>")
@@ -47,9 +47,20 @@ module Pbuilder::PHelper
     #
     # * +resource+ - Resource to abbreviate
     def self.abbreviate(resource)
-      Namespace.prefix(resource).to_s + "#" + Namespace.localname(resource)
+      Namespace.prefix(resource).to_s + "#" + Namespace.localname(resource).to_s
     end
     
+  end
+  
+  class Counter
+    def self.max_patterns_size(patterns)
+      max = 0
+      patterns.each do |pattern|
+        s = pattern.size / 2
+        max = s if s > max
+      end
+      max
+    end
   end
   
 end

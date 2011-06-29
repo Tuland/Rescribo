@@ -1,4 +1,9 @@
 - i = 0
+
+%p
+  ="Counter "
+  %span#counter= "0"
+  
 - @patterns.each do |pattern|
   - i = i.next
   %h3.important
@@ -16,7 +21,11 @@
         = h abbreviate(@core_concept_rsc)
     %ul
       -@core_instances.each do |instance|
-        %li.child{:id => "#{h abbreviate(instance)}"}
+        %li.child
           %span.instance_tag= "1"
-          =h abbreviate(instance) 
+          %span{:id => "pat#{i}_lev1_#{h abbreviate(instance)}"}=h abbreviate(instance)
+        
+= periodically_call_remote( :url => {:action => "rewrite_periodically"}, 
+                            :frequency => 5,
+                            :condition => "$('counter').innerHTML < #{@max_size}")
     

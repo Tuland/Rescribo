@@ -27,7 +27,7 @@ module Pbuilder
         @concepts_list = Array.new
         @visited_concepts = Array.new
       else
-        init_concept = Converter.src_2_str(init_concept)
+        init_concept = Converter.rsc_2_str(init_concept)
         @concepts_list = Array[init_concept]
         @visited_concepts = Array[init_concept]
       end
@@ -46,9 +46,9 @@ module Pbuilder
                 concept_o, 
                 property_name, 
                 property_type = DEFAULT_PROPERTY_TYPE)
-      concept_s = Converter.src_2_str(concept_s)
-      concept_o = Converter.src_2_str(concept_o)
-      property_name = Converter.src_2_str(property_name)
+      concept_s = Converter.rsc_2_str(concept_s)
+      concept_o = Converter.rsc_2_str(concept_o)
+      property_name = Converter.rsc_2_str(property_name)
       @concepts_list.push(concept_o)
       update_properties_list( concept_s,
                               property_name,
@@ -63,9 +63,9 @@ module Pbuilder
     def include_edge?(concept_s, 
                       property_name,
                       concept_o)
-      concept_s = Converter.src_2_str(concept_s)
-      concept_o = Converter.src_2_str(concept_o)
-      property_name = Converter.src_2_str(property_name)
+      concept_s = Converter.rsc_2_str(concept_s)
+      concept_o = Converter.rsc_2_str(concept_o)
+      property_name = Converter.rsc_2_str(property_name)
       result_s = include_directed_edge?(concept_s, 
                                         property_name,
                                         concept_o)
@@ -96,7 +96,7 @@ module Pbuilder
     #
     # +property+ - A property URI (also an ActiveRDF resource). Allowed: RDFS::Resource, String, <String>
     def include_property_name?(property)
-      property = Converter.src_2_str(property)
+      property = Converter.rsc_2_str(property)
       each_property_name do |item|
         if item == property
           return true
