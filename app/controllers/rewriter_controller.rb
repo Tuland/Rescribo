@@ -8,9 +8,12 @@ require 'pbuilder/adapter'
 require 'pbuilder/endpoint_adapter'
 require 'pbuilder/clouds_explorer'
 require 'pbuilder/yaml_reader'
+require 'pbuilder/instances_explorer'
 
 class RewriterController < ApplicationController
   include Pbuilder::PHelper
+  
+  FREQUENCY = 5
   
   layout 'main', :except => [ :load, 
                               :rewrite, 
@@ -74,59 +77,53 @@ class RewriterController < ApplicationController
   end
   
   def rewrite
-    
-    reader = Pbuilder::YamlReader.new(session[:user_id],
-                                      MAPPINGS_FILE,
-                                      PATTERNS_FILE,
-                                      ANALYSIS_FILE)
     a_concept = params[:settings][:a_concept]
-    constraint = params[:settings][:constraint]  
-    patterns, analysis = reader.load(a_concept)
+    constraint = params[:settings][:constraint]
+    patterns, analysis = init_patterns(a_concept)
     core_concept_node = patterns[a_concept].root
     @patterns = core_concept_node.build_patterns
     @analysis = analysis[a_concept]
-    @max_size = max_size
+    @max_size = max_size(@patterns)
     onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
-    if onto_source.source == "endpoint"
-      onto = Ontology.find(:first, :conditions => "user_id='#{session[:user_id]}'")
-      adapter = Pbuilder::EndpointAdapter.add_source(onto.url)
-      Prefix.get_prefixes(session[:user_id])
-    else
-      adapter = Pbuilder::Adapter.get_connection( PERSISTENT_ONTO, 
-                                                  session[:user_id])
-    end
+    adapter = init_adapter({ :prefix => true })
     @core_instances = []                                  
     begin
       @core_concept_rsc = RDFS::Resource.new(core_concept_node.value)
-      query = Query.new.extend(Pbuilder::Query)
-      query = query.search_by_concept(@core_concept_rsc, constraint)
-      query.execute do |instance|
-        @core_instances << instance
+      ie = Pbuilder::InstancesExplorer.new(@patterns, 
+                                          @core_concept_rsc, 
+                                          constraint) do |instances, pattern_count|
+        Instance.save_grouping_by_pattern(instances, pattern_count, session[:user_id], session[:level])
       end
-      for i in 1..@patterns.size
-        Instance.save_grouping_by_pattern(@core_instances, i, session[:user_id], session[:level])
-      end
+      @core_instances = ie.core_instances
+      
+      # CONTINUARE QUI l'ALGORITMO: introdurre search_next_instances (vedi query.rb in lib)
+      ie.scan_patterns
     rescue Exception => e
       puts e.message  
       puts e.backtrace.inspect
     ensure 
       adapter.close 
     end
-  end
-  
-  def rewrite_periodically
-    old_instances = Instance.find(:all, 
-                                  :conditions => "user_id='#{session[:user_id]} and 
-                                                  level='#{session[:level]}'")
+    @frenquecy = FREQUENCY
+    
+    
     # TODO:
     # prendere il concetto+property del pattern a livello giusto
     # associare a instance un campo padre nel db?
     # (old_i, property, ?x) (?x, RDF::type, concetto) -> @[old_i, ?x] ... e salvare ?x nel db
-    old_instances.each do |old_i|
+    #old_instances.each do |old_i|
       # Query.new.distinct(:i).where(:i, RDF::type, concept).where(:i, RDFS::label, :lab)
-    end
+    #end
+    #
+    # onto_source quando viene usato?
+    
+  end
+  
+  def post_periodically
     session[:level] = session[:level].next
     @level = session[:level]
+    
+    puts "_______________ LEVEL: #{@level}"
   end
   
   def edit_prefix
@@ -178,10 +175,31 @@ class RewriterController < ApplicationController
   
   private
   
-  def max_size
-    max_size = Counter.max_patterns_size(@patterns)
-    max_size = MAX_SIZE if MAX_SIZE < @max_size
+  def max_size(patterns)
+    max_size = Counter.max_patterns_size(patterns)
+    max_size = MAX_SIZE if MAX_SIZE < max_size
     max_size
+  end
+  
+  def init_patterns(a_concept)
+    reader = Pbuilder::YamlReader.new(session[:user_id],
+                                      MAPPINGS_FILE,
+                                      PATTERNS_FILE,
+                                      ANALYSIS_FILE)
+    reader.load(a_concept)
+  end
+  
+  def init_adapter(options = {})
+    onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
+    if onto_source.source == "endpoint"
+      onto = Ontology.find(:first, :conditions => "user_id='#{session[:user_id]}'")
+      adapter = Pbuilder::EndpointAdapter.add_source(onto.url)
+      Prefix.get_prefixes(session[:user_id]) if options[:prefix] = true
+    else
+      adapter = Pbuilder::Adapter.get_connection( PERSISTENT_ONTO, 
+                                                  session[:user_id])
+    end
+    adapter
   end
 
 end

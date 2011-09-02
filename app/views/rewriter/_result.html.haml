@@ -25,7 +25,7 @@
           %span.instance_tag= "1"
           %span{:id => "pat#{i}_lev1_#{h abbreviate(instance)}"}=h abbreviate(instance)
         
-= periodically_call_remote( :url => {:action => "rewrite_periodically"}, 
-                            :frequency => 5,
+= periodically_call_remote( :url => {:action => "post_periodically"}, 
+                            :frequency => @frenquecy,
                             :condition => "$('counter').innerHTML < #{@max_size}")
     

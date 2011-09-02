@@ -37,6 +37,17 @@ module Pbuilder::Query
     regexp = Regexp.new(Regexp.quote(constraint))  
     self.distinct(:i).where(:i, RDF::type, concept).where(:i, RDFS::label, :lab)
     self.filter_regexp(:lab, regexp, {:sparql_flags => "i"})
-  end 
+  end
+  
+  # Searches the next instances exploiting patterns
+  #
+  # ==== Attributes
+  #
+  # * +curr_instance+ - Current instance (string)
+  # * +property+ - Property related to the next instances (curr_instance property ?i)
+  # * +concept+ - Class of the next instances (?i RDF:type concept)
+  def search_next_instances(curr_instance, property, concept)
+    self.distinct(:i).where(curr_instance, property, :i).where(:i, RDF::type, concept)
+  end
   
 end
