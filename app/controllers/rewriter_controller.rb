@@ -28,8 +28,7 @@ class RewriterController < ApplicationController
   
   def index
     #Pbuilder::Adapter.purge(session[:user_id])
-    Prefix.delete_all(["user_id = ?", session[:user_id]])
-    Instance.delete_all(["user_id = ?", session[:user_id]])
+    delete_all(session[:user_id])
     session[:level] = 0
   end
   
@@ -89,14 +88,24 @@ class RewriterController < ApplicationController
     @core_instances = []                                  
     begin
       @core_concept_rsc = RDFS::Resource.new(core_concept_node.value)
+      soft_instance = Struct.new("SoftInstance", :id, :uri)
       ie = Pbuilder::InstancesExplorer.new(@patterns, 
                                           @core_concept_rsc, 
-                                          constraint) do |instances, pattern_count|
-        Instance.save_grouping_by_pattern(instances, pattern_count, session[:user_id], session[:level])
+                                          constraint) do |i, p_count, level, property, parent_id|
+        instance = Instance.new(
+          :uri => Converter.rsc_2_str(i),
+          :pattern => p_count,
+          :user_id => session[:user_id],
+          :level => level,
+          :parent_id => parent_id)
+        if ! property.nil?
+          prop = Converter.rsc_2_str(property)
+          instance.property = Property.find_or_create_by_uri(prop)
+        end
+        instance.save
+        soft_instance.new(instance.id, i)
       end
       @core_instances = ie.core_instances
-      
-      # CONTINUARE QUI l'ALGORITMO: introdurre search_next_instances (vedi query.rb in lib)
       ie.scan_patterns
     rescue Exception => e
       puts e.message  
@@ -122,6 +131,7 @@ class RewriterController < ApplicationController
   def post_periodically
     session[:level] = session[:level].next
     @level = session[:level]
+    # recuperare le instance aventi il livello indicato da @level
     
     puts "_______________ LEVEL: #{@level}"
   end
@@ -187,6 +197,12 @@ class RewriterController < ApplicationController
                                       PATTERNS_FILE,
                                       ANALYSIS_FILE)
     reader.load(a_concept)
+  end
+  
+  def delete_all(user_id)
+    Prefix.delete_all(["user_id = ?", user_id])
+    Instance.delete_all(["user_id = ?", user_id])
+    #Property.delete_all
   end
   
   def init_adapter(options = {})

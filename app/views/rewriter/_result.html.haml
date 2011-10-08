@@ -5,7 +5,6 @@
   %span#counter= "0"
   
 - @patterns.each do |pattern|
-  - i = i.next
   %h3.important
     = "Pattern #{i}"
     = link_to_remote "[ Hide ]",
@@ -20,10 +19,11 @@
         %span.concept_tag= "CONCEPT 1"
         = h abbreviate(@core_concept_rsc)
     %ul
-      -@core_instances.each do |instance|
+      -@core_instances[i].each do |instance|
         %li.child
           %span.instance_tag= "1"
-          %span{:id => "pat#{i}_lev1_#{h abbreviate(instance)}"}=h abbreviate(instance)
+          %span{:id => "#{instance.id}"}=h abbreviate(instance.uri)
+  - i = i.next
         
 = periodically_call_remote( :url => {:action => "post_periodically"}, 
                             :frequency => @frenquecy,

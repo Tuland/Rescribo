@@ -9,16 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110624085613) do
+ActiveRecord::Schema.define(:version => 20110913152028) do
 
-  create_table "instances", :force => true do |t|
-    t.string   "uri",        :null => false
-    t.string   "concept"
-    t.integer  "pattern"
-    t.integer  "level"
-    t.integer  "user_id",    :null => false
+  create_table "data_files", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "instances", :force => true do |t|
+    t.string   "uri",         :null => false
+    t.integer  "pattern"
+    t.integer  "level"
+    t.integer  "user_id",     :null => false
+    t.integer  "parent_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "property_id"
   end
 
   create_table "onto_sources", :force => true do |t|
@@ -35,10 +41,24 @@ ActiveRecord::Schema.define(:version => 20110624085613) do
     t.datetime "updated_at"
   end
 
+  create_table "ontos", :force => true do |t|
+    t.text     "url"
+    t.text     "base"
+    t.binary   "model"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "prefixes", :force => true do |t|
     t.text     "namespace"
     t.text     "prefix"
     t.integer  "user_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "properties", :force => true do |t|
+    t.string   "uri"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

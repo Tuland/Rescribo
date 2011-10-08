@@ -1,11 +1,12 @@
 class CreateInstances < ActiveRecord::Migration
   def self.up
-    create_table :instances do |t|
+    create_table :instances, :force => true do |t|
       t.string :uri, :null => false
-      t.string :concept
       t.integer :pattern
       t.integer :level
       t.integer :user_id, :null => false
+      t.integer :parent_id
+      t.integer :property_id
       t.timestamps
     end
   end
