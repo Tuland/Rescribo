@@ -47,6 +47,7 @@ module Pbuilder::PHelper
     #
     # * +resource+ - Resource to abbreviate
     def self.abbreviate(resource)
+      resource = RDFS::Resource.new(resource)
       Namespace.prefix(resource).to_s + "#" + Namespace.localname(resource).to_s
     end
     

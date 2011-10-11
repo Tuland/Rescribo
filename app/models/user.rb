@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_one   :onto_source
   has_one   :ontology
   has_many  :instances
+  has_many  :cencepts
   
   
   validates_presence_of :name 

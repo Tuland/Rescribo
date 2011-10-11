@@ -241,7 +241,7 @@ li.child {
   
   span.edge {
     font-style: italic;
-    border: 1px dotted Black;
+    //border: 1px dotted Black;
   }
 }
 
@@ -253,7 +253,7 @@ span.concept_tag, span.instance_tag {
   -khtml-border-radius: 10px;
   border-radius: 10px;
   color: white;
-  margin-right: 1em;
+  margin-right: 0.5em;
   background-color: #000099;
 }
 

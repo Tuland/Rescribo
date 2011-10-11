@@ -9,9 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110913152028) do
+ActiveRecord::Schema.define(:version => 20111011080052) do
 
-  create_table "data_files", :force => true do |t|
+  create_table "concepts", :force => true do |t|
+    t.string   "uri"
+    t.integer  "level"
+    t.integer  "pattern"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -21,9 +24,9 @@ ActiveRecord::Schema.define(:version => 20110913152028) do
     t.integer  "pattern"
     t.integer  "level"
     t.integer  "user_id",     :null => false
-    t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "parent_id"
     t.integer  "property_id"
   end
 
@@ -37,14 +40,6 @@ ActiveRecord::Schema.define(:version => 20110913152028) do
   create_table "ontologies", :force => true do |t|
     t.text     "url"
     t.integer  "user_id",    :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "ontos", :force => true do |t|
-    t.text     "url"
-    t.text     "base"
-    t.binary   "model"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

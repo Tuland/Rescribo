@@ -9,11 +9,12 @@ require 'pbuilder/endpoint_adapter'
 require 'pbuilder/clouds_explorer'
 require 'pbuilder/yaml_reader'
 require 'pbuilder/instances_explorer'
+require 'pbuilder/soft_instance'
 
 class RewriterController < ApplicationController
   include Pbuilder::PHelper
   
-  FREQUENCY = 5
+  FREQUENCY = 6
   
   layout 'main', :except => [ :load, 
                               :rewrite, 
@@ -29,7 +30,6 @@ class RewriterController < ApplicationController
   def index
     #Pbuilder::Adapter.purge(session[:user_id])
     delete_all(session[:user_id])
-    session[:level] = 0
   end
   
   def load
@@ -76,11 +76,13 @@ class RewriterController < ApplicationController
   end
   
   def rewrite
+    delete_all(session[:user_id])
     a_concept = params[:settings][:a_concept]
     constraint = params[:settings][:constraint]
     patterns, analysis = init_patterns(a_concept)
     core_concept_node = patterns[a_concept].root
     @patterns = core_concept_node.build_patterns
+    Concept.import_from_matrix(@patterns, session[:user_id])
     @analysis = analysis[a_concept]
     @max_size = max_size(@patterns)
     onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
@@ -88,7 +90,7 @@ class RewriterController < ApplicationController
     @core_instances = []                                  
     begin
       @core_concept_rsc = RDFS::Resource.new(core_concept_node.value)
-      soft_instance = Struct.new("SoftInstance", :id, :uri)
+      #soft_instance = Struct.new("SoftInstance", :id, :uri)
       ie = Pbuilder::InstancesExplorer.new(@patterns, 
                                           @core_concept_rsc, 
                                           constraint) do |i, p_count, level, property, parent_id|
@@ -103,7 +105,7 @@ class RewriterController < ApplicationController
           instance.property = Property.find_or_create_by_uri(prop)
         end
         instance.save
-        soft_instance.new(instance.id, i)
+        Pbuilder::SoftInstance.new(instance.id, i)
       end
       @core_instances = ie.core_instances
       ie.scan_patterns
@@ -113,7 +115,7 @@ class RewriterController < ApplicationController
     ensure 
       adapter.close 
     end
-    @frenquecy = FREQUENCY
+    @frequency = FREQUENCY
     
     
     # TODO:
@@ -129,11 +131,16 @@ class RewriterController < ApplicationController
   end
   
   def post_periodically
+    @parents = Instance.find( :all,
+                              :conditions => ["user_id = ? and level = ?", 
+                                              session[:user_id], session[:level] ],
+                              :order	=> "parent_id ASC")
     session[:level] = session[:level].next
     @level = session[:level]
-    # recuperare le instance aventi il livello indicato da @level
-    
-    puts "_______________ LEVEL: #{@level}"
+    @concepts = Concept.find(:all,
+                            :conditions => ["user_id = ? and level = ?", 
+                                            session[:user_id], @level],
+                            :order => "pattern ASC")
   end
   
   def edit_prefix
@@ -202,7 +209,8 @@ class RewriterController < ApplicationController
   def delete_all(user_id)
     Prefix.delete_all(["user_id = ?", user_id])
     Instance.delete_all(["user_id = ?", user_id])
-    #Property.delete_all
+    Concept.delete_all(["user_id = ?", user_id])
+    init_level
   end
   
   def init_adapter(options = {})
@@ -216,6 +224,10 @@ class RewriterController < ApplicationController
                                                   session[:user_id])
     end
     adapter
+  end
+  
+  def init_level
+    session[:level] = 0
   end
 
 end
