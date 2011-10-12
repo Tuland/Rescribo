@@ -14,7 +14,7 @@ page.delay(1) do
       page.insert_html :after, parent.id.to_s, children_list(@level, parent.children)
       parent.children.each do |child|
         page.delay(1) do
-          page.visual_effect(:shake, "#{child.id.to_s}", :duration => 1)
+          page.visual_effect(:shake, "#{child.id.to_s}")
           page.visual_effect(:highlight, "li_#{child.id.to_s}")
         end
       end

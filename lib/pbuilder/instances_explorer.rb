@@ -10,6 +10,23 @@ module Pbuilder
     
     attr_reader :core_instances
     
+    # Init
+    #  
+    # ==== Attributes  
+    # 
+    # * +patterns+ - An array including patterns
+    # * +core_concept+ - A string or a resource determining the core concept 
+    # * +constraint+ - A string determining the constraint of the query
+    # * +&action+ - A block used, for example, to store infos.
+    #
+    # ==== Examples
+    #
+    # # InstanceExplorer.new(p,cc ,c) do |instace, p_count, level, property, instance_id|
+    # * instance - instance from the sparql query
+    # * p_count - pattern counter
+    # * level - level number
+    # * property - A string determining the uri of property
+    # * instance_id - the id of the instance  
     def initialize(patterns, core_concept, constraint, &action)
       @action = action
       core_concept_rsc = RDFS::Resource.new(core_concept) 
@@ -32,31 +49,24 @@ module Pbuilder
       
     end
     
+    
+    # Scans patterns and executes also the block &action passed during the class initialization
     def scan_patterns
       p_count = 0
       @patterns.each do |pattern|
-        puts "----- NUOVO PATTERN"
         level = 0
         curr_instances = []
-        # UTILIZZARE CHILDREN DI ACTS_AS_TREE
         curr_instances = @core_instances[p_count]
         pr = PatternReader.new(pattern[1..-1])
         until pr.halted?
           prop, concept = pr.default_next_concept_and_prop
           level = level.next
-          puts "----- prop: " + prop.to_s
-          puts "----- concept: " + concept.to_s
           next_instances = []
           curr_instances.each do |c_instance|
-            # recuperare dal DB l'ID di c_instance tramite NOME, N_PATTERN, LEVEL, PROPERTY_ID
-            puts "---- instance: " + c_instance.uri.to_s
             q = @query.new.extend(Pbuilder::Query)
             q = q.search_next_instances(c_instance.uri, prop, concept)
             q.execute do |i|
-              # salvare nel DB c_instance.id come i.father_id
-              # inserire il valore ritornato in "id" (vedi riga successiva qui sotto)
               next_instances << @action.call(i, p_count, level, prop, c_instance.id)
-              puts "!!! Found: " + i.to_s
             end
           end
           curr_instances = next_instances

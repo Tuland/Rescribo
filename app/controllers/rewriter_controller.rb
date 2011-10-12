@@ -28,7 +28,6 @@ class RewriterController < ApplicationController
   MAX_SIZE = 20
   
   def index
-    #Pbuilder::Adapter.purge(session[:user_id])
     delete_all(session[:user_id])
   end
   
@@ -90,7 +89,6 @@ class RewriterController < ApplicationController
     @core_instances = []                                  
     begin
       @core_concept_rsc = RDFS::Resource.new(core_concept_node.value)
-      #soft_instance = Struct.new("SoftInstance", :id, :uri)
       ie = Pbuilder::InstancesExplorer.new(@patterns, 
                                           @core_concept_rsc, 
                                           constraint) do |i, p_count, level, property, parent_id|
@@ -116,18 +114,6 @@ class RewriterController < ApplicationController
       adapter.close 
     end
     @frequency = FREQUENCY
-    
-    
-    # TODO:
-    # prendere il concetto+property del pattern a livello giusto
-    # associare a instance un campo padre nel db?
-    # (old_i, property, ?x) (?x, RDF::type, concetto) -> @[old_i, ?x] ... e salvare ?x nel db
-    #old_instances.each do |old_i|
-      # Query.new.distinct(:i).where(:i, RDF::type, concept).where(:i, RDFS::label, :lab)
-    #end
-    #
-    # onto_source quando viene usato?
-    
   end
   
   def post_periodically

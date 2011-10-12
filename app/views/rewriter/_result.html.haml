@@ -15,9 +15,9 @@
                       :html => {:class => "opt", :id => "show_#{i}", :style => 'display:none'}
   %div{:id => "pattern_#{i}"} 
     %ul.concept
-      = li_concept(i, 0 ,@core_concept_rsc)
+      = li_concept(i,0 ,@core_concept_rsc)
     %ul
-      -@core_instances[i].each do |instance|
+      - @core_instances[i].each do |instance|
         %li.child
           %span.instance_tag= "0"
           %span.value{:id => "#{instance.id}"}=h abbreviate(instance.uri)
