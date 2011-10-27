@@ -33,7 +33,7 @@ module Pbuilder
 
     def list
       @root.build_patterns
-    end   
+    end
       
   end
     

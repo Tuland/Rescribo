@@ -1,7 +1,7 @@
 module Pbuilder
   
   class TreeNode
-    attr_reader :value, :edge
+    attr_reader :value, :edge, :children
     
     # Init
     #  
@@ -91,7 +91,7 @@ module Pbuilder
       global_str
     end
     
-    # Iterator
+    # Iterator (Depth-first search)
     def each
       if @edge.nil?
         yield @value
@@ -102,6 +102,33 @@ module Pbuilder
         child.each {|v, e| yield v, e}
       end
     end
+    
+    
+    
+    ###########################!!!!!!!!!
+    def bfs(counter = 0) # Attenzione non conta il nodo di partenza!  
+      list = []
+      @children.each do |child|
+        counter = counter.next
+        list << ReachedNode.new(counter, 0, child.value)
+      end
+      until list.empty do
+        current = list.shift
+        level = current.level.next
+        yield(current)
+        current.children.each do |child|
+          if ! child.nil?
+            counter = counter.next
+            list << ReachedNode.new(counter,
+                                    level, 
+                                    child.value, 
+                                    child.edge, 
+                                    current.id)
+          end
+        end
+      end
+    end
+    
     
     # Build a pattern list exploring the tree recursively.
     # Depth-first search

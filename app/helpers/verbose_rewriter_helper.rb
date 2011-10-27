@@ -1,0 +1,2 @@
+module VerboseRewriterHelper
+end

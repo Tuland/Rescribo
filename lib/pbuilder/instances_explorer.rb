@@ -13,21 +13,14 @@ module Pbuilder
     # Init
     #  
     # ==== Attributes  
-    # 
-    # * +patterns+ - An array including patterns
-    # * +core_concept+ - A string or a resource determining the core concept 
-    # * +constraint+ - A string determining the constraint of the query
-    # * +&action+ - A block used, for example, to store infos.
+
     #
     # ==== Examples
-    #
-    # # InstanceExplorer.new(p,cc ,c) do |instace, p_count, level, property, instance_id|
-    # * instance - instance from the sparql query
-    # * p_count - pattern counter
-    # * level - level number
-    # * property - A string determining the uri of property
-    # * instance_id - the id of the instance  
-    def initialize(patterns, core_concept, constraint, &action)
+    # 
+    def initialize(core_concept, constraint, &action)  
+      
+      #########################
+=begin
       @action = action
       core_concept_rsc = RDFS::Resource.new(core_concept) 
       @patterns = patterns 
@@ -46,12 +39,32 @@ module Pbuilder
         end
         @core_instances << list
       end
+=end
+      #######################
       
+      @action = action
+      @core_instances = []
+      @root = core_concept
+      core_concpt_rsc = RDFS::Resource.new(core_concept)
+      @query = Query
+      q = @query.new.extend(Pbuilder::Query) 
+      q = q.search_by_concept(core_concept_rsc, constraint)
+      q.execute do |i|
+        ########## qui bisogna salvare l'appartenenza del nodo pattern
+        @core_instances << @action.call(i, 0, 0, nil, nil)
+      end
+      
+      # Attenzione il root ha una differente query rispetto agli altri! Ha anche il constraint!
+      # Creare una lista 
+   
     end
     
     
     # Scans patterns and executes also the block &action passed during the class initialization
     def scan_patterns
+      
+      ########################
+=begin
       p_count = 0
       @patterns.each do |pattern|
         level = 0
@@ -73,9 +86,27 @@ module Pbuilder
         end
         p_count = p_count.next
       end
+=end
+      ########################
+      
+      
+      # utilizzare bfs da root! Non considera root ma solo i successivi
+      
+      # PROBLEMA come faccio a recuperare u curr_instances giusti? Il vecchio metodo non va bene
+      # utiliziamo una altra &action per find (trova instance di un determinato concetto/stepalgoritmo)?
+      # si potrebbe usare "pattern" (o creare un nuovo attributo) per conoscere il concetto  l'id del concetto di appartenenza
+      @root.bfs do |r_node|
+        c_instances = yield(r_node.parent_id)
+        c_instances.each do |c_instance|
+          q = @query.new.extend(Pbuilder::Query)
+          q = q.search_next_instances(c_instance.uri, r_node.property, r_node.concept)
+          q.execute do |i|
+            @action.call(i, r_node.id, r_node.level, r_node.property, c_instance.id)
+          end
+        end  
+      end
+      
     end
-    
-    
     
   end
   

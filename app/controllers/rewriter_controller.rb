@@ -80,10 +80,13 @@ class RewriterController < ApplicationController
     constraint = params[:settings][:constraint]
     patterns, analysis = init_patterns(a_concept)
     core_concept_node = patterns[a_concept].root
-    @patterns = core_concept_node.build_patterns
-    Concept.import_from_matrix(@patterns, session[:user_id])
-    @analysis = analysis[a_concept]
-    @max_size = max_size(@patterns)
+    #### necessari?
+    @patterns = core_concept_node.build_patterns # È ancora necessario?
+    Concept.import_from_matrix(@patterns, session[:user_id]) # È ancora necessario?
+    @analysis = analysis[a_concept] # È ancora necessario?
+    @max_size = max_size(@patterns) # Come recupero max size con non uso build_patterns?       
+    ####
+ 
     onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
     adapter = init_adapter({ :prefix => true })
     @core_instances = []                                  
@@ -106,7 +109,10 @@ class RewriterController < ApplicationController
         Pbuilder::SoftInstance.new(instance.id, i)
       end
       @core_instances = ie.core_instances
-      ie.scan_patterns
+      ie.scan_patterns do |p_count|
+        Instance.find(:all,
+                      :conditions => ["user_id =? and pattern = ?"], session[:user_id], p_count)
+      end
     rescue Exception => e
       puts e.message  
       puts e.backtrace.inspect

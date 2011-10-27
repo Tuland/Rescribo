@@ -1,0 +1,7 @@
+page.replace_html 'result', :partial => "result"
+page.delay(1) do
+  page.visual_effect(:scrollTo, "counter")
+  page.visual_effect(:highlight, "result")
+end
+
+

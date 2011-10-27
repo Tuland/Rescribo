@@ -1,0 +1,7 @@
+page.visual_effect(:fade, @show_str)
+page.visual_effect(:blindDown, @pattern_str)
+page.visual_effect(:appear, @hide_str)
+page.delay(1) do
+  page.visual_effect(:highlight, @hide_str)
+  page.visual_effect(:highlight, @pattern_str)
+end

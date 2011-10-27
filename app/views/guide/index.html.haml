@@ -2,16 +2,20 @@
   %h3{:class => :menu}= link_to 'Rewriter', :controller => "rewriter", :action => "index"
   %p
     = "A sample of approximation"
-    %ul
+    %ul 
       %li
         = "Use"
         = link_to 'this uploader', :controller => "uploader", :action => "upload_aeria"
         = "to select your AERIA summary."
-    %ul
       %li
         = "Use"
         = link_to 'this uploader', :controller => "uploader", :action => "upload_onto"
         = "to select your dataset."
+    %ul
+      %li
+        = "It's available a "
+        = link_to "verbose version", :controller => "verbose_rewriter", :action => "index"
+        = "(Rewriting tree splitted following patterns)."
 
 %div.part
   %h3{:class => :menu}= link_to 'Patterns builder', :controller => "patterns_builder", :action => "index"

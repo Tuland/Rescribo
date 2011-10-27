@@ -1,0 +1,23 @@
+page.replace_html 'counter', @level
+@concepts.each do |concept|
+  page.insert_html  :after, 
+                    "li_concept_#{concept.pattern}_#{@level.pred.to_s}", 
+                    li_concept(concept.pattern, @level, concept.uri)
+  page.visual_effect(:highlight, "concept_#{concept.pattern}_#{@level.to_s}")
+end
+
+page.delay(1) do
+  @parents.each do |parent|
+    parent.children.each do |c|
+    end 
+    if ! parent.children.empty?
+      page.insert_html :after, parent.id.to_s, children_list(@level, parent.children)
+      parent.children.each do |child|
+        page.delay(1) do
+          page.visual_effect(:shake, "#{child.id.to_s}")
+          page.visual_effect(:highlight, "li_#{child.id.to_s}")
+        end
+      end
+    end
+  end
+end
