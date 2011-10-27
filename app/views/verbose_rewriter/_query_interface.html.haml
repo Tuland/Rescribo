@@ -1,7 +1,7 @@
 %div#query_interface
   %div#form
     %div.part
-      - form_remote_tag  :url => {  :controller => "rewriter", 
+      - form_remote_tag  :url => {  :controller => "verbose_rewriter", 
                                     :action => "rewrite" },
                          :loading => "Element.show('rewriting_p_indicator')",
                          :complete => "Element.hide('rewriting_p_indicator')" do 

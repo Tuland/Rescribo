@@ -92,8 +92,7 @@ class RewriterController < ApplicationController
     @core_instances = []                                  
     begin
       @core_concept_rsc = RDFS::Resource.new(core_concept_node.value)
-      ie = Pbuilder::InstancesExplorer.new(@patterns, 
-                                          @core_concept_rsc, 
+      ie = Pbuilder::InstancesExplorer.new(core_concept_node, 
                                           constraint) do |i, p_count, level, property, parent_id|
         instance = Instance.new(
           :uri => Converter.rsc_2_str(i),
@@ -109,9 +108,13 @@ class RewriterController < ApplicationController
         Pbuilder::SoftInstance.new(instance.id, i)
       end
       @core_instances = ie.core_instances
+      puts "!!!!!"
+      puts @core_instances.to_s
+      puts "!!!!!"
       ie.scan_patterns do |p_count|
         Instance.find(:all,
-                      :conditions => ["user_id =? and pattern = ?"], session[:user_id], p_count)
+                      :conditions => ["user_id =? and pattern = ?", 
+                                      session[:user_id], p_count])
       end
     rescue Exception => e
       puts e.message  
@@ -166,20 +169,6 @@ class RewriterController < ApplicationController
         @e_value = @e_old_prefix
       end
     end
-  end
-  
-  def hide_pattern
-    i = params[:id]
-    @hide_str = "hide_#{i}"
-    @pattern_str = "pattern_#{i}"
-    @show_str = "show_#{i}"
-  end
-  
-  def show_pattern
-    i = params[:id]
-    @hide_str = "hide_#{i}"
-    @pattern_str = "pattern_#{i}"
-    @show_str = "show_#{i}"
   end
   
   private

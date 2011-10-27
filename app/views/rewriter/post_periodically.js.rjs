@@ -1,10 +1,4 @@
 page.replace_html 'counter', @level
-@concepts.each do |concept|
-  page.insert_html  :after, 
-                    "li_concept_#{concept.pattern}_#{@level.pred.to_s}", 
-                    li_concept(concept.pattern, @level, concept.uri)
-  page.visual_effect(:highlight, "concept_#{concept.pattern}_#{@level.to_s}")
-end
 
 page.delay(1) do
   @parents.each do |parent|

@@ -15,8 +15,10 @@ module RewriterHelper
     str << "<ul>\n"
     children.each do |child|
       str << "\t<li class='child' id='li_#{child.id.to_s}'>\n"
-      str << "\t\t<span class='edge'>#{h(abbreviate(child.property.uri))}</span>"
-      str << "\t\t<image src='/images/tree_bullet_s_arrow.gif' alt='arrow' />"
+      if child.methods.include?("property") && ! child.property.nil?
+        str << "\t\t<span class='edge'>#{h(abbreviate(child.property.uri))}</span>"
+        str << "\t\t<image src='/images/tree_bullet_s_arrow.gif' alt='arrow' />"
+      end
       str << "\t\t<span class='instance_tag'>#{level.to_s}</span>\n"
       str << "\t\t<span class='value' id='#{child.id.to_s}'> #{h(abbreviate(child.uri))}</span>\n"
       str << "\t</li>\n"

@@ -106,16 +106,26 @@ module Pbuilder
     
     
     ###########################!!!!!!!!!
-    def bfs(counter = 0) # Attenzione non conta il nodo di partenza!  
+    # ATTENZIONE! Non è necessario utilizzare ReachedNode ma si può usare lo stesso TreeNode con in più level, counter, parent_id e pattern
+    # SE si devono fare due passate dei pattern utilizare ReachedNode. Se basta la prima No
+    # Deve essere ricpercorso due volte perché nella seconda potrebbe essere non necessario continuare l'esplorazione se un concetto non ha istanze
+    # Usare ReachabilityInfo con dentro (id, level, parent_id) e associarlo a TreeNode, Scorrere TreeNode e non ReachedNode
+    # Con questa ultima modifica va usato value ed edge nel chiamante!
+    # ***** No! Fare il contrario! ReachedNode ha al suo interno il metodo "node" accessibile in lettura a cui linko il TreeNode adeguato
+    # ***** Quindi ReachedNode non ha più :concept, :property
+    # ***** Pensarea ad un nome alternativo per ReachedNode?
+    def bfs(counter = 0) # Attenzione non conta il nodo di partenza!
       list = []
+      # ATTENZIONE: sarebbe meglio che bfs escludesse i nodi che hanno un progenitore privo istanze 
       @children.each do |child|
         counter = counter.next
         list << ReachedNode.new(counter, 0, child.value)
       end
-      until list.empty do
+      until list.empty? do
         current = list.shift
         level = current.level.next
         yield(current)
+          # ATTENZIONE: sarebbe meglio che bfs escludesse i nodi che hanno un progenitore privo istanze 
         current.children.each do |child|
           if ! child.nil?
             counter = counter.next

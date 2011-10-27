@@ -67,7 +67,7 @@ module Pbuilder
             q.execute do |i|
               next_instances << @action.call(i, p_count, level, prop, c_instance.id)
             end
-          end
+          end if ! curr_instances.nil? 
           curr_instances = next_instances
         end
         p_count = p_count.next
