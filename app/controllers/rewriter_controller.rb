@@ -14,13 +14,12 @@ require 'pbuilder/soft_instance'
 class RewriterController < ApplicationController
   include Pbuilder::PHelper
   
-  FREQUENCY = 6
+  FREQUENCY = 4
   
   layout 'main', :except => [ :load, 
                               :rewrite, 
-                              :edit_prefix, 
-                              :hide_pattern, 
-                              :show_pattern ]
+                              :edit_prefix,
+                              :post_periodically ]
   
   before_filter :authorize
   
@@ -75,18 +74,12 @@ class RewriterController < ApplicationController
   end
   
   def rewrite
-    delete_all(session[:user_id])
+    @frequency = FREQUENCY
+    delete_all(session[:user_id], [Instance, Concept] )
     a_concept = params[:settings][:a_concept]
     constraint = params[:settings][:constraint]
     patterns, analysis = init_patterns(a_concept)
     core_concept_node = patterns[a_concept].root
-    #### necessari?
-    @patterns = core_concept_node.build_patterns # È ancora necessario?
-    Concept.import_from_matrix(@patterns, session[:user_id]) # È ancora necessario?
-    @analysis = analysis[a_concept] # È ancora necessario?
-    @max_size = max_size(@patterns) # Come recupero max size con non uso build_patterns?       
-    ####
- 
     onto_source = OntoSource.find(:first, :conditions => "user_id='#{session[:user_id]}'")
     adapter = init_adapter({ :prefix => true })
     @core_instances = []                                  
@@ -108,10 +101,7 @@ class RewriterController < ApplicationController
         Pbuilder::SoftInstance.new(instance.id, i)
       end
       @core_instances = ie.core_instances
-      puts "!!!!!"
-      puts @core_instances.to_s
-      puts "!!!!!"
-      ie.scan_patterns do |p_count|
+      @max_size = ie.scan_patterns do |p_count|
         Instance.find(:all,
                       :conditions => ["user_id =? and pattern = ?", 
                                       session[:user_id], p_count])
@@ -122,7 +112,6 @@ class RewriterController < ApplicationController
     ensure 
       adapter.close 
     end
-    @frequency = FREQUENCY
   end
   
   def post_periodically
@@ -164,10 +153,8 @@ class RewriterController < ApplicationController
         p = Prefix.find(:first, 
                         :conditions => ["prefix = ? and user_id = ?", @e_old_prefix, session[:user_id]])
       end
-      p.prefix = @e_value
-      if ! p.save
-        @e_value = @e_old_prefix
-      end
+      p.prefix = @e_value      
+      @e_value = @e_old_prefix if ! p.save
     end
   end
   
@@ -187,10 +174,10 @@ class RewriterController < ApplicationController
     reader.load(a_concept)
   end
   
-  def delete_all(user_id)
-    Prefix.delete_all(["user_id = ?", user_id])
-    Instance.delete_all(["user_id = ?", user_id])
-    Concept.delete_all(["user_id = ?", user_id])
+  def delete_all(user_id, models = [Prefix, Instance, Concept] )
+    models.each do |mod|
+      mod.delete_all(["user_id = ?", user_id])
+    end
     init_level
   end
   

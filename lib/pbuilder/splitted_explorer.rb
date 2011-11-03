@@ -22,11 +22,13 @@ module Pbuilder
     # ==== Examples
     #
     # # InstanceExplorer.new(p,cc ,c) do |instace, p_count, level, property, instance_id|
-    # * instance - instance from the sparql query
-    # * p_count - pattern counter
-    # * level - level number
+    # # [...]
+    # # end
+    # * instance - Instance from the sparql query
+    # * p_count - Pattern counter
+    # * level - Level number
     # * property - A string determining the uri of property
-    # * instance_id - the id of the instance  
+    # * instance_id - The id of the instance  
     def initialize(patterns, core_concept, constraint, &action)
       @action = action
       core_concept_rsc = RDFS::Resource.new(core_concept) 

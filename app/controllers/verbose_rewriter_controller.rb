@@ -20,7 +20,8 @@ class VerboseRewriterController < ApplicationController
                               :rewrite, 
                               :edit_prefix, 
                               :hide_pattern, 
-                              :show_pattern ]
+                              :show_pattern,
+                              :post_periodically ]
   
   before_filter :authorize
   

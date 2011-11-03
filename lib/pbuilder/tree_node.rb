@@ -103,51 +103,55 @@ module Pbuilder
       end
     end
     
-    
-    
-    ###########################!!!!!!!!!
-    # ATTENZIONE! Non è necessario utilizzare ReachedNode ma si può usare lo stesso TreeNode con in più level, counter, parent_id e pattern
-    # SE si devono fare due passate dei pattern utilizare ReachedNode. Se basta la prima No
-    # Deve essere ricpercorso due volte perché nella seconda potrebbe essere non necessario continuare l'esplorazione se un concetto non ha istanze
-    # Usare ReachabilityInfo con dentro (id, level, parent_id) e associarlo a TreeNode, Scorrere TreeNode e non ReachedNode
-    # Con questa ultima modifica va usato value ed edge nel chiamante!
-    # ***** No! Fare il contrario! ReachedNode ha al suo interno il metodo "node" accessibile in lettura a cui linko il TreeNode adeguato
-    # ***** Quindi ReachedNode non ha più :concept, :property
-    # ***** Pensarea ad un nome alternativo per ReachedNode?
-    def bfs(counter = 0) # Attenzione non conta il nodo di partenza!
+    # Breadth-first search
+    # It don't take into consideration the start node (only the children)
+    # Attenzione non conta il nodo di partenza!
+    #  
+    # ==== Attributes  
+    #  
+    # * +counter+ = Start counter (integer)
+    # * +level+ = Start level (integer)
+    #
+    # ==== Examples
+    #
+    # # root_node.bfs do |r_info|
+    # #   [...]
+    # # end
+    #
+    # * r_info - An ReachingInfo instance
+    def bfs(counter = 0, level = 0) # Attenzione non conta il nodo di partenza!
       list = []
-      # ATTENZIONE: sarebbe meglio che bfs escludesse i nodi che hanno un progenitore privo istanze 
+      root_counter = counter
+      level = level.next
       @children.each do |child|
         counter = counter.next
-        list << ReachedNode.new(counter, 0, child.value)
+        list << ReachingInfo.new(child, 
+                                counter, 
+                                level, 
+                                root_counter)
       end
       until list.empty? do
         current = list.shift
         level = current.level.next
-        yield(current)
-          # ATTENZIONE: sarebbe meglio che bfs escludesse i nodi che hanno un progenitore privo istanze 
-        current.children.each do |child|
+        pass = yield(current)
+        current.node.children.each do |child|
           if ! child.nil?
             counter = counter.next
-            list << ReachedNode.new(counter,
-                                    level, 
-                                    child.value, 
-                                    child.edge, 
-                                    current.id)
+            list << ReachingInfo.new( child,
+                                      counter,
+                                      level,
+                                      current.id )
           end
-        end
+        end if pass 
       end
     end
-    
     
     # Build a pattern list exploring the tree recursively.
     # Depth-first search
     # * +local_list+ - A temporary local list (needed by recursion)
     # * +global_list+ - A global list to return
     def build_patterns(local_list=[], global_list=[])
-      if ! @edge.nil?
-        local_list << @edge
-      end
+      local_list << @edge if ! @edge.nil?
       local_list << @value
       if @children.empty?
         global_list << local_list
